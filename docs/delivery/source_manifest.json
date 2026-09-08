@@ -1,0 +1,41 @@
+{
+  "baseline_date": "2026-09-06",
+  "note": "Original planning-package baseline manifest. Root/current docs may supersede these historical snapshots.",
+  "files": [
+    {
+      "file": "baseline/soccer_app_foundation_plan.md",
+      "sha256": "2157fc40d5b4e51648fc8597237275b4e8545deb3c95153469e4f90d3f77d78c",
+      "bytes": 59162
+    },
+    {
+      "file": "baseline/soccer_club_parent_and_coach_administration.md",
+      "sha256": "e9ef75d98fb78e1d0d7f2ca206c2e6f40a03fca9fa1dc8c2741c9881b6481b6c",
+      "bytes": 25471
+    },
+    {
+      "file": "baseline/soccer_delivery_backlog.md",
+      "sha256": "5463011ff1176d52a03b3f29865a149c10f7e4e78e76a4d9af381daea5a971b3",
+      "bytes": 33074
+    },
+    {
+      "file": "baseline/soccer_end_to_end_platform_and_business_plan.md",
+      "sha256": "08c6a47e56f12f665dd9a9e35370d3a2f3c5f3ad40e8cab175ee644d39ee7231",
+      "bytes": 53728
+    },
+    {
+      "file": "baseline/soccer_end_to_end_security_and_gap_review.md",
+      "sha256": "6c108250716b9d4f0a57d927d55e3486969592623bf202c70fc06114fcd21728",
+      "bytes": 39567
+    },
+    {
+      "file": "baseline/soccer_pilot_and_design_pack.md",
+      "sha256": "74f5ddb282fdec235f9935e70a761dd2bd727bac676e20400878418ca2ce5ed2",
+      "bytes": 63399
+    },
+    {
+      "file": "baseline/soccer_sdlc_security_and_agent_delivery_review.md",
+      "sha256": "6178d7a054af8e4220d2ad99ff0f6e3e8c389ae15e105ca2d39f3e1cff3f38cd",
+      "bytes": 50849
+    }
+  ]
+}
