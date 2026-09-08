@@ -1,42 +1,46 @@
-# Delivery Package Validation
+# Delivery package validation
 
-Baseline validation date: 6 September 2026.
+> Synchronized 8 September 2026 from the [complete planning source](../../packages/soccer_agent_activity_package_20260908/docs/validation_report.md). This page contains the full source text with repository-relative navigation. Edit the canonical file under `packages/soccer_agent_activity_package_20260908/`, then run `node tools/sync-docs.cjs` from the repository root. Plain filenames, machine-data references and package regeneration commands in the source are relative to the [canonical package](../../packages/soccer_agent_activity_package_20260908/README.md).
 
-These checks validate the planning package structure. They are not implementation tests, a security certification or proof of a successful Linear import.
+Historical snapshot: this report applies to the 6 September baseline. See [activity plan validation](activity_plan_validation.md) for the 8 September revision.
+
+6 September 2026. These checks validate planning artifacts, structure and import-file preservation. They are not implementation tests, security certification or an actual Linear import.
 
 | Check | Result |
 |---|---|
-| 150 unique consecutive source IDs; SP-001–SP-074 preserved | Pass in dated planning package |
-| All tasks start Backlog; no fabricated assignees/acceptance | Pass |
-| All dependencies resolve and are acyclic | Pass |
-| 76 parent relations; 42 work packages; 108 leaves | Pass |
+| 150 unique consecutive source IDs; original SP-001–SP-074 preserved | Pass |
+| All tasks start Backlog; no fabricated assignees or acceptance | Pass |
+| All dependencies exist and point to different tasks | Pass |
+| Dependency graph acyclic; 574 required predecessor edges | Pass |
+| 76 valid parent relations; 42 work packages and 108 leaves | Pass |
 | 12 phases and seven gate projects covered | Pass |
 | Every issue has human, agent, scope, acceptance and assignment sections | Pass |
-| Full CSV expected 21 headers and 150 multiline records | Pass in dated package |
-| Smoke CSV expected 3 records | Pass in dated package |
-| Remaining CSV expected 147 records | Pass in dated package |
-| Smoke + remaining are disjoint and cover all 150 | Pass in dated package |
-| 30 features and F01–F33 / S01–S27 / R01–R20 mapped | Pass |
-| 543 planned acceptance criteria | Pass |
-| Baseline snapshots had recorded SHA-256 hashes | Pass in dated package |
+| soccer_linear_import.csv: expected 21 headers and 150 intact multiline records | Pass |
+| soccer_linear_smoke.csv: expected 21 headers and 3 intact multiline records | Pass |
+| soccer_linear_remaining.csv: expected 21 headers and 147 intact multiline records | Pass |
+| CSV values, labels, empty owners/dates and priority match manifest; no leading formula payload | Pass |
+| Smoke and remaining files are disjoint and together cover all 150 | Pass |
+| 30 features and all F01–F33 / S01–S27 / R01–R20 mapped | Pass |
+| All feature/screen/security/review references resolve to real source issues | Pass |
+| 543 unique planned acceptance criteria; no passing results fabricated | Pass |
+| Seven baseline snapshots match recorded SHA-256 hashes | Pass |
+| Backlog Markdown contains exactly the same 150 task descriptions | Pass |
+| Root document file references exist and fenced blocks are balanced | Pass |
+| Compact import preview inspected | Pass; IDs, titles, priority and Backlog state are readable |
 
-## Counts from the dated package
+## Counts
 
-- 150 planning records.
-- 42 work packages and 108 leaves.
-- 76 parent links.
-- 574 predecessor edges.
-- 30 capability groups.
-- 33 screen references.
-- 27 security risk themes.
-- 20 review actions.
-- 543 planned acceptance criteria.
-- Zero implementation evidence records accepted at planning time.
+- 150 planning records: 74 retained source issues plus 76 additions.
+- 42 work packages with children and 108 leaves; 87 leaves are potentially agent-dispatchable only after Ready and a complete run contract.
+- 12 phases, seven gate projects, 76 parent links and 574 predecessor edges.
+- 30 capability groups, 33 screen references, 27 security risk themes and 20 review actions.
+- 543 planned acceptance criteria; zero implementation evidence records accepted.
 
-## Limits
+## Limits and pending validation
 
-- No application, database, API, media exporter, subscription integration or deployment was proven by the planning package.
-- The original CSV/manifest artifacts described tracker import structure; they did not themselves create a Linear workspace.
-- Human qualifications, content approval, family consent, supplier quotes, named personnel and production release decisions remain real-world actions.
-- Competitive/provider capability and pricing require re-checking when used for current purchasing or release decisions.
-- The 7 September market-review additions introduced five immediate priorities that must be reconciled into the dated 150-task machine-readable package before those affected tasks are dispatched.
+- No import was run against the user's Linear workspace. Owner/status mapping and actual integration behaviour need the documented trial.
+- The CSV carries issues; projects, milestones, parents, dependency relations and human/agent identities require the second pass.
+- No app, database, API, media exporter, subscription integration or deployment was implemented or tested by this planning task.
+- Qualification, content approval, family consent, supplier quotes, named personnel and production release decisions remain human actions.
+- Provider capabilities/pricing and the existing financial workbook require their scheduled scoped review; this package does not recalculate the business model.
+- The traceability map shows assigned work; it does not establish that every possible future defect has been anticipated.

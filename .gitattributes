@@ -1,0 +1,7 @@
+*.md text eol=lf
+*.json text eol=lf
+*.cjs text eol=lf
+# The canonical package contains byte-verified historical snapshots and media.
+packages/soccer_agent_activity_package_20260908/** -text
+# Preserve standard CRLF CSV records without reporting CR as trailing whitespace.
+packages/soccer_agent_activity_package_20260908/**/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

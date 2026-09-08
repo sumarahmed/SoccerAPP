@@ -4,56 +4,256 @@
   "linear_baseline_date": "2026-09-08",
   "priorities_reconciled_into_linear": true,
   "files": [
-    {"path":"PACKAGE_VALIDATION.md","bytes":1032,"sha256":"326dac65b9e47872ffb5c85ec8ca74bcb4bb13bb0475ce7efd10af36b313ebe8"},
-    {"path":"README.md","bytes":5123,"sha256":"e2ba06c27f6f09fe28da8a52c1696aa563b466f673c796c28758d145015549e9"},
-    {"path":"design/soccer_navigation_consistency_board.png","bytes":1620010,"sha256":"691c59a8bc0d73df5860c2edd617cc79611ae85ac13fd9f757ab0ac4b3d3fe6a"},
-    {"path":"design/soccer_practice_app_concept_board.png","bytes":1572727,"sha256":"3edb4a562f536e92cc43c0487aca90dc28c68458428ff836e73cd5d7c5b2a0f7"},
-    {"path":"design/soccer_practice_app_concept_screens.png","bytes":1559978,"sha256":"92b362f4c1118cbf1396f900abffe012e3907e2dc31732ecfd234213abd0e028"},
-    {"path":"docs/README.md","bytes":3380,"sha256":"70bbd4afff5575313ba7e1fe82229c885612ebd18e0a3c3ac3cc1853b1bac671"},
-    {"path":"docs/activities/P00.md","bytes":15330,"sha256":"bb2301ecf7205bb59d70f804e3fee811e6072c0f74834c7c851c0701c370dfc3"},
-    {"path":"docs/activities/P01.md","bytes":142870,"sha256":"02eccc2be0e25347d25448e1146109ba12fd2a1b47abde5b97caa634c1416302"},
-    {"path":"docs/activities/P02.md","bytes":19967,"sha256":"a46c762ae397d130ef80d91d72aaab3ae4be66a3ddb394666f74d70f192d8861"},
-    {"path":"docs/activities/P03.md","bytes":54971,"sha256":"6d0e54f0d4b8e2122803fb8a3c2546cb09519186953cfc48ebddbc84db385a20"},
-    {"path":"docs/activities/P04.md","bytes":94206,"sha256":"27d0d20dde1a9facec7b857122dd5b0fa6ca5231e00f9079edf5788958d00300"},
-    {"path":"docs/activities/P05.md","bytes":81263,"sha256":"5e3eb65188dfdebd91ba5bf215e28fcba3c9f95e90b860e61e084983ccca6c7b"},
-    {"path":"docs/activities/P06.md","bytes":71677,"sha256":"f57fd904847065de595aef9704b4b3ff46d6ddc928a94893bb0d0dcb27d4f99d"},
-    {"path":"docs/activities/P07.md","bytes":84641,"sha256":"c29c411a317b84fafafd051e0b5c44da7c4957893109b38f4ff56138c5f74529"},
-    {"path":"docs/activities/P08.md","bytes":65778,"sha256":"017f24af767b1b72f672a284a7713d31093a8daaa450c24e63123b045c7d799e"},
-    {"path":"docs/activities/P09.md","bytes":27935,"sha256":"e21f838ddfa789d77d306ffd6a14452c9f50f369ad4162a5eb8437588bed51c5"},
-    {"path":"docs/activities/P10.md","bytes":70559,"sha256":"4c9fe241c55d2f59715d1d4b9e58ff48f8ae6d6f6ca6684dbbbbd688717c7dd8"},
-    {"path":"docs/activities/P11.md","bytes":30104,"sha256":"ca67c0a191d567bfa77948c14e32fe4ca81b7fe368912a6e982993251aec609e"},
-    {"path":"docs/activity-plan-counts.json","bytes":335,"sha256":"3c6f79dbdef1da6c382ae3fed7afabab30570c62b0e19a22c2acbc46ce495b99"},
-    {"path":"docs/activity_plan_validation.md","bytes":2676,"sha256":"ef31eb51381687e623bd8e9344db679ddc80138b36cf279aad63912bfcc5b0b0"},
-    {"path":"docs/baseline/soccer_app_foundation_plan.md","bytes":59162,"sha256":"2157fc40d5b4e51648fc8597237275b4e8545deb3c95153469e4f90d3f77d78c"},
-    {"path":"docs/baseline/soccer_club_parent_and_coach_administration.md","bytes":25471,"sha256":"e9ef75d98fb78e1d0d7f2ca206c2e6f40a03fca9fa1dc8c2741c9881b6481b6c"},
-    {"path":"docs/baseline/soccer_delivery_backlog.md","bytes":33074,"sha256":"5463011ff1176d52a03b3f29865a149c10f7e4e78e76a4d9af381daea5a971b3"},
-    {"path":"docs/baseline/soccer_end_to_end_platform_and_business_plan.md","bytes":53728,"sha256":"08c6a47e56f12f665dd9a9e35370d3a2f3c5f3ad40e8cab175ee644d39ee7231"},
-    {"path":"docs/baseline/soccer_end_to_end_security_and_gap_review.md","bytes":39567,"sha256":"6c108250716b9d4f0a57d927d55e3486969592623bf202c70fc06114fcd21728"},
-    {"path":"docs/baseline/soccer_pilot_and_design_pack.md","bytes":63399,"sha256":"74f5ddb282fdec235f9935e70a761dd2bd727bac676e20400878418ca2ce5ed2"},
-    {"path":"docs/baseline/soccer_sdlc_security_and_agent_delivery_review.md","bytes":50849,"sha256":"6178d7a054af8e4220d2ad99ff0f6e3e8c389ae15e105ca2d39f3e1cff3f38cd"},
-    {"path":"docs/soccer_acceptance_evidence_register.json","bytes":354143,"sha256":"46c6da0f73879da6b0ad15633e50012968b3d9ccd3bc1e1212c0f0d7b6afae3c"},
-    {"path":"docs/soccer_agent_activity_manifest.json","bytes":1080530,"sha256":"d72bbb9bc084c7d0e9560a9565b60efef689680654a65e10045f1698578b810f"},
-    {"path":"docs/soccer_agent_activity_plan.md","bytes":9706,"sha256":"ea8ab8e7af7ccc651a8f62d3d518ac1f1256a74bde37d62cba7abd4a5dac0578"},
-    {"path":"docs/soccer_agent_activity_tasks.csv","bytes":179057,"sha256":"e1d00fda583eb7f7c9b73bcdf5cb21ae80dac4c6bdc633f4bfd199be8a1e0f87"},
-    {"path":"docs/soccer_agent_execution_playbook.md","bytes":18454,"sha256":"44a7dd406ceda4769fa0759d4865f3858e6db22db508298726fe6e91b0813015"},
-    {"path":"docs/soccer_delivery_backlog.md","bytes":552713,"sha256":"dca1c45fc1da03f4c18c454f5f56577d578a8f01b3d926201378488f88496681"},
-    {"path":"docs/soccer_delivery_master_plan.md","bytes":38412,"sha256":"c9a9576825efc64cf8b5d72537c748e5193d6f10b767295c14d20e66789c74dd"},
-    {"path":"docs/soccer_feature_traceability.md","bytes":24020,"sha256":"b98230ede39fcd075f417415198c3b1d916251ecaf4af24882c8f92caa06b0d1"},
-    {"path":"docs/soccer_human_action_playbook.md","bytes":16163,"sha256":"a0dde6fdcb94a730b1ef984044ebbf24e5f41b82ffa7158cb59b9cc626274342"},
-    {"path":"docs/soccer_linear_import.csv","bytes":572731,"sha256":"5f2d3f88e3d6f73e36dfe2253643ef5276e76bec1e83f7e4a96bb86215301cf5"},
-    {"path":"docs/soccer_linear_manifest.json","bytes":1195085,"sha256":"621558a326f5a1e7bbd1da70742ff1da7d8aef5e89ff7427c5c1f438031f45c6"},
-    {"path":"docs/soccer_linear_remaining.csv","bytes":562481,"sha256":"dbc5599d763c5480cc28c5b19402095e2ccf0bca35a820d873c804e430b09d7b"},
-    {"path":"docs/soccer_linear_setup_and_import.md","bytes":12154,"sha256":"1fbf9c3b2cb64ce7735d30a06b32591b46d8dd4da5ae6d058204251bcb0fb4e4"},
-    {"path":"docs/soccer_linear_smoke.csv","bytes":10474,"sha256":"46110d572ec8866f294959aa9d22c03beb6e4b5e75766045854ab6b7fea0e5e4"},
-    {"path":"docs/soccer_market_gap_analysis.md","bytes":45073,"sha256":"4f8eb44969f35cf2cdf60d573df01eb21a6c78c50f57369eeede1a2ca55a7076"},
-    {"path":"docs/soccer_product_wishlist.md","bytes":7386,"sha256":"a7a8d457fd333d0af10b476f77bd93279bc3d5035637fdc04746fa3d4e4e82d3"},
-    {"path":"docs/source_manifest.json","bytes":2260,"sha256":"12e511589f8ab7fc61ef729eccdf01f8045fa9c1065a2752812b9df80fc9c4b8"},
-    {"path":"docs/validation_report.md","bytes":3238,"sha256":"a62033ff1322dc0d5fd4e00670868c80f075cb26e14db523632863022c24c6ad"},
-    {"path":"financial/soccer_subscription_and_cost_model.xlsx","bytes":38431,"sha256":"b5e823043cff7014d1af27ae7c2808994f7571253fdc786601962cd253cb1ed2"},
-    {"path":"tools/activity-config.cjs","bytes":16183,"sha256":"1f5c84047795a963eaaff41a297eae6a804bd19c0f83b2b1a041c9029edce1fc"},
-    {"path":"tools/activity-slices.cjs","bytes":44972,"sha256":"23fc7bcc944b2cf67e838b0eecdcbebc43ff1a322ce141c6b4bb3fa289b833d9"},
-    {"path":"tools/build-activity-plan.cjs","bytes":32061,"sha256":"92daeeeffac6e59c5584cb28d5c84109c970e8521f072c814969565505d93228"},
-    {"path":"tools/validate-activity-plan.cjs","bytes":14781,"sha256":"4bb8a985cbbc3a3aaddbcfb668911877e335e1f9288b33bdd86cce411716c667"}
+    {
+      "path": "PACKAGE_VALIDATION.md",
+      "bytes": 1032,
+      "sha256": "326dac65b9e47872ffb5c85ec8ca74bcb4bb13bb0475ce7efd10af36b313ebe8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5123,
+      "sha256": "e2ba06c27f6f09fe28da8a52c1696aa563b466f673c796c28758d145015549e9"
+    },
+    {
+      "path": "design/soccer_navigation_consistency_board.png",
+      "bytes": 1620010,
+      "sha256": "691c59a8bc0d73df5860c2edd617cc79611ae85ac13fd9f757ab0ac4b3d3fe6a"
+    },
+    {
+      "path": "design/soccer_practice_app_concept_board.png",
+      "bytes": 1572727,
+      "sha256": "3edb4a562f536e92cc43c0487aca90dc28c68458428ff836e73cd5d7c5b2a0f7"
+    },
+    {
+      "path": "design/soccer_practice_app_concept_screens.png",
+      "bytes": 1559978,
+      "sha256": "92b362f4c1118cbf1396f900abffe012e3907e2dc31732ecfd234213abd0e028"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 3380,
+      "sha256": "70bbd4afff5575313ba7e1fe82229c885612ebd18e0a3c3ac3cc1853b1bac671"
+    },
+    {
+      "path": "docs/activities/P00.md",
+      "bytes": 15330,
+      "sha256": "bb2301ecf7205bb59d70f804e3fee811e6072c0f74834c7c851c0701c370dfc3"
+    },
+    {
+      "path": "docs/activities/P01.md",
+      "bytes": 142870,
+      "sha256": "02eccc2be0e25347d25448e1146109ba12fd2a1b47abde5b97caa634c1416302"
+    },
+    {
+      "path": "docs/activities/P02.md",
+      "bytes": 19967,
+      "sha256": "a46c762ae397d130ef80d91d72aaab3ae4be66a3ddb394666f74d70f192d8861"
+    },
+    {
+      "path": "docs/activities/P03.md",
+      "bytes": 54971,
+      "sha256": "6d0e54f0d4b8e2122803fb8a3c2546cb09519186953cfc48ebddbc84db385a20"
+    },
+    {
+      "path": "docs/activities/P04.md",
+      "bytes": 94206,
+      "sha256": "27d0d20dde1a9facec7b857122dd5b0fa6ca5231e00f9079edf5788958d00300"
+    },
+    {
+      "path": "docs/activities/P05.md",
+      "bytes": 81263,
+      "sha256": "5e3eb65188dfdebd91ba5bf215e28fcba3c9f95e90b860e61e084983ccca6c7b"
+    },
+    {
+      "path": "docs/activities/P06.md",
+      "bytes": 71677,
+      "sha256": "f57fd904847065de595aef9704b4b3ff46d6ddc928a94893bb0d0dcb27d4f99d"
+    },
+    {
+      "path": "docs/activities/P07.md",
+      "bytes": 84641,
+      "sha256": "c29c411a317b84fafafd051e0b5c44da7c4957893109b38f4ff56138c5f74529"
+    },
+    {
+      "path": "docs/activities/P08.md",
+      "bytes": 65778,
+      "sha256": "017f24af767b1b72f672a284a7713d31093a8daaa450c24e63123b045c7d799e"
+    },
+    {
+      "path": "docs/activities/P09.md",
+      "bytes": 27935,
+      "sha256": "e21f838ddfa789d77d306ffd6a14452c9f50f369ad4162a5eb8437588bed51c5"
+    },
+    {
+      "path": "docs/activities/P10.md",
+      "bytes": 70559,
+      "sha256": "4c9fe241c55d2f59715d1d4b9e58ff48f8ae6d6f6ca6684dbbbbd688717c7dd8"
+    },
+    {
+      "path": "docs/activities/P11.md",
+      "bytes": 30104,
+      "sha256": "ca67c0a191d567bfa77948c14e32fe4ca81b7fe368912a6e982993251aec609e"
+    },
+    {
+      "path": "docs/activity-plan-counts.json",
+      "bytes": 335,
+      "sha256": "3c6f79dbdef1da6c382ae3fed7afabab30570c62b0e19a22c2acbc46ce495b99"
+    },
+    {
+      "path": "docs/activity_plan_validation.md",
+      "bytes": 2676,
+      "sha256": "ef31eb51381687e623bd8e9344db679ddc80138b36cf279aad63912bfcc5b0b0"
+    },
+    {
+      "path": "docs/baseline/soccer_app_foundation_plan.md",
+      "bytes": 59162,
+      "sha256": "2157fc40d5b4e51648fc8597237275b4e8545deb3c95153469e4f90d3f77d78c"
+    },
+    {
+      "path": "docs/baseline/soccer_club_parent_and_coach_administration.md",
+      "bytes": 25471,
+      "sha256": "e9ef75d98fb78e1d0d7f2ca206c2e6f40a03fca9fa1dc8c2741c9881b6481b6c"
+    },
+    {
+      "path": "docs/baseline/soccer_delivery_backlog.md",
+      "bytes": 33074,
+      "sha256": "5463011ff1176d52a03b3f29865a149c10f7e4e78e76a4d9af381daea5a971b3"
+    },
+    {
+      "path": "docs/baseline/soccer_end_to_end_platform_and_business_plan.md",
+      "bytes": 53728,
+      "sha256": "08c6a47e56f12f665dd9a9e35370d3a2f3c5f3ad40e8cab175ee644d39ee7231"
+    },
+    {
+      "path": "docs/baseline/soccer_end_to_end_security_and_gap_review.md",
+      "bytes": 39567,
+      "sha256": "6c108250716b9d4f0a57d927d55e3486969592623bf202c70fc06114fcd21728"
+    },
+    {
+      "path": "docs/baseline/soccer_pilot_and_design_pack.md",
+      "bytes": 63399,
+      "sha256": "74f5ddb282fdec235f9935e70a761dd2bd727bac676e20400878418ca2ce5ed2"
+    },
+    {
+      "path": "docs/baseline/soccer_sdlc_security_and_agent_delivery_review.md",
+      "bytes": 50849,
+      "sha256": "6178d7a054af8e4220d2ad99ff0f6e3e8c389ae15e105ca2d39f3e1cff3f38cd"
+    },
+    {
+      "path": "docs/soccer_acceptance_evidence_register.json",
+      "bytes": 354143,
+      "sha256": "46c6da0f73879da6b0ad15633e50012968b3d9ccd3bc1e1212c0f0d7b6afae3c"
+    },
+    {
+      "path": "docs/soccer_agent_activity_manifest.json",
+      "bytes": 1080530,
+      "sha256": "d72bbb9bc084c7d0e9560a9565b60efef689680654a65e10045f1698578b810f"
+    },
+    {
+      "path": "docs/soccer_agent_activity_plan.md",
+      "bytes": 9706,
+      "sha256": "ea8ab8e7af7ccc651a8f62d3d518ac1f1256a74bde37d62cba7abd4a5dac0578"
+    },
+    {
+      "path": "docs/soccer_agent_activity_tasks.csv",
+      "bytes": 179057,
+      "sha256": "e1d00fda583eb7f7c9b73bcdf5cb21ae80dac4c6bdc633f4bfd199be8a1e0f87"
+    },
+    {
+      "path": "docs/soccer_agent_execution_playbook.md",
+      "bytes": 18454,
+      "sha256": "44a7dd406ceda4769fa0759d4865f3858e6db22db508298726fe6e91b0813015"
+    },
+    {
+      "path": "docs/soccer_delivery_backlog.md",
+      "bytes": 552713,
+      "sha256": "dca1c45fc1da03f4c18c454f5f56577d578a8f01b3d926201378488f88496681"
+    },
+    {
+      "path": "docs/soccer_delivery_master_plan.md",
+      "bytes": 38412,
+      "sha256": "c9a9576825efc64cf8b5d72537c748e5193d6f10b767295c14d20e66789c74dd"
+    },
+    {
+      "path": "docs/soccer_feature_traceability.md",
+      "bytes": 24020,
+      "sha256": "b98230ede39fcd075f417415198c3b1d916251ecaf4af24882c8f92caa06b0d1"
+    },
+    {
+      "path": "docs/soccer_human_action_playbook.md",
+      "bytes": 16163,
+      "sha256": "a0dde6fdcb94a730b1ef984044ebbf24e5f41b82ffa7158cb59b9cc626274342"
+    },
+    {
+      "path": "docs/soccer_linear_import.csv",
+      "bytes": 572731,
+      "sha256": "5f2d3f88e3d6f73e36dfe2253643ef5276e76bec1e83f7e4a96bb86215301cf5"
+    },
+    {
+      "path": "docs/soccer_linear_manifest.json",
+      "bytes": 1195085,
+      "sha256": "621558a326f5a1e7bbd1da70742ff1da7d8aef5e89ff7427c5c1f438031f45c6"
+    },
+    {
+      "path": "docs/soccer_linear_remaining.csv",
+      "bytes": 562481,
+      "sha256": "dbc5599d763c5480cc28c5b19402095e2ccf0bca35a820d873c804e430b09d7b"
+    },
+    {
+      "path": "docs/soccer_linear_setup_and_import.md",
+      "bytes": 12154,
+      "sha256": "1fbf9c3b2cb64ce7735d30a06b32591b46d8dd4da5ae6d058204251bcb0fb4e4"
+    },
+    {
+      "path": "docs/soccer_linear_smoke.csv",
+      "bytes": 10474,
+      "sha256": "46110d572ec8866f294959aa9d22c03beb6e4b5e75766045854ab6b7fea0e5e4"
+    },
+    {
+      "path": "docs/soccer_market_gap_analysis.md",
+      "bytes": 45073,
+      "sha256": "4f8eb44969f35cf2cdf60d573df01eb21a6c78c50f57369eeede1a2ca55a7076"
+    },
+    {
+      "path": "docs/soccer_product_wishlist.md",
+      "bytes": 7386,
+      "sha256": "a7a8d457fd333d0af10b476f77bd93279bc3d5035637fdc04746fa3d4e4e82d3"
+    },
+    {
+      "path": "docs/source_manifest.json",
+      "bytes": 2260,
+      "sha256": "12e511589f8ab7fc61ef729eccdf01f8045fa9c1065a2752812b9df80fc9c4b8"
+    },
+    {
+      "path": "docs/validation_report.md",
+      "bytes": 3238,
+      "sha256": "a62033ff1322dc0d5fd4e00670868c80f075cb26e14db523632863022c24c6ad"
+    },
+    {
+      "path": "financial/soccer_subscription_and_cost_model.xlsx",
+      "bytes": 38431,
+      "sha256": "b5e823043cff7014d1af27ae7c2808994f7571253fdc786601962cd253cb1ed2"
+    },
+    {
+      "path": "tools/activity-config.cjs",
+      "bytes": 16183,
+      "sha256": "1f5c84047795a963eaaff41a297eae6a804bd19c0f83b2b1a041c9029edce1fc"
+    },
+    {
+      "path": "tools/activity-slices.cjs",
+      "bytes": 44972,
+      "sha256": "23fc7bcc944b2cf67e838b0eecdcbebc43ff1a322ce141c6b4bb3fa289b833d9"
+    },
+    {
+      "path": "tools/build-activity-plan.cjs",
+      "bytes": 32061,
+      "sha256": "92daeeeffac6e59c5584cb28d5c84109c970e8521f072c814969565505d93228"
+    },
+    {
+      "path": "tools/validate-activity-plan.cjs",
+      "bytes": 14781,
+      "sha256": "4bb8a985cbbc3a3aaddbcfb668911877e335e1f9288b33bdd86cce411716c667"
+    }
   ],
   "revised_on": "2026-09-08",
   "priority_reconciliation_scope": "Prepared local task/CSV/manifest files only; no live Linear import",

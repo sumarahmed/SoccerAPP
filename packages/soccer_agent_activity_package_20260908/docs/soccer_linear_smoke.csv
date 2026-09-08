@@ -1,0 +1,110 @@
+"Id","Team","Title","Description","Status","Estimate","Priority","Project","Creator","Assignee","Labels","Cycle Number","Cycle Name","Cycle Start","Cycle End","Created","Updated","Started","Completed","Canceled","Archived"
+"SP-001","SoccerTrainingApp","[SP-001] Resolve launch and account assumptions","Phase: P00 — Definition and accountable ownership | Gate: G0 | Type: Human action | Execution: Human | Status: Backlog
+
+Accountable owner: Founder/product owner. Reviewer: Founder / specialist. Suggested agent: Business analysis agent. Actual identities remain unassigned.
+
+Parent: None. Predecessors: None. Parent completion includes children; children never wait for their own parent solely because of containment.
+
+### Goal and scope
+
+Decision log names first market/language, initial pilot age representation, solo/assisted expectations, adult account treatment, and the confirmed two recording modes
+
+### Human inputs and decisions
+
+The accountable Founder/product owner supplies missing decisions and approves the specific outcome: Resolve launch and account assumptions. Resolve any specialist sign-off with the actual specialist; preserve the original acceptance below.
+
+### Activity tasks and goals
+
+- **ACT-SP-001-01 — Prepare review packet: Resolve launch and account assumptions** (Agent): Assemble source evidence, options, gaps and the decision needed for: Decision log names first market/language, initial pilot age representation, solo/assisted expectations, adult account treatment, and the confirmed two recording modes Deliver: Review-ready SP-001 packet with source versions, open decisions and acceptance checklist
+- **ACT-SP-001-02 — Complete human action: Resolve launch and account assumptions** (Human): The accountable Founder/product owner supplies missing decisions and approves the specific outcome: Resolve launch and account assumptions. Resolve any specialist sign-off with the actual specialist; preserve the original acceptance below. Confirm the outcome against the original source acceptance; record approve/revise/stop with actual evidence. Deliver: Dated SP-001 decision and any actual specialist/participant work required by its scope
+
+Full inputs, predecessors, evidence and run fields: [P00 activities](activities/P00.md). Machine record: soccer_agent_activity_manifest.json.
+
+### Acceptance and evidence
+
+- [ ] AC-SP-001-01: Decision log names first market/language, initial pilot age representation, solo/assisted expectations, adult account treatment, and the confirmed two recording modes
+
+Attach exact artifact/build/config/content version, checks actually run and named devices where applicable. A verification activity submits evidence; the designated acceptance owner records Done.
+
+### Assignment boundary
+
+Read: baseline/soccer_end_to_end_platform_and_business_plan.md; soccer_agent_execution_playbook.md; soccer_feature_traceability.md. Proposed areas: docs/business/**. These logical paths are not existing source folders. Set actual target, paths, fixtures, reviewer and budget before Ready; a 90-minute checkpoint and two attempts are proposed sizing defaults, not estimates or approved spend. Unrelated features, live customer data, real charges, production publishing and changing release protections are outside an ordinary build assignment. Human-only decisions remain with their recorded owners.
+
+### Traceability
+
+Features: FT-01. Screens: Task-specific. Risks: S17. Reviews: Task-specific. Priorities: Baseline. All evidence remains pending unless the evidence register records an actual accepted result.
+","Backlog","","High","G0 — Definition and delivery setup","","","phase-P00, gate-G0, area-business, mode-human, risk-standard, kind-human-action, required-p0","","","","","","","","","",""
+"SP-003","SoccerTrainingApp","[SP-003] Set agent scope and evidence policy","Phase: P00 — Definition and accountable ownership | Gate: G0 | Type: Task | Execution: Hybrid | Status: Backlog
+
+Accountable owner: Technical lead/founder. Reviewer: Delivery owner. Suggested agent: Delivery agent. Actual identities remain unassigned.
+
+Parent: None. Predecessors: None. Parent completion includes children; children never wait for their own parent solely because of containment.
+
+### Goal and scope
+
+Allowed tools/data/actions, explicit repository selection, risk routing, time/spend limits, stop/retry behavior, independent review, and Done rules; S09–S12 covered
+
+### Human inputs and decisions
+
+The accountable Technical lead/founder supplies missing decisions and approves the specific outcome: Set agent scope and evidence policy. Resolve any specialist sign-off with the actual specialist; preserve the original acceptance below.
+
+### Activity tasks and goals
+
+- **ACT-SP-003-01 — Define agent assignment boundaries** (Agent): Specify allowed tools, data, paths, environments, authority, spend/time ceilings and stop/retry behavior Deliver: Run-contract policy with unresolved owner decisions
+- **ACT-SP-003-02 — Define evidence and review routing** (Agent): Map standard/security-sensitive work to reviewers and current-version evidence required for Ready, Review and Done Deliver: Review matrix, handoff template and failure-routing examples
+- **ACT-SP-003-03 — Verify and hand off: Set agent scope and evidence policy** (Agent): Demonstrate every source acceptance condition against the resulting artifact and submit evidence to Delivery owner. Deliver: SP-003 acceptance evidence bundle: criterion outcomes, exact versions, commands/checks, device results where required and remaining limits
+
+Full inputs, predecessors, evidence and run fields: [P00 activities](activities/P00.md). Machine record: soccer_agent_activity_manifest.json.
+
+### Acceptance and evidence
+
+- [ ] AC-SP-003-01: Allowed tools/data/actions, explicit repository selection, risk routing, time/spend limits, stop/retry behavior, independent review, and Done rules
+- [ ] AC-SP-003-02: S09–S12 covered
+
+Attach exact artifact/build/config/content version, checks actually run and named devices where applicable. A verification activity submits evidence; the designated acceptance owner records Done.
+
+### Assignment boundary
+
+Read: baseline/soccer_sdlc_security_and_agent_delivery_review.md, baseline/soccer_end_to_end_security_and_gap_review.md; soccer_agent_execution_playbook.md; soccer_feature_traceability.md. Proposed areas: docs/delivery/**. These logical paths are not existing source folders. Set actual target, paths, fixtures, reviewer and budget before Ready; a 90-minute checkpoint and two attempts are proposed sizing defaults, not estimates or approved spend. Unrelated features, live customer data, real charges, production publishing and changing release protections are outside an ordinary build assignment. Human-only decisions remain with their recorded owners.
+
+### Traceability
+
+Features: FT-27. Screens: Task-specific. Risks: S10. Reviews: Task-specific. Priorities: Baseline. All evidence remains pending unless the evidence register records an actual accepted result.
+","Backlog","","High","G0 — Definition and delivery setup","","","phase-P00, gate-G0, area-delivery, mode-hybrid, risk-standard, kind-task, required-p0","","","","","","","","","",""
+"SP-075","SoccerTrainingApp","[SP-075] Name owners and fund discovery work","Phase: P00 — Definition and accountable ownership | Gate: G0 | Type: Human action | Execution: Human | Status: Backlog
+
+Accountable owner: Delivery owner. Reviewer: Delivery owner. Suggested agent: Delivery agent. Actual identities remain unassigned.
+
+Parent: SP-004. Predecessors: SP-001. Parent completion includes children; children never wait for their own parent solely because of containment.
+
+### Goal and scope
+
+Identify accountable and backup people for product, technology, coaching, safeguarding, privacy, operations and release; obtain scoped discovery estimates
+
+### Human inputs and decisions
+
+Founder accepts commitments and fills vacancies before affected work starts
+
+### Activity tasks and goals
+
+- **ACT-SP-075-01 — Prepare review packet: Name owners and fund discovery work** (Agent): Assemble source evidence, options, gaps and the decision needed for: Identify accountable and backup people for product, technology, coaching, safeguarding, privacy, operations and release; obtain scoped discovery estimates Deliver: Review-ready SP-075 packet with source versions, open decisions and acceptance checklist
+- **ACT-SP-075-02 — Complete human action: Name owners and fund discovery work** (Human): Founder accepts commitments and fills vacancies before affected work starts Confirm the outcome against the original source acceptance; record approve/revise/stop with actual evidence. Deliver: Dated SP-075 decision and any actual specialist/participant work required by its scope
+
+Full inputs, predecessors, evidence and run fields: [P00 activities](activities/P00.md). Machine record: soccer_agent_activity_manifest.json.
+
+### Acceptance and evidence
+
+- [ ] AC-SP-075-01: Each role has an accepted named owner or explicit vacancy
+- [ ] AC-SP-075-02: spending and external-contact authority recorded
+- [ ] AC-SP-075-03: no fictional second approver
+
+Attach exact artifact/build/config/content version, checks actually run and named devices where applicable. A verification activity submits evidence; the designated acceptance owner records Done.
+
+### Assignment boundary
+
+Read: baseline/soccer_sdlc_security_and_agent_delivery_review.md, baseline/soccer_end_to_end_security_and_gap_review.md; soccer_agent_execution_playbook.md; soccer_feature_traceability.md. Proposed areas: docs/delivery/**. These logical paths are not existing source folders. Set actual target, paths, fixtures, reviewer and budget before Ready; a 90-minute checkpoint and two attempts are proposed sizing defaults, not estimates or approved spend. Unrelated features, live customer data, real charges, production publishing and changing release protections are outside an ordinary build assignment. Human-only decisions remain with their recorded owners.
+
+### Traceability
+
+Features: FT-01. Screens: Task-specific. Risks: Task-specific. Reviews: Task-specific. Priorities: Baseline. All evidence remains pending unless the evidence register records an actual accepted result.
+","Backlog","","High","G0 — Definition and delivery setup","","","phase-P00, gate-G0, area-delivery, mode-human, risk-standard, kind-human-action, required-p0","","","","","","","","","",""
