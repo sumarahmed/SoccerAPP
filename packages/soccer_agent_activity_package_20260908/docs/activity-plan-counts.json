@@ -1,0 +1,15 @@
+{
+  "source_tasks": 165,
+  "source_containers": 42,
+  "source_leaves": 123,
+  "activities": 390,
+  "agent_activities": 327,
+  "human_actions": 21,
+  "human_rollups": 42,
+  "planned_acceptance_criteria": 613,
+  "source_dependency_edges": 642,
+  "parent_links": 91,
+  "activity_dependency_edges": 867,
+  "smoke": 3,
+  "remaining": 162
+}
