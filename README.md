@@ -19,6 +19,8 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 ## Documentation
 
+**Accepted decision:** [SP-001 launch and account assumptions](docs/decisions/SP-001-launch-and-account-assumptions.md) version 1.0 was accepted by the founder/product owner on 10 September 2026. It confirms Australia/English, the five-band pilot representation target, solo/assisted expectations, adult-account treatment and both recording modes. No participant recruitment, specialist compliance approval or implementation evidence is claimed.
+
 **Next development step:** the [detailed foundation milestones](docs/foundation/development_foundation_milestones.md), added 10 September 2026, define 11 milestones and 33 work items for tooling, libraries, CI, contracts, local services, runnable tests, agent execution and device/provider feasibility. Read the [library baseline](docs/foundation/technology_and_libraries.md), [36 test specifications](docs/foundation/foundation_test_catalog.md) and [review report](docs/foundation/foundation_review.md). These are planned implementation tasks; the app stack and executable app tests are not yet installed.
 
 Start with the [agent activity plan](docs/delivery/soccer_agent_activity_plan.md): **390 activities across twelve phases**, including **327 agent activities**, **21 human actions/decisions** and **42 human acceptance rollups**. Every activity has a goal, deliverable, executor role, predecessors and completion checks; the plan includes the first assignment batch.
@@ -29,6 +31,7 @@ The [delivery master plan](docs/product/soccer_delivery_master_plan.md) and [det
 - `docs/design/` — UX, recording, theme and export requirements.
 - `docs/architecture/` — platform architecture and data boundaries.
 - `docs/security/` — identity, media, privacy and safeguarding requirements.
+- `docs/decisions/` — dated, attributable human decisions and their stated limits.
 - `docs/delivery/` — full activity cards, backlog, traceability, human/agent execution model and validation reports.
 - `linear/` — tracker import guidance and links to the exact import artifacts.
 - `packages/soccer_agent_activity_package_20260908/` — complete authoritative planning package, including structured manifests, CSVs, original specifications, workbook and design assets.
@@ -51,4 +54,4 @@ Run `node tools/validate-docs.cjs` from the repository root. This checks the sou
 
 ## Current status
 
-Documentation synchronized 8 September 2026; development foundation plan added 10 September 2026. Planning/design stage: all source task and activity records remain Backlog and foundation milestones remain proposed. No production application, live database, customer billing setup, live Linear import or dispatched agent run is represented by this documentation update. Human approval, specialist review and implementation evidence remain required at the relevant delivery gates.
+Documentation synchronized 8 September 2026; development foundation plan and the first attributable decision were added 10 September 2026. SP-001 is accepted through its dated decision artifact. The frozen planning-package manifests still retain their original Backlog/Not started state, and foundation milestones remain proposed. No production application, live database, customer billing setup, live Linear import or dispatched agent run is represented by this documentation update. Specialist review and implementation evidence remain required at the relevant downstream delivery gates.
