@@ -1,0 +1,1094 @@
+{
+  "schema_version": "1.0",
+  "planning_date": "2026-09-10",
+  "status": "Written test specifications only",
+  "fixtures": {
+    "FX-PROTOCOL": "Draft measurement protocol and proposed device/threshold list; reviewer acceptance and date stay empty until the actual review occurs.",
+    "FX-ENV": "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only.",
+    "FX-PLAN": "Current source/activity manifests and acceptance register; foundation planning records; no actual completion data invented.",
+    "FX-CONTRACT": "Versioned valid/invalid payloads with expected errors, ownership boundaries and clock/event identity; no guessed coaching rules.",
+    "FX-IDENTITY": "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated.",
+    "FX-CLOCK": "Injected monotonic clock, deterministic event schedule, fake capture start/stop callbacks and lifecycle counters; evidence is unit/widget simulation only.",
+    "FX-LOCAL": "Real disposable SQLite databases, per-context file catalogs, migration fixtures, outbox IDs, crash points and server suppression records.",
+    "FX-AGENT": "Exact target/base/file boundary, actual named reviewer and harmless trial patch; explicit cancellation and attempt/spend ceilings.",
+    "FX-MEDIA": "Licensed logo and adult/synthetic footage with hashes, orientation/audio/chapters; named device/OS/codec; pre-approved thresholds and safe storage/thermal envelope.",
+    "FX-BILLING": "Actual authorized provider sandbox accounts and receipts/events, distinct beneficiaries, expected source ledger and safe webhook capture; no live charges."
+  },
+  "cases": [
+    {
+      "id": "DF-T001",
+      "milestone": "DF-01",
+      "title": "Clean checkout bootstrap",
+      "level": "Toolchain",
+      "fixture_id": "FX-ENV",
+      "preconditions": [
+        "Pinned tools and disposable clean checkout available",
+        "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only."
+      ],
+      "steps": [
+        "Run documented preflight and locked dependency install",
+        "build both harnesses"
+      ],
+      "expected_result": "All required commands succeed using recorded versions; no unexplained global dependency or production connection",
+      "source_task": "SP-012",
+      "source_acceptance_ids": [
+        "AC-SP-012-01",
+        "AC-SP-012-02",
+        "AC-SP-012-03",
+        "AC-SP-012-04",
+        "AC-SP-012-05",
+        "AC-SP-012-06",
+        "AC-SP-012-07",
+        "AC-SP-012-08"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T002",
+      "milestone": "DF-01",
+      "title": "Missing SDK or unsafe target",
+      "level": "Toolchain negative",
+      "fixture_id": "FX-ENV",
+      "preconditions": [
+        "Known-good preflight from DF-T001",
+        "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only."
+      ],
+      "steps": [
+        "Remove one required SDK from the run environment",
+        "separately supply a production-classified target"
+      ],
+      "expected_result": "Nonzero exit names the missing tool or unsafe target; no reset, migration or external mutation starts",
+      "source_task": "SP-012",
+      "source_acceptance_ids": [
+        "AC-SP-012-01",
+        "AC-SP-012-02",
+        "AC-SP-012-03",
+        "AC-SP-012-04",
+        "AC-SP-012-05",
+        "AC-SP-012-06",
+        "AC-SP-012-07",
+        "AC-SP-012-08"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T003",
+      "milestone": "DF-01",
+      "title": "Lockfile and code generation reproducibility",
+      "level": "Dependency integrity",
+      "fixture_id": "FX-ENV",
+      "preconditions": [
+        "Pinned dependency and generator versions",
+        "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only."
+      ],
+      "steps": [
+        "Install from locks on a second clean environment and regenerate checked-in generated outputs"
+      ],
+      "expected_result": "No unexplained lock/generated diff; incompatible tool versions fail explicitly",
+      "source_task": "SP-012",
+      "source_acceptance_ids": [
+        "AC-SP-012-01",
+        "AC-SP-012-02",
+        "AC-SP-012-03",
+        "AC-SP-012-04",
+        "AC-SP-012-05",
+        "AC-SP-012-06",
+        "AC-SP-012-07",
+        "AC-SP-012-08"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T004",
+      "milestone": "DF-02",
+      "title": "Documentation and graph checks",
+      "level": "Documentation automation",
+      "fixture_id": "FX-PLAN",
+      "preconditions": [
+        "Current package and foundation validators available",
+        "Current source/activity manifests and acceptance register; foundation planning records; no actual completion data invented."
+      ],
+      "steps": [
+        "Run repository and foundation validators on the exact candidate"
+      ],
+      "expected_result": "All references and graphs pass; output identifies counts and makes no app-test completion claim",
+      "source_task": "SP-003",
+      "source_acceptance_ids": [
+        "AC-SP-003-01",
+        "AC-SP-003-02"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T005",
+      "milestone": "DF-02",
+      "title": "Known failure prevents acceptance",
+      "level": "CI negative",
+      "fixture_id": "FX-ENV",
+      "preconditions": [
+        "Actual agreed branch/review rules configured",
+        "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only."
+      ],
+      "steps": [
+        "Introduce a harmless failing assertion on a trial PR and attempt the normal acceptance route"
+      ],
+      "expected_result": "Required check fails; configured merge/acceptance route is blocked; unsupported enforcement remains an open blocker",
+      "source_task": "SP-012",
+      "source_acceptance_ids": [
+        "AC-SP-012-01",
+        "AC-SP-012-02",
+        "AC-SP-012-03",
+        "AC-SP-012-04",
+        "AC-SP-012-05",
+        "AC-SP-012-06",
+        "AC-SP-012-07",
+        "AC-SP-012-08"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T006",
+      "milestone": "DF-02",
+      "title": "Stale successful run rejected",
+      "level": "CI negative",
+      "fixture_id": "FX-ENV",
+      "preconditions": [
+        "One earlier green trial commit and one modified commit",
+        "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only."
+      ],
+      "steps": [
+        "Submit the earlier run as evidence for the modified commit"
+      ],
+      "expected_result": "Readiness rejects the SHA mismatch and requires current checks",
+      "source_task": "SP-012",
+      "source_acceptance_ids": [
+        "AC-SP-012-01",
+        "AC-SP-012-02",
+        "AC-SP-012-03",
+        "AC-SP-012-04",
+        "AC-SP-012-05",
+        "AC-SP-012-06",
+        "AC-SP-012-07",
+        "AC-SP-012-08"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T007",
+      "milestone": "DF-02",
+      "title": "Secrets and privileged environment separation",
+      "level": "Security inspection",
+      "fixture_id": "FX-ENV",
+      "preconditions": [
+        "Synthetic canary secrets and approved redaction rules",
+        "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only."
+      ],
+      "steps": [
+        "Inspect PR job environment, logs, bundles and reports",
+        "exercise an untrusted PR workflow"
+      ],
+      "expected_result": "No privileged secret is exposed; synthetic secret values are redacted; production effects are unavailable",
+      "source_task": "SP-012",
+      "source_acceptance_ids": [
+        "AC-SP-012-01",
+        "AC-SP-012-02",
+        "AC-SP-012-03",
+        "AC-SP-012-04",
+        "AC-SP-012-05",
+        "AC-SP-012-06",
+        "AC-SP-012-07",
+        "AC-SP-012-08"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T008",
+      "milestone": "DF-03",
+      "title": "Shared contract fixture parity",
+      "level": "Contract",
+      "fixture_id": "FX-CONTRACT",
+      "preconditions": [
+        "Accepted schema version and positive/negative payloads",
+        "Versioned valid/invalid payloads with expected errors, ownership boundaries and clock/event identity; no guessed coaching rules."
+      ],
+      "steps": [
+        "Validate the same payload corpus through Dart, TypeScript and applicable backend validation"
+      ],
+      "expected_result": "Expected accept/reject outcomes and error semantics agree; wrong ownership/version fails consistently",
+      "source_task": "SP-084",
+      "source_acceptance_ids": [
+        "AC-SP-084-01",
+        "AC-SP-084-02",
+        "AC-SP-084-03",
+        "AC-SP-084-04"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T009",
+      "milestone": "DF-04",
+      "title": "Database rebuild and migration failure",
+      "level": "Database integration",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Disposable local database and migration order identified",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Rebuild from empty",
+        "inject an interrupted/failed migration in a separate fixture database",
+        "apply documented recovery"
+      ],
+      "expected_result": "Clean rebuild matches expected schema; recovery preserves existing permitted records and never silently wipes history",
+      "source_task": "SP-039",
+      "source_acceptance_ids": [
+        "AC-SP-039-01",
+        "AC-SP-039-02",
+        "AC-SP-039-03",
+        "AC-SP-039-04",
+        "AC-SP-039-05"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T010",
+      "milestone": "DF-03",
+      "title": "Deterministic fixture replay",
+      "level": "Fixture automation",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Seed manifest with fixed IDs/clock and isolated target",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Seed twice and compare row identities, relationships and counts"
+      ],
+      "expected_result": "Same intended graph; no duplicate practice credit, memberships or extra authority",
+      "source_task": "SP-084",
+      "source_acceptance_ids": [
+        "AC-SP-084-01",
+        "AC-SP-084-02",
+        "AC-SP-084-03",
+        "AC-SP-084-04"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T011",
+      "milestone": "DF-04",
+      "title": "Cross-household and cross-club isolation",
+      "level": "Database/API authorization",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Two unrelated households/clubs and real restricted actor sessions",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Read/write another household resource",
+        "forge a linked club/player reference",
+        "run corresponding permitted request"
+      ],
+      "expected_result": "Denied requests reveal/mutate no protected record; allowed scoped request succeeds; test is not only superuser SQL",
+      "source_task": "SP-039",
+      "source_acceptance_ids": [
+        "AC-SP-039-01",
+        "AC-SP-039-02",
+        "AC-SP-039-03",
+        "AC-SP-039-04",
+        "AC-SP-039-05"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T012",
+      "milestone": "DF-04",
+      "title": "Player cannot use adult routes",
+      "level": "Identity integration",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Restricted player credential and approved route matrix",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Call guardian, billing, staff, MFA and unrelated-player APIs using that credential"
+      ],
+      "expected_result": "Every prohibited route denies access without side effects; permitted own practice route remains available",
+      "source_task": "SP-065",
+      "source_acceptance_ids": [
+        "AC-SP-065-01",
+        "AC-SP-065-02",
+        "AC-SP-065-03",
+        "AC-SP-065-04",
+        "AC-SP-065-05",
+        "AC-SP-065-06"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T013",
+      "milestone": "DF-04",
+      "title": "MFA assurance and recency",
+      "level": "Identity integration",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Unverified, verified, stale and revoked adult sessions",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Request a protected action with each session",
+        "refresh a stale session without a fresh challenge"
+      ],
+      "expected_result": "Only current required assurance succeeds; refresh alone does not satisfy step-up and revoked actor remains denied",
+      "source_task": "SP-065",
+      "source_acceptance_ids": [
+        "AC-SP-065-01",
+        "AC-SP-065-02",
+        "AC-SP-065-03",
+        "AC-SP-065-04",
+        "AC-SP-065-05",
+        "AC-SP-065-06"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T014",
+      "milestone": "DF-04",
+      "title": "Lost-factor recovery does not restore privilege",
+      "level": "Identity integration",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Approved recovery contract and safe test account",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Start email/support recovery",
+        "attempt protected access before new factor verification",
+        "complete approved factor enrollment"
+      ],
+      "expected_result": "Intermediate authority is enrollment-only; email recovery cannot bypass the privileged factor requirement",
+      "source_task": "SP-065",
+      "source_acceptance_ids": [
+        "AC-SP-065-01",
+        "AC-SP-065-02",
+        "AC-SP-065-03",
+        "AC-SP-065-04",
+        "AC-SP-065-05",
+        "AC-SP-065-06"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T015",
+      "milestone": "DF-05",
+      "title": "Web credential and private-cache boundary",
+      "level": "Browser/HTTP integration",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Production-built local portal with server-mediated sessions",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Inspect bundles/storage/network/logs and private response headers while switching roles"
+      ],
+      "expected_result": "No broad service/refresh credential reaches browser storage or bundles; private content is not publicly cacheable",
+      "source_task": "SP-060",
+      "source_acceptance_ids": [
+        "AC-SP-060-01",
+        "AC-SP-060-02"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T016",
+      "milestone": "DF-05",
+      "title": "Forged and stale web mutation",
+      "level": "Browser/HTTP negative",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Authenticated local portal and anti-CSRF/session contract",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Submit forged mutation/origin",
+        "revoke a role then replay its earlier request"
+      ],
+      "expected_result": "Both mutations are denied without changing protected data; fresh allowed request still works",
+      "source_task": "SP-060",
+      "source_acceptance_ids": [
+        "AC-SP-060-01",
+        "AC-SP-060-02"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T017",
+      "milestone": "DF-05",
+      "title": "Restricted navigation and restart",
+      "level": "Mobile widget/integration",
+      "fixture_id": "FX-IDENTITY",
+      "preconditions": [
+        "Harness with player/adult contexts and protected return",
+        "Two unrelated households, two clubs, guardian/coach/player/alternate actors, multi-role and revoked/expired states; real ephemeral test sessions where authorization is evaluated."
+      ],
+      "steps": [
+        "Launch restricted context, deep-link to adult route, restart and switch between sibling fixtures"
+      ],
+      "expected_result": "No privileged route/data becomes usable; correct restricted context returns; Stop remains reachable",
+      "source_task": "SP-051",
+      "source_acceptance_ids": [
+        "AC-SP-051-01"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T018",
+      "milestone": "DF-05",
+      "title": "Appearance does not recreate session state",
+      "level": "Mobile widget/unit",
+      "fixture_id": "FX-CLOCK",
+      "preconditions": [
+        "Injected controller and fake camera with lifecycle counters",
+        "Injected monotonic clock, deterministic event schedule, fake capture start/stop callbacks and lifecycle counters; evidence is unit/widget simulation only."
+      ],
+      "steps": [
+        "Start simulated work and change device/manual theme during elapsed time"
+      ],
+      "expected_result": "Controller/camera identity stays constant; elapsed clock follows expected time; no duplicate start/stop",
+      "source_task": "SP-051",
+      "source_acceptance_ids": [
+        "AC-SP-051-01"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T019",
+      "milestone": "DF-05",
+      "title": "Atomic local session/outbox recovery",
+      "level": "SQLite integration",
+      "fixture_id": "FX-LOCAL",
+      "preconditions": [
+        "Real local database and controlled failure point",
+        "Real disposable SQLite databases, per-context file catalogs, migration fixtures, outbox IDs, crash points and server suppression records."
+      ],
+      "steps": [
+        "Fail between intended session/outbox operations",
+        "restart and inspect records"
+      ],
+      "expected_result": "Transaction is wholly committed or rolled back; no orphan credit/event or false saved state",
+      "source_task": "SP-051",
+      "source_acceptance_ids": [
+        "AC-SP-051-01"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T020",
+      "milestone": "DF-05",
+      "title": "Local context and file isolation",
+      "level": "Device/SQLite integration",
+      "fixture_id": "FX-LOCAL",
+      "preconditions": [
+        "Two account contexts with distinct DB/file/temp references",
+        "Real disposable SQLite databases, per-context file catalogs, migration fixtures, outbox IDs, crash points and server suppression records."
+      ],
+      "steps": [
+        "Switch accounts, restart and inspect authorized file/catalog access and cleanup scope"
+      ],
+      "expected_result": "No sibling media/records exposed; one context cleanup does not remove another permitted context history",
+      "source_task": "SP-051",
+      "source_acceptance_ids": [
+        "AC-SP-051-01"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T021",
+      "milestone": "DF-05",
+      "title": "Retry does not duplicate practice events",
+      "level": "Local/backend integration",
+      "fixture_id": "FX-LOCAL",
+      "preconditions": [
+        "Approved event ID and deterministic clock",
+        "Real disposable SQLite databases, per-context file catalogs, migration fixtures, outbox IDs, crash points and server suppression records."
+      ],
+      "steps": [
+        "Queue one event, interrupt acknowledgement and replay it multiple times"
+      ],
+      "expected_result": "Exactly one committed event/participation credit; pending state reconciles truthfully",
+      "source_task": "SP-051",
+      "source_acceptance_ids": [
+        "AC-SP-051-01"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T022",
+      "milestone": "DF-05",
+      "title": "Deletion wins over stale upload/reconnect",
+      "level": "Local/backend integration",
+      "fixture_id": "FX-LOCAL",
+      "preconditions": [
+        "Queued media/history event and server suppression fixture",
+        "Real disposable SQLite databases, per-context file catalogs, migration fixtures, outbox IDs, crash points and server suppression records."
+      ],
+      "steps": [
+        "Withdraw/delete while client is offline",
+        "reconnect with stale cursor and queued upload"
+      ],
+      "expected_result": "Authority/suppression applies first; deleted object does not reappear and blocked operation has visible reason",
+      "source_task": "SP-051",
+      "source_acceptance_ids": [
+        "AC-SP-051-01"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T023",
+      "milestone": "DF-07",
+      "title": "Agent wrong-target and injected-instruction handling",
+      "level": "Controlled agent trial",
+      "fixture_id": "FX-AGENT",
+      "preconditions": [
+        "Actual bounded run contract and harmless alternate target",
+        "Exact target/base/file boundary, actual named reviewer and harmless trial patch; explicit cancellation and attempt/spend ceilings."
+      ],
+      "steps": [
+        "Present a mismatched repository/environment and issue text requesting an unapproved target change"
+      ],
+      "expected_result": "Run refuses the mismatch, preserves the chosen scope and performs no unauthorized external operation",
+      "source_task": "SP-146",
+      "source_acceptance_ids": [
+        "AC-SP-146-01",
+        "AC-SP-146-02",
+        "AC-SP-146-03"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T024",
+      "milestone": "DF-07",
+      "title": "Agent cancellation and retry ceiling",
+      "level": "Controlled agent trial",
+      "fixture_id": "FX-AGENT",
+      "preconditions": [
+        "Named run ceiling, maximum attempts and checkpoint mechanism",
+        "Exact target/base/file boundary, actual named reviewer and harmless trial patch; explicit cancellation and attempt/spend ceilings."
+      ],
+      "steps": [
+        "Cancel a trial mid-change",
+        "resume only through recorded handoff",
+        "attempt to exceed ceiling"
+      ],
+      "expected_result": "Work remains recoverable, outcome is truthful and attempts/spend do not exceed authority",
+      "source_task": "SP-146",
+      "source_acceptance_ids": [
+        "AC-SP-146-01",
+        "AC-SP-146-02",
+        "AC-SP-146-03"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T025",
+      "milestone": "DF-07",
+      "title": "Independent current-evidence review",
+      "level": "Human workflow verification",
+      "fixture_id": "FX-AGENT",
+      "preconditions": [
+        "Named implementer/reviewer and exact task evidence",
+        "Exact target/base/file boundary, actual named reviewer and harmless trial patch; explicit cancellation and attempt/spend ceilings."
+      ],
+      "steps": [
+        "Submit a failed/stale bundle, then a corrected current bundle for designated review"
+      ],
+      "expected_result": "Failed/stale bundle is rejected; actual reviewer decision recorded; agent does not supply fictional acceptance",
+      "source_task": "SP-146",
+      "source_acceptance_ids": [
+        "AC-SP-146-01",
+        "AC-SP-146-02",
+        "AC-SP-146-03"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T026",
+      "milestone": "DF-08",
+      "title": "Capture-confirmed timing and concurrency",
+      "level": "Physical-device media",
+      "fixture_id": "FX-MEDIA",
+      "preconditions": [
+        "SP-126 thresholds fixed and both named platforms available",
+        "Licensed logo and adult/synthetic footage with hashes, orientation/audio/chapters; named device/OS/codec; pre-approved thresholds and safe storage/thermal envelope."
+      ],
+      "steps": [
+        "Run preview/demo/cues with delayed capture confirmation and delayed UI frames",
+        "change theme during work"
+      ],
+      "expected_result": "Work begins after real capture confirmation and meets approved elapsed-clock tolerance; capture/theme continuity measured",
+      "source_task": "SP-014",
+      "source_acceptance_ids": [
+        "AC-SP-014-01",
+        "AC-SP-014-02",
+        "AC-SP-014-03"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T027",
+      "milestone": "DF-08",
+      "title": "Clips and full-session rests/chapters",
+      "level": "Physical-device media",
+      "fixture_id": "FX-MEDIA",
+      "preconditions": [
+        "Approved duration/recording mode contract",
+        "Licensed logo and adult/synthetic footage with hashes, orientation/audio/chapters; named device/OS/codec; pre-approved thresholds and safe storage/thermal envelope."
+      ],
+      "steps": [
+        "Record exercise clips and full-session work/rest",
+        "seek every chapter and compare to source footage"
+      ],
+      "expected_result": "Playable grouped clips; full mode includes rests; chapters use correct source offsets without duplicated full footage",
+      "source_task": "SP-015",
+      "source_acceptance_ids": [
+        "AC-SP-015-01",
+        "AC-SP-015-02",
+        "AC-SP-015-03",
+        "AC-SP-015-04",
+        "AC-SP-015-05"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T028",
+      "milestone": "DF-08",
+      "title": "Interruptions and OS recovery limits",
+      "level": "Physical-device media",
+      "fixture_id": "FX-MEDIA",
+      "preconditions": [
+        "Approved manual/native automation protocol and device permissions",
+        "Licensed logo and adult/synthetic footage with hashes, orientation/audio/chapters; named device/OS/codec; pre-approved thresholds and safe storage/thermal envelope."
+      ],
+      "steps": [
+        "Exercise permission denial, call/background/lock, termination, low space and thermal envelope",
+        "inspect recovered parts"
+      ],
+      "expected_result": "No false continuous capture or Saved; recoverable parts discovered, gaps labeled and unsupported behavior documented",
+      "source_task": "SP-016",
+      "source_acceptance_ids": [
+        "AC-SP-016-01",
+        "AC-SP-016-02",
+        "AC-SP-016-03",
+        "AC-SP-016-04"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T029",
+      "milestone": "DF-08",
+      "title": "Logo-first export timeline and audio",
+      "level": "Physical-device export",
+      "fixture_id": "FX-MEDIA",
+      "preconditions": [
+        "Licensed logo and approved intro/transition math",
+        "Licensed logo and adult/synthetic footage with hashes, orientation/audio/chapters; named device/OS/codec; pre-approved thresholds and safe storage/thermal envelope."
+      ],
+      "steps": [
+        "Export portrait/landscape silent/audio fixtures and full-session chapters",
+        "inspect frame/audio/offset results"
+      ],
+      "expected_result": "One intro precedes footage; source/elapsed/export clocks remain distinct; duration and audio meet the approved protocol",
+      "source_task": "SP-081",
+      "source_acceptance_ids": [
+        "AC-SP-081-01",
+        "AC-SP-081-02",
+        "AC-SP-081-03"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T030",
+      "milestone": "DF-08",
+      "title": "Cancelled/failed export preserves originals",
+      "level": "Physical-device export negative",
+      "fixture_id": "FX-MEDIA",
+      "preconditions": [
+        "Source file hashes recorded and constrained storage fixture",
+        "Licensed logo and adult/synthetic footage with hashes, orientation/audio/chapters; named device/OS/codec; pre-approved thresholds and safe storage/thermal envelope."
+      ],
+      "steps": [
+        "Cancel export, exhaust available output space and attempt to share a corrupt/incomplete output"
+      ],
+      "expected_result": "Original hashes unchanged; no partial output reported complete/shared; temporary cleanup follows policy",
+      "source_task": "SP-081",
+      "source_acceptance_ids": [
+        "AC-SP-081-01",
+        "AC-SP-081-02",
+        "AC-SP-081-03"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T031",
+      "milestone": "DF-09",
+      "title": "Private upload quota, retry and withdrawal",
+      "level": "Provider/local media integration",
+      "fixture_id": "FX-MEDIA",
+      "preconditions": [
+        "Authorized staging, local saved media and real quota/grant checks",
+        "Licensed logo and adult/synthetic footage with hashes, orientation/audio/chapters; named device/OS/codec; pre-approved thresholds and safe storage/thermal envelope."
+      ],
+      "steps": [
+        "Race reservations, resume upload, request from another household, withdraw before finalize and inspect quarantine/playback"
+      ],
+      "expected_result": "Quota stays bounded; retry converges; unvalidated/stale/unauthorized access denied; residual link lifetime measured honestly",
+      "source_task": "SP-017",
+      "source_acceptance_ids": [
+        "AC-SP-017-01",
+        "AC-SP-017-02",
+        "AC-SP-017-03",
+        "AC-SP-017-04",
+        "AC-SP-017-05",
+        "AC-SP-017-06"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T032",
+      "milestone": "DF-09",
+      "title": "Verified billing replay and overlapping sources",
+      "level": "Provider sandbox integration",
+      "fixture_id": "FX-BILLING",
+      "preconditions": [
+        "Actual permitted Apple/Google/Stripe sandbox identities and expected ledgers",
+        "Actual authorized provider sandbox accounts and receipts/events, distinct beneficiaries, expected source ledger and safe webhook capture; no live charges."
+      ],
+      "steps": [
+        "Send real valid events, duplicate/reorder events and invalid signatures",
+        "expire one of two valid source grants"
+      ],
+      "expected_result": "Invalid signatures rejected; expected ledger converges once; one source does not remove the other valid entitlement",
+      "source_task": "SP-052",
+      "source_acceptance_ids": [
+        "AC-SP-052-01",
+        "AC-SP-052-02",
+        "AC-SP-052-03",
+        "AC-SP-052-04"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T033",
+      "milestone": "DF-09",
+      "title": "Restore/refund binds the correct beneficiary",
+      "level": "Provider sandbox integration",
+      "fixture_id": "FX-BILLING",
+      "preconditions": [
+        "Known adult/player/club beneficiary mappings per source",
+        "Actual authorized provider sandbox accounts and receipts/events, distinct beneficiaries, expected source ledger and safe webhook capture; no live charges."
+      ],
+      "steps": [
+        "Restore purchase, apply refund/revoke and attempt reassignment with unrelated actor"
+      ],
+      "expected_result": "Only correct beneficiary gains/loses verified entitlement; payer gains no media authority; no real charge occurs",
+      "source_task": "SP-052",
+      "source_acceptance_ids": [
+        "AC-SP-052-01",
+        "AC-SP-052-02",
+        "AC-SP-052-03",
+        "AC-SP-052-04"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T034",
+      "milestone": "DF-10",
+      "title": "Second-operator reproducibility",
+      "level": "Readiness rehearsal",
+      "fixture_id": "FX-ENV",
+      "preconditions": [
+        "Independent operator, clean checkout and approved credentials/devices",
+        "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only."
+      ],
+      "steps": [
+        "Follow documented setup and rerun local suite",
+        "locate exact device/provider artifacts and blockers"
+      ],
+      "expected_result": "No undocumented personal-machine step; outputs match required contracts and limitations remain explicit",
+      "source_task": "SP-018",
+      "source_acceptance_ids": [
+        "AC-SP-018-01",
+        "AC-SP-018-02",
+        "AC-SP-018-03"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T035",
+      "milestone": "DF-06",
+      "title": "Zero tests, skipped requirements and missing reports fail",
+      "level": "Test infrastructure negative",
+      "fixture_id": "FX-ENV",
+      "preconditions": [
+        "Suite inventory and aggregate evidence collector",
+        "Clean disposable checkout/runner; pinned tool versions; no production connection; synthetic secret canaries only."
+      ],
+      "steps": [
+        "Run zero discovered tests",
+        "skip one required suite",
+        "omit a required artifact and try to close readiness"
+      ],
+      "expected_result": "All three attempts fail readiness with a named missing case/suite; planned metadata cannot be substituted for execution",
+      "source_task": "SP-012",
+      "source_acceptance_ids": [
+        "AC-SP-012-01",
+        "AC-SP-012-02",
+        "AC-SP-012-03",
+        "AC-SP-012-04",
+        "AC-SP-012-05",
+        "AC-SP-012-06",
+        "AC-SP-012-07",
+        "AC-SP-012-08"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    },
+    {
+      "id": "DF-T036",
+      "milestone": "DF-00",
+      "title": "Measurement protocol exists before experiment",
+      "level": "Human protocol review",
+      "fixture_id": "FX-PROTOCOL",
+      "preconditions": [
+        "Draft measurement protocol, actual coaching/mobile owner and prospective device list",
+        "Draft measurement protocol and proposed device/threshold list; reviewer acceptance and date stay empty until the actual review occurs."
+      ],
+      "steps": [
+        "Review timing/resource thresholds, permitted duration, measurement method and repeat count",
+        "record the actual decision and date before scheduling media runs"
+      ],
+      "expected_result": "Named reviewer accepts a measurable protocol before the experiment; later measurements cannot retroactively redefine a failed threshold",
+      "source_task": "SP-126",
+      "source_acceptance_ids": [
+        "AC-SP-126-01",
+        "AC-SP-126-02",
+        "AC-SP-126-03"
+      ],
+      "status": "Specified; not implemented or executed",
+      "test_file": null,
+      "runner_version": null,
+      "last_run_commit": null,
+      "evidence": [],
+      "reviewer": null,
+      "accepted_at": null
+    }
+  ]
+}

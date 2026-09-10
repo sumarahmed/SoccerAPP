@@ -11,6 +11,7 @@ function run(script,args=[]){
 }
 run('packages/soccer_agent_activity_package_20260908/tools/validate-activity-plan.cjs');
 run('tools/sync-docs.cjs',['--check']);
+run('tools/validate-foundation-docs.cjs');
 const walk=folder=>fs.readdirSync(path.join(root,folder),{withFileTypes:true}).flatMap(e=>e.name==='.git'?[]:e.isDirectory()?walk(path.posix.join(folder,e.name)):[path.posix.join(folder,e.name)]);
 let links=0;
 for(const file of walk('').filter(f=>f.endsWith('.md')&&!f.startsWith('packages/soccer_agent_activity_package_20260908/docs/baseline/'))){
