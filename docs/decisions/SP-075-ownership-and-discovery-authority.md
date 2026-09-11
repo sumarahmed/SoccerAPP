@@ -69,4 +69,3 @@ Create a new version of this decision before any of the following takes effect:
 ## Affected next work
 
 SP-075 may now be treated as accepted where the operational tracker links this exact artifact and records Syed Ahmed and the decision date. `ACT-SP-004-01` may proceed to its founder review because its SP-001 and SP-075 predecessors now have dated acceptance evidence. Its budget, success criteria, device plan and specialist work scopes must still be assessed against their own acceptance criteria; this decision does not pre-accept SP-004.
-
