@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - docs/decisions/**
+      - docs/delivery/**
       - packages/soccer_agent_activity_package_20260908/docs/soccer_agent_activity_manifest.json
       - packages/soccer_agent_activity_package_20260908/docs/soccer_linear_manifest.json
       - site/activity-map/**
