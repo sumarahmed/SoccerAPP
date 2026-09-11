@@ -21,7 +21,7 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 **Accepted decision:** [SP-001 launch and account assumptions](docs/decisions/SP-001-launch-and-account-assumptions.md) version 1.0 was accepted by the founder/product owner on 10 September 2026. It confirms Australia/English, the five-band pilot representation target, solo/assisted expectations, adult-account treatment and both recording modes. No participant recruitment, specialist compliance approval or implementation evidence is claimed.
 
-Explore the delivery dependencies and accepted status in the private [SoccerAPP activity execution map](https://soccerapp-activity-map.sumarahmed.chatgpt.site).
+Explore the delivery dependencies and accepted status in the [automatically generated SoccerAPP activity execution map](https://sumarahmed.github.io/SoccerAPP/). GitHub Actions rebuilds and republishes it from the activity manifests and accepted decision records after relevant changes land on `main`.
 
 **Next development step:** the [detailed foundation milestones](docs/foundation/development_foundation_milestones.md), added 10 September 2026, define 11 milestones and 33 work items for tooling, libraries, CI, contracts, local services, runnable tests, agent execution and device/provider feasibility. Read the [library baseline](docs/foundation/technology_and_libraries.md), [36 test specifications](docs/foundation/foundation_test_catalog.md) and [review report](docs/foundation/foundation_review.md). These are planned implementation tasks; the app stack and executable app tests are not yet installed.
 
@@ -52,7 +52,7 @@ The 10 September refinement lives in `docs/foundation/` and maps back to the unc
 
 ## Documentation checks
 
-Run `node tools/validate-docs.cjs` from the repository root. This checks the source/activity graphs, acceptance coverage, CSV parity, package hashes, generated documentation and relative links. To update documentation, edit canonical files under `packages/soccer_agent_activity_package_20260908/` and follow the [regeneration procedure](docs/delivery/package_inventory.md#updating-documentation).
+Run `node tools/validate-docs.cjs` from the repository root. This checks the source/activity graphs, acceptance coverage, CSV parity, package hashes, generated documentation, activity-map output and relative links. To update documentation, edit canonical files under `packages/soccer_agent_activity_package_20260908/` and follow the [regeneration procedure](docs/delivery/package_inventory.md#updating-documentation).
 
 ## Current status
 
