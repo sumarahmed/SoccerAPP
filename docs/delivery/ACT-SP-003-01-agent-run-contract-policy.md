@@ -2,7 +2,7 @@
 
 | Field | Recorded value |
 |---|---|
-| Policy version | 0.1 |
+| Policy version | 1.0 |
 | Prepared | 11 September 2026 |
 | Activity | `ACT-SP-003-01` — Define agent assignment boundaries |
 | Source issue | `SP-003` |
@@ -13,7 +13,7 @@
 | Preparation base | `f35f0009b06256f850c335c64e592791bc444395` on `main` |
 | Development machine | Windows only |
 | Incremental cash-spend ceiling | AUD 0 |
-| Status | Review-ready output for `ACT-SP-003-02`; SP-003 remains unaccepted |
+| Status | Accepted by Syed Ahmed on 11 September 2026 as the predecessor for `ACT-SP-003-02`; SP-003 remains pending `ACT-SP-003-03` |
 
 This policy defines the minimum contract for every agent assignment. An issue title, chat request, imported CSV row or agent capability is not authority by itself. Every run must bind the task to an exact repository, commit, environment, path set, data class, effect boundary and stop rule before mutation.
 
@@ -276,6 +276,8 @@ The template is not authorization with blank fields. Copy it into the actual tas
 | OD-003-08 | Name actual dev/staging accounts and cleanup/spend limits when cloud/provider work begins | Local synthetic work only |
 
 ## 15. Completion and handoff
+
+**Owner decision:** Syed Ahmed accepted `ACT-SP-003-01` on 11 September 2026. This acceptance approves the run-contract policy as the predecessor input to `ACT-SP-003-02`; it does not by itself mark source issue `SP-003` Done.
 
 - [x] Allowed tools, data, paths, environments and authority are specified.
 - [x] Incremental spend is bounded at AUD 0; time/attempt proposals and unresolved approval are explicit.
