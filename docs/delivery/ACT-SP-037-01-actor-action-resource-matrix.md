@@ -2,21 +2,21 @@
 
 | Field | Recorded value |
 |---|---|
-| Artifact version | 1.0 |
+| Artifact version | 1.2 accepted design baseline |
 | Prepared | 13 September 2026 |
 | Activity | `ACT-SP-037-01` — Model actors and scoped capabilities |
 | Source issue | `SP-037` |
 | Phase / gate | P01 / G1 |
 | Executor | Codex acting as Identity agent |
 | Accountable owner | Syed Ahmed acting as Product/technical lead |
-| Required reviewer | Independent security reviewer — vacant; review cannot be represented as independent |
-| Repository/base | `https://github.com/sumarahmed/SoccerAPP.git`; `main`; `f2a4d3aa86d6f0765a186977af2240896bb32d29` |
+| Required reviewer | Independent adversarial agent review completed against version 1.0; accountable human security reviewer remains unassigned |
+| Repository/base | `https://github.com/sumarahmed/SoccerAPP.git`; `main`; remediation based on review of commit `613640a3d0454df291229204717571d1e383537b` |
 | Run identity | `PREP-ACT-SP-037-01-20260913-01`; attempt 1 of 2 |
 | Approved path | `docs/delivery/ACT-SP-037-01-actor-action-resource-matrix.md` |
 | Authority | Syed Ahmed's 13 September 2026 instruction to start the next review |
-| External effects | Local documentation draft only; no commit, push, Linear mutation, identity creation, invitation or permission change |
+| External effects | Local remediation draft only; no commit, push, Linear mutation, identity creation, invitation or permission change |
 | Spend/time | AUD 0 incremental; attempt 1; 90-minute checkpoint; exact elapsed time not separately metered |
-| Status | Accepted by Syed Ahmed on 13 September 2026 as the predecessor for `ACT-SP-037-02`; not implementation evidence and not final SP-037 acceptance |
+| Status | Accepted by Syed Ahmed on 13 September 2026 as the SP-037 design baseline; not implementation evidence or production authorization |
 
 This artifact begins `ACT-SP-037-01`. It converts the accepted hierarchy and current security/product contracts into a deny-by-default authorization matrix. It does not create accounts, roles, database policies, API middleware, media grants or billing entitlements.
 
@@ -87,7 +87,7 @@ The server evaluates the selected workspace/role on every protected operation. T
 | Buy/manage Family subscription | Deny by default | Deny | Deny | Allow for own household with fresh assurance | Deny | Allow for own account |
 | Allocate sponsored entitlement | Conditional entitlement-support scope | Allow within contracted seats | Deny | Accept/decline for authorized child where required | Deny | Accept/decline for self |
 | Change guardian relationship/consent | Conditional verified exceptional support process | Deny | Deny | Conditional authorized guardian process and fresh assurance | Deny | Own adult consent; cannot grant guardianship over another person |
-| Assign platform role or bypass safety control | Allow only through protected dual-control policy to be specified | Deny | Deny | Deny | Deny | Deny |
+| Assign platform role or bypass safety control | Conditional only through the Level 0 controls in section 10.3; emergency suspension/revocation never waits for dual control | Deny | Deny | Deny | Deny | Deny |
 
 ## 5. Billing and media are separate capability planes
 
@@ -170,18 +170,107 @@ ACT-SP-037-02 and `ACT-SP-037-03` must turn this matrix into transition examples
 
 These are required test specifications, not results. Real sessions, policies and negative evidence do not exist yet.
 
-## 10. Review findings and decisions required
+## 10. Normative authorization controls
+
+The terms in this section are requirements. Implementations may use different component names, but they must preserve these decisions and produce the listed evidence.
+
+### 10.1 Server authorization tuple and provenance
+
+Every protected decision uses one server-constructed tuple:
+
+```text
+(principal_id, principal_type, selected_context_type, selected_context_id,
+ dependencies[{type, id, generation, origin_context_id}],
+ capability_assignment_id, capability_assignment_version,
+ grant_id, grant_version, action, resource_type, resource_id,
+ resource_generation, canonical_resource_origin_context_id,
+ projection_or_share_id, purpose, assurance_level,
+ scoped_policy_epochs[{scope_type, scope_id, epoch}], request_time)
+```
+
+- The server resolves resource origin and the current relationship; caller-supplied ownership, tenant, household, club, relationship or role claims are hints only.
+- The selected context and canonical resource origin must match, unless an explicit projection or cross-context grant names the recipient context, canonical origin, exact immutable resources and all authorizing dependencies.
+- For a minor, household membership alone is insufficient: the tuple must include the current authority relationship for the exact player.
+- `dependencies` is a typed set, not a single relationship. It includes every fact required by the decision, such as club membership, team/player assignment, guardian authority, media grant, qualification, approval and entitlement. Loss or generation change of any mandatory dependency denies.
+- Each resource has one canonical owning context and generation. A multi-origin business object is represented by a canonical object plus explicit immutable projections, each with its own origin, purpose and generation; an implementation must not choose among multiple origins supplied by the caller.
+- Applicable capability assignments, grants and projections are addressed by ID and version. Replacement, rollback, deletion or revocation invalidates a request carrying an older version.
+- Lists, searches, counts, joins, exports, bulk operations, cache entries, realtime channels, notifications and asynchronous jobs enforce the same tuple per returned or processed resource.
+- A missing, ambiguous, expired or contradictory element denies. A control-plane lookup failure denies protected access and is observable.
+
+### 10.2 Normative policy dictionary
+
+| Term | Testable meaning |
+|---|---|
+| Current authority | The authoritative relationship record is active at request time, its generation matches the request, and no newer suspension, dispute, revocation, deletion or adult-transition state exists |
+| Fresh assurance | Authentication assurance at or above the capability's configured level, completed inside its recorded maximum age; sensitive guardian, operator, publishing and export actions require step-up authentication |
+| Qualified | A current, independently sourced qualification record explicitly covers the action and population; absence, expiry or unverifiable state denies |
+| Explicitly shared | A current grant names the principal, their exact relationship/context, immutable resource IDs, allowed operation, purpose, issue time and absolute expiry |
+| Restricted support | A case-bound Level 0 capability issued through the just-in-time process in section 10.3; it never means general user impersonation or browse-all access |
+| Checked request | Authorization is evaluated against current authoritative state at the point of data access or action, not only when a session, token, URL or job was created |
+| Governed history | Immutable minimum records retained under a named legal, contractual, safety or audit purpose; former actors receive no access merely because they created or once viewed them |
+| Derived solely | The grant has one or more recorded authorizing relationships and becomes non-authorizing when every such relationship is inactive or its generation changes |
+| Active membership | An authoritative membership dependency is active now, for the selected context and requested action, and its recorded generation is current |
+| Capability assignment | A server-issued, versioned association between a principal/context and named actions/resources; role names alone are not capabilities |
+| Assurance level | An enumerated authentication strength from the identity policy; the capability specifies the minimum level and maximum elapsed time since verification |
+| Purpose | A value from the controlled purpose registry, not free text; each purpose defines permitted actions, resource classes, recipients, retention and incompatible reuse |
+| Relationship generation | A monotonic version changed by suspension, dispute, revocation, replacement or material scope change; older generations never authorize |
+| Resource generation | A monotonic version changed by replacement, withdrawal, deletion, restoration or material ownership/scope change |
+| Scoped policy epoch | A monotonic version for one principal, context, relationship, grant, capability assignment or resource; it never acts as one platform-global invalidation counter |
+| Explicit cross-context grant | A versioned grant naming both recipient context and canonical resource-origin context, every required relationship dependency, exact resources, action, purpose and expiry |
+| Authoritative-store freshness | The enforcement surface has successfully read or subscribed to a version no older than that surface's convergence limit; unknown or older state denies |
+| Risk-required invalidation | The deterministic transition table in ACT-SP-037-02 section 7.3; implementations cannot choose whether invalidation applies |
+
+The implementation must maintain an endpoint-to-rule register showing the authoritative data source, assurance level, freshness window, error behavior and tests for every protected endpoint and asynchronous consumer.
+
+### 10.3 Level 0 and exceptional support
+
+- Level 0 capabilities are separate named roles. No Level 0 identity receives a reusable browse-all or unrestricted impersonation capability.
+- Assignment and renewal require two distinct authorized people, phishing-resistant MFA and an immutable audit record. Suspension and revocation may occur unilaterally or automatically and take effect immediately; they never wait for a second person. A second person reviews emergency action after access has stopped.
+- An approver must hold the separate `level0-approver` capability in the same operator domain, must not be the requester, subject, case assignee or other approver, and must have no unresolved suspension or conflict flag. The request and each approval expire after 15 minutes. Loss of either approver's authority before issuance cancels the request.
+- Routine support receives metadata needed for the case only. Access to a household, child record or private recording requires a case ID, named resource IDs, purpose, approving person and a maximum 30-minute just-in-time grant.
+- A break-glass grant uses the same resource and time bounds, records the stated emergency, visibly watermarks the support session, and triggers independent next-business-day audit review. It cannot mint a reusable end-user session or token.
+- The affected adult is notified after access unless a recorded safety or legal hold delays notice; the reason and notice decision are auditable.
+- Level 0 grants expire automatically, are not renewable by the holder, cannot be transferred, and are revoked when the case closes or the operator relationship ends. Any authorized security operator or automated compromise control can suspend a grant immediately; only a new two-person issuance can restore access.
+
+### 10.4 Machine and service principals
+
+- Each workload has a distinct, rotatable workload identity; shared database owner credentials and human session tokens are prohibited.
+- A job contract binds tenant/context, action, immutable resource identifiers, purpose, policy epoch, relationship generation, issuer, issue time, expiry and idempotency key. Messages are authenticated and reject modification, replay, expiry and wrong consumers.
+- Tenant and resource scope is derived from server-held records. Workers reauthorize at execution and before each disclosure or mutation; authorization captured when queued is insufficient.
+- Database and storage roles do not bypass tenant policy. Any narrowly unavoidable privileged procedure accepts the full authorization tuple, validates it, exposes no arbitrary query surface and produces immutable audit evidence.
+- Credentials, network paths, storage permissions and queue consumption are least-privilege and separately revocable. A service principal can never approve its own run, guardian decision, youth-content decision or permission expansion.
+
+### 10.5 Media-grant schema and delivery
+
+A media grant binds all of: grant ID/version; principal ID; recipient role/relationship ID and generation; recipient context; canonical resource-origin context; every mandatory membership, assignment, guardian and consent dependency with ID/generation; immutable resource IDs/generations; allowed operation; purpose; authorizing adult/guardian and relationship generation; issue time; and absolute expiry. Loss or generation change of any dependency invalidates the whole grant. Resource collections are snapshots by default; later-created media is excluded.
+
+Playback uses an authorization gateway that rechecks the current dependency set before every manifest, key and media-segment response. Delivery credentials are proof-of-possession tokens bound to the recipient principal, active session, registered client key, grant/version, resource/generation and gateway audience; copied bearer use from another session or device is denied. Tokens expire within 60 seconds and do not independently authorize a segment. Raw reusable bucket URLs are prohibited.
+
+Revocation, accepted guardian dispute and adult cutoff add the affected token/grant/session versions to the gateway deny set before the authoritative transaction reports completion. New requests deny immediately; an in-flight segment may finish, but the next segment begins a new checked request and is denied within the ten-second high-risk convergence limit in ACT-SP-037-02 section 7.3. Controlled CDN entries and object paths are invalidated or rotated where needed. The product discloses that bytes already delivered, screen capture and uncontrolled downstream copies cannot be technically recalled.
+
+### 10.6 Separation of duties for content
+
+| Content risk | Required separation |
+|---|---|
+| Low-risk editorial correction with no change to instruction, audience, suitability, rights or media | One qualified editor may review and publish; the change remains attributable |
+| Youth instruction, suitability, assessment guidance, media, rights, safety or audience change | `author_id != reviewer_id`; the publisher must hold a separate publish capability and `publisher_id != author_id`. For safety, suitability or rights changes, `publisher_id != reviewer_id`, requiring three distinct people |
+| Global safety withdrawal or emergency replacement | Two-person approval unless immediate withdrawal is needed to prevent harm; emergency action is attributable and independently reviewed next business day |
+
+The server derives risk from the immutable diff, changed field/resource classes and controlled rules; the author cannot select or lower it. An unclassified or ambiguous change defaults to the higher-risk class. Approval binds a cryptographic digest of the exact content, assets, rights, suitability labels, audience, locale, derived risk and version. Publish rechecks identity separation and capability and publishes only that digest; any mutation invalidates approval and returns the item to review.
+
+## 11. Review findings and decisions required
 
 | ID | Review item | Proposed disposition |
 |---|---|---|
 | `OD-037-01` | Confirm the matrix as the product/technical authorization baseline | Accepted by Syed Ahmed for `ACT-SP-037-02` on 13 September 2026 |
-| `OD-037-02` | Name the independent security reviewer | Keep final SP-037 acceptance blocked until a real reviewer accepts the role; owner review must not be relabeled independent |
-| `OD-037-03` | Define Level 0 role assignment/dual-control and exceptional support boundaries | Carry as an explicit open security design item; do not grant a browse-all or impersonation role |
+| `OD-037-02` | Obtain independent security review | Independent adversarial agent reviewed versions 1.0 and 1.1; version 1.2 applies the returned corrections, and accountable human review remains a production gate |
+| `OD-037-03` | Define Level 0 role assignment/dual-control and exceptional support boundaries | Strengthened in version 1.2 section 10.3 after follow-up review; pending owner acceptance |
 | `OD-037-04` | Confirm initial coach feedback fields and whether any free text is permitted | Accepted: structured, recipient-scoped feedback; unrestricted confidential free text is excluded |
 | `OD-037-05` | Confirm exact club-visible completion projection | Accepted baseline: assignment ID, completion state/time and approved assessment fields; exclude home history and media |
 | `OD-037-06` | Confirm whether media grants permit streaming only or controlled download | Accepted baseline: streaming/playback only; any download/export requires a separate explicit capability and residual-access disclosure |
+| `OD-037-13` | Define Level 0, machine-principal, authorization-tuple, media-delivery and content-separation controls | Accepted by Syed Ahmed in version 1.2 on 13 September 2026 after both adversarial reviews |
 
-## 11. Completion and handoff
+## 12. Completion and handoff
 
 - [x] Platform, club, parent, coach, child and adult-player actors are separated by active context.
 - [x] Protected actions are mapped to resource ownership and explicit capabilities.
@@ -190,7 +279,10 @@ These are required test specifications, not results. Real sessions, policies and
 - [x] Draft, review and publish permissions are distinct.
 - [x] Departure, revocation, adulthood and club-closure transitions are identified for the next activity.
 - [x] Required positive and negative fixtures are recorded without claiming tests were run.
-- [x] Syed Ahmed reviewed version 0.1 and accepted `OD-037-01`, `OD-037-04`, `OD-037-05` and `OD-037-06` on 13 September 2026; version 1.0 records acceptance metadata only.
-- [ ] A real independent security reviewer is named before final SP-037 acceptance.
+- [x] Syed Ahmed reviewed version 0.1 and accepted `OD-037-01`, `OD-037-04`, `OD-037-05` and `OD-037-06` on 13 September 2026; version 1.0 records that historical acceptance.
+- [x] Version 1.1 received independent adversarial follow-up review: four findings closed, nine partial and two new Medium risks.
+- [x] Version 1.2 addresses every remaining authorization, operator, media, provenance, policy-definition and separation-of-duties issue returned by that review.
+- [x] Syed Ahmed accepted the version 1.2 remediated decisions and candidate SHA-256 `5CAC31266066C2D065A4D69588A7945765D81349EA54650BE8080EDDFD878033` on 13 September 2026.
+- [ ] An accountable human security reviewer is named before production use involving real youth, guardian or private-media data.
 
-Handoff status: Syed Ahmed accepted this matrix as the input to `ACT-SP-037-02`, with streaming-only media grants, structured feedback, minimum club completion projection and the independent-review vacancy retained exactly as stated. Final SP-037 acceptance remains blocked until the remaining activities and required review are complete.
+Handoff status: Syed Ahmed accepted version 1.2 after both independent agent-review cycles. The matrix is the completed SP-037 design baseline and may feed dependent specification work. It remains design evidence, not runtime or accountable human-security evidence.

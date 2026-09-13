@@ -2,31 +2,31 @@
 
 | Field | Recorded value |
 |---|---|
-| Artifact version | 1.0 |
+| Artifact version | 1.2 accepted design baseline |
 | Prepared | 13 September 2026 |
 | Activity | `ACT-SP-037-02` — Resolve multi-role and departure transitions |
 | Source issue | `SP-037` |
 | Phase / gate | P01 / G1 |
 | Executor | Codex acting as Identity agent |
 | Accountable owner | Syed Ahmed acting as Product/technical lead |
-| Required reviewer | Independent security reviewer — vacant; review cannot be represented as independent |
-| Repository/base | `https://github.com/sumarahmed/SoccerAPP.git`; `main`; `9fd6535d7202aae3a2aabb067e110d3ea37e640f` |
+| Required reviewer | Independent adversarial agent review completed against version 1.0; accountable human security reviewer remains unassigned |
+| Repository/base | `https://github.com/sumarahmed/SoccerAPP.git`; `main`; remediation based on review of commit `613640a3d0454df291229204717571d1e383537b` |
 | Run identity | `PREP-ACT-SP-037-02-20260913-01`; attempt 1 of 2 |
 | Approved path | `docs/delivery/ACT-SP-037-02-role-and-departure-transitions.md` |
 | Authority | Syed Ahmed's 13 September 2026 instruction to commit the accepted predecessor and move to the next activity |
-| External effects | Local documentation draft only; no push, Linear mutation, account/role change, invitation, revocation or production action |
+| External effects | Local remediation draft only; no push, Linear mutation, account/role change, invitation, revocation or production action |
 | Spend/time | AUD 0 incremental; attempt 1; 90-minute checkpoint; exact elapsed time not separately metered |
-| Status | Accepted by Syed Ahmed on 13 September 2026 as the predecessor for `ACT-SP-037-03`; not implementation evidence and not final SP-037 acceptance |
+| Status | Accepted by Syed Ahmed on 13 September 2026 as the SP-037 lifecycle design baseline; not implementation evidence or production authorization |
 
 This artifact applies the accepted [ACT-SP-037-01 capability matrix](ACT-SP-037-01-actor-action-resource-matrix.md) to lifecycle transitions. Every transition below changes only its named relationship or capability. No transition silently grants guardianship, billing control, coaching qualification, publishing power or media access.
 
-## 1. Fixed predecessor
+## 1. Historical predecessor and remediation dependency
 
 | Input | Exact identity | Effect on this activity |
 |---|---|---|
-| [ACT-SP-037-01 actor/action/resource matrix](ACT-SP-037-01-actor-action-resource-matrix.md) | Version 1.0; commit `9fd6535d7202aae3a2aabb067e110d3ea37e640f`; SHA-256 `89588BC66EE9A1F9AFEC7EA4FDB6E4D4F3192459B2408DE9D51A68A8CD8F70E3` | Fixes deny-by-default evaluation, context non-composition, structured feedback, minimum club completion projection and streaming-only media-grant baseline |
+| [ACT-SP-037-01 actor/action/resource matrix](ACT-SP-037-01-actor-action-resource-matrix.md) | Historical version 1.0: commit `9fd6535d7202aae3a2aabb067e110d3ea37e640f`; SHA-256 `89588BC66EE9A1F9AFEC7EA4FDB6E4D4F3192459B2408DE9D51A68A8CD8F70E3`. Current dependency: version 1.2 remediation draft | Preserves the accepted baseline and adds normative authorization, operator, service-principal, media-delivery and separation-of-duties controls that this transition specification must follow |
 
-The predecessor remains specification evidence. There is no live identity service, database policy, administration portal or test session.
+The historical predecessor remains evidence of what was reviewed. The current version 1.2 files form one remediation bundle and must be accepted together. There is no live identity service, database policy, administration portal or test session.
 
 ## 2. State families
 
@@ -153,7 +153,70 @@ A failed or partial transition remains visible with a named owner and next actio
 - An older offline queue cannot recreate a removed membership, withdrawn consent or deleted recording.
 - Exceptional support never becomes a routine impersonation mechanism and requires a separate attributable scope.
 
-## 7. Evidence scenarios for ACT-SP-037-03
+## 7. Enforceable lifecycle contracts
+
+### 7.1 Guardian dispute and revocation
+
+Dispute processing has separate `Intake`, `Accepted review`, `Rejected intake`, `Resolved confirmed` and `Resolved dismissed` states. Filing creates `Intake` only and does not suspend another guardian. A safeguarding/identity triager who is not a disputing party accepts review only when the submission identifies the relationship, asserts a safety/legal/identity ground, passes authenticated-contact checks and is not a duplicate of a resolved claim without new evidence. Repeated or automated submissions are rate-limited and grouped for abuse review; filing volume never determines authority.
+
+`Accepted review` is fail-closed for existing sensitive access, not only new sharing. At acceptance, the system increments the relationship generation and, within the high-risk limits in section 7.3, suspends the disputed person's active sessions, media grants, exports, schedule/location visibility, notifications, realtime subscriptions and queued jobs for the affected player.
+
+The only operations available to the disputed person are:
+
+- authenticate and maintain their own account security;
+- view the minimum dispute notice and case contact route;
+- submit evidence or a response to the restricted safeguarding case; and
+- receive a specifically approved safe-contact communication that contains no schedule, location, roster, private media or unrelated household data.
+
+Any exception preserving sensitive access requires a named safeguarding decision owner, exact allowed operations/resources, reason, issue and expiry time, independent approval and audit. Urgent continuity for the child is routed to a separately verified safe contact and reveals only the minimum approved information; it never automatically restores either disputing guardian. Accepted reviews receive an expedited queue and escalation deadline defined by the safeguarding policy. Coaches and club administrators cannot triage or decide guardian authority. Revocation makes the relationship permanently non-authorizing unless a new verified relationship with a new generation is established.
+
+### 7.2 Adult transition
+
+For the Australian launch baseline, the authorization cutoff is 00:00 at the beginning of the player's eighteenth birthday in the timezone of their verified legal residence; `Australia/Sydney` is used only when that residence is recorded as New South Wales. The policy service derives the cutoff synchronously from the authoritative date of birth and residence record. If residence/timezone is missing, use the earliest cutoff instant among supported Australian legal-residence timezones. If an old and new residence conflict, use the earlier cutoff until identity review resolves it. A residence/timezone change within 30 days of the calculated boundary requires step-up authentication and identity review and cannot move the cutoff later without approval. Tokens, caches, jobs and client state cannot extend it.
+
+At the cutoff, former guardian relationships and every grant derived from them become non-authorizing by default. The high-risk transition rules in section 7.3 apply: controlled media credentials enter the deny set before transition completion and sessions, realtime channels, caches, exports and jobs stop within ten seconds. Adult authentication is not a precondition for ending former guardian authority. Continued family, club or media access requires a deliberate adult decision creating a new relationship or grant. An uncertain or disputed birth date routes to the restricted identity/safeguarding process and cannot silently extend guardian authority.
+
+### 7.3 Revocation convergence contract
+
+An authoritative suspension, accepted dispute, revocation, deletion or adult transition increments only the affected principal, context, relationship, grant, capability-assignment and resource epochs/generations in one durable transaction. There is no platform-global invalidation counter. Each enforcement surface compares the complete dependency-version set at use time, so unrelated tenants, users and jobs remain available.
+
+| Surface | Maximum convergence from authoritative commit | Required behavior |
+|---|---:|---|
+| New API, RPC, database and storage request | Before protected access begins | Deny before reading or mutating protected data |
+| Accepted guardian dispute, guardian revocation and adult cutoff: active session, realtime, cache, export, notification, job and media delivery | 10 seconds | Disconnect, cancel, invalidate or deny at the next checked boundary; no protected mutation may commit without rechecking current dependencies |
+| Other membership/grant suspension or revocation: active session, realtime, search/list/count cache, export, notification and job | 60 seconds | Disconnect, cancel or invalidate; reauthorize before protected continuation, assembly, delivery or commit |
+| Media gateway and CDN | Before every manifest, key and segment; high-risk transitions within 10 seconds | Check proof-of-possession token and current dependency versions; deny copied or stale credentials and invalidate controlled cache/object paths |
+
+Timing begins when the authoritative transaction commits and ends when the surface can no longer disclose or commit protected data under the old dependency versions. A read already delivered cannot be recalled. A streaming response stops at its next segment. An in-flight mutation must recheck immediately before commit and fail if a dependency changed. “Immediate” elsewhere in this bundle means before a new checked request begins, or the ten-second limit for explicitly identified high-risk active channels.
+
+If the policy service, revocation stream or required authoritative store is unavailable or stale beyond these limits, protected access fails closed and raises an operational alert. Already delivered bytes and external screen captures remain a disclosed residual limitation, not an authorization success.
+
+### 7.4 Offline, replay and restore safety
+
+- Memberships, guardian relationships, grants, consent and protected resources have monotonic generations and durable tombstones.
+- Every mutation contains an idempotency key, expected generation and authenticated server-issued context. Conditional writes reject older, duplicate, reordered, expired or wrong-context commands.
+- Offline clients and queues carry identifiers and requested actions, never reusable authorization. The server reauthorizes against current state on receipt.
+- A tombstone dominates every command or backup value created before it. Deletion or revocation can be reversed only by an explicit authorized recovery that creates a new generation; replay cannot reactivate the old record.
+- Restore procedures first restore tombstones and policy epochs, then reconcile dependent data before serving traffic. Realtime consumers and jobs discard messages whose generation is no longer current.
+
+### 7.5 Pending invitation protocol
+
+A pending invitation is not a membership or authorization. The only pre-acceptance response fields are invitation type, inviting organization display name, proposed role display name, expiry time and a generic action label. Child/player identity, roster, team, schedule, location, media, household members, internal IDs and whether an account already exists are never returned. Pre-acceptance operations are limited to retrieving that schema, verifying the intended recipient, accepting or declining, and requesting a new token through an anti-enumerating route.
+
+Invitation tokens are high entropy, single use, stored hashed, expire within 72 hours, and bind intended recipient identity, role, club/household context and proposed minimum scope. Acceptance requires authenticated identity verification and is atomic: exactly one concurrent request consumes the token. Forwarded, expired, replayed, wrong-identity and already-consumed tokens reveal no protected records and create no assignment, grant, role or cache entry.
+
+| Invitation type | State created after verified acceptance | Additional approval before Active | Authority while waiting |
+|---|---|---|---|
+| Club staff/administrator | Pending verification | Club staffing approver; qualification where the capability requires it | Enrollment and own-account security only |
+| Coach | Pending verification | Club staffing approver, current qualification and explicit team/player assignment | Enrollment and own-account security only |
+| Minor player/household enrollment | Pending verification | Current verified guardian plus club enrollment approval | Enrollment and own-account security only; no child or roster data |
+| Adult player | Pending verification | Adult identity verification plus club enrollment approval | Enrollment and own-account security only |
+| Additional guardian | Pending verification | Existing-authority and identity/safeguarding process in section 7.1 | Dispute/evidence route and own-account security only |
+| Platform operator or Level 0 approver | Pending verification | Two-person Level 0 issuance under ACT-SP-037-01 section 10.3 | Own-account security only |
+
+No invitation type creates an Active relationship merely through token acceptance. Each required approval is separately attributable; activation atomically creates a new relationship generation only after all applicable approvals are current.
+
+## 8. Evidence scenarios for ACT-SP-037-03
 
 | Scenario | Required outcome |
 |---|---|
@@ -170,7 +233,7 @@ A failed or partial transition remains visible with a named owner and next actio
 
 These are design-level expected outcomes. `ACT-SP-037-03` must bind actual implementation/test evidence when the relevant services exist or explicitly record the unavailable environment; it must not turn these rows into fabricated PASS results.
 
-## 8. Accountable owners
+## 9. Accountable owners
 
 | Area | Accountable role | Required separate review/operation |
 |---|---|---|
@@ -185,7 +248,7 @@ These are design-level expected outcomes. `ACT-SP-037-03` must bind actual imple
 
 Actual people remain unassigned except Syed Ahmed's recorded owner roles. Role names do not constitute permission grants or specialist acceptance.
 
-## 9. Review decisions
+## 10. Review decisions
 
 | ID | Decision requested from Syed Ahmed | Proposed baseline |
 |---|---|---|
@@ -195,10 +258,11 @@ Actual people remain unassigned except Syed Ahmed's recorded owner roles. Role n
 | `OD-037-10` | Approve age-18 handling | Accepted: end automatic guardian authority and require the adult to review each continued club/family/media relationship |
 | `OD-037-11` | Approve plan separation | Accepted: Draft, review, approve and publish remain distinct capabilities; approval binds an immutable version |
 | `OD-037-12` | Approve departure preservation | Accepted: preserve only governed history/audit while stopping future access, assignments, grants and sponsorship |
+| `OD-037-14` | Approve the dispute allowlist, atomic adult cutoff, convergence limits, anti-resurrection protocol and invitation protocol | Accepted by Syed Ahmed in version 1.2 on 13 September 2026 after both adversarial reviews |
 
-Independent security review remains a separate unresolved requirement and cannot be satisfied by owner acceptance of this draft.
+Independent agent reviews of versions 1.0 and 1.1 returned the corrections incorporated into version 1.2. Owner acceptance remains unresolved, and it cannot substitute for later runtime or accountable human security evidence.
 
-## 10. Completion and handoff
+## 11. Completion and handoff
 
 - [x] Membership, assignment, guardian, media and content lifecycles are explicit.
 - [x] Draft, review, approve and publish capabilities are separate.
@@ -207,7 +271,10 @@ Independent security review remains a separate unresolved requirement and cannot
 - [x] Revocation covers API, data, Storage, export, realtime, notification and job paths.
 - [x] Billing, guardianship, coaching qualification, publishing and media grants remain independent.
 - [x] Accountable roles and required specialist/independent reviewers are recorded without inventing identities.
-- [x] Syed Ahmed reviewed version 0.1 and accepted `OD-037-07` through `OD-037-12` on 13 September 2026; version 1.0 records acceptance metadata only.
-- [ ] A real independent security reviewer is named before final SP-037 acceptance.
+- [x] Syed Ahmed reviewed version 0.1 and accepted `OD-037-07` through `OD-037-12` on 13 September 2026; version 1.0 records that historical acceptance.
+- [x] Version 1.1 received independent adversarial follow-up review: four findings closed, nine partial and two new Medium risks.
+- [x] Version 1.2 addresses every remaining guardian-dispute, adult-transition, revocation, media-timing, epoch-scope and invitation issue returned by that review.
+- [x] Syed Ahmed accepted the version 1.2 remediated decisions and candidate SHA-256 `218D640E656B7DA4373E3C8286D6568A1FACEC7E0D722600B63B062DCB0E9F1F` on 13 September 2026.
+- [ ] An accountable human security reviewer is named before production use involving real youth, guardian or private-media data.
 
-Handoff status: Syed Ahmed accepted the lifecycle states, immediate revocation, context non-composition, age-18 review, immutable publication sequence and governed-history preservation as the input to `ACT-SP-037-03`. Final SP-037 acceptance remains blocked until verification and the required independent security review are complete.
+Handoff status: Syed Ahmed accepted version 1.2 after both independent agent-review cycles. The lifecycle contract is the completed SP-037 design baseline and may feed dependent specification work. It remains design evidence, not runtime or accountable human-security evidence.
