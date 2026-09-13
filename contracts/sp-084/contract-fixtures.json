@@ -1,0 +1,90 @@
+{
+  "fixtureSet": "sp-084-contract-fixtures-v1",
+  "contractVersion": "2026-09",
+  "schemaRevision": 1,
+  "classification": "synthetic",
+  "consumers": ["mobile", "web", "job"],
+  "fixtures": [
+    {
+      "id": "contract-version-additive",
+      "concern": "compatibility",
+      "input": {
+        "declaredContractVersion": "2026-09",
+        "response": {"id": "player_fixture_01", "generation": 3, "displayName": "Fixture Player", "newOptionalField": "ignored"}
+      },
+      "expected": {"accepted": true, "knownValuesPreserved": true, "unknownResponseFieldsIgnored": ["newOptionalField"]}
+    },
+    {
+      "id": "contract-version-breaking",
+      "concern": "compatibility",
+      "input": {"declaredContractVersion": "2025-01", "minimumSafeClientVersion": "2.4.0"},
+      "expected": {"accepted": false, "allowedCodes": ["unsupported_contract", "client_upgrade_required"], "retryable": false}
+    },
+    {
+      "id": "timestamp-dst-boundary",
+      "concern": "time",
+      "input": {"localDateTime": "2026-10-04T03:30:00", "timeZone": "Australia/Sydney", "resolvedInstant": "2026-10-03T16:30:00.000Z"},
+      "expected": {"localIntentPreserved": true, "resolvedInstant": "2026-10-03T16:30:00.000Z"}
+    },
+    {
+      "id": "private-not-found",
+      "concern": "error-privacy",
+      "input": {
+        "absent": {"resourceRef": "recording_fixture_absent"},
+        "unauthorized": {"resourceRef": "recording_fixture_foreign"}
+      },
+      "expected": {
+        "externallyIndistinguishable": true,
+        "problem": {"contractVersion": "2026-09", "code": "not_found", "category": "Not found", "message": "Resource not found", "retryable": false}
+      }
+    },
+    {
+      "id": "cursor-context-revoked",
+      "concern": "pagination",
+      "input": {"cursorContext": "club_fixture_a", "selectedContext": "club_fixture_b", "dependencyGenerationAtIssue": 7, "dependencyGenerationNow": 8},
+      "expected": {"pageReturned": false, "code": "context_mismatch", "reauthorized": true}
+    },
+    {
+      "id": "operation-retry-identical",
+      "concern": "idempotency",
+      "input": {"operationId": "operation_fixture_01", "normalizedPayloadDigest": "sha256:fixture-identical", "deliveryCount": 2},
+      "expected": {"resourceCount": 1, "effectCount": 1, "sameReceiptReturned": true}
+    },
+    {
+      "id": "operation-reuse-different-payload",
+      "concern": "idempotency",
+      "input": {"operationId": "operation_fixture_02", "firstDigest": "sha256:fixture-first", "retryDigest": "sha256:fixture-changed"},
+      "expected": {"mutationCount": 1, "code": "generation_conflict", "originalIntentOverwritten": false}
+    },
+    {
+      "id": "offline-delete-wins",
+      "concern": "offline-replay",
+      "input": {"queuedResourceGeneration": 3, "authoritativeTombstoneGeneration": 4, "queuedCommand": "update"},
+      "expected": {"resourceRecreated": false, "code": "dependency_revoked", "winningGeneration": 4}
+    },
+    {
+      "id": "event-duplicate",
+      "concern": "event-delivery",
+      "input": {"eventId": "event_fixture_01", "aggregateSequence": 5, "deliveryCount": 3},
+      "expected": {"appliedEventCount": 1, "effectCount": 1}
+    },
+    {
+      "id": "event-gap-and-reorder",
+      "concern": "event-ordering",
+      "input": {"lastAppliedSequence": 5, "deliveryOrder": [7, 6]},
+      "expected": {"parkedSequences": [7], "finalAppliedOrder": [6, 7], "silentGapApply": false}
+    },
+    {
+      "id": "worker-lease-loss",
+      "concern": "job-idempotency",
+      "input": {"jobId": "job_fixture_01", "effectId": "effect_fixture_01", "workerAttempts": ["worker_fixture_a", "worker_fixture_b"]},
+      "expected": {"terminalCompletionCount": 1, "effectCount": 1, "stableEffectIdentity": true}
+    },
+    {
+      "id": "multi-owner-collection",
+      "concern": "ownership",
+      "input": {"selectedContext": "household_fixture_a", "candidateOwnerContexts": ["household_fixture_a", "household_fixture_b"]},
+      "expected": {"returnedOwnerContexts": ["household_fixture_a"], "foreignResourceCount": 0, "foreignCountDisclosed": false}
+    }
+  ]
+}
