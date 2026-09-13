@@ -2,7 +2,7 @@
 
 | Field | Recorded value |
 |---|---|
-| Artifact version | 0.1 |
+| Artifact version | 0.2 |
 | Prepared | 12 September 2026 |
 | Activity | `ACT-SP-002-02` — Apply and inspect authorized tracker configuration |
 | Source issue | `SP-002` |
@@ -14,9 +14,9 @@
 | Preparation authority | Syed Ahmed's 12 September 2026 instruction to prepare the next activity for review |
 | Preparation external effects | Repository documentation edit only; no commit, push, Linear access, upload, import, configuration change, invitation or integration installation |
 | Spend/time | AUD 0 incremental; preparation attempt 1; 90-minute checkpoint |
-| Status | Review-ready execution proposal; **Not Ready for live execution** until every activation gate in section 4 is resolved and explicitly authorized |
+| Status | Stages A-C executed under separate owner approvals on 12-13 September 2026; result submitted to `ACT-SP-002-03` with retained limitations |
 
-This artifact prepares the bounded run for `ACT-SP-002-02`. It does not claim that the Linear workspace has been inspected or configured. It deliberately separates read-only discovery, the three-record smoke mutation and the remaining 162-record import so that approval of one stage cannot be interpreted as authority for another.
+This artifact originally prepared the bounded run for `ACT-SP-002-02`. Syed Ahmed subsequently authorized Stage A read-only inspection, Stage B's three-record smoke mutation and Stage C's remaining 162-record import as separate decisions. The executed result is summarized in section 13 and verified in `ACT-SP-002-03`; private workspace identifiers remain outside the public repository.
 
 ## 1. Predecessor and source identity
 
@@ -283,8 +283,35 @@ Syed Ahmed is asked to review this proposal and record:
 - [x] Duplicate prevention, uncertain-mutation handling and non-destructive recovery are defined.
 - [x] Permission, SP-001 sample, mapping and pairwise relationship evidence are specified.
 - [x] Missing destination/identity/authority fields remain visibly blocked rather than invented.
-- [ ] Stage A is authorized and completed.
-- [ ] Stage B smoke import is authorized and completed.
-- [ ] Stage C remaining import is authorized and completed.
+- [x] Stage A was separately authorized and completed.
+- [x] Stage B smoke import was separately authorized and completed.
+- [x] Stage C remaining import and relationship reconciliation were separately authorized and completed.
 
-Handoff status: Review-ready for Syed Ahmed. The next safe action after acceptance is to provide the exact Linear workspace URL and authorize **Stage A read-only inspection only**. Live configuration and import remain blocked until the inspection result and the corresponding mutation gates receive separate explicit approval.
+Handoff status: Execution completed and submitted to `ACT-SP-002-03`. This status records the authorized run, not acceptance of every SP-002 criterion.
+
+## 13. Executed result and retained limits
+
+| Result | Recorded outcome |
+|---|---|
+| Import route | Three-row smoke file followed by the 162-row remaining file; the 165-row full file was not imported |
+| Source reconciliation | 165 unique source issues mapped to 165 live issues |
+| Project placement | All 165 issues assigned across the seven G0-G6 projects |
+| Parent relationships | 91 expected and verified |
+| Dependency relationships | 642 expected and verified; zero missing, unexpected or duplicate edges |
+| Field comparison | Zero field problems reported by the final reconciler for the checked source fields |
+| Credentials | Temporary task-specific API credentials were revoked after use and the local clipboard was cleared |
+| Spend | AUD 0 incremental |
+
+The private owner-controlled evidence files are bound to this public summary by SHA-256 only:
+
+- smoke result: `F0A01E9549FE09F2E0EC4CBFE3C91482448BBA73122CFAE6BD99873459363438`;
+- Stage C result and complete private source-to-live map: `5A536D50FC88531FDA7BB35E0D8CFB008EC73439625E6D238946D9D7854A6501`.
+
+The following limitations remain visible:
+
+- all twelve phase milestones exist within their owning gate projects, but Linear does not allow an issue in one gate project to use a milestone owned by another project; phase identity is therefore retained on every issue with the `phase-Pxx` label rather than a native milestone assignment;
+- the seven planned custom saved views were not created and the live team view list was empty at the final read-only inspection;
+- imported issues remain unassigned by design; accountable and reviewer roles are preserved in source descriptions, while actual specialist identities remain vacant until accepted by real people; and
+- the sample/import run proved the owner-authenticated read/write path, but it did not exercise a separate least-privilege negative-permission identity.
+
+No private workspace URL, member identifier, email address, issue UUID, issue URL or credential is included in this repository artifact.
