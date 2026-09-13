@@ -2,7 +2,7 @@
 
 | Field | Recorded value |
 |---|---|
-| Artifact version | 0.2 |
+| Artifact version | 1.0 |
 | Prepared | 12 September 2026 |
 | Activity | `ACT-SP-002-02` — Apply and inspect authorized tracker configuration |
 | Source issue | `SP-002` |
@@ -14,7 +14,7 @@
 | Preparation authority | Syed Ahmed's 12 September 2026 instruction to prepare the next activity for review |
 | Preparation external effects | Repository documentation edit only; no commit, push, Linear access, upload, import, configuration change, invitation or integration installation |
 | Spend/time | AUD 0 incremental; preparation attempt 1; 90-minute checkpoint |
-| Status | Stages A-C executed under separate owner approvals on 12-13 September 2026; result submitted to `ACT-SP-002-03` with retained limitations |
+| Status | Stages A-C and the authorized completion pass executed on 12-13 September 2026; accepted result recorded by `ACT-SP-002-03` and the SP-002 decision |
 
 This artifact originally prepared the bounded run for `ACT-SP-002-02`. Syed Ahmed subsequently authorized Stage A read-only inspection, Stage B's three-record smoke mutation and Stage C's remaining 162-record import as separate decisions. The executed result is summarized in section 13 and verified in `ACT-SP-002-03`; private workspace identifiers remain outside the public repository.
 
@@ -307,11 +307,12 @@ The private owner-controlled evidence files are bound to this public summary by 
 - smoke result: `F0A01E9549FE09F2E0EC4CBFE3C91482448BBA73122CFAE6BD99873459363438`;
 - Stage C result and complete private source-to-live map: `5A536D50FC88531FDA7BB35E0D8CFB008EC73439625E6D238946D9D7854A6501`.
 
-The following limitations remain visible:
+The authorized completion pass resolved or dispositioned the retained findings:
 
-- all twelve phase milestones exist within their owning gate projects, but Linear does not allow an issue in one gate project to use a milestone owned by another project; phase identity is therefore retained on every issue with the `phase-Pxx` label rather than a native milestone assignment;
-- the seven planned custom saved views were not created and the live team view list was empty at the final read-only inspection;
-- imported issues remain unassigned by design; accountable and reviewer roles are preserved in source descriptions, while actual specialist identities remain vacant until accepted by real people; and
-- the sample/import run proved the owner-authenticated read/write path, but it did not exercise a separate least-privilege negative-permission identity.
+- all twelve phase milestones exist within their owning gate projects; `phase-Pxx` labels are the accepted permanent phase representation where Linear forbids a cross-project native milestone, while same-project records may use the native milestone;
+- all seven planned custom views were created and read back: Human decisions, Ready agent work, Review queue, Blocked, Gate evidence, Content approval and Dated operations;
+- blocked work uses the existing `status-blocked` label and the Blocked view instead of being conflated with a canceled workflow state;
+- SP-001 was assigned only to the verified owner, placed in P00, linked to its accepted decision, acceptance-checked and moved to Done; and
+- the separate least-privilege negative-permission identity exercise is explicitly deferred to SP-012 before any additional human or agent identity receives write authority. No fictional/test member was invited in the one-member workspace.
 
 No private workspace URL, member identifier, email address, issue UUID, issue URL or credential is included in this repository artifact.
