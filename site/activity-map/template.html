@@ -1256,8 +1256,8 @@ html>body{padding:0}</style>
     const acceptedSummary = document.getElementById('flow-accepted-summary');
     document.getElementById('flow-accepted-title').textContent = latestDecision.source + ' accepted';
     document.getElementById('flow-accepted-meta').textContent = 'Decision v' + latestDecision.version + ' · ' + latestDecision.date + ' · ' + latestDecision.accountable;
-    const acceptedEvidence = document.getElementById('flow-accepted-evidence');
-    acceptedEvidence.href = latestDecision.evidenceUrl;
+    const acceptedEvidenceLink = document.getElementById('flow-accepted-evidence');
+    acceptedEvidenceLink.href = latestDecision.evidenceUrl;
     acceptedSummary.hidden = false;
   }
   const byId = new Map(data.activities.map(activity => [activity.id, activity]));

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "contractVersion": "1.0",
+  "timebase": {
+    "supportedOutputFps": [25, 30],
+    "introSeconds": 2.0,
+    "fixedPlateSeconds": 1.6,
+    "dissolveSeconds": 0.4,
+    "sourceMotionStartsAtSeconds": 2.0,
+    "defaultOutro": false,
+    "optionalOutroSeconds": 4.0,
+    "rangeConvention": "half-open [startFrame,endFrame)"
+  },
+  "timelineCases": [
+    {
+      "id": "TL-01-30FPS-SILENT",
+      "fps": 30,
+      "sourceFrames": 90,
+      "sourceHasAudio": false,
+      "outroRequested": false,
+      "expected": {"introFrames": 60, "fixedPlateFrames": 48, "dissolveFrames": 12, "sourceStartFrame": 60, "outroFrames": 0, "outputFrames": 150, "outputHasAudio": false}
+    },
+    {
+      "id": "TL-02-25FPS-AUDIO",
+      "fps": 25,
+      "sourceFrames": 250,
+      "sourceHasAudio": true,
+      "outroRequested": false,
+      "expected": {"introFrames": 50, "fixedPlateFrames": 40, "dissolveFrames": 10, "sourceStartFrame": 50, "outroFrames": 0, "outputFrames": 300, "outputHasAudio": true}
+    },
+    {
+      "id": "TL-03-EXPLICIT-OUTRO",
+      "fps": 30,
+      "sourceFrames": 300,
+      "sourceHasAudio": true,
+      "outroRequested": true,
+      "expected": {"introFrames": 60, "fixedPlateFrames": 48, "dissolveFrames": 12, "sourceStartFrame": 60, "outroFrames": 120, "outputFrames": 480, "outputHasAudio": true}
+    }
+  ],
+  "chapterCases": [
+    {
+      "id": "CH-01-CONTIGUOUS",
+      "fps": 30,
+      "sourceFrames": 180,
+      "parts": [{"id": "part-1", "sourceStartFrame": 0, "sourceEndFrame": 180, "captureGapBeforeMs": 0}],
+      "chapters": [
+        {"id": "warm-up", "sourceStartFrame": 0, "sourceEndFrame": 30, "expectedExportStartFrame": 60, "expectedExportEndFrame": 90},
+        {"id": "drill", "sourceStartFrame": 30, "sourceEndFrame": 150, "expectedExportStartFrame": 90, "expectedExportEndFrame": 210},
+        {"id": "review", "sourceStartFrame": 150, "sourceEndFrame": 180, "expectedExportStartFrame": 210, "expectedExportEndFrame": 240}
+      ],
+      "expectedOutputFrames": 240
+    },
+    {
+      "id": "CH-02-INTERRUPTED-PARTS",
+      "fps": 30,
+      "sourceFrames": 180,
+      "parts": [
+        {"id": "part-1", "sourceStartFrame": 0, "sourceEndFrame": 120, "captureGapBeforeMs": 0},
+        {"id": "part-2", "sourceStartFrame": 120, "sourceEndFrame": 180, "captureGapBeforeMs": 15000}
+      ],
+      "chapters": [
+        {"id": "before-interruption", "sourceStartFrame": 0, "sourceEndFrame": 120, "expectedExportStartFrame": 60, "expectedExportEndFrame": 180},
+        {"id": "after-interruption", "sourceStartFrame": 120, "sourceEndFrame": 180, "expectedExportStartFrame": 180, "expectedExportEndFrame": 240}
+      ],
+      "expectedOutputFrames": 240,
+      "expectedGapTreatment": "retain gap metadata; do not invent fifteen seconds of video or training time"
+    },
+    {
+      "id": "CH-03-25FPS-BOUNDARY",
+      "fps": 25,
+      "sourceFrames": 25,
+      "parts": [{"id": "part-1", "sourceStartFrame": 0, "sourceEndFrame": 25, "captureGapBeforeMs": 0}],
+      "chapters": [{"id": "whole-source", "sourceStartFrame": 0, "sourceEndFrame": 25, "expectedExportStartFrame": 50, "expectedExportEndFrame": 75}],
+      "expectedOutputFrames": 75
+    }
+  ],
+  "operationTransitions": [
+    {"id": "OP-01-CANCEL-PREFLIGHT", "from": "preflighting", "event": "cancel", "to": "cancelled", "publishedOutput": false, "stagingRetained": false, "sourceMutation": false, "shareInvoked": false},
+    {"id": "OP-02-CANCEL-COMPOSING", "from": "composing", "event": "cancel", "to": "cancelled", "publishedOutput": false, "stagingRetained": false, "sourceMutation": false, "shareInvoked": false},
+    {"id": "OP-03-LOW-SPACE-PREFLIGHT", "from": "reserving-space", "event": "insufficient-space", "to": "failed-space", "publishedOutput": false, "stagingRetained": false, "sourceMutation": false, "shareInvoked": false},
+    {"id": "OP-04-LOW-SPACE-MID-RENDER", "from": "composing", "event": "write-no-space", "to": "failed-space", "publishedOutput": false, "stagingRetained": false, "sourceMutation": false, "shareInvoked": false},
+    {"id": "OP-05-VALIDATION-FAIL", "from": "validating", "event": "duration-frame-or-digest-mismatch", "to": "failed-validation", "publishedOutput": false, "stagingRetained": false, "sourceMutation": false, "shareInvoked": false},
+    {"id": "OP-06-SUCCESS", "from": "validating", "event": "all-checks-pass", "to": "local-export-ready", "publishedOutput": true, "stagingRetained": false, "sourceMutation": false, "shareInvoked": false},
+    {"id": "OP-07-RETRY", "from": "failed-space", "event": "retry-after-new-preflight", "to": "preflighting", "publishedOutput": false, "stagingRetained": false, "sourceMutation": false, "shareInvoked": false}
+  ],
+  "copyShareCases": [
+    {"id": "SH-01-READY-IS-LOCAL", "start": "local-export-ready", "action": "none", "authorityCurrent": true, "expected": "local-export-ready", "createsExternalCopy": false, "invokesShareSheet": false},
+    {"id": "SH-02-SAVE-TO-PHOTOS", "start": "local-export-ready", "action": "save-copy-to-photos", "authorityCurrent": true, "expected": "external-copy-created", "createsExternalCopy": true, "invokesShareSheet": false},
+    {"id": "SH-03-SHARE-CANCELLED", "start": "share-intent", "action": "cancel-before-handoff", "authorityCurrent": true, "expected": "local-export-ready", "createsExternalCopy": false, "invokesShareSheet": false},
+    {"id": "SH-04-SHARE-HANDOFF", "start": "share-intent", "action": "invoke-os-share-sheet", "authorityCurrent": true, "expected": "external-custody-possible", "createsExternalCopy": true, "invokesShareSheet": true},
+    {"id": "SH-05-AUTHORITY-REVOKED", "start": "share-intent", "action": "invoke-os-share-sheet", "authorityCurrent": false, "expected": "denied-authority", "createsExternalCopy": false, "invokesShareSheet": false}
+  ]
+}
