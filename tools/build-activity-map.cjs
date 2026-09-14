@@ -8,6 +8,7 @@ const outputDir = path.join(siteDir, 'dist');
 const activityManifestPath = path.join(root, 'packages', 'soccer_agent_activity_package_20260908', 'docs', 'soccer_agent_activity_manifest.json');
 const sourceManifestPath = path.join(root, 'packages', 'soccer_agent_activity_package_20260908', 'docs', 'soccer_linear_manifest.json');
 const decisionsDir = path.join(root, 'docs', 'decisions');
+const activityDecisionsDir = path.join(root, 'docs', 'activity-decisions');
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const activityManifest = readJson(activityManifestPath);
@@ -107,6 +108,38 @@ if (fs.existsSync(decisionsDir)) {
 }
 acceptedDecisions.sort((a, b) => Date.parse(b.date) - Date.parse(a.date) || a.source.localeCompare(b.source));
 
+const activityDecisions = [];
+if (fs.existsSync(activityDecisionsDir)) {
+  for (const name of fs.readdirSync(activityDecisionsDir).filter(name => name.endsWith('.md')).sort()) {
+    const absolutePath = path.join(activityDecisionsDir, name);
+    const markdown = fs.readFileSync(absolutePath, 'utf8');
+    const outcome = tableValue(markdown, 'Outcome');
+    if (!outcome || outcome.toLowerCase() !== 'accepted') continue;
+    const activity = tableValue(markdown, 'Activity');
+    const version = tableValue(markdown, 'Decision version');
+    const date = tableValue(markdown, 'Decision date');
+    const accountable = tableValue(markdown, 'Accountable person');
+    const title = markdown.match(/^#\s+(.+)$/m)?.[1].trim() || name;
+    if (!activity || !version || !date || !accountable) {
+      throw new Error(`Accepted activity decision ${name} is missing required metadata`);
+    }
+    if (!byId.has(activity)) {
+      throw new Error(`Accepted activity decision ${name} references unknown activity ${activity}`);
+    }
+    const relativePath = path.relative(root, absolutePath).split(path.sep).join('/');
+    activityDecisions.push({
+      activity,
+      version,
+      date,
+      accountable,
+      title,
+      relativePath,
+      evidenceUrl: `https://github.com/sumarahmed/SoccerAPP/blob/main/${relativePath}`
+    });
+  }
+}
+activityDecisions.sort((a, b) => Date.parse(b.date) - Date.parse(a.date) || a.activity.localeCompare(b.activity));
+
 const statusOverrides = {};
 for (const decision of acceptedDecisions) {
   const related = activities.filter(activity => activity.source === decision.source);
@@ -121,6 +154,14 @@ for (const decision of acceptedDecisions) {
     };
   }
 }
+for (const decision of activityDecisions) {
+  statusOverrides[decision.activity] = {
+    status: 'Accepted',
+    statusDate: decision.date,
+    evidenceLabel: `${decision.activity} decision v${decision.version}`,
+    evidenceUrl: decision.evidenceUrl
+  };
+}
 
 const data = {
   activities,
@@ -131,7 +172,8 @@ const data = {
   phaseCounts,
   edgeCount: activities.reduce((total, activity) => total + activity.dependencies.length, 0),
   rootCount: activities.filter(activity => activity.dependencies.length === 0).length,
-  acceptedDecisions
+  acceptedDecisions,
+  activityDecisions
 };
 
 const template = fs.readFileSync(templatePath, 'utf8');
@@ -146,4 +188,4 @@ fs.rmSync(outputDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });
 fs.writeFileSync(path.join(outputDir, 'index.html'), output);
 fs.writeFileSync(path.join(outputDir, '.nojekyll'), '');
-console.log(`Built activity map: ${activities.length} activities, ${data.edgeCount} dependencies, ${acceptedDecisions.length} accepted decisions.`);
+console.log(`Built activity map: ${activities.length} activities, ${data.edgeCount} dependencies, ${acceptedDecisions.length} accepted source decisions and ${activityDecisions.length} accepted activity decisions.`);

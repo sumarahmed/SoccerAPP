@@ -1237,14 +1237,22 @@ html>body{padding:0}</style>
     if (statusOverrides[activity.id]) Object.assign(activity, statusOverrides[activity.id]);
   }
   const acceptedDecisions = data.acceptedDecisions || [];
+  const activityDecisions = data.activityDecisions || [];
+  const acceptedEvidence = acceptedDecisions.concat(activityDecisions.map(decision => ({
+    source: decision.activity,
+    version: decision.version,
+    date: decision.date,
+    accountable: decision.accountable,
+    evidenceUrl: decision.evidenceUrl
+  }))).sort((a, b) => Date.parse(b.date) - Date.parse(a.date) || a.source.localeCompare(b.source));
   const acceptedCount = document.getElementById('flow-accepted-count');
   const acceptedList = document.getElementById('flow-accepted-list');
-  acceptedCount.textContent = String(acceptedDecisions.length);
-  acceptedList.textContent = acceptedDecisions.length
-    ? acceptedDecisions.map(decision => decision.source).join(', ') + ' · evidence linked'
+  acceptedCount.textContent = String(acceptedEvidence.length);
+  acceptedList.textContent = acceptedEvidence.length
+    ? acceptedEvidence.map(decision => decision.source).join(', ') + ' · evidence linked'
     : 'No accepted decision evidence';
-  if (acceptedDecisions.length) {
-    const latestDecision = acceptedDecisions[0];
+  if (acceptedEvidence.length) {
+    const latestDecision = acceptedEvidence[0];
     const acceptedSummary = document.getElementById('flow-accepted-summary');
     document.getElementById('flow-accepted-title').textContent = latestDecision.source + ' accepted';
     document.getElementById('flow-accepted-meta').textContent = 'Decision v' + latestDecision.version + ' · ' + latestDecision.date + ' · ' + latestDecision.accountable;

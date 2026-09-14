@@ -1,0 +1,1131 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "SHA-256",
+  "excluded": [
+    ".soccolo-brand-build-root",
+    "release-manifest.json"
+  ],
+  "aggregateSha256": "350a76d214465780c7d80a7722669b8d75823357e1fae615020cfcd09311aa44",
+  "files": [
+    {
+      "path": "01-master/profiles/FOGRA39L_coated.icc",
+      "sha256": "b35713ef7eff09349d4c3249e5f377736d06d8a2671c54712971a3546bf17c57",
+      "sizeBytes": 121368
+    },
+    {
+      "path": "01-master/profiles/sRGB.icc",
+      "sha256": "30e5581e4b4278c43ec1b90f025b44abb90a06186f6c583428c431dc802795e9",
+      "sizeBytes": 588
+    },
+    {
+      "path": "01-master/soccolo-construction-grid.svg",
+      "sha256": "36dbe19dc270278b8236055132e22c158dc89dfc29a50cca955a1ea0355ace7d",
+      "sizeBytes": 13451
+    },
+    {
+      "path": "01-master/soccolo-master.svg",
+      "sha256": "853f2b363e8a649921630e202e2020be4c43f8ee827cefdcf981863229b995b4",
+      "sizeBytes": 53458
+    },
+    {
+      "path": "01-master/source/build.py",
+      "sha256": "a828a1168ffdf040e0bdb73d66737b6fb4ff979bfdf7518e351b0c5b02560492",
+      "sizeBytes": 35737
+    },
+    {
+      "path": "01-master/source/fontmark.py",
+      "sha256": "65eea9f30e76f5c6ad2677b064f5cc1869b426fdd6033ef5956b2570dba04114",
+      "sizeBytes": 8770
+    },
+    {
+      "path": "01-master/source/geom.py",
+      "sha256": "cb9bbd9eed2f63dfaccb6599866bd8c00f58a816c371ca6c882c19409e140e95",
+      "sizeBytes": 10865
+    },
+    {
+      "path": "01-master/source/lockups.py",
+      "sha256": "f660b9b888ea425984a676954b3bb35f9cc7c4bf63da21da3573419980a1f5e8",
+      "sizeBytes": 8662
+    },
+    {
+      "path": "01-master/source/marks.py",
+      "sha256": "58f183a32b33dcb6d321d1b57905c06b93a9f3be3cfdbc4a43760ca56f8bb2a0",
+      "sizeBytes": 10552
+    },
+    {
+      "path": "01-master/source/palette.py",
+      "sha256": "a3e917cd253ea9dd72b963c82646c58fc8cdd712b02693ce116ecc7f87f6850d",
+      "sizeBytes": 3333
+    },
+    {
+      "path": "01-master/source/pdfout.py",
+      "sha256": "1845f6a9ae828c2a38e98c6bf99ad9611cfbe150cd4ad4e126a773806d5f00d9",
+      "sizeBytes": 10047
+    },
+    {
+      "path": "01-master/source/printcolour.py",
+      "sha256": "99f4b03935d6cdfbe73fa46cb32d3faab3915025d6c7120587f1dd34257e3365",
+      "sizeBytes": 4243
+    },
+    {
+      "path": "01-master/source/release_manifest.py",
+      "sha256": "d06a7436f9e197b43babf94d105b47c73d8e39bf2aca208b700c690e803bd82f",
+      "sizeBytes": 2748
+    },
+    {
+      "path": "01-master/source/requirements.txt",
+      "sha256": "a0f36d978aa121dd58b3dbe00bf5e32372b4bc3fdf2365de5f4b08d65edf316c",
+      "sizeBytes": 166
+    },
+    {
+      "path": "01-master/source/sheets.py",
+      "sha256": "6d81dafbb51732fba66bc25d98f065cd9424470f1a8c202f122399f2cd22fc93",
+      "sizeBytes": 17094
+    },
+    {
+      "path": "01-master/source/svgdoc.py",
+      "sha256": "15ddd8239c2a63d47e8fbd4934d2d3f3812ccd1153dc0bd5f4476e2980a767f9",
+      "sizeBytes": 4186
+    },
+    {
+      "path": "01-master/source/system.py",
+      "sha256": "5f047d4bf6a3a5eb2ce6447aaff4f633b9b3ff250a839eef7783e21eb2d138e2",
+      "sizeBytes": 3078
+    },
+    {
+      "path": "01-master/typeface/OFL.txt",
+      "sha256": "8503c30a4d7e09c4c09015fee42f829f18acbe6330755e9930ba50ea44eaa157",
+      "sizeBytes": 4384
+    },
+    {
+      "path": "01-master/typeface/Poppins-SemiBold.ttf",
+      "sha256": "d3bf1bdaf0550e83da9ac0b1d1d9fe6db086835a83aa28578e609a394b9a0286",
+      "sizeBytes": 157312
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-horizontal-black.png",
+      "sha256": "91a6bfab0324b4bf679b6a54f976cdf8d3c9054d620ece9b6f3f0928b8b76b29",
+      "sizeBytes": 41909
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-horizontal-dark.png",
+      "sha256": "07cd9a8c9f52acc902d0c7bd7ad68ed3b4f39a6791ef1cada7685ecdd9ea0267",
+      "sizeBytes": 54087
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-horizontal-light.png",
+      "sha256": "9dcdcb560efbd9c453f04f5b1924e2063d83ecf0fb8b045a044cdf541982d827",
+      "sizeBytes": 62189
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-horizontal-tagline-black.png",
+      "sha256": "8d43ebd574525f0d64cf12addf559aea56245c6b305b823d8a5a5e437114782a",
+      "sizeBytes": 66679
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-horizontal-tagline-dark.png",
+      "sha256": "de0d54d4cc8c057fb3744765770d4f01240f08459a4fcce25232586fdaabe504",
+      "sizeBytes": 89607
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-horizontal-tagline-light.png",
+      "sha256": "5a7ff6124141e124c282d4870d20745401e76dfc973cf1985c5d65ee4d06ff40",
+      "sizeBytes": 98220
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-horizontal-tagline-white.png",
+      "sha256": "115fa8c0815ddc9915cfcf583a269290325d2cf68aa3b79a4d70d096405b9538",
+      "sizeBytes": 75306
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-horizontal-white.png",
+      "sha256": "c32dbae41794612df1b9f7ff4a2d894af81c8fdf62e8a907ff5223d7c01ed0a0",
+      "sizeBytes": 47973
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-wordmark-black.png",
+      "sha256": "8aeae48a40a5550450819fd817328373cad82d9c8418bb6b8fb4f452750580d9",
+      "sizeBytes": 39965
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-wordmark-dark.png",
+      "sha256": "c23428fbbfbc9a3c4788103ba8027dab57c95c23bec52a2688fd703e3c8e9059",
+      "sizeBytes": 45251
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-wordmark-light.png",
+      "sha256": "59de3e668bf19fe1a9607ca6eb037dff78769115491f00182bb68e8a21099607",
+      "sizeBytes": 57969
+    },
+    {
+      "path": "02-logo/horizontal/png/soccolo-wordmark-white.png",
+      "sha256": "c23428fbbfbc9a3c4788103ba8027dab57c95c23bec52a2688fd703e3c8e9059",
+      "sizeBytes": 45251
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-horizontal-black.svg",
+      "sha256": "ce87878b0a33742f032c5809d550a0a4a068dc467f26d86c4cba966744d32d38",
+      "sizeBytes": 3956
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-horizontal-dark.svg",
+      "sha256": "cbd1fa668e4856dc78fcf21f0d4e4ab4cd3de155f2da6d4ae560217797d31ac6",
+      "sizeBytes": 3962
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-horizontal-light.svg",
+      "sha256": "b1f1a164b1b82c0924d480b34072281c694ebb27298b5a0bf025b6906df2b384",
+      "sizeBytes": 3963
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-horizontal-tagline-black.svg",
+      "sha256": "8b8a71ccee6b88741aa5201d232881bea24b9e5c0647175b7eb94bb108a0483d",
+      "sizeBytes": 10198
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-horizontal-tagline-dark.svg",
+      "sha256": "7d702f81c39e516f82f8ca319fd66c9ada6f7a98bac0903177ab8a8cbd7697bb",
+      "sizeBytes": 10204
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-horizontal-tagline-light.svg",
+      "sha256": "b85b174a6b393f1c4999ca79819befdf06229eaac7630614df7bd3c2fd180c35",
+      "sizeBytes": 10205
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-horizontal-tagline-white.svg",
+      "sha256": "99d6f0f5c3218e79acce356aa061ff94cc619017ac87565b62b2788fdaaf8579",
+      "sizeBytes": 10198
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-horizontal-white.svg",
+      "sha256": "044dda409e0e3b8ceb5607070b07daa3010a5e2a1fb4f9bb06d767a186ceab17",
+      "sizeBytes": 3956
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-wordmark-black.svg",
+      "sha256": "c2ecca318f332d07554cb850835ee698b8bfcf235c2648d106f0adc9de6c643a",
+      "sizeBytes": 4698
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-wordmark-dark.svg",
+      "sha256": "6c86fbb3b762389ae1e4a6f97932d030287e3782a330d33306a2bdd5af548bd6",
+      "sizeBytes": 4704
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-wordmark-light.svg",
+      "sha256": "79605f03ad98ca55ba1984bfc7f445c7e2e2466b1ec24b4c7657a4e4c96b3a3b",
+      "sizeBytes": 4705
+    },
+    {
+      "path": "02-logo/horizontal/soccolo-wordmark-white.svg",
+      "sha256": "29c099327c1a3eb779476618cb3d66fab5beae604f68642c1f0270817aabc746",
+      "sizeBytes": 4698
+    },
+    {
+      "path": "02-logo/manifest.json",
+      "sha256": "9a3653196c72af1259cc131e6f2a72f692c6b71d09a74fd530872b3bfe4ed8a9",
+      "sizeBytes": 7039
+    },
+    {
+      "path": "02-logo/on-accent/soccolo-horizontal-on-mint.svg",
+      "sha256": "402fe0f0e2a834099ef3b5728e6dc05730f1d7ea8a76231bfa16e0131baa4049",
+      "sizeBytes": 3956
+    },
+    {
+      "path": "02-logo/on-accent/soccolo-symbol-on-mint.svg",
+      "sha256": "90c4a0f327ed43e0acbea3414e0b9d2fd32c03d6f7a2f6ce30572d4534e838fa",
+      "sizeBytes": 630
+    },
+    {
+      "path": "02-logo/stacked/png/soccolo-stacked-black.png",
+      "sha256": "121fe223212c807b4077c3a55302b7f5ce62ad8ea7e25a947c5fe9a2372d4f31",
+      "sizeBytes": 67804
+    },
+    {
+      "path": "02-logo/stacked/png/soccolo-stacked-dark.png",
+      "sha256": "207e106a11fb5c4c19e1b94cc10f3084c7a790e801425db5435160e75613b51a",
+      "sizeBytes": 86201
+    },
+    {
+      "path": "02-logo/stacked/png/soccolo-stacked-light.png",
+      "sha256": "b44f50daa5bf2847f90c8c68b1d57c6c76dc6fe8411b7a392a65de20f70c2a01",
+      "sizeBytes": 98930
+    },
+    {
+      "path": "02-logo/stacked/png/soccolo-stacked-tagline-black.png",
+      "sha256": "54d40b2d3b354b0a852e871f67dbe39de604ad9bee3047e57b5820029284c539",
+      "sizeBytes": 70166
+    },
+    {
+      "path": "02-logo/stacked/png/soccolo-stacked-tagline-dark.png",
+      "sha256": "ef607405385f9ee776f7a25ff1475f9d542a9f983ec6dab234ec78ac8d0f03fb",
+      "sizeBytes": 93988
+    },
+    {
+      "path": "02-logo/stacked/png/soccolo-stacked-tagline-light.png",
+      "sha256": "07eb46b1b3bbb2995c2563320e398fcf660bc68ca8704ebe780f84b78be494b4",
+      "sizeBytes": 104093
+    },
+    {
+      "path": "02-logo/stacked/png/soccolo-stacked-tagline-white.png",
+      "sha256": "d8d2da02cf87f81d4cb47d18102ea1bf6b817f9a7f430c4b7166933d1880fba6",
+      "sizeBytes": 80601
+    },
+    {
+      "path": "02-logo/stacked/png/soccolo-stacked-white.png",
+      "sha256": "04fdf08fea96d7ea412e7effbe288c57ab5390c5c6248d9a9b70d3f821592078",
+      "sizeBytes": 77891
+    },
+    {
+      "path": "02-logo/stacked/soccolo-stacked-black.svg",
+      "sha256": "ed4209e889981a248f3c23c378e688ed8f9a51b5f0f40783ec05d8000aa01580",
+      "sizeBytes": 5464
+    },
+    {
+      "path": "02-logo/stacked/soccolo-stacked-dark.svg",
+      "sha256": "5d22861fc479b02d8007cea314c9b7b5c721837cca04d881c7a68c2f8c0d3f2f",
+      "sizeBytes": 5470
+    },
+    {
+      "path": "02-logo/stacked/soccolo-stacked-light.svg",
+      "sha256": "6ea29aa45107d1fd2a9e9aad65790fa003802aa7467169479e6c8bb335fe81b8",
+      "sizeBytes": 5471
+    },
+    {
+      "path": "02-logo/stacked/soccolo-stacked-tagline-black.svg",
+      "sha256": "33b2a99a77c01e92331c3ba3591af03fba9e77ea0520a7756ff39d6fe0e29d63",
+      "sizeBytes": 11708
+    },
+    {
+      "path": "02-logo/stacked/soccolo-stacked-tagline-dark.svg",
+      "sha256": "36561535d5b8ad1b5a8d34aa90d582cca27bd36b33801e1d9a55364f7c6de7f8",
+      "sizeBytes": 11714
+    },
+    {
+      "path": "02-logo/stacked/soccolo-stacked-tagline-light.svg",
+      "sha256": "1f338b305ea09fb0d371d1934d39922f1329b7e79aee3fe7775d74d6ce48c17b",
+      "sizeBytes": 11715
+    },
+    {
+      "path": "02-logo/stacked/soccolo-stacked-tagline-white.svg",
+      "sha256": "e767a0dce3495c06c5dc81be2ef2eab28075ff7e667cfba21027b5da99b9eaec",
+      "sizeBytes": 11708
+    },
+    {
+      "path": "02-logo/stacked/soccolo-stacked-white.svg",
+      "sha256": "a25f1cd911b967b8fc2dd2453b67c43ecad6d0f752abac00c4ecd7032702f058",
+      "sizeBytes": 5464
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-black.png",
+      "sha256": "34193ecc5b6d2c47346385cfc594823c003736e363fadc7485e983cf32465b0c",
+      "sizeBytes": 58238
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-compact-black.png",
+      "sha256": "9a7a06d87a0e228109ae90c32f7ebff0bad53d9394ebaa30f9e392625f9ed623",
+      "sizeBytes": 55545
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-compact-dark.png",
+      "sha256": "b55dbe312f260f876fe17fd909f9e535e354eb29ca559d40ce35593bfba5b498",
+      "sizeBytes": 75525
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-compact-light.png",
+      "sha256": "b65ca815386ba2b117d7048be6e7d6fc66924774287ce16d548f6e3f99d6a077",
+      "sizeBytes": 76195
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-compact-white.png",
+      "sha256": "45d17fad2563df882018f648999b332e4d3138c4b1be15ac7db8b09bd6efb9d4",
+      "sizeBytes": 60078
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-dark.png",
+      "sha256": "974015ae9ad382b73b6a33524ae38cf46be14d26a7d7818d25c5f1b609f9a2d6",
+      "sizeBytes": 79629
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-light.png",
+      "sha256": "122cb94bceb64dbd3e0f09f75f69986c334cda11ed6b780a8d039ebee171f600",
+      "sizeBytes": 79868
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-orbit-black.png",
+      "sha256": "15da042470dd3c9d952155b8180701f07d082150982852b7dd98a8326c1c96f3",
+      "sizeBytes": 44540
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-orbit-dark.png",
+      "sha256": "46417a4a1e39c5e1377fa61ee59d478b2d0f8cbc90fd33754e4984fb4123617f",
+      "sizeBytes": 63131
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-orbit-light.png",
+      "sha256": "71887d823556a4defbfba6e09256d90667c6fceff6f578a56700905dcacf2626",
+      "sizeBytes": 62663
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-orbit-white.png",
+      "sha256": "928f3a5e55c0d8cb4ff5b487b236c6582bba2ba6702748780e48777ade42b129",
+      "sizeBytes": 49302
+    },
+    {
+      "path": "02-logo/symbol/png/soccolo-symbol-white.png",
+      "sha256": "8afcccb229752bbc742775bf4962e1e57bda59dd763f8d2988c6ecfdd32028a4",
+      "sizeBytes": 63186
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-black.svg",
+      "sha256": "88f48f0605e813185a238964f514a738c92667c86161eba6c636196b962aaea7",
+      "sizeBytes": 630
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-compact-black.svg",
+      "sha256": "bbb8bdd83c76d27558920c774848358e9a8eb4f8caa97f6a700529f1ce734a63",
+      "sizeBytes": 652
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-compact-dark.svg",
+      "sha256": "9c4e90aa3fd622467d8363ecac9cd4168becf5ab67585118a855f9f2352c60c9",
+      "sizeBytes": 658
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-compact-light.svg",
+      "sha256": "2df9882970dd2250c4a5e71391ec669fc8d33a8c376acc9beaafdf27b00ba2ed",
+      "sizeBytes": 659
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-compact-white.svg",
+      "sha256": "c59557e7495c6e3a5520ce0416af426011f7af6de47ee47707439f7be1f01a44",
+      "sizeBytes": 652
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-dark.svg",
+      "sha256": "5ddf0b3119ca038f8ccf7f515eefc56fb617b06d3df8f427fe1e738b8b7a10e6",
+      "sizeBytes": 636
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-light.svg",
+      "sha256": "364fe49ef43d557dfa5e18b7fcce67dc93033b7c497db63cffe7e6f47562c021",
+      "sizeBytes": 637
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-orbit-black.svg",
+      "sha256": "cb0a13bdc371d3e4d8b76321a01f4d0e3f52d735c826bffbcc50c3c2dd85cd43",
+      "sizeBytes": 782
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-orbit-dark.svg",
+      "sha256": "0583ca50378e9e00c89798702266be4c07957e37232ef885dcd4a6743ce8bdc7",
+      "sizeBytes": 788
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-orbit-light.svg",
+      "sha256": "b7b21e72cdb8debf631b1bc80a3e802d70df7c8a1d17bf2686f4ce4bfd6e78ff",
+      "sizeBytes": 789
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-orbit-white.svg",
+      "sha256": "82b605343cfe0e890f318781f2994e0777ed0bfb1c1df4fb89e2e786b4502a8d",
+      "sizeBytes": 782
+    },
+    {
+      "path": "02-logo/symbol/soccolo-symbol-white.svg",
+      "sha256": "d5dcd8b7afb91f014d0ced4383261fb7910d88f0c98c2bcf3f8fcff9463e0e16",
+      "sizeBytes": 630
+    },
+    {
+      "path": "03-app/android/ic_launcher_background.png",
+      "sha256": "a8de29938af6a641eeb8c15056ea0ce9871a793867cba3be7579ce28bd1f265d",
+      "sizeBytes": 1353
+    },
+    {
+      "path": "03-app/android/ic_launcher_background.svg",
+      "sha256": "3b4e9b9bbb56ac64c539ed293e0c0da6691a229fe4103e6833e7b6d43ff11a5c",
+      "sizeBytes": 208
+    },
+    {
+      "path": "03-app/android/ic_launcher_foreground.png",
+      "sha256": "8a975278eed77d47f390ae875c2f2aa4a38a5833e30ed82997e280662bd03c95",
+      "sizeBytes": 9191
+    },
+    {
+      "path": "03-app/android/ic_launcher_foreground.svg",
+      "sha256": "320a773f73083f9f39efd2a3bc7ef2102c7d4024b8ab9257acdb2b732a04004a",
+      "sizeBytes": 652
+    },
+    {
+      "path": "03-app/android/ic_launcher_monochrome.png",
+      "sha256": "763b0837d3b013edb96ee87f3ffe34b6ac928a1ff729d86a87103783635de4de",
+      "sizeBytes": 5734
+    },
+    {
+      "path": "03-app/android/ic_launcher_monochrome.svg",
+      "sha256": "ce01d974b7818279d64deddbfa6d9cc77dec083f6b0376db86a9a5402f0532f5",
+      "sizeBytes": 652
+    },
+    {
+      "path": "03-app/android/playstore-icon-512.png",
+      "sha256": "4f59b661e83519d5d0eef55e08891c092ed0263a9920191a5e1a37662c3f3b9d",
+      "sizeBytes": 14000
+    },
+    {
+      "path": "03-app/ios/AppIcon-1024.png",
+      "sha256": "83b98dfe48e14bb5d7aa713a682c9143a16eb37b8a577632e8dfcb33149d45e2",
+      "sizeBytes": 30661
+    },
+    {
+      "path": "03-app/ios/AppIcon-120.png",
+      "sha256": "d9029aeb10791e055f144e0f7401835c6ba5c9874b8a4abdf36e671d6bd88258",
+      "sizeBytes": 3077
+    },
+    {
+      "path": "03-app/ios/AppIcon-152.png",
+      "sha256": "b3bf432f47f1f902f3e1896d3eef388b7020072fd0acf2111cc90f104366372c",
+      "sizeBytes": 3887
+    },
+    {
+      "path": "03-app/ios/AppIcon-167.png",
+      "sha256": "7e92bf94b0d00f4fd72d492a01c1d22cf1f5ab229c845fda9ad471a18fc2fc52",
+      "sizeBytes": 4233
+    },
+    {
+      "path": "03-app/ios/AppIcon-180.png",
+      "sha256": "c1fa717b299c457b438de59d41214ac5a6e9b77b02e84ed245a6c5754ce9de47",
+      "sizeBytes": 4535
+    },
+    {
+      "path": "03-app/ios/AppIcon-20.png",
+      "sha256": "6b79384be5fc2dc0eb22b2ac9ecf6d07bf4d927867b824fda8083e38f59a183f",
+      "sizeBytes": 460
+    },
+    {
+      "path": "03-app/ios/AppIcon-29.png",
+      "sha256": "a9ab78801d9e0fa41f86054d7cfd4cd1b4536af974b4f5d0c8107bfb3ec053d9",
+      "sizeBytes": 749
+    },
+    {
+      "path": "03-app/ios/AppIcon-40.png",
+      "sha256": "b2e92182b3490a99e1f4b74ba9877037375505c88374d9f3634f580b641e2c45",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "03-app/ios/AppIcon-58.png",
+      "sha256": "39be65dcf2c0d15197e67fe6652130dd9a4f7b7c3976d4251e592a3fbed2401f",
+      "sizeBytes": 1472
+    },
+    {
+      "path": "03-app/ios/AppIcon-60.png",
+      "sha256": "0acbc9acb7bb4bf82db2da824f5433a11e73f623ee79335d3c9e50979a3bb7f2",
+      "sizeBytes": 1571
+    },
+    {
+      "path": "03-app/ios/AppIcon-76.png",
+      "sha256": "51a73c0fc4ed7d8d1de2f7e68bf006c23892777ecc507490feb4fe7de668746c",
+      "sizeBytes": 1855
+    },
+    {
+      "path": "03-app/ios/AppIcon-80.png",
+      "sha256": "b88569c810a5d905080578425685c6bfa8859d0534e5352c750bfd626ab6d3e2",
+      "sizeBytes": 2080
+    },
+    {
+      "path": "03-app/ios/AppIcon-87.png",
+      "sha256": "19eb40050a74c0465d5a24ae1c5c4e539aac0268ce6d405682bd02203592c33e",
+      "sizeBytes": 2338
+    },
+    {
+      "path": "03-app/proofs/small-size-proof.png",
+      "sha256": "66472fb566237d3e3ac6c4168b34bc0a5ffa46c04750d55a2d48a25dcace5520",
+      "sizeBytes": 82633
+    },
+    {
+      "path": "03-app/soccolo-appicon-master-1024.png",
+      "sha256": "83b98dfe48e14bb5d7aa713a682c9143a16eb37b8a577632e8dfcb33149d45e2",
+      "sizeBytes": 30661
+    },
+    {
+      "path": "03-app/soccolo-appicon-master-1024.svg",
+      "sha256": "b7e25f82e34fb4770728d4a3bc78251503cb7f874a55e64be750fb2a1617f82e",
+      "sizeBytes": 701
+    },
+    {
+      "path": "03-app/web/apple-touch-icon-180.png",
+      "sha256": "c1fa717b299c457b438de59d41214ac5a6e9b77b02e84ed245a6c5754ce9de47",
+      "sizeBytes": 4535
+    },
+    {
+      "path": "03-app/web/favicon-16.png",
+      "sha256": "d65ab0ae4487f2b2a836bb675ce79eb2fd1573a1c9012839132239b3cb9c2888",
+      "sizeBytes": 516
+    },
+    {
+      "path": "03-app/web/favicon-32.png",
+      "sha256": "1313addc6b949d1bd3526e3204860c261f475c4f248181ea60bb209194087767",
+      "sizeBytes": 1111
+    },
+    {
+      "path": "03-app/web/favicon-48.png",
+      "sha256": "8958db30aa22d1406a8c55f0cf38b1d322f7e1dd9ebfd693b5910646e801d5c4",
+      "sizeBytes": 1729
+    },
+    {
+      "path": "03-app/web/favicon-orbit-16.png",
+      "sha256": "2660f7f4b490193307492a0b1adf8e8f0aa3126df9516fb0a2df5a4dff1f1fda",
+      "sizeBytes": 689
+    },
+    {
+      "path": "03-app/web/favicon-orbit-32.png",
+      "sha256": "f149b022f7afde731b5ca1cab27f9d2fd58242814b8ea6ce3a9b57d36e96b5ab",
+      "sizeBytes": 1571
+    },
+    {
+      "path": "03-app/web/favicon-orbit-alternate.svg",
+      "sha256": "bdcd2905c195f817546fa15097e6001155bffec405e8365bbb12c23e7cebb3b3",
+      "sizeBytes": 831
+    },
+    {
+      "path": "03-app/web/favicon.svg",
+      "sha256": "41aeb27c6d15dff3191e9c08c7e1b080f6c50a0eab854dc165f719d61c445b64",
+      "sizeBytes": 690
+    },
+    {
+      "path": "03-app/web/maskable-icon-512.png",
+      "sha256": "cabbc8bd6ebee5ea38d860a7350d03223d9ea8d9fb5012bf03a417f858d8bb70",
+      "sizeBytes": 12497
+    },
+    {
+      "path": "04-export-treatment/export-treatment.md",
+      "sha256": "6c8f09ca985b867ef8c2cc9504ca4df0f2bd517e52f1ed9ce86ac2d97f3c5aa8",
+      "sizeBytes": 4591
+    },
+    {
+      "path": "04-export-treatment/overlays/soccolo-endframe-1080x1080-safe-area.png",
+      "sha256": "309c366a99f8b808ead1872dedc186d37e4180619ea4b8716e480a76d461bdef",
+      "sizeBytes": 20348
+    },
+    {
+      "path": "04-export-treatment/overlays/soccolo-endframe-1080x1920-safe-area.png",
+      "sha256": "5042b6155e214b4d9d7eea0c26235bc83c3abcfe0ffe7e7958d74ea9141e431a",
+      "sizeBytes": 30634
+    },
+    {
+      "path": "04-export-treatment/overlays/soccolo-endframe-1920x1080-safe-area.png",
+      "sha256": "557dad7f9c002c5122c5e4124988416d3b38921b55eca9ce323f0b3def9adf70",
+      "sizeBytes": 31989
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1080x1080-safe-area.svg",
+      "sha256": "6064ced61c4996d606c636cc9c8e4c9102ed4bc0fd15f9b41237b01584b18783",
+      "sizeBytes": 12313
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1080x1080.png",
+      "sha256": "53fe31a3dc8624819a05d1c4c8bd9f1d370160ee9efe5a048d74056d68574540",
+      "sizeBytes": 34372
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1080x1080.svg",
+      "sha256": "ab0e89b611d6ab13b1e650095f79485bb58374bf14c2fbbf8e4419146ccb4348",
+      "sizeBytes": 11790
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1080x1920-safe-area.svg",
+      "sha256": "4e23b1a88d2a5f22ca6638831786858a9ffb7887803fb1f990d4bd13c2ec9673",
+      "sizeBytes": 12316
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1080x1920.png",
+      "sha256": "6d50992ccae0273004d0f9a09c9a74e8f254f1790ff7e1a9932d07074e3efd30",
+      "sizeBytes": 53202
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1080x1920.svg",
+      "sha256": "3cd6fe1d6556eb2529f1bda62906f7c8db3f909113376ed1cb175ec3cabe2932",
+      "sizeBytes": 11790
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1920x1080-safe-area.svg",
+      "sha256": "f29f58032a75a50b74bee42fd8754cb8c1048c650d76dc3850f11b11f0797507",
+      "sizeBytes": 12305
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1920x1080.png",
+      "sha256": "dcc9d18fea101838dde2af5908801e31f0998bdc9224722714c57c43675300c9",
+      "sizeBytes": 59000
+    },
+    {
+      "path": "04-export-treatment/soccolo-endframe-1920x1080.svg",
+      "sha256": "2232d92110fd277ec47d384d1cc5310e01f8c232156ae3b5808ec7e245c6d97e",
+      "sizeBytes": 11793
+    },
+    {
+      "path": "04-export-treatment/soccolo-export-timing-specification.pdf",
+      "sha256": "4da35a84a779a33deda29a694625d3b40b17290cb0f1239183e6e73db26d1dc4",
+      "sizeBytes": 31050
+    },
+    {
+      "path": "04-export-treatment/soccolo-export-timing-specification.png",
+      "sha256": "e4ae72b43ee63985f9e819b6e3fe814e500304901de7faf1df374c5a1c9249c0",
+      "sizeBytes": 232245
+    },
+    {
+      "path": "05-specification/clear-space.svg",
+      "sha256": "e2b931ac7f92f3220244ed8427c5aa05e2774b993b56eb1ed91d51c09f85159d",
+      "sizeBytes": 6126
+    },
+    {
+      "path": "05-specification/colour-tokens.css",
+      "sha256": "deaa44e8409ed95ba3468aafe3e66c06b8dbb6420d751d42625adef4a01330cd",
+      "sizeBytes": 948
+    },
+    {
+      "path": "05-specification/colour-tokens.json",
+      "sha256": "617ccfeadb103a5c1d63b473147257381b99d2b4147d3e29c0167499d5b9c143",
+      "sizeBytes": 4013
+    },
+    {
+      "path": "05-specification/measurements.json",
+      "sha256": "5fd9ba0202ee3433aca595c2996a6d452f077ba2370f119b54682e6a97ec41f3",
+      "sizeBytes": 1064
+    },
+    {
+      "path": "05-specification/minimum-size.png",
+      "sha256": "45f11938b0cd198bb2d08ecfac82114a705a9b5567e4562cb2c04cc3aae3229c",
+      "sizeBytes": 173957
+    },
+    {
+      "path": "05-specification/usage-specification.md",
+      "sha256": "5c1069777179534412e2d49169d07dcf7d127728cb529f24e2b84d4bafea4d95",
+      "sizeBytes": 14142
+    },
+    {
+      "path": "06-provenance/revision-log.md",
+      "sha256": "4c43703da8edfc6a252ebc4830a794ec54056b661fe9b128c47d5e44a3e94b9b",
+      "sizeBytes": 13973
+    },
+    {
+      "path": "06-provenance/rights-and-provenance.md",
+      "sha256": "ba5ccf9be5e71a4213866e3d57cecf5e4345f140c5328bb3cc03bafbbbefdb4d",
+      "sizeBytes": 12910
+    },
+    {
+      "path": "06-provenance/similarity-review.md",
+      "sha256": "60c55a74d9abeca72a0faecf44ac2272f9a23fb769a10977bf4a583d75f85c7e",
+      "sizeBytes": 11032
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-horizontal-black-cmyk.pdf",
+      "sha256": "9efef65b72dabfd9ab97c3a12957762615ce914e52a662f529dbcf1ee9e70031",
+      "sizeBytes": 98338
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-horizontal-dark-cmyk.pdf",
+      "sha256": "de4eea20d7cabdade069f36c279d5f368a0ae8406969315a4d9a9167db0c249b",
+      "sizeBytes": 98345
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-horizontal-light-cmyk.pdf",
+      "sha256": "aa7a47306b907d8905eff58362fdbbd35dbddec8575e53c300951b0d04a8233d",
+      "sizeBytes": 98357
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-horizontal-tagline-black-cmyk.pdf",
+      "sha256": "99ecfd4a3dbb366c11fc5aac54c8059dc4df18e384d58ab2b5b7125012c6cc3b",
+      "sizeBytes": 101457
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-horizontal-tagline-dark-cmyk.pdf",
+      "sha256": "e4d68974e64ea965832b1548cad10ac46d046fe06fc286be73cd1a04d4166564",
+      "sizeBytes": 101470
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-horizontal-tagline-light-cmyk.pdf",
+      "sha256": "1b5f96cb15de46fcd1a11a364a5002540bd70b46e14bd5ca9bd52ada0426c697",
+      "sizeBytes": 101490
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-horizontal-tagline-white-cmyk.pdf",
+      "sha256": "227e505e0c930ba3e10ededbde94da4237e52dd8bb7ea34ed8fd8820c2f10c82",
+      "sizeBytes": 101455
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-horizontal-white-cmyk.pdf",
+      "sha256": "657003154301ea6c999b588ff881e40d898afa436c076942b7333f6ba2c8ba38",
+      "sizeBytes": 98337
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-stacked-black-cmyk.pdf",
+      "sha256": "6a4e9a7adad242303396110f1a56bf7fd7d2350fc67e58d6319d5046256747c6",
+      "sizeBytes": 99027
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-stacked-dark-cmyk.pdf",
+      "sha256": "80ffc551f5196c0898c9674238e20921a12e1c45347e98adfc364460256df13c",
+      "sizeBytes": 99032
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-stacked-light-cmyk.pdf",
+      "sha256": "137f463128df357ee89aa28ae4002f4bf98cff53b1477456fd40fbd78ce926c8",
+      "sizeBytes": 99044
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-stacked-tagline-black-cmyk.pdf",
+      "sha256": "51ff516a466909cf03a1cd99914dc78daffd39de5ae806e98edc3549de20691c",
+      "sizeBytes": 102148
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-stacked-tagline-dark-cmyk.pdf",
+      "sha256": "cfaf7dc938a747892c3032d7503f48bbc336cfb07fe4efd7d63b5547910512e0",
+      "sizeBytes": 102159
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-stacked-tagline-light-cmyk.pdf",
+      "sha256": "1a3f32f06bf72dc4a7d8344033bd009e72ab81e86ad698a66073b22cddaceed2",
+      "sizeBytes": 102175
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-stacked-tagline-white-cmyk.pdf",
+      "sha256": "378335ee8d1b3d9091e5d71a22b2d2bb67e5a1babc1e22bca3af44f3f28d8410",
+      "sizeBytes": 102145
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-stacked-white-cmyk.pdf",
+      "sha256": "4946dfab39b8033495a29c30c6d8497e1e4a71c746d217c3dee237b6dbbaae50",
+      "sizeBytes": 99025
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-symbol-black-cmyk.pdf",
+      "sha256": "b345e8f403ec1c78212536d33a5d8269a53dd8a3107ec799bddd849f2aeaf6cb",
+      "sizeBytes": 96335
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-symbol-dark-cmyk.pdf",
+      "sha256": "0a1df204b975d60c3bf0c4fcc270022f270cb907601bebf008d9f2db0b7a7676",
+      "sizeBytes": 96336
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-symbol-light-cmyk.pdf",
+      "sha256": "4a63fac66339b85b7a59f0b289907d3c8ef219b76923720dc9d141cc7f570930",
+      "sizeBytes": 96339
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-symbol-orbit-black-cmyk.pdf",
+      "sha256": "26c9b38729b690a65f34595404e2fde454e1fd1190b4ae8e6e0cfa2ed39bea9b",
+      "sizeBytes": 96549
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-symbol-orbit-dark-cmyk.pdf",
+      "sha256": "d2d821af9dda7467098beb8a4184c803eac6f4bcc75451264b5f8841031bbc14",
+      "sizeBytes": 96551
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-symbol-orbit-light-cmyk.pdf",
+      "sha256": "f4a27d22a50adeeff47cd693ffaeba229d3c0d1476d8b655b30c8a957f77ad09",
+      "sizeBytes": 96554
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-symbol-orbit-white-cmyk.pdf",
+      "sha256": "0f4da97acae64599bd3af33499643a8237862985107c899a4bbfa279221f3536",
+      "sizeBytes": 96546
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-symbol-white-cmyk.pdf",
+      "sha256": "53a347e03879eabba70c4ccdd458274e09f29995c58f13ef6f2d68f9dea6813e",
+      "sizeBytes": 96331
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-wordmark-black-cmyk.pdf",
+      "sha256": "e98b5746e427feb31b8492a90aa29d1c6f9167c8537f05b4a0740a3e864e939e",
+      "sizeBytes": 98605
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-wordmark-dark-cmyk.pdf",
+      "sha256": "c1abd2a5d36058618f3e9d322e1eceb2eabc26ffbb1b523b2131ad8e8d66302d",
+      "sizeBytes": 98603
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-wordmark-light-cmyk.pdf",
+      "sha256": "57d9f01d875c47909bd9fcccfbdeb91dbbfd60e1ba44fcf11f5b967bf8d3bd41",
+      "sizeBytes": 98612
+    },
+    {
+      "path": "07-print/cmyk-for-print/soccolo-wordmark-white-cmyk.pdf",
+      "sha256": "323709052f77b75e8d226c2e525b261f31d385ebe568e1b5755e5508e286078d",
+      "sizeBytes": 98604
+    },
+    {
+      "path": "07-print/print-index.json",
+      "sha256": "fc94f0b0d69cbee443f25f5eaebd7c1fec1724b9cf78615a301ab75afebb0860",
+      "sizeBytes": 16019
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-horizontal-black-rgb.pdf",
+      "sha256": "c234c461feec0f458a8a8ebc82e211ceb03136cd560e874e866e730934141714",
+      "sizeBytes": 3197
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-horizontal-dark-rgb.pdf",
+      "sha256": "e55e77176bbf92069f27b2a017ee24fa87a85e5d3a15027421fa18b318a2ed9a",
+      "sizeBytes": 3205
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-horizontal-light-rgb.pdf",
+      "sha256": "a2353a2ff74ccd4993ad05acb9bebba4f0defe536457cf5fb2974070000872d5",
+      "sizeBytes": 3206
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-horizontal-tagline-black-rgb.pdf",
+      "sha256": "b4d46268a56698fdef6f6bf9fdb83dec1b86eec830025c197deda71da912664f",
+      "sizeBytes": 6313
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-horizontal-tagline-dark-rgb.pdf",
+      "sha256": "a7353dceefeb3506fe0ea9a80ddc9b50f2f5593cd20ee312b3b8601839e3cc33",
+      "sizeBytes": 6332
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-horizontal-tagline-light-rgb.pdf",
+      "sha256": "9dbaeaf44f30bec7597890d38d779cef75f6e2b388db3b30b68f33cc6e776ee1",
+      "sizeBytes": 6334
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-horizontal-tagline-white-rgb.pdf",
+      "sha256": "b90556e8efab676e0f85f40d1768e633ad822a80d89d58d6fc219d7c5c476d6f",
+      "sizeBytes": 6313
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-horizontal-white-rgb.pdf",
+      "sha256": "83f6f6eec171b64d999269de4f2bc2fd3e295758e16ce338eb1670ce58909962",
+      "sizeBytes": 3196
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-stacked-black-rgb.pdf",
+      "sha256": "018c1638efa844a6ef199cec94bc754a4023acd35ec1edce015cce7092bacd47",
+      "sizeBytes": 3883
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-stacked-dark-rgb.pdf",
+      "sha256": "f8041bca25526c1bcf30e61bde5d7695011f3c27ee2c512de7cc912bbcd82b1a",
+      "sizeBytes": 3892
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-stacked-light-rgb.pdf",
+      "sha256": "5f475ec59c03f1e6245a4ef5e650c6d1db2cec232a7eb90220e2aabc821dd6e4",
+      "sizeBytes": 3896
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-stacked-tagline-black-rgb.pdf",
+      "sha256": "599072b46929232b68da5d04d1c31b1a88efc9a1bdd57945754444f74051f962",
+      "sizeBytes": 7003
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-stacked-tagline-dark-rgb.pdf",
+      "sha256": "2d85fff723fb4a967fe50ef53b21d21ad451cc4ed4d9d6fece452045c4bc37f2",
+      "sizeBytes": 7024
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-stacked-tagline-light-rgb.pdf",
+      "sha256": "91e27a9e0a400be334ff181e3da324bcb596b001cbfcbb62b8ac226712aab375",
+      "sizeBytes": 7025
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-stacked-tagline-white-rgb.pdf",
+      "sha256": "67d85df15f785a3c4ffa77af4da065513e15a3bdbfea638dd47b53b74bea448e",
+      "sizeBytes": 7003
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-stacked-white-rgb.pdf",
+      "sha256": "58f106a9dab4a3259fa9814fac47249b277b5502a26e7724d920785cddabedd2",
+      "sizeBytes": 3883
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-symbol-black-rgb.pdf",
+      "sha256": "80437797c651ba5a17b44459060efa515c26744ceee18f5d8bc366878485316c",
+      "sizeBytes": 1191
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-symbol-dark-rgb.pdf",
+      "sha256": "85c6102141aee1d8efc9e5c5c04cb7097b608a0a2aa48a7a09530c51ac06c032",
+      "sizeBytes": 1197
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-symbol-light-rgb.pdf",
+      "sha256": "6ab8c187ec8a7f96fc7ad8d756af72b8a31d3965c111e645df50fe9abf5f7c7b",
+      "sizeBytes": 1196
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-symbol-orbit-black-rgb.pdf",
+      "sha256": "a1ef952cdc695ba5d5d43a7e5f2602b49fa8f2f8443fbb47db86332a341564b4",
+      "sizeBytes": 1405
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-symbol-orbit-dark-rgb.pdf",
+      "sha256": "5388057e4032fa185cf8fb735a968fb93b246f0916e6e7fb443843f609d11213",
+      "sizeBytes": 1408
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-symbol-orbit-light-rgb.pdf",
+      "sha256": "0256b4f02a1924c0185c9b4ffd7baf7d9f54994e4dc2b3eee173fdff6beabef5",
+      "sizeBytes": 1410
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-symbol-orbit-white-rgb.pdf",
+      "sha256": "ddb28ce1e31648220cca47b51adde40c36b672ec76be92e1b007cee740c411fd",
+      "sizeBytes": 1405
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-symbol-white-rgb.pdf",
+      "sha256": "e8a3fa298ffe24d58a895eb47aa9b30570b0cca874822037f58aaaaac7d8a29f",
+      "sizeBytes": 1190
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-wordmark-black-rgb.pdf",
+      "sha256": "0055eceb7c4ffed974ce6f7a9631fe6e3e1be702c6db3006729ef28a739cdc48",
+      "sizeBytes": 3463
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-wordmark-dark-rgb.pdf",
+      "sha256": "9fea132b8509f644f70d3466d563da1c3511756c000f8c63ef03f6c4121dd5dc",
+      "sizeBytes": 3461
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-wordmark-light-rgb.pdf",
+      "sha256": "36d6fbedd4516ab970edcc35cf753be5833854520c1ad28fc9ab1e0a55daaf62",
+      "sizeBytes": 3470
+    },
+    {
+      "path": "07-print/rgb-for-office/soccolo-wordmark-white-rgb.pdf",
+      "sha256": "15c859bf347fef0bc64b9d4213d2425bf9e96d5e55aea10b875f5106a953675d",
+      "sizeBytes": 3462
+    },
+    {
+      "path": "07-print/soccolo-print-reference.pdf",
+      "sha256": "331413818d19ed14ac34cdc7fcdc3d6ce59585a1631877052df956edec5cbf51",
+      "sizeBytes": 35462
+    },
+    {
+      "path": "08-video/intro/soccolo-intro-16x9-alpha.mov",
+      "sha256": "a7485a6ccac8102928473e0b9abc7a504d6bb3db509012ba08eb5c8e34825525",
+      "sizeBytes": 2407944
+    },
+    {
+      "path": "08-video/intro/soccolo-intro-16x9.mp4",
+      "sha256": "348a45a1c229076e2d934e8cdcc8bd26085e0589f26fc381e650e261d9d57500",
+      "sizeBytes": 38020
+    },
+    {
+      "path": "08-video/intro/soccolo-intro-1x1-alpha.mov",
+      "sha256": "3310e0b6f0155e9cc5347f2d665af786c0d8fd93f01628d2d9e054b24d040b8c",
+      "sizeBytes": 1411648
+    },
+    {
+      "path": "08-video/intro/soccolo-intro-1x1.mp4",
+      "sha256": "3f4fae7045d8ec537b67fa72c2d21bac41ce674de4737f28da2c5d2cb81e30fb",
+      "sizeBytes": 21701
+    },
+    {
+      "path": "08-video/intro/soccolo-intro-9x16-alpha.mov",
+      "sha256": "c2af93b14995e86ca4f87fbde86e40d66508e6b8373de81b8de5f7dc78a4031d",
+      "sizeBytes": 2338801
+    },
+    {
+      "path": "08-video/intro/soccolo-intro-9x16.mp4",
+      "sha256": "e4415b337992c14824ce16ffbc0b358571b393e5f631747a1621b32f8865d753",
+      "sizeBytes": 34429
+    },
+    {
+      "path": "08-video/manifest.json",
+      "sha256": "947803f0df8b97940b964542320b06b1e0e2a208db8b4399fa0f4a6e5a00a868",
+      "sizeBytes": 7661
+    },
+    {
+      "path": "08-video/mark/soccolo-intro-mark-16x9.png",
+      "sha256": "56e875724c86877f895f32e1e460987a9ec59273cd8613f178441b23a552f719",
+      "sizeBytes": 29459
+    },
+    {
+      "path": "08-video/mark/soccolo-intro-mark-1x1.png",
+      "sha256": "e863c1ba9cc92d92b02fc80045b82ff92c9b6c942e69ded6cdada15f4ccd438f",
+      "sizeBytes": 15242
+    },
+    {
+      "path": "08-video/mark/soccolo-intro-mark-9x16.png",
+      "sha256": "f11455a57064b7974922853a9133658636e37dc1629774c096d888341d4513fd",
+      "sizeBytes": 25328
+    },
+    {
+      "path": "08-video/mark/soccolo-outro-mark-16x9.png",
+      "sha256": "ca9fc97e08aea2643e7d482a14a02a94e129e47ce2f6eace969ac22ea5c1b7cc",
+      "sizeBytes": 42730
+    },
+    {
+      "path": "08-video/mark/soccolo-outro-mark-1x1.png",
+      "sha256": "63363f30d39baef0203d5c7402a8faf63b06e2c3fdf7b868c5c5a1aa0b5cf28d",
+      "sizeBytes": 22608
+    },
+    {
+      "path": "08-video/mark/soccolo-outro-mark-9x16.png",
+      "sha256": "186d123845625d52d78305f2c6c7c7fdc8a598131f8d8b45e0370d1b17f48734",
+      "sizeBytes": 36650
+    },
+    {
+      "path": "08-video/outro/soccolo-outro-16x9.mov",
+      "sha256": "585eb997660acd2341a77116994da3ab523633025236ec9efd2f692ea6f13339",
+      "sizeBytes": 5104096
+    },
+    {
+      "path": "08-video/outro/soccolo-outro-16x9.mp4",
+      "sha256": "a80cef9b073a206df50d66c3247170cd21308c392d0f7c2aef431d6d91330753",
+      "sizeBytes": 58570
+    },
+    {
+      "path": "08-video/outro/soccolo-outro-1x1.mov",
+      "sha256": "bd0c816d5784cdde460b36ca4ce751171acfa5fc2159415a4ba1785a9a1286a9",
+      "sizeBytes": 3018972
+    },
+    {
+      "path": "08-video/outro/soccolo-outro-1x1.mp4",
+      "sha256": "5b3b0a5850d0adbb7729aed2a1f9f7fbc25bc3adb2787c1776fcbdf48880ab9c",
+      "sizeBytes": 32122
+    },
+    {
+      "path": "08-video/outro/soccolo-outro-9x16.mov",
+      "sha256": "5351b7d0bbf83e467816f9428e2a83f948fae2c7f2fa605994589379adf0d7cb",
+      "sizeBytes": 5009057
+    },
+    {
+      "path": "08-video/outro/soccolo-outro-9x16.mp4",
+      "sha256": "778fc7fc67f8a751869ef78aace6f9b7d1155061a2119832107bf72bde27b08f",
+      "sizeBytes": 51565
+    },
+    {
+      "path": "08-video/soccolo-export.py",
+      "sha256": "71026c32aa1d9951e0259bcc3db3c47bbb87b7800160c154fbcf0069971a9766",
+      "sizeBytes": 21142
+    },
+    {
+      "path": "08-video/video-export-specification.md",
+      "sha256": "e43b5fa27322c784ac1b2160ce9ba14dd654cbab881011754175f98dbcba72c8",
+      "sizeBytes": 10085
+    },
+    {
+      "path": "08-video/video.py",
+      "sha256": "189c6ea584960589d1e8e28f376ba28dbf6a809c954370eb890cf0b690494e26",
+      "sizeBytes": 8128
+    },
+    {
+      "path": "08-video/video_manifest.py",
+      "sha256": "2401fcd8915bb63fe9d976b43910df928e37410a22cef296026c17c454c92035",
+      "sizeBytes": 5593
+    },
+    {
+      "path": "README.md",
+      "sha256": "3be91532d299b0f830d2d10290efa69c12f9c88adf12046b4fe1d52cb1a6a5bd",
+      "sizeBytes": 7642
+    }
+  ]
+}
