@@ -27,6 +27,9 @@ assert.equal(data.rootCount, manifest.activities.filter(activity => activity.dep
 assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-001' && decision.acceptance === 'AC-SP-001-01'));
 assert.equal(statusOverrides['ACT-SP-001-01'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-001-02'].status, 'Accepted');
+assert.ok(template.includes("(activity.status ? '✓ ' : '') + shortId(id)"), 'Completed activities need an always-visible checkmark');
+assert.ok(template.includes("activity.status ? 'done' : ''"), 'Completed activities need a dedicated visual state');
+assert.ok(template.includes("selector: 'node.done'"), 'Completed activity styling is missing');
 
 for (const decision of data.acceptedDecisions) {
   assert.ok(fs.existsSync(path.join(root, ...decision.relativePath.split('/'))), `Missing evidence file ${decision.relativePath}`);

@@ -1062,7 +1062,7 @@ html>body{padding:0}</style>
   <div class="viz-row flow-legend" aria-label="Legend">
     <span><span class="flow-key flow-key-agent" aria-hidden="true"></span>Agent activity</span>
     <span><span class="flow-key flow-key-human" aria-hidden="true"></span>Human action or acceptance</span>
-    <span><span class="flow-key flow-key-accepted" aria-hidden="true"></span>Completed or accepted</span>
+    <span><span class="flow-key flow-key-accepted" aria-hidden="true">✓</span>Completed or accepted</span>
     <span><span class="flow-arrow" aria-hidden="true">→</span>Must finish before</span>
   </div>
 
@@ -1145,7 +1145,15 @@ html>body{padding:0}</style>
     transform: rotate(45deg);
   }
   #soccer-activity-flow .flow-key-accepted {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    color: rgb(13 13 13);
     background: var(--green);
+    border-radius: .2rem;
+    font-size: .75rem;
+    font-weight: 700;
   }
   #soccer-activity-flow .flow-arrow {
     color: var(--muted-foreground);
@@ -1330,8 +1338,8 @@ html>body{padding:0}</style>
         const isContext = !chainMode && selectedPhase !== 'all' && activity.phase !== selectedPhase;
         return {
           group: 'nodes',
-          data: { id, label: shortId(id), activity },
-          classes: [activity.execution.toLowerCase(), activity.status ? 'accepted' : '', isContext ? 'context' : '', chainSet.has(id) ? 'on-chain' : ''].filter(Boolean).join(' ')
+          data: { id, label: (activity.status ? '✓ ' : '') + shortId(id), activity },
+          classes: [activity.execution.toLowerCase(), activity.status ? 'done' : '', activity.status ? activity.status.toLowerCase() : '', isContext ? 'context' : '', chainSet.has(id) ? 'on-chain' : ''].filter(Boolean).join(' ')
         };
       });
     const edges = [];
@@ -1358,6 +1366,7 @@ html>body{padding:0}</style>
     const incoming = token('--viz-series-3');
     const outgoing = token('--viz-series-4');
     const accepted = token('--green');
+    const acceptedText = 'rgb(13, 13, 13)';
     const primary = token('--primary');
     const primaryForeground = token('--primary-foreground');
     return [
@@ -1379,8 +1388,10 @@ html>body{padding:0}</style>
       { selector: 'node.context', style: {
         'background-color': muted, 'color': mutedForeground, 'background-opacity': .7
       }},
-      { selector: 'node.accepted', style: {
-        'border-width': 4, 'border-color': accepted, 'background-opacity': 1, 'z-index': 12
+      { selector: 'node.done', style: {
+        'background-color': accepted, 'background-opacity': 1,
+        'border-width': 3, 'border-color': accepted,
+        'color': acceptedText, 'font-weight': 700, 'z-index': 12
       }},
       { selector: 'edge', style: {
         'width': 1, 'line-color': border, 'target-arrow-color': border,
