@@ -1,0 +1,240 @@
+[
+  {
+    "lockup": "symbol",
+    "colourway": "light",
+    "svg": "02-logo/symbol/soccolo-symbol-light.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-light.png",
+    "aspect": 2.049
+  },
+  {
+    "lockup": "symbol",
+    "colourway": "dark",
+    "svg": "02-logo/symbol/soccolo-symbol-dark.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-dark.png",
+    "aspect": 2.049
+  },
+  {
+    "lockup": "symbol",
+    "colourway": "black",
+    "svg": "02-logo/symbol/soccolo-symbol-black.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-black.png",
+    "aspect": 2.049
+  },
+  {
+    "lockup": "symbol",
+    "colourway": "white",
+    "svg": "02-logo/symbol/soccolo-symbol-white.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-white.png",
+    "aspect": 2.049
+  },
+  {
+    "lockup": "symbol-compact",
+    "colourway": "light",
+    "svg": "02-logo/symbol/soccolo-symbol-compact-light.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-compact-light.png",
+    "aspect": 2.1226
+  },
+  {
+    "lockup": "symbol-compact",
+    "colourway": "dark",
+    "svg": "02-logo/symbol/soccolo-symbol-compact-dark.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-compact-dark.png",
+    "aspect": 2.1226
+  },
+  {
+    "lockup": "symbol-compact",
+    "colourway": "black",
+    "svg": "02-logo/symbol/soccolo-symbol-compact-black.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-compact-black.png",
+    "aspect": 2.1226
+  },
+  {
+    "lockup": "symbol-compact",
+    "colourway": "white",
+    "svg": "02-logo/symbol/soccolo-symbol-compact-white.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-compact-white.png",
+    "aspect": 2.1226
+  },
+  {
+    "lockup": "symbol-orbit",
+    "colourway": "light",
+    "svg": "02-logo/symbol/soccolo-symbol-orbit-light.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-orbit-light.png",
+    "aspect": 1.0
+  },
+  {
+    "lockup": "symbol-orbit",
+    "colourway": "dark",
+    "svg": "02-logo/symbol/soccolo-symbol-orbit-dark.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-orbit-dark.png",
+    "aspect": 1.0
+  },
+  {
+    "lockup": "symbol-orbit",
+    "colourway": "black",
+    "svg": "02-logo/symbol/soccolo-symbol-orbit-black.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-orbit-black.png",
+    "aspect": 1.0
+  },
+  {
+    "lockup": "symbol-orbit",
+    "colourway": "white",
+    "svg": "02-logo/symbol/soccolo-symbol-orbit-white.svg",
+    "png": "02-logo/symbol/png/soccolo-symbol-orbit-white.png",
+    "aspect": 1.0
+  },
+  {
+    "lockup": "wordmark",
+    "colourway": "light",
+    "svg": "02-logo/horizontal/soccolo-wordmark-light.svg",
+    "png": "02-logo/horizontal/png/soccolo-wordmark-light.png",
+    "aspect": 5.2337
+  },
+  {
+    "lockup": "wordmark",
+    "colourway": "dark",
+    "svg": "02-logo/horizontal/soccolo-wordmark-dark.svg",
+    "png": "02-logo/horizontal/png/soccolo-wordmark-dark.png",
+    "aspect": 5.2337
+  },
+  {
+    "lockup": "wordmark",
+    "colourway": "black",
+    "svg": "02-logo/horizontal/soccolo-wordmark-black.svg",
+    "png": "02-logo/horizontal/png/soccolo-wordmark-black.png",
+    "aspect": 5.2337
+  },
+  {
+    "lockup": "wordmark",
+    "colourway": "white",
+    "svg": "02-logo/horizontal/soccolo-wordmark-white.svg",
+    "png": "02-logo/horizontal/png/soccolo-wordmark-white.png",
+    "aspect": 5.2337
+  },
+  {
+    "lockup": "horizontal",
+    "colourway": "light",
+    "svg": "02-logo/horizontal/soccolo-horizontal-light.svg",
+    "png": "02-logo/horizontal/png/soccolo-horizontal-light.png",
+    "aspect": 5.2804
+  },
+  {
+    "lockup": "horizontal",
+    "colourway": "dark",
+    "svg": "02-logo/horizontal/soccolo-horizontal-dark.svg",
+    "png": "02-logo/horizontal/png/soccolo-horizontal-dark.png",
+    "aspect": 5.2804
+  },
+  {
+    "lockup": "horizontal",
+    "colourway": "black",
+    "svg": "02-logo/horizontal/soccolo-horizontal-black.svg",
+    "png": "02-logo/horizontal/png/soccolo-horizontal-black.png",
+    "aspect": 5.2804
+  },
+  {
+    "lockup": "horizontal",
+    "colourway": "white",
+    "svg": "02-logo/horizontal/soccolo-horizontal-white.svg",
+    "png": "02-logo/horizontal/png/soccolo-horizontal-white.png",
+    "aspect": 5.2804
+  },
+  {
+    "lockup": "horizontal-tagline",
+    "colourway": "light",
+    "svg": "02-logo/horizontal/soccolo-horizontal-tagline-light.svg",
+    "png": "02-logo/horizontal/png/soccolo-horizontal-tagline-light.png",
+    "aspect": 3.0196
+  },
+  {
+    "lockup": "horizontal-tagline",
+    "colourway": "dark",
+    "svg": "02-logo/horizontal/soccolo-horizontal-tagline-dark.svg",
+    "png": "02-logo/horizontal/png/soccolo-horizontal-tagline-dark.png",
+    "aspect": 3.0196
+  },
+  {
+    "lockup": "horizontal-tagline",
+    "colourway": "black",
+    "svg": "02-logo/horizontal/soccolo-horizontal-tagline-black.svg",
+    "png": "02-logo/horizontal/png/soccolo-horizontal-tagline-black.png",
+    "aspect": 3.0196
+  },
+  {
+    "lockup": "horizontal-tagline",
+    "colourway": "white",
+    "svg": "02-logo/horizontal/soccolo-horizontal-tagline-white.svg",
+    "png": "02-logo/horizontal/png/soccolo-horizontal-tagline-white.png",
+    "aspect": 3.0196
+  },
+  {
+    "lockup": "stacked",
+    "colourway": "light",
+    "svg": "02-logo/stacked/soccolo-stacked-light.svg",
+    "png": "02-logo/stacked/png/soccolo-stacked-light.png",
+    "aspect": 2.0489
+  },
+  {
+    "lockup": "stacked",
+    "colourway": "dark",
+    "svg": "02-logo/stacked/soccolo-stacked-dark.svg",
+    "png": "02-logo/stacked/png/soccolo-stacked-dark.png",
+    "aspect": 2.0489
+  },
+  {
+    "lockup": "stacked",
+    "colourway": "black",
+    "svg": "02-logo/stacked/soccolo-stacked-black.svg",
+    "png": "02-logo/stacked/png/soccolo-stacked-black.png",
+    "aspect": 2.0489
+  },
+  {
+    "lockup": "stacked",
+    "colourway": "white",
+    "svg": "02-logo/stacked/soccolo-stacked-white.svg",
+    "png": "02-logo/stacked/png/soccolo-stacked-white.png",
+    "aspect": 2.0489
+  },
+  {
+    "lockup": "stacked-tagline",
+    "colourway": "light",
+    "svg": "02-logo/stacked/soccolo-stacked-tagline-light.svg",
+    "png": "02-logo/stacked/png/soccolo-stacked-tagline-light.png",
+    "aspect": 1.5869
+  },
+  {
+    "lockup": "stacked-tagline",
+    "colourway": "dark",
+    "svg": "02-logo/stacked/soccolo-stacked-tagline-dark.svg",
+    "png": "02-logo/stacked/png/soccolo-stacked-tagline-dark.png",
+    "aspect": 1.5869
+  },
+  {
+    "lockup": "stacked-tagline",
+    "colourway": "black",
+    "svg": "02-logo/stacked/soccolo-stacked-tagline-black.svg",
+    "png": "02-logo/stacked/png/soccolo-stacked-tagline-black.png",
+    "aspect": 1.5869
+  },
+  {
+    "lockup": "stacked-tagline",
+    "colourway": "white",
+    "svg": "02-logo/stacked/soccolo-stacked-tagline-white.svg",
+    "png": "02-logo/stacked/png/soccolo-stacked-tagline-white.png",
+    "aspect": 1.5869
+  },
+  {
+    "lockup": "symbol",
+    "colourway": "mint",
+    "svg": "02-logo/on-accent/soccolo-symbol-on-mint.svg",
+    "png": null,
+    "aspect": 2.049
+  },
+  {
+    "lockup": "horizontal",
+    "colourway": "mint",
+    "svg": "02-logo/on-accent/soccolo-horizontal-on-mint.svg",
+    "png": null,
+    "aspect": 5.2804
+  }
+]

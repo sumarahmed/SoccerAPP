@@ -1,0 +1,773 @@
+{
+  "condition": "FOGRA39L Coated",
+  "intent": "relative colorimetric",
+  "artworkLongestEdgeMm": 100.0,
+  "colour": {
+    "ink-900": {
+      "hex": "#04141D",
+      "cmyk": [
+        95,
+        56,
+        29,
+        96
+      ],
+      "totalAreaCoverage": 277,
+      "deltaE": 6.4,
+      "inGamut": false
+    },
+    "ink-800": {
+      "hex": "#0A2231",
+      "cmyk": [
+        98,
+        49,
+        15,
+        92
+      ],
+      "totalAreaCoverage": 253,
+      "deltaE": 2.5,
+      "inGamut": true
+    },
+    "ink-700": {
+      "hex": "#123449",
+      "cmyk": [
+        92,
+        42,
+        10,
+        77
+      ],
+      "totalAreaCoverage": 222,
+      "deltaE": 0.8,
+      "inGamut": true
+    },
+    "ink-600": {
+      "hex": "#1E4A63",
+      "cmyk": [
+        90,
+        48,
+        24,
+        52
+      ],
+      "totalAreaCoverage": 214,
+      "deltaE": 1.0,
+      "inGamut": true
+    },
+    "ink-400": {
+      "hex": "#4E7E96",
+      "cmyk": [
+        68,
+        30,
+        21,
+        26
+      ],
+      "totalAreaCoverage": 145,
+      "deltaE": 0.3,
+      "inGamut": true
+    },
+    "ink-200": {
+      "hex": "#AFC6D2",
+      "cmyk": [
+        37,
+        15,
+        15,
+        0
+      ],
+      "totalAreaCoverage": 67,
+      "deltaE": 0.3,
+      "inGamut": true
+    },
+    "ink-100": {
+      "hex": "#DCE7ED",
+      "cmyk": [
+        15,
+        7,
+        8,
+        0
+      ],
+      "totalAreaCoverage": 31,
+      "deltaE": 2.0,
+      "inGamut": true
+    },
+    "paper": {
+      "hex": "#F4F8FA",
+      "cmyk": [
+        5,
+        3,
+        3,
+        0
+      ],
+      "totalAreaCoverage": 10,
+      "deltaE": 1.3,
+      "inGamut": true
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "cmyk": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "totalAreaCoverage": 0,
+      "deltaE": 0.0,
+      "inGamut": true
+    },
+    "pitch-900": {
+      "hex": "#06301F",
+      "cmyk": [
+        89,
+        17,
+        84,
+        89
+      ],
+      "totalAreaCoverage": 280,
+      "deltaE": 3.6,
+      "inGamut": true
+    },
+    "pitch-700": {
+      "hex": "#0A5537",
+      "cmyk": [
+        95,
+        28,
+        90,
+        53
+      ],
+      "totalAreaCoverage": 265,
+      "deltaE": 0.5,
+      "inGamut": true
+    },
+    "pitch-600": {
+      "hex": "#0C6B45",
+      "cmyk": [
+        91,
+        26,
+        87,
+        33
+      ],
+      "totalAreaCoverage": 236,
+      "deltaE": 0.6,
+      "inGamut": true
+    },
+    "pitch-500": {
+      "hex": "#12A26C",
+      "cmyk": [
+        80,
+        1,
+        72,
+        7
+      ],
+      "totalAreaCoverage": 160,
+      "deltaE": 0.4,
+      "inGamut": true
+    },
+    "pitch-400": {
+      "hex": "#2ACE8C",
+      "cmyk": [
+        64,
+        0,
+        58,
+        0
+      ],
+      "totalAreaCoverage": 122,
+      "deltaE": 20.3,
+      "inGamut": false
+    },
+    "pitch-300": {
+      "hex": "#54E8AC",
+      "cmyk": [
+        49,
+        0,
+        41,
+        0
+      ],
+      "totalAreaCoverage": 89,
+      "deltaE": 30.1,
+      "inGamut": false
+    },
+    "pitch-200": {
+      "hex": "#8DF3C9",
+      "cmyk": [
+        35,
+        0,
+        27,
+        0
+      ],
+      "totalAreaCoverage": 62,
+      "deltaE": 24.5,
+      "inGamut": false
+    },
+    "pitch-100": {
+      "hex": "#CDFAE6",
+      "cmyk": [
+        17,
+        0,
+        14,
+        0
+      ],
+      "totalAreaCoverage": 31,
+      "deltaE": 10.9,
+      "inGamut": false
+    }
+  },
+  "files": [
+    {
+      "lockup": "horizontal",
+      "colourway": "light",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-horizontal-light-cmyk.pdf",
+      "page_mm": [
+        116.2,
+        35.1
+      ]
+    },
+    {
+      "lockup": "horizontal",
+      "colourway": "light",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-horizontal-light-rgb.pdf",
+      "page_mm": [
+        116.2,
+        35.1
+      ]
+    },
+    {
+      "lockup": "horizontal",
+      "colourway": "dark",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-horizontal-dark-cmyk.pdf",
+      "page_mm": [
+        116.2,
+        35.1
+      ]
+    },
+    {
+      "lockup": "horizontal",
+      "colourway": "dark",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-horizontal-dark-rgb.pdf",
+      "page_mm": [
+        116.2,
+        35.1
+      ]
+    },
+    {
+      "lockup": "horizontal",
+      "colourway": "black",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-horizontal-black-cmyk.pdf",
+      "page_mm": [
+        116.2,
+        35.1
+      ]
+    },
+    {
+      "lockup": "horizontal",
+      "colourway": "black",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-horizontal-black-rgb.pdf",
+      "page_mm": [
+        116.2,
+        35.1
+      ]
+    },
+    {
+      "lockup": "horizontal",
+      "colourway": "white",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-horizontal-white-cmyk.pdf",
+      "page_mm": [
+        116.2,
+        35.1
+      ]
+    },
+    {
+      "lockup": "horizontal",
+      "colourway": "white",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-horizontal-white-rgb.pdf",
+      "page_mm": [
+        116.2,
+        35.1
+      ]
+    },
+    {
+      "lockup": "horizontal-tagline",
+      "colourway": "light",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-horizontal-tagline-light-cmyk.pdf",
+      "page_mm": [
+        116.2,
+        49.3
+      ]
+    },
+    {
+      "lockup": "horizontal-tagline",
+      "colourway": "light",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-horizontal-tagline-light-rgb.pdf",
+      "page_mm": [
+        116.2,
+        49.3
+      ]
+    },
+    {
+      "lockup": "horizontal-tagline",
+      "colourway": "dark",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-horizontal-tagline-dark-cmyk.pdf",
+      "page_mm": [
+        116.2,
+        49.3
+      ]
+    },
+    {
+      "lockup": "horizontal-tagline",
+      "colourway": "dark",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-horizontal-tagline-dark-rgb.pdf",
+      "page_mm": [
+        116.2,
+        49.3
+      ]
+    },
+    {
+      "lockup": "horizontal-tagline",
+      "colourway": "black",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-horizontal-tagline-black-cmyk.pdf",
+      "page_mm": [
+        116.2,
+        49.3
+      ]
+    },
+    {
+      "lockup": "horizontal-tagline",
+      "colourway": "black",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-horizontal-tagline-black-rgb.pdf",
+      "page_mm": [
+        116.2,
+        49.3
+      ]
+    },
+    {
+      "lockup": "horizontal-tagline",
+      "colourway": "white",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-horizontal-tagline-white-cmyk.pdf",
+      "page_mm": [
+        116.2,
+        49.3
+      ]
+    },
+    {
+      "lockup": "horizontal-tagline",
+      "colourway": "white",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-horizontal-tagline-white-rgb.pdf",
+      "page_mm": [
+        116.2,
+        49.3
+      ]
+    },
+    {
+      "lockup": "stacked",
+      "colourway": "light",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-stacked-light-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        65.1
+      ]
+    },
+    {
+      "lockup": "stacked",
+      "colourway": "light",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-stacked-light-rgb.pdf",
+      "page_mm": [
+        116.3,
+        65.1
+      ]
+    },
+    {
+      "lockup": "stacked",
+      "colourway": "dark",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-stacked-dark-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        65.1
+      ]
+    },
+    {
+      "lockup": "stacked",
+      "colourway": "dark",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-stacked-dark-rgb.pdf",
+      "page_mm": [
+        116.3,
+        65.1
+      ]
+    },
+    {
+      "lockup": "stacked",
+      "colourway": "black",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-stacked-black-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        65.1
+      ]
+    },
+    {
+      "lockup": "stacked",
+      "colourway": "black",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-stacked-black-rgb.pdf",
+      "page_mm": [
+        116.3,
+        65.1
+      ]
+    },
+    {
+      "lockup": "stacked",
+      "colourway": "white",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-stacked-white-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        65.1
+      ]
+    },
+    {
+      "lockup": "stacked",
+      "colourway": "white",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-stacked-white-rgb.pdf",
+      "page_mm": [
+        116.3,
+        65.1
+      ]
+    },
+    {
+      "lockup": "stacked-tagline",
+      "colourway": "light",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-stacked-tagline-light-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        79.3
+      ]
+    },
+    {
+      "lockup": "stacked-tagline",
+      "colourway": "light",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-stacked-tagline-light-rgb.pdf",
+      "page_mm": [
+        116.3,
+        79.3
+      ]
+    },
+    {
+      "lockup": "stacked-tagline",
+      "colourway": "dark",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-stacked-tagline-dark-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        79.3
+      ]
+    },
+    {
+      "lockup": "stacked-tagline",
+      "colourway": "dark",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-stacked-tagline-dark-rgb.pdf",
+      "page_mm": [
+        116.3,
+        79.3
+      ]
+    },
+    {
+      "lockup": "stacked-tagline",
+      "colourway": "black",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-stacked-tagline-black-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        79.3
+      ]
+    },
+    {
+      "lockup": "stacked-tagline",
+      "colourway": "black",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-stacked-tagline-black-rgb.pdf",
+      "page_mm": [
+        116.3,
+        79.3
+      ]
+    },
+    {
+      "lockup": "stacked-tagline",
+      "colourway": "white",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-stacked-tagline-white-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        79.3
+      ]
+    },
+    {
+      "lockup": "stacked-tagline",
+      "colourway": "white",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-stacked-tagline-white-rgb.pdf",
+      "page_mm": [
+        116.3,
+        79.3
+      ]
+    },
+    {
+      "lockup": "symbol",
+      "colourway": "light",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-symbol-light-cmyk.pdf",
+      "page_mm": [
+        154.5,
+        103.3
+      ]
+    },
+    {
+      "lockup": "symbol",
+      "colourway": "light",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-symbol-light-rgb.pdf",
+      "page_mm": [
+        154.5,
+        103.3
+      ]
+    },
+    {
+      "lockup": "symbol",
+      "colourway": "dark",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-symbol-dark-cmyk.pdf",
+      "page_mm": [
+        154.5,
+        103.3
+      ]
+    },
+    {
+      "lockup": "symbol",
+      "colourway": "dark",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-symbol-dark-rgb.pdf",
+      "page_mm": [
+        154.5,
+        103.3
+      ]
+    },
+    {
+      "lockup": "symbol",
+      "colourway": "black",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-symbol-black-cmyk.pdf",
+      "page_mm": [
+        154.5,
+        103.3
+      ]
+    },
+    {
+      "lockup": "symbol",
+      "colourway": "black",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-symbol-black-rgb.pdf",
+      "page_mm": [
+        154.5,
+        103.3
+      ]
+    },
+    {
+      "lockup": "symbol",
+      "colourway": "white",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-symbol-white-cmyk.pdf",
+      "page_mm": [
+        154.5,
+        103.3
+      ]
+    },
+    {
+      "lockup": "symbol",
+      "colourway": "white",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-symbol-white-rgb.pdf",
+      "page_mm": [
+        154.5,
+        103.3
+      ]
+    },
+    {
+      "lockup": "symbol-orbit",
+      "colourway": "light",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-symbol-orbit-light-cmyk.pdf",
+      "page_mm": [
+        155.9,
+        155.9
+      ]
+    },
+    {
+      "lockup": "symbol-orbit",
+      "colourway": "light",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-symbol-orbit-light-rgb.pdf",
+      "page_mm": [
+        155.9,
+        155.9
+      ]
+    },
+    {
+      "lockup": "symbol-orbit",
+      "colourway": "dark",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-symbol-orbit-dark-cmyk.pdf",
+      "page_mm": [
+        155.9,
+        155.9
+      ]
+    },
+    {
+      "lockup": "symbol-orbit",
+      "colourway": "dark",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-symbol-orbit-dark-rgb.pdf",
+      "page_mm": [
+        155.9,
+        155.9
+      ]
+    },
+    {
+      "lockup": "symbol-orbit",
+      "colourway": "black",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-symbol-orbit-black-cmyk.pdf",
+      "page_mm": [
+        155.9,
+        155.9
+      ]
+    },
+    {
+      "lockup": "symbol-orbit",
+      "colourway": "black",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-symbol-orbit-black-rgb.pdf",
+      "page_mm": [
+        155.9,
+        155.9
+      ]
+    },
+    {
+      "lockup": "symbol-orbit",
+      "colourway": "white",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-symbol-orbit-white-cmyk.pdf",
+      "page_mm": [
+        155.9,
+        155.9
+      ]
+    },
+    {
+      "lockup": "symbol-orbit",
+      "colourway": "white",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-symbol-orbit-white-rgb.pdf",
+      "page_mm": [
+        155.9,
+        155.9
+      ]
+    },
+    {
+      "lockup": "wordmark",
+      "colourway": "light",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-wordmark-light-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        35.4
+      ]
+    },
+    {
+      "lockup": "wordmark",
+      "colourway": "light",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-wordmark-light-rgb.pdf",
+      "page_mm": [
+        116.3,
+        35.4
+      ]
+    },
+    {
+      "lockup": "wordmark",
+      "colourway": "dark",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-wordmark-dark-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        35.4
+      ]
+    },
+    {
+      "lockup": "wordmark",
+      "colourway": "dark",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-wordmark-dark-rgb.pdf",
+      "page_mm": [
+        116.3,
+        35.4
+      ]
+    },
+    {
+      "lockup": "wordmark",
+      "colourway": "black",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-wordmark-black-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        35.4
+      ]
+    },
+    {
+      "lockup": "wordmark",
+      "colourway": "black",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-wordmark-black-rgb.pdf",
+      "page_mm": [
+        116.3,
+        35.4
+      ]
+    },
+    {
+      "lockup": "wordmark",
+      "colourway": "white",
+      "space": "cmyk",
+      "file": "07-print/cmyk-for-print/soccolo-wordmark-white-cmyk.pdf",
+      "page_mm": [
+        116.3,
+        35.4
+      ]
+    },
+    {
+      "lockup": "wordmark",
+      "colourway": "white",
+      "space": "rgb",
+      "file": "07-print/rgb-for-office/soccolo-wordmark-white-rgb.pdf",
+      "page_mm": [
+        116.3,
+        35.4
+      ]
+    }
+  ]
+}

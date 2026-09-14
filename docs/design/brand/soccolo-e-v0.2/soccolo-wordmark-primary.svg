@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120" role="img" aria-labelledby="title desc" >
+  <title id="title">Soccolo custom wordmark</title>
+  <desc id="desc">Custom geometric Soccolo wordmark with the selected inward-facing double-c touch construction.</desc>
+  <metadata>Soccolo Concept E controlled refinement v0.2; generated from repository source geometry on 2026-09-14; no stock icon, traced image or third-party wordmark font.</metadata>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="18">
+    <path d="M76 29 C65 14 32 14 19 30 C8 44 19 55 44 58 C68 61 79 70 71 85 C62 102 29 103 14 86" stroke="#0B1D2A"/>
+    <circle cx="119" cy="59" r="31" stroke="#0B1D2A"/>
+    <path d="M218 35 C204 20 180 21 166 37 C152 53 157 80 174 91 C189 100 207 96 219 82" stroke="#087A55"/>
+    <circle cx="235" cy="58" r="6.5" fill="#087A55" stroke="none"/>
+    <path d="M218 35 C204 20 180 21 166 37 C152 53 157 80 174 91 C189 100 207 96 219 82" transform="translate(470 0) scale(-1 1)" stroke="#087A55"/>
+    <circle cx="365" cy="59" r="31" stroke="#0B1D2A"/>
+    <path d="M421 17 L421 79 C421 94 433 100 447 89" stroke="#0B1D2A"/>
+    <circle cx="496" cy="59" r="31" stroke="#0B1D2A"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc" >
+  <title id="title">Soccolo app icon</title>
+  <desc id="desc">Full-bleed navy square with the mint forward double-touch symbol in the central safe area.</desc>
+  <metadata>Soccolo Concept E controlled refinement v0.3; generated from repository source geometry on 2026-09-14; no stock icon, traced image or third-party wordmark font.</metadata>
+<rect width="1024" height="1024" fill="#0B1D2A"/><g transform="translate(103 287) scale(3.72)"><g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M88 27 C72 11 40 13 24 35 C7 58 19 91 48 99 C65 104 82 98 93 84" stroke="#59EFB5" stroke-width="18"/>
+    <circle cx="115" cy="58" r="12" fill="#59EFB5" stroke="none"/>
+    <path d="M218 22 C202 6 170 8 154 30 C137 53 149 86 178 94 C195 99 212 93 223 79" stroke="#59EFB5" stroke-width="18"/>
+  </g></g>
+</svg>

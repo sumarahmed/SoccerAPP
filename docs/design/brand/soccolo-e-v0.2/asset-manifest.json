@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "assetSet": "working-soccolo-e-v0.2",
+  "status": "provisional-review",
+  "created": "2026-09-14",
+  "canonicalSource": "build-assets.mjs",
+  "creatorRecord": "PROVENANCE.md",
+  "usageRules": "USAGE.md",
+  "similarityReview": "SIMILARITY-REVIEW.md",
+  "finalFounderApproval": null,
+  "files": [
+    {
+      "path": "EXPORT-INTRO-STORYBOARD.md",
+      "bytes": 1559,
+      "sha256": "ACA659E86A1D88D940CADD30AEE6676785E0C2D400EF15399E3B02F6727D5FF8",
+      "role": "specification-or-evidence"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "bytes": 3912,
+      "sha256": "7EAF91B780C9B15CA137A786267AA6AA0F6C918ED624DB83D24E8E5DFB2DA099",
+      "role": "specification-or-evidence"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2927,
+      "sha256": "5AEF38AB8F53A38622AC6E6ABF39EA6E2AF94E8D1AEA49D2D7EB348FFC2FD6D1",
+      "role": "specification-or-evidence"
+    },
+    {
+      "path": "SIMILARITY-REVIEW.md",
+      "bytes": 5455,
+      "sha256": "78780A231662D14F2348DEDDCE82447D217A8A15359B55E43F0D59DA93A0ED7C",
+      "role": "specification-or-evidence"
+    },
+    {
+      "path": "USAGE.md",
+      "bytes": 3960,
+      "sha256": "774BD77064395C4C27CDD90A6AEA5522FCBFD431C54EA79BC3D94AAE689AF50E",
+      "role": "specification-or-evidence"
+    },
+    {
+      "path": "brand-tokens.json",
+      "bytes": 720,
+      "sha256": "59F4123F0C0E88194776F3D4C1CD2BA0750C94327D1C95E74AAD59A68C86DA76",
+      "role": "configuration"
+    },
+    {
+      "path": "build-assets.mjs",
+      "bytes": 12138,
+      "sha256": "3FFB7A36DD30CCF17E527658DA56807D397E45168A35333D6D0ECF0190E32BDC",
+      "role": "canonical-editable-geometry-source"
+    },
+    {
+      "path": "reference-selected-concept-e-cropped.png",
+      "bytes": 29267,
+      "sha256": "5ED736C7458BD05CF5696E053E7401807E3CDC25AEB1EE60BEF37B3888F554FF",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "render-assets.ps1",
+      "bytes": 5071,
+      "sha256": "9C47A0AE6E88869D5E575662D2303139B694B3BC2E94CFFCA40CD235FB299B52",
+      "role": "reproduction-tool"
+    },
+    {
+      "path": "soccolo-android-adaptive-background.png",
+      "bytes": 1296,
+      "sha256": "E37425F9E30D7528B568DD3E1760D6CBF36D2DA69591B998FB2BEC7062885E11",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-android-adaptive-background.svg",
+      "bytes": 559,
+      "sha256": "657FA6396161AFC56FB2CE29876BFA207E0CCE9DACDA09F0DF9E133A2BC76529",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-android-adaptive-foreground.png",
+      "bytes": 10543,
+      "sha256": "3B59E8BCF8568DD10FD06BC9FE84F2EEB7012C208CE4A87292F890C9091B2BBB",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-android-adaptive-foreground.svg",
+      "bytes": 1029,
+      "sha256": "6773E34B4D9B1FBCDC69EACD5D2A78D255A3FF7CDF78E0FA7FCC9EDCF24A9EC6",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-app-icon-1024.png",
+      "bytes": 29104,
+      "sha256": "34691807F7F4CC9B094963890F2E24106EF088E3831831E864C8A50529EA250F",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-app-icon-1024.svg",
+      "bytes": 1038,
+      "sha256": "9056A9F79B38252147BA1B74D2639CD424B44A14018B59579434FB9B52144B2B",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-app-icon-16.png",
+      "bytes": 613,
+      "sha256": "4E1EC022AD462BB643EFD1CF6063F87F3AD71753E7D10DABA22D1EF607A6E498",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-app-icon-24.png",
+      "bytes": 778,
+      "sha256": "16D214295B2F2BDD8A2C70DEA26F0A420470748D6846E9B5F45BD0E45C3FF680",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-app-icon-32.png",
+      "bytes": 1167,
+      "sha256": "344A0B78A8BB3E9E86BDD6C4C9DFBF8FD78D6D7311F27CA2EB5F1C235BCAB2A1",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-app-icon-48.png",
+      "bytes": 1806,
+      "sha256": "EBB9077E70655086A313D086EC2606281BBFBF19D32265F1DE2DB23606B2E009",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-export-intro-frame-16x9.svg",
+      "bytes": 3361,
+      "sha256": "311948DE9A8ECAF137BD8627DEC030783D74C428E6EACBDFFDDF1CFECAE1B559",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-export-intro-frame-1920x1080.png",
+      "bytes": 32838,
+      "sha256": "A5C48DBF8C73D905C35AFEA6FBDC2A5FC224669B03B5C7EA9D57257FE2E52FDC",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-favicon.svg",
+      "bytes": 929,
+      "sha256": "237433EDA2A139D659252107EF0081491A02D4CB2C4517053AE3D5F5317DED6F",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-ios-app-60@2x.png",
+      "bytes": 4513,
+      "sha256": "492DDE3E52F67F84A1EFD4472A142752696DD8EA95692783E8DCAE807D5A9440",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ios-app-60@3x.png",
+      "bytes": 6905,
+      "sha256": "EF284A41C2AD556AABA4E6E43C13D7F4FCAAEA0AD792327BA46A9F3F42415E75",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ios-notification-20@2x.png",
+      "bytes": 1415,
+      "sha256": "8256480A668CB98EDB3AF643601EFD4CC13D689E9602F74CD754DDE2C933813D",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ios-notification-20@3x.png",
+      "bytes": 2244,
+      "sha256": "0C982DBE766ABC2B614B61E59E0D95C031AF7923F7C69330AB15EB129623B868",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ios-settings-29@2x.png",
+      "bytes": 2201,
+      "sha256": "864A7985EFF7097043955FCAFE066656A3429B58226ED2F32705BED326D46B36",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ios-settings-29@3x.png",
+      "bytes": 3348,
+      "sha256": "BC4D2831517E645A3CC4E5BB200718780C5ED45417D7D8DB244910562E685264",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ios-spotlight-40@2x.png",
+      "bytes": 3117,
+      "sha256": "9C39AECBE7719A59D9952A4A32DA8C42DEB3FD3C27EF5A257FCE8FCE1C749E03",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ios-spotlight-40@3x.png",
+      "bytes": 4513,
+      "sha256": "492DDE3E52F67F84A1EFD4472A142752696DD8EA95692783E8DCAE807D5A9440",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ipad-app-76@2x.png",
+      "bytes": 5824,
+      "sha256": "FC4376A58657B86E83189AFCB96EC8E6CFFAA193BE6543E7420F4A6B85185421",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-ipad-pro-app-83.5@2x.png",
+      "bytes": 6199,
+      "sha256": "8909888520075991B815FFDB12BF85685FB3C3D4F242A81563D82E1D0C40EA9D",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-lockup-horizontal-dark.png",
+      "bytes": 22345,
+      "sha256": "633E0564CF9DF130407700CB5E30156E050319376217E303C2A1D590DCBE4C59",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-lockup-horizontal-dark.svg",
+      "bytes": 3335,
+      "sha256": "7E1E7A690DB3284B905D8E4E1EC5F17B8F49D877E7A18D62FF1D2B1D12E39852",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-lockup-horizontal-light.png",
+      "bytes": 21917,
+      "sha256": "F7600FE023E08ABF66F06E7F545A0AFB472A77E390AB22CB6E8FB41CBE693646",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-lockup-horizontal-light.svg",
+      "bytes": 3337,
+      "sha256": "2E361CA27298A61B1F77C5B69F1AB28D1B1F766A590BFBDD9DD0D3A6D0F98C78",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-lockup-monochrome-black.svg",
+      "bytes": 3266,
+      "sha256": "1601F26CD317A059ECB379877962B303B7757F5C936D8E3DA4D8EFC8905B54E3",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-lockup-monochrome-white.svg",
+      "bytes": 3266,
+      "sha256": "F29410B8BB090C096C3D4ABEAD9B9983E251F4DA317A509E9F2C9B3D1E4BFDDF",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-lockup-stacked-dark.png",
+      "bytes": 29187,
+      "sha256": "8FEB520CE4E56FF06143D999D8E28B25A83D60866DB77CE5571DB6890AF3C980",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-lockup-stacked-dark.svg",
+      "bytes": 3329,
+      "sha256": "441B50B90BD52D2D748784F5DF0B2075EFA5FDDECB497E54816AB1EABD8D0F9F",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-lockup-stacked-light.png",
+      "bytes": 28383,
+      "sha256": "D1554AD82498DE26B8CB5F0A1A3F4DAC556EFBC6A98512557F1736B631E6D94D",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-lockup-stacked-light.svg",
+      "bytes": 3331,
+      "sha256": "B6575B25FF3B3BB8E36B264625B397F89949704D06FC507699764678071831C4",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-review-board.png",
+      "bytes": 148397,
+      "sha256": "F689E2B9D752C27D98687EB3FE27743DEC83201D59EB02BCB52F49E43C6F1DEC",
+      "role": "raster-derivative"
+    },
+    {
+      "path": "soccolo-review-board.svg",
+      "bytes": 18084,
+      "sha256": "5ED8C883E3174FDA37D9C09332F6729C5C29432FDD22B3FC3C19682118DECF07",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-symbol-primary.svg",
+      "bytes": 939,
+      "sha256": "BE71020BF4AFC646BEECBE13E7466D9F8A0935206A1A59E9561348F0F7051467",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-symbol-reversed.svg",
+      "bytes": 947,
+      "sha256": "D620D90750A9F7CE1E7E377D3434DF8FE277F52F0A2132F56F8A17E532E8DD2B",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-wordmark-primary.svg",
+      "bytes": 1298,
+      "sha256": "A963C9BF2101A4E173804D2C605CD4BD7CC110C8A6A6AF5A8B843EB46B93D5B0",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "soccolo-wordmark-reversed.svg",
+      "bytes": 1319,
+      "sha256": "A74C8E81F445B3B201E50C1101FE080DE7DC2A0A814ED52131804EDB04F28B23",
+      "role": "editable-vector-or-vector-derivative"
+    },
+    {
+      "path": "write-manifest.mjs",
+      "bytes": 1693,
+      "sha256": "6366D0AFDD073A3EAA2BD6F3BD5E73BCBD3A146DF6221451874C51A58E42ADA0",
+      "role": "reproduction-tool"
+    }
+  ]
+}

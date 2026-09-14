@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc" >
+  <title id="title">Soccolo export intro frame</title>
+  <desc id="desc">Provisional fixed navy 16 by 9 export frame with centred Soccolo lockup.</desc>
+  <metadata>Soccolo Concept E controlled refinement v0.1; generated from repository source geometry on 2026-09-14; no stock icon, traced image or third-party wordmark font.</metadata>
+<rect width="1920" height="1080" fill="#0B1D2A"/><g transform="translate(510 440)">
+  <g transform="translate(34 50) scale(.78)"><g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M88 27 C72 11 40 13 24 35 C7 58 19 91 48 99 C65 104 82 98 93 84" stroke="#FFFFFF" stroke-width="18"/>
+    <circle cx="111" cy="58" r="8.5" fill="#FFFFFF" stroke="none"/>
+    <path d="M198 22 C182 6 150 8 134 30 C117 53 129 86 158 94 C175 99 192 93 203 79" stroke="#59EFB5" stroke-width="18"/>
+  </g></g>
+  <g transform="translate(232 35)"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="18">
+    <path d="M76 29 C65 14 32 14 19 30 C8 44 19 55 44 58 C68 61 79 70 71 85 C62 102 29 103 14 86" stroke="#FFFFFF"/>
+    <circle cx="119" cy="59" r="31" stroke="#FFFFFF"/>
+    <path d="M218 35 C204 20 180 21 166 37 C152 53 157 80 174 91 C189 100 207 96 219 82" stroke="#59EFB5"/>
+    <circle cx="233" cy="58" r="5.5" fill="#FFFFFF" stroke="none"/>
+    <path d="M304 33 C290 18 265 20 251 37 C238 54 243 80 260 91 C275 100 294 95 305 81" stroke="#59EFB5"/>
+    <circle cx="355" cy="59" r="31" stroke="#FFFFFF"/>
+    <path d="M411 17 L411 79 C411 94 423 100 437 89" stroke="#FFFFFF"/>
+    <circle cx="486" cy="59" r="31" stroke="#FFFFFF"/>
+  </g></g>
+  <g transform="translate(236 146) scale(1.15)" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(0.00 0) scale(1)"><path d="M0 0 H14 M7 0 V16"/></g><g transform="translate(19.60 3.8) scale(0.76)"><path d="M1 16 V0 H7 C14 0 14 9 7 9 H1 M7 9 L14 16"/></g><g transform="translate(36.12 3.8) scale(0.76)"><path d="M0 16 L6 0 L12 16 M3 10 H9"/></g><g transform="translate(50.36 3.8) scale(0.76)"><path d="M2 0 V16"/></g><g transform="translate(58.52 3.8) scale(0.76)"><path d="M1 16 V0 L12 16 V0"/></g><g transform="translate(73.52 0) scale(1)"><path d="M3 14 L1 19"/></g><g transform="translate(95.72 0) scale(1)"><path d="M1 16 V0 H7 C14 0 14 9 7 9 H1"/></g><g transform="translate(114.32 3.8) scale(0.76)"><path d="M1 0 V16 H12"/></g><g transform="translate(128.56 3.8) scale(0.76)"><path d="M0 16 L6 0 L12 16 M3 10 H9"/></g><g transform="translate(142.80 3.8) scale(0.76)"><path d="M0 0 L7 8 L14 0 M7 8 V16"/></g><g transform="translate(158.56 0) scale(1)"><path d="M3 14 L1 19"/></g><g transform="translate(180.76 0) scale(1)"><path d="M12 3 C9 -1 2 0 1 8 C0 16 8 19 13 14 V10 H8"/></g><g transform="translate(199.36 3.8) scale(0.76)"><path d="M1 16 V0 H7 C14 0 14 9 7 9 H1 M7 9 L14 16"/></g><g transform="translate(215.88 3.8) scale(0.76)"><path d="M7 0 C1 0 0 4 0 8 C0 13 2 16 7 16 C12 16 14 13 14 8 C14 3 12 0 7 0 Z"/></g><g transform="translate(232.40 3.8) scale(0.76)"><path d="M0 0 L3 16 L8 6 L13 16 L16 0"/></g></g></g>
+</svg>

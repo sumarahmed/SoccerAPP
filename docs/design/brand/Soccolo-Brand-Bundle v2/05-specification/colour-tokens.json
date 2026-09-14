@@ -1,0 +1,202 @@
+{
+  "$schema": "https://design-tokens.org/schema.json",
+  "meta": {
+    "system": "Soccolo",
+    "unit": "the dot diameter at the centre of the symbol",
+    "unitValue": 22.78796110051292
+  },
+  "colour": {
+    "ink-900": {
+      "value": "#04141D"
+    },
+    "ink-800": {
+      "value": "#0A2231"
+    },
+    "ink-700": {
+      "value": "#123449"
+    },
+    "ink-600": {
+      "value": "#1E4A63"
+    },
+    "ink-400": {
+      "value": "#4E7E96"
+    },
+    "ink-200": {
+      "value": "#AFC6D2"
+    },
+    "ink-100": {
+      "value": "#DCE7ED"
+    },
+    "paper": {
+      "value": "#F4F8FA"
+    },
+    "white": {
+      "value": "#FFFFFF"
+    },
+    "pitch-900": {
+      "value": "#06301F"
+    },
+    "pitch-700": {
+      "value": "#0A5537"
+    },
+    "pitch-600": {
+      "value": "#0C6B45"
+    },
+    "pitch-500": {
+      "value": "#12A26C"
+    },
+    "pitch-400": {
+      "value": "#2ACE8C"
+    },
+    "pitch-300": {
+      "value": "#54E8AC"
+    },
+    "pitch-200": {
+      "value": "#8DF3C9"
+    },
+    "pitch-100": {
+      "value": "#CDFAE6"
+    }
+  },
+  "semantic": {
+    "brand.ground.dark": {
+      "value": "{colour.ink-800}"
+    },
+    "brand.ground.light": {
+      "value": "{colour.paper}"
+    },
+    "brand.mark.onDark": {
+      "value": "{colour.white}"
+    },
+    "brand.mark.onLight": {
+      "value": "{colour.ink-800}"
+    },
+    "brand.accent.onDark": {
+      "value": "{colour.pitch-300}"
+    },
+    "brand.accent.onLight": {
+      "value": "{colour.pitch-700}"
+    },
+    "brand.mono.black": {
+      "value": "#000000"
+    },
+    "brand.mono.white": {
+      "value": "#FFFFFF"
+    }
+  },
+  "geometry": {
+    "typeface": {
+      "value": "Poppins SemiBold"
+    },
+    "typefaceLicence": {
+      "value": "SIL Open Font License 1.1"
+    },
+    "capHeight": {
+      "value": 100.0
+    },
+    "xHeight": {
+      "value": 79.03
+    },
+    "strokeVertical": {
+      "value": 17.4
+    },
+    "strokeHorizontal": {
+      "value": 20.4
+    },
+    "overshoot": {
+      "value": 1.28
+    },
+    "letterAperture": {
+      "value": 18.6,
+      "unit": "degrees"
+    },
+    "symbolAperture": {
+      "value": 27.28,
+      "unit": "degrees"
+    },
+    "symbolSeparation": {
+      "value": 85.88
+    },
+    "dotDiameter": {
+      "value": 22.788
+    },
+    "clearSpace": {
+      "value": 45.576
+    }
+  },
+  "contrastAudit": [
+    {
+      "pair": "mint accent on brand navy",
+      "foreground": "pitch-300",
+      "background": "ink-800",
+      "ratio": 10.51,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "mint accent on deepest navy",
+      "foreground": "pitch-300",
+      "background": "ink-900",
+      "ratio": 12.04,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "reversed wordmark on brand navy",
+      "foreground": "white",
+      "background": "ink-800",
+      "ratio": 16.33,
+      "minimum": 7.0,
+      "pass": true
+    },
+    {
+      "pair": "tagline reversed on brand navy",
+      "foreground": "ink-100",
+      "background": "ink-800",
+      "ratio": 12.98,
+      "minimum": 7.0,
+      "pass": true
+    },
+    {
+      "pair": "deep green accent on light ground",
+      "foreground": "pitch-700",
+      "background": "paper",
+      "ratio": 8.3,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "deep green accent on pure white",
+      "foreground": "pitch-700",
+      "background": "white",
+      "ratio": 8.87,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "wordmark on light ground",
+      "foreground": "ink-800",
+      "background": "paper",
+      "ratio": 15.28,
+      "minimum": 7.0,
+      "pass": true
+    },
+    {
+      "pair": "tagline on light ground",
+      "foreground": "ink-600",
+      "background": "paper",
+      "ratio": 8.87,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "pair": "navy mark on mint ground",
+      "foreground": "ink-800",
+      "background": "pitch-300",
+      "ratio": 10.51,
+      "minimum": 4.5,
+      "pass": true
+    }
+  ],
+  "contrastAuditPasses": true
+}

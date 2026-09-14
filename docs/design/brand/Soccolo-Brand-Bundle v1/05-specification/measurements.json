@@ -1,0 +1,67 @@
+{
+  "symbol": {
+    "w": 167.19,
+    "h": 81.6,
+    "ratio": 2.049
+  },
+  "symbol-compact": {
+    "w": 173.2,
+    "h": 81.6,
+    "ratio": 2.123
+  },
+  "symbol-orbit": {
+    "w": 163.2,
+    "h": 163.2,
+    "ratio": 1.0
+  },
+  "symbol-orbit-compact": {
+    "w": 163.2,
+    "h": 163.2,
+    "ratio": 1.0
+  },
+  "wordmark": {
+    "w": 559.2,
+    "h": 106.85,
+    "ratio": 5.234
+  },
+  "horizontal": {
+    "w": 564.19,
+    "h": 106.85,
+    "ratio": 5.28
+  },
+  "horizontal-tagline": {
+    "w": 564.19,
+    "h": 186.84,
+    "ratio": 3.02
+  },
+  "stacked": {
+    "w": 559.2,
+    "h": 272.93,
+    "ratio": 2.049
+  },
+  "stacked-tagline": {
+    "w": 559.2,
+    "h": 352.38,
+    "ratio": 1.587
+  },
+  "stacked-orbit": {
+    "w": 559.2,
+    "h": 304.23,
+    "ratio": 1.838
+  },
+  "_symbol": {
+    "separation": 85.877,
+    "dot_d": 22.788,
+    "clearance": 8.506,
+    "aperture": 27.281,
+    "stroke_v": 17.404,
+    "stroke_h": 20.399,
+    "stroke": 18.902,
+    "cy": 39.515,
+    "rx": 40.656,
+    "ry": 40.799,
+    "ix": 20.257,
+    "iy": 23.395,
+    "form_gap": 13.609
+  }
+}

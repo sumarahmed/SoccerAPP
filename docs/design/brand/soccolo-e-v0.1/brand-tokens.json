@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "brandId": "working-soccolo-e-v0.1",
+  "status": "provisional-review",
+  "displayName": "Soccolo",
+  "tagline": "Train, Play, Grow",
+  "colours": {
+    "navy": "#0B1D2A",
+    "mint": "#59EFB5",
+    "green": "#087A55",
+    "white": "#FFFFFF",
+    "black": "#000000",
+    "surfaceLight": "#F5F8FA"
+  },
+  "logo": {
+    "lightPrimary": "soccolo-lockup-horizontal-light.svg",
+    "darkPrimary": "soccolo-lockup-horizontal-dark.svg",
+    "symbolLight": "soccolo-symbol-primary.svg",
+    "symbolDark": "soccolo-symbol-reversed.svg",
+    "appIconSource": "soccolo-app-icon-1024.svg",
+    "exportIntroFrame": "soccolo-export-intro-frame-16x9.svg"
+  },
+  "technicalIdentifiersRemainIndependent": true
+}

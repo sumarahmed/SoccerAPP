@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="432" height="432" viewBox="0 0 432 432" role="img" aria-labelledby="title desc" >
+  <title id="title">Soccolo Android adaptive foreground</title>
+  <desc id="desc">Transparent adaptive-icon foreground with the mint inward-facing double-touch symbol inside the 66 by 66 percent safe zone.</desc>
+  <metadata>Soccolo Concept E controlled refinement v0.2; generated from repository source geometry on 2026-09-14; no stock icon, traced image or third-party wordmark font.</metadata>
+<g transform="translate(62 134) scale(1.4)"><g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M88 27 C72 11 40 13 24 35 C7 58 19 91 48 99 C65 104 82 98 93 84" stroke="#59EFB5" stroke-width="18"/>
+    <circle cx="110" cy="58" r="8.5" fill="#59EFB5" stroke="none"/>
+    <path d="M88 27 C72 11 40 13 24 35 C7 58 19 91 48 99 C65 104 82 98 93 84" transform="translate(220 0) scale(-1 1)" stroke="#59EFB5" stroke-width="18"/>
+  </g></g>
+</svg>

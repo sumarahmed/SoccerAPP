@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="530" height="120" viewBox="0 0 530 120" role="img" aria-labelledby="title desc" >
+  <title id="title">Soccolo reversed custom wordmark</title>
+  <desc id="desc">Custom geometric Soccolo wordmark in white and mint for dark surfaces.</desc>
+  <metadata>Soccolo Concept E controlled refinement v0.1; generated from repository source geometry on 2026-09-14; no stock icon, traced image or third-party wordmark font.</metadata>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="18">
+    <path d="M76 29 C65 14 32 14 19 30 C8 44 19 55 44 58 C68 61 79 70 71 85 C62 102 29 103 14 86" stroke="#FFFFFF"/>
+    <circle cx="119" cy="59" r="31" stroke="#FFFFFF"/>
+    <path d="M218 35 C204 20 180 21 166 37 C152 53 157 80 174 91 C189 100 207 96 219 82" stroke="#59EFB5"/>
+    <circle cx="233" cy="58" r="5.5" fill="#FFFFFF" stroke="none"/>
+    <path d="M304 33 C290 18 265 20 251 37 C238 54 243 80 260 91 C275 100 294 95 305 81" stroke="#59EFB5"/>
+    <circle cx="355" cy="59" r="31" stroke="#FFFFFF"/>
+    <path d="M411 17 L411 79 C411 94 423 100 437 89" stroke="#FFFFFF"/>
+    <circle cx="486" cy="59" r="31" stroke="#FFFFFF"/>
+  </g>
+</svg>

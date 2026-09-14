@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="120" viewBox="0 0 220 120" role="img" aria-labelledby="title desc" >
+  <title id="title">Soccolo double-touch symbol</title>
+  <desc id="desc">Two sequential custom C-shaped training touches and one contact point in navy and green.</desc>
+  <metadata>Soccolo Concept E controlled refinement v0.1; generated from repository source geometry on 2026-09-14; no stock icon, traced image or third-party wordmark font.</metadata>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M88 27 C72 11 40 13 24 35 C7 58 19 91 48 99 C65 104 82 98 93 84" stroke="#0B1D2A" stroke-width="18"/>
+    <circle cx="111" cy="58" r="8.5" fill="#0B1D2A" stroke="none"/>
+    <path d="M198 22 C182 6 150 8 134 30 C117 53 129 86 158 94 C175 99 192 93 203 79" stroke="#087A55" stroke-width="18"/>
+  </g>
+</svg>

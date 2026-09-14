@@ -1,0 +1,28 @@
+:root {
+  --soccolo-ink-900: #04141D;
+  --soccolo-ink-800: #0A2231;
+  --soccolo-ink-700: #123449;
+  --soccolo-ink-600: #1E4A63;
+  --soccolo-ink-400: #4E7E96;
+  --soccolo-ink-200: #AFC6D2;
+  --soccolo-ink-100: #DCE7ED;
+  --soccolo-paper: #F4F8FA;
+  --soccolo-white: #FFFFFF;
+  --soccolo-pitch-900: #06301F;
+  --soccolo-pitch-700: #0A5537;
+  --soccolo-pitch-600: #0C6B45;
+  --soccolo-pitch-500: #12A26C;
+  --soccolo-pitch-400: #2ACE8C;
+  --soccolo-pitch-300: #54E8AC;
+  --soccolo-pitch-200: #8DF3C9;
+  --soccolo-pitch-100: #CDFAE6;
+
+  --soccolo-brand-ground-dark: var(--soccolo-ink-800);
+  --soccolo-brand-ground-light: var(--soccolo-paper);
+  --soccolo-brand-mark-onDark: var(--soccolo-white);
+  --soccolo-brand-mark-onLight: var(--soccolo-ink-800);
+  --soccolo-brand-accent-onDark: var(--soccolo-pitch-300);
+  --soccolo-brand-accent-onLight: var(--soccolo-pitch-700);
+  --soccolo-brand-mono-black: #000000;
+  --soccolo-brand-mono-white: #FFFFFF;
+}
