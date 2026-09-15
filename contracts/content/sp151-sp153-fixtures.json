@@ -1,29 +1,115 @@
 {
   "contract": "soccolo-sp151-sp153-foundation-v1",
-  "catalog": { "offered": ["D01","D02","D03","D04","D05","D06","D07","D08","D09","D10"], "deferred": ["D11","D12"], "variantSuffix": ".base.v1" },
+  "status": "accepted-pilot-baseline",
+  "approval": {
+    "accountableOwner": "Syed Ahmed",
+    "coachingApprover": "Aaron M",
+    "approvedDate": "2026-09-16",
+    "scope": "D01.base.v1-D10.base.v1",
+    "source": "docs/design/soccer_pilot_and_design_pack.md",
+    "sourceSha256": "2C7A98FF06845863CAB03648CFD7115E744A8832D3B2B3B44DB62B1D8D1AC43D"
+  },
+  "catalog": {
+    "offered": ["D01", "D02", "D03", "D04", "D05", "D06", "D07", "D08", "D09", "D10"],
+    "deferred": ["D11", "D12"],
+    "withdrawn": [],
+    "variantSuffix": ".base.v1",
+    "pilotSizeIsAuthoringLimit": false
+  },
   "pathways": [
-    {"id":"ball-control","steps":["D01.base.v1","D02.base.v1","D03.base.v1"],"next":["D04.base.v1","D08.base.v1"]},
-    {"id":"passing","steps":["D05.base.v1","D06.base.v1","D07.base.v1"],"next":["D10.base.v1"]},
-    {"id":"move-turn","steps":["D03.base.v1","D04.base.v1","D08.base.v1","D09.base.v1"],"next":["repeat-approved"]},
-    {"id":"receive-finish","steps":["D05.base.v1","D06.base.v1","D10.base.v1"],"next":["repeat-or-return"]}
+    {
+      "id": "ball-control",
+      "learningGoal": "Build close control before adding a direction change or turn.",
+      "entryRequirements": ["approved-current-variant", "age-suitable", "coach-selected-start", "safe-space", "one-ball", "required-supervision"],
+      "steps": ["D01.base.v1", "D02.base.v1", "D03.base.v1"],
+      "ageSegments": [
+        {"minAge": 5, "maxAge": 7, "sequence": ["D01.base.v1", "D02.base.v1", "D03.base.v1"], "next": {"type": "repeat", "variant": "D03.base.v1"}},
+        {"minAge": 8, "maxAge": 18, "sequence": ["D01.base.v1", "D02.base.v1", "D03.base.v1"], "next": {"type": "coach-selected-branch", "variants": ["D04.base.v1", "D08.base.v1"], "selectionRule": "Use D04 for observed direction-change control or D08 for observed sole-turn readiness."}}
+      ],
+      "progressionCondition": "Coach-approved evidence of consistent close control under the approved setup.",
+      "easierAlternatives": {"D01.base.v1": null, "D02.base.v1": "D01.base.v1", "D03.base.v1": "D02.base.v1"},
+      "parentSetupKey": "ball-control",
+      "positionRelevance": "advisory"
+    },
+    {
+      "id": "passing",
+      "learningGoal": "Build a controlled ground pass and receiving sequence.",
+      "entryRequirements": ["approved-current-variant", "age-suitable", "coach-selected-start", "safe-space", "approved-partner-gate-or-rebound", "required-supervision"],
+      "steps": ["D05.base.v1", "D06.base.v1", "D07.base.v1"],
+      "ageSegments": [
+        {"minAge": 5, "maxAge": 7, "sequence": ["D05.base.v1"], "next": {"type": "repeat", "variant": "D05.base.v1"}},
+        {"minAge": 8, "maxAge": 10, "sequence": ["D05.base.v1", "D06.base.v1"], "next": {"type": "repeat", "variant": "D06.base.v1"}},
+        {"minAge": 11, "maxAge": 18, "sequence": ["D05.base.v1", "D06.base.v1", "D07.base.v1"], "next": {"type": "conditional-branch", "variants": ["D10.base.v1", "D07.base.v1"], "selectionRule": "Use D10 only when its finishing setup is eligible; otherwise repeat D07."}}
+      ],
+      "progressionCondition": "Coach-approved evidence of controlled passing and receiving under the approved setup.",
+      "easierAlternatives": {"D05.base.v1": null, "D06.base.v1": "D05.base.v1", "D07.base.v1": "D06.base.v1"},
+      "parentSetupKey": "passing",
+      "positionRelevance": "advisory"
+    },
+    {
+      "id": "move-turn",
+      "learningGoal": "Link controlled approach, change of direction and exit.",
+      "entryRequirements": ["approved-current-variant", "age-suitable", "coach-selected-start", "clear-approach-and-exit", "one-ball", "required-supervision"],
+      "steps": ["D03.base.v1", "D04.base.v1", "D08.base.v1", "D09.base.v1"],
+      "ageSegments": [
+        {"minAge": 8, "maxAge": 18, "sequence": ["D03.base.v1", "D04.base.v1", "D08.base.v1", "D09.base.v1"], "next": {"type": "repeat", "variant": "D09.base.v1"}}
+      ],
+      "progressionCondition": "Coach-approved evidence of a controlled approach, turn and exit in a safe lane.",
+      "easierAlternatives": {"D03.base.v1": null, "D04.base.v1": "D03.base.v1", "D08.base.v1": "D04.base.v1", "D09.base.v1": "D08.base.v1"},
+      "parentSetupKey": "move-turn",
+      "positionRelevance": "advisory"
+    },
+    {
+      "id": "receive-finish",
+      "learningGoal": "Link a controlled receive and set with a safe finish.",
+      "entryRequirements": ["approved-current-variant", "age-suitable", "coach-selected-start", "safe-target", "approved-partner-or-adult", "clear-ball-path", "required-supervision"],
+      "steps": ["D05.base.v1", "D06.base.v1", "D10.base.v1"],
+      "ageSegments": [
+        {"minAge": 8, "maxAge": 18, "sequence": ["D05.base.v1", "D06.base.v1", "D10.base.v1"], "next": {"type": "coach-selected-branch", "variants": ["D10.base.v1", "D05.base.v1"], "selectionRule": "Repeat D10 or return to D05 using coach-approved evidence."}}
+      ],
+      "progressionCondition": "Coach-approved evidence of a controlled receive, set and safe finish under the approved setup.",
+      "easierAlternatives": {"D05.base.v1": null, "D06.base.v1": "D05.base.v1", "D10.base.v1": "D06.base.v1"},
+      "parentSetupKey": "receive-finish",
+      "positionRelevance": "advisory"
+    }
   ],
-  "precedence": ["safety-or-approval","authority-or-assignment","age-supervision-ability","resources-and-time","workload-conflict","next-path-step","easier-alternative","no-recommendation"],
+  "parentSetup": {
+    "ball-control": "Use one ball on a clear, level area; keep an adult nearby for a younger player.",
+    "passing": "Use the approved partner, gate or rebound setup and keep the retrieval path clear.",
+    "move-turn": "Keep the approach and exit lane clear of people and obstacles.",
+    "receive-finish": "Use the approved adult or partner and safe target; keep bystanders and the phone outside the ball path."
+  },
+  "eligibility": {
+    "ageAndAbilityAreSeparate": true,
+    "missingOrWithdrawnBlocksAffectedRoute": true,
+    "silentTruncationAllowed": false,
+    "inventAlternativeAllowed": false,
+    "partnerAndReboundInterchangeableByDefault": false
+  },
+  "precedence": ["safety-or-approval", "authority-or-assignment", "age-supervision-ability", "resources-and-time", "workload-conflict", "next-path-step", "easier-alternative", "no-recommendation"],
   "recommendationFixtures": [
-    {"case":"no-equipment","result":"easier-approved-or-none","oneAction":true,"reason":true},
-    {"case":"limited-time","result":"one-short-eligible-action","oneAction":true,"reason":true},
-    {"case":"missed-session","result":"resume-current-eligible-step","oneAction":true,"reason":true},
-    {"case":"younger-advanced","result":"age-suitable-approved-only","oneAction":true,"reason":true},
-    {"case":"older-beginner","result":"foundation-neutral-language","oneAction":true,"reason":true},
-    {"case":"conflicting-club-assignments","result":"current-authorized-assignment-only","oneAction":true,"reason":true},
-    {"case":"missing-required-input","result":"no-recommendation","oneAction":false,"reason":true},
-    {"case":"offline-stale","result":"display-last-signed-no-recalculation","oneAction":false,"reason":true}
+    {"case": "no-equipment", "result": "easier-approved-or-none", "oneAction": true, "reason": true},
+    {"case": "limited-time", "result": "one-short-eligible-action", "oneAction": true, "reason": true},
+    {"case": "missed-session", "result": "resume-current-eligible-step", "oneAction": true, "reason": true},
+    {"case": "younger-advanced", "result": "age-suitable-approved-only", "oneAction": true, "reason": true},
+    {"case": "older-beginner", "result": "foundation-neutral-language", "oneAction": true, "reason": true},
+    {"case": "conflicting-club-assignments", "result": "current-authorized-assignment-only", "oneAction": true, "reason": true},
+    {"case": "missing-required-input", "result": "no-recommendation", "oneAction": false, "reason": true},
+    {"case": "offline-stale", "result": "display-last-signed-no-recalculation", "oneAction": false, "reason": true}
   ],
-  "invariants": {"completionChangesAbility":false,"completionChangesWorkload":false,"inventUnapprovedActivity":false},
+  "invariants": {
+    "completionChangesAbility": false,
+    "completionChangesWorkload": false,
+    "parentObservationChangesProgression": false,
+    "coachApprovedAssessmentRequired": true,
+    "positionRelevanceBlocksEligibility": false,
+    "inventUnapprovedActivity": false
+  },
   "protocols": [
-    {"id":"P01-D01-v1","attempts":2,"unit":"controlled-touches-per-20-seconds","retestDays":7,"recordingRequired":false},
-    {"id":"P02-D03-v1","attempts":4,"unit":"controlled-stop-journeys","retestDays":7,"recordingRequired":false},
-    {"id":"P03-D05-v1","attempts":6,"unit":"valid-ground-passes-through-gate","retestDays":7,"recordingRequired":false}
+    {"id": "P01-D01-v1", "attempts": 2, "unit": "controlled-touches-per-20-seconds", "retestDays": 7, "recordingRequired": false},
+    {"id": "P02-D03-v1", "attempts": 4, "unit": "controlled-stop-journeys", "retestDays": 7, "recordingRequired": false},
+    {"id": "P03-D05-v1", "attempts": 6, "unit": "valid-ground-passes-through-gate", "retestDays": 7, "recordingRequired": false}
   ],
-  "comparabilityFields": ["protocol-version","setup","equipment","surface","assistance","observation-source","foot-or-side"],
-  "skillFixtures": ["matching-conditions","changed-surface","changed-assistance","coach-observation","parent-limited-observation","no-video-valid","unsafe-no-result","missing-fields-no-result","append-only-correction"]
+  "comparabilityFields": ["protocol-version", "setup", "equipment", "surface", "assistance", "observation-source", "foot-or-side"],
+  "skillFixtures": ["matching-conditions", "changed-surface", "changed-assistance", "coach-observation", "parent-limited-observation", "no-video-valid", "unsafe-no-result", "missing-fields-no-result", "append-only-correction"]
 }

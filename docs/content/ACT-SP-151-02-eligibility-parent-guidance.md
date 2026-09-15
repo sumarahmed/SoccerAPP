@@ -1,14 +1,18 @@
 # ACT-SP-151-02 — Eligibility and parent guidance
 
-Version `1.0-review-ready` applies to the D01–D10 initial catalogue.
+Version `1.0` is accepted for the D01–D10 pilot catalogue. Aaron M approved the
+coaching and supervision rules; Syed Ahmed accepted the parent-facing contract
+on 16 September 2026.
 
 ## Eligibility order
 
-1. Confirm the exact variant is approved and not withdrawn.
+1. Confirm the exact variant is approved, current and not withdrawn.
 2. Apply age suitability independently from assessed ability.
-3. Confirm supervision, equipment, space, assistance, and current assignment requirements.
-4. Offer the next ordered eligible step or its named easier alternative.
-5. If no approved step is eligible, show no recommendation and a plain reason; never invent a drill.
+3. Confirm supervision, equipment, space, assistance and current assignment.
+4. Use the coach-approved age route and progression decision.
+5. Offer one exact next step or its named exact easier alternative.
+6. If no approved step is eligible, show no recommendation and a plain reason;
+   never truncate a route, invent a drill or substitute a harder activity.
 
 ## Parent-facing states
 
@@ -21,4 +25,16 @@ Version `1.0-review-ready` applies to the D01–D10 initial catalogue.
 | Older beginner | “Start with the foundation version that matches current experience. Progress is based on coach-approved evidence, not age alone.” |
 | No eligible option | “No suitable session is available from the approved catalogue for these conditions.” |
 
-D11 and D12 use the withdrawn/unavailable presentation in the initial catalogue. D12’s goalkeeper-qualified review remains recorded, but deferral means it is not offered.
+## Pathway setup guidance
+
+| Path | Short setup guidance |
+|---|---|
+| Ball control | Use one ball on a clear, level area. Keep an adult nearby for a younger player. |
+| Passing foundations | Use the approved partner, gate or rebound setup and keep the retrieval path clear. Partner and rebound variants are not interchangeable unless the exact variant permits it. |
+| Move and turn | Keep the approach and exit lane clear of people and obstacles. |
+| Receive and finish | Use the approved adult/partner and safe target, keep bystanders out from behind the target, and place the phone outside the ball path. |
+
+Parents may record practice and observations. Only a coach-approved assessment
+may change assessed ability, progression or the selected branch. Position labels
+are advisory only. D11 and D12 use the unavailable presentation during the
+pilot; their prior review does not make them offerable.
