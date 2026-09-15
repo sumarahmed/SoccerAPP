@@ -32,6 +32,7 @@ assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-050' &
 assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-059' && decision.acceptance === 'AC-SP-059-01 through AC-SP-059-02'));
 assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-060' && decision.acceptance === 'AC-SP-060-01 through AC-SP-060-02'));
 assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-061' && decision.acceptance === 'AC-SP-061-01 through AC-SP-061-02'));
+assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-062' && decision.acceptance === 'AC-SP-062-01 through AC-SP-062-02'));
 assert.ok(data.activityDecisions.some(decision => decision.activity === 'ACT-SP-080-01'));
 assert.ok(data.activityDecisions.some(decision => decision.activity === 'ACT-SP-011-01'));
 assert.equal(statusOverrides['ACT-SP-001-01'].status, 'Completed');
@@ -61,6 +62,9 @@ assert.equal(statusOverrides['ACT-SP-060-03'].status, 'Accepted');
 assert.equal(statusOverrides['ACT-SP-061-01'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-061-02'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-061-03'].status, 'Accepted');
+assert.equal(statusOverrides['ACT-SP-062-01'].status, 'Completed');
+assert.equal(statusOverrides['ACT-SP-062-02'].status, 'Completed');
+assert.equal(statusOverrides['ACT-SP-062-03'].status, 'Accepted');
 assert.ok(template.includes("(activity.status ? '✓ ' : '') + shortId(id)"), 'Completed activities need an always-visible checkmark');
 assert.ok(template.includes("activity.status ? 'done' : ''"), 'Completed activities need a dedicated visual state');
 assert.ok(template.includes("selector: 'node.done'"), 'Completed activity styling is missing');
