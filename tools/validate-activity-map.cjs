@@ -28,12 +28,14 @@ assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-001' &
 assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-080' && decision.acceptance === 'AC-SP-080-01 through AC-SP-080-04'));
 assert.ok(data.acceptedDecisions.some(decision => decision.source === 'SP-010' && decision.acceptance === 'AC-SP-010-01 through AC-SP-010-08'));
 assert.ok(data.activityDecisions.some(decision => decision.activity === 'ACT-SP-080-01'));
+assert.ok(data.activityDecisions.some(decision => decision.activity === 'ACT-SP-011-01'));
 assert.equal(statusOverrides['ACT-SP-001-01'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-001-02'].status, 'Accepted');
 assert.equal(statusOverrides['ACT-SP-080-01'].status, 'Accepted');
 assert.equal(statusOverrides['ACT-SP-080-02'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-080-03'].status, 'Accepted');
 assert.equal(statusOverrides['ACT-SP-010-01'].status, 'Accepted');
+assert.equal(statusOverrides['ACT-SP-011-01'].status, 'Accepted');
 assert.ok(template.includes("(activity.status ? '✓ ' : '') + shortId(id)"), 'Completed activities need an always-visible checkmark');
 assert.ok(template.includes("activity.status ? 'done' : ''"), 'Completed activities need a dedicated visual state');
 assert.ok(template.includes("selector: 'node.done'"), 'Completed activity styling is missing');
