@@ -1,0 +1,157 @@
+{
+  "fixtureSet": "sp-047-reconciliation-v1",
+  "contractVersion": "1.0",
+  "classification": "synthetic",
+  "configuration": {
+    "maximumOfflineValidityDays": 7,
+    "maximumAutomaticAttemptsPerSyncRun": 5,
+    "maximumSyncRunSeconds": 900,
+    "serverTimeAuthoritative": true,
+    "timestampsResolveSecurityConflicts": false,
+    "mediaResumeEnabled": false,
+    "mediaAutomaticFullRestart": false,
+    "mediaRetryStartsAtByteZero": true,
+    "freeContentAfterPremiumExpiry": true,
+    "localHistoryAfterPremiumExpiry": true,
+    "localMediaAfterPremiumExpiry": true
+  },
+  "idempotencyScope": [
+    "principalId",
+    "selectedContextId",
+    "commandType",
+    "operationId"
+  ],
+  "reconciliationOrder": [
+    "refreshIdentityAndContext",
+    "refreshAuthorityAndServerTime",
+    "applyWithdrawalSuppressionAndDeviceDeletion",
+    "forceAuthorizedResyncWhenCursorUntrusted",
+    "pullPermittedCurrentState",
+    "submitIdempotentSessionEvents",
+    "resolveRemainingAuthorizedCommands",
+    "offerNewMediaReservationOrByteZeroRestart"
+  ],
+  "requiredF25States": [
+    "offline_valid",
+    "offline_verification_required",
+    "practice_updates_waiting",
+    "cloud_uploads_waiting",
+    "upload_interrupted_restart",
+    "retrying_small_event",
+    "conflict_needs_attention",
+    "authority_changed",
+    "account_switch_warning",
+    "premium_expired_local_retained",
+    "fully_reconciled"
+  ],
+  "scenarios": [
+    {
+      "id": "operation-retry-identical",
+      "category": "idempotency",
+      "input": {"operationId": "op_fixture_01", "payloadDigest": "sha256:fixture-one", "deliveries": 2},
+      "expected": {"domainEffects": 1, "sameReceiptReturned": true}
+    },
+    {
+      "id": "operation-reuse-changed-payload",
+      "category": "idempotency",
+      "input": {"operationId": "op_fixture_02", "firstDigest": "sha256:first", "retryDigest": "sha256:changed"},
+      "expected": {"secondMutationApplied": false, "problemCode": "generation_conflict"}
+    },
+    {
+      "id": "crash-before-outbox-commit",
+      "category": "atomic-local-write",
+      "input": {"localMutationCommitted": false, "outboxCommitted": false},
+      "expected": {"partialLocalStateVisible": false, "outboxEntryPresent": false}
+    },
+    {
+      "id": "response-lost-after-server-accept",
+      "category": "receipt-recovery",
+      "input": {"serverAccepted": true, "responseReceived": false, "sameOperationIdQueried": true},
+      "expected": {"newOperationCreated": false, "receiptRecovered": true, "domainEffects": 1}
+    },
+    {
+      "id": "event-duplicate-and-gap",
+      "category": "event-ordering",
+      "input": {"lastSequence": 4, "deliveryOrder": [6, 5, 5]},
+      "expected": {"appliedOrder": [5, 6], "duplicateEffects": 0, "gapAppliedSilently": false}
+    },
+    {
+      "id": "cursor-expired-forces-resync",
+      "category": "cursor",
+      "input": {"cursorTrusted": false, "pendingCommands": 3},
+      "expected": {"pushBeforeResync": false, "fullAuthorizedResync": true, "pendingIntentPreserved": true}
+    },
+    {
+      "id": "offline-edit-versus-newer-plan",
+      "category": "conflict",
+      "input": {"localBaseGeneration": 8, "serverGeneration": 9, "operation": "edit_household_plan"},
+      "expected": {"silentOverwrite": false, "state": "conflict_needs_attention"}
+    },
+    {
+      "id": "offline-upload-versus-newer-delete",
+      "category": "delete-wins",
+      "input": {"queuedGeneration": 3, "tombstoneGeneration": 4},
+      "expected": {"uploadStarted": false, "resourceResurrected": false, "state": "superseded_by_deletion"}
+    },
+    {
+      "id": "withdrawal-while-upload-queued",
+      "category": "authority",
+      "input": {"queuedConsentGeneration": 5, "currentConsentGeneration": 6, "currentState": "withdrawn"},
+      "expected": {"uploadStarted": false, "state": "rejected_by_current_authority", "localCopyDeleted": false}
+    },
+    {
+      "id": "delete-everywhere-old-device-reconnect",
+      "category": "delete-wins",
+      "input": {"deviceGeneration": 2, "deleteGeneration": 3, "oldQueueContainsUpload": true},
+      "expected": {"deviceDeletionBeforeUpload": true, "uploadStarted": false, "resourceResurrected": false}
+    },
+    {
+      "id": "account-switch-with-unsynced-work",
+      "category": "context-isolation",
+      "input": {"practiceUpdates": 2, "pendingUploads": 1, "localRecordings": 3},
+      "expected": {"warningShown": true, "switchAllowedWithoutUpload": true, "oldVaultLocked": true, "crossContextCopy": false}
+    },
+    {
+      "id": "premium-expires-offline",
+      "category": "offline-expiry",
+      "input": {"daysSinceVerification": 8, "premiumSessionActive": false},
+      "expected": {"newPremiumSessionAllowed": false, "freeContentAvailable": true, "localHistoryAvailable": true, "localMediaAvailable": true}
+    },
+    {
+      "id": "premium-expires-during-session",
+      "category": "offline-expiry",
+      "input": {"validAtSessionStart": true, "expiresDuringActiveSession": true},
+      "expected": {"activeSessionMayFinish": true, "localSaveAllowed": true, "nextPremiumSessionAllowed": false}
+    },
+    {
+      "id": "device-clock-rollback",
+      "category": "time",
+      "input": {"serverBaselineKnown": true, "wallClockMovedBackward": true, "validityProvable": false},
+      "expected": {"offlineValidityExtended": false, "connectionRequired": true}
+    },
+    {
+      "id": "concurrent-household-plan-edits",
+      "category": "conflict",
+      "input": {"adultAEditGeneration": 11, "adultBBaseGeneration": 10},
+      "expected": {"silentLastWriteWins": false, "authorizedResolutionRequired": true}
+    },
+    {
+      "id": "membership-removed-before-replay",
+      "category": "authority",
+      "input": {"queuedMembershipGeneration": 7, "currentMembershipGeneration": 8, "currentState": "removed"},
+      "expected": {"queuedActionApplied": false, "state": "rejected_by_current_authority", "foreignDetailsRevealed": false}
+    },
+    {
+      "id": "interrupted-media-byte-zero-restart",
+      "category": "media-retry",
+      "input": {"bytesPreviouslyTransferred": 1048576, "attemptInterrupted": true},
+      "expected": {"automaticFullRestart": false, "fragmentsReusable": false, "userAction": "restart", "retryStartsAtByte": 0}
+    },
+    {
+      "id": "terminal-error-not-retried",
+      "category": "retry",
+      "input": {"problemCode": "dependency_revoked", "retryable": false},
+      "expected": {"automaticRetry": false, "visibleState": "rejected_by_current_authority"}
+    }
+  ]
+}
