@@ -2131,7 +2131,7 @@ Parent: None. Predecessors: SP-011, SP-037. Parent completion includes children;
 
 ### Goal and scope
 
-Sydney primary, separate staging/prod, web function routing, secrets, private media and Melbourne recovery; costs/region boundaries/RPO-RTO scope documented
+Lean lowest-cost pilot with Sydney primary data, global delivery, separated development/production secrets and private media controls; dedicated recovery and RPO/RTO promises deferred until post-pilot
 
 ### Human inputs and decisions
 
@@ -2139,16 +2139,16 @@ The accountable Operator/security lead supplies missing decisions and approves t
 
 ### Activity tasks and goals
 
-- **ACT-SP-050-01 — Map environment and processor boundaries** (Agent): Describe intended Sydney primary, staging/production separation, web routing, private media and secret identities Deliver: Deployment/processor inventory with unverified provider assumptions
-- **ACT-SP-050-02 — Specify whole-system recovery targets** (Agent): Define Melbourne recovery copy, auth/config/object scope, cost drivers and owner-approved RPO/RTO Deliver: Recovery architecture, measurement plan and unresolved supplier decisions
+- **ACT-SP-050-01 — Map lean pilot environment and processor boundaries** (Agent): Describe Sydney primary, global delivery, development/production separation, private-media cache controls and scoped secrets Deliver: Lean deployment and processor inventory with provider and cost assumptions
+- **ACT-SP-050-02 — Specify pilot data-loss and recovery deferral** (Agent): Record no dedicated pilot recovery, no RPO/RTO promise, provider-default limits, original-device guidance and the post-pilot recovery trigger Deliver: Pilot continuity and data-loss decision with post-pilot recovery gate
 - **ACT-SP-050-03 — Verify and hand off: Specify environments, regions and recovery** (Agent): Demonstrate every source acceptance condition against the resulting artifact and submit evidence to Operator / security reviewer. Deliver: SP-050 acceptance evidence bundle: criterion outcomes, exact versions, commands/checks, device results where required and remaining limits
 
 Full inputs, predecessors, evidence and run fields: [P01 activities](activities/P01.md). Machine record: soccer_agent_activity_manifest.json.
 
 ### Acceptance and evidence
 
-- [ ] AC-SP-050-01: Sydney primary, separate staging/prod, web function routing, secrets, private media and Melbourne recovery
-- [ ] AC-SP-050-02: costs/region boundaries/RPO-RTO scope documented
+- [ ] AC-SP-050-01: Sydney primary, global delivery allowed, development/production separation, scoped secrets and private media controls
+- [ ] AC-SP-050-02: pilot runs without dedicated recovery or RPO/RTO guarantees; lowest-cost provider choices, data-loss disclosure and post-pilot recovery gate documented
 
 Attach exact artifact/build/config/content version, checks actually run and named devices where applicable. A verification activity submits evidence; the designated acceptance owner records Done.
 

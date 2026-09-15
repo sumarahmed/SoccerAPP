@@ -22,6 +22,12 @@ const mappings = {
   'docs/soccer_linear_setup_and_import.md': 'linear/soccer_linear_setup_and_import.md',
   'PACKAGE_VALIDATION.md': 'docs/delivery/package_validation.md'
 };
+const currentDecisionOverrides = new Set([
+  'docs/product/soccer_delivery_master_plan.md',
+  'docs/product/soccer_app_foundation_plan.md',
+  'docs/architecture/soccer_end_to_end_platform_and_business_plan.md',
+  'docs/security/soccer_sdlc_security_and_agent_delivery_review.md'
+]);
 for(let i=0;i<12;i++){
   const phase='P'+String(i).padStart(2,'0');
   mappings[`docs/activities/${phase}.md`]=`docs/delivery/activities/${phase}.md`;
@@ -38,7 +44,10 @@ function projectMarkdown(source,destination){
   });
   const headingEnd=text.indexOf('\n');
   const notice=`\n\n> Synchronized 8 September 2026 from the [complete planning source](${rel(destination,'packages/soccer_agent_activity_package_20260908/'+source)}). This page contains the full source text with repository-relative navigation. Edit the canonical file under \`packages/soccer_agent_activity_package_20260908/\`, then run \`node tools/sync-docs.cjs\` from the repository root. Plain filenames, machine-data references and package regeneration commands in the source are relative to the [canonical package](${rel(destination,'packages/soccer_agent_activity_package_20260908/README.md')}).`;
-  return text.slice(0,headingEnd)+notice+text.slice(headingEnd);
+  const currentOverride=currentDecisionOverrides.has(destination)
+    ? `\n\n> **Current lean-pilot override — accepted 15 September 2026:** The [SP-050 decision](../decisions/SP-050-lean-pilot-hosting-and-recovery.md) supersedes older proposals below for strict Australian-only processing, paid staging, Melbourne recovery copies and pilot RPO/RTO. Sydney primary placement and private-data authorization remain; global delivery is permitted and dedicated recovery is deferred until post-pilot.`
+    : '';
+  return text.slice(0,headingEnd)+notice+currentOverride+text.slice(headingEnd);
 }
 function emit(destination,text){
   const output=path.join(root,destination);

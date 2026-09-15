@@ -48,8 +48,8 @@ module.exports = {
     'Model purchase ownership and beneficiaries | Separate buyer, provider source, player beneficiary, club seat and feature grant | Entitlement domain model and overlap examples',
     'Specify package and lifecycle presentation | Mark catalog values proposed and define invited coach, restore, sponsorship and F23/F24 states | Proposed catalog and purchase-source lifecycle/state matrix'],
   'SP-050': [
-    'Map environment and processor boundaries | Describe intended Sydney primary, staging/production separation, web routing, private media and secret identities | Deployment/processor inventory with unverified provider assumptions',
-    'Specify whole-system recovery targets | Define Melbourne recovery copy, auth/config/object scope, cost drivers and owner-approved RPO/RTO | Recovery architecture, measurement plan and unresolved supplier decisions'],
+    'Map lean pilot environment and processor boundaries | Describe Sydney primary, global delivery, development/production separation, private-media cache controls and scoped secrets | Lean deployment and processor inventory with provider and cost assumptions',
+    'Specify pilot data-loss and recovery deferral | Record no dedicated pilot recovery, no RPO/RTO promise, provider-default limits, original-device guidance and the post-pilot recovery trigger | Pilot continuity and data-loss decision with post-pilot recovery gate'],
   'SP-051': [
     'Prototype protected offline persistence | Exercise account switch, local sessions and synthetic migration in the device harness | Per-context persistence feasibility implementation and fixture set',
     'Exercise crash and reconnect ordering | Replay duplicate outbox events, stale entitlements, tombstones and interrupted uploads on phones | Device evidence for retained history, isolation and delete-first reconnect'],

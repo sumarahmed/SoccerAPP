@@ -2,13 +2,13 @@
 
 | Field | Recorded value |
 |---|---|
-| Decision version | 1.0 |
+| Decision version | 1.1 |
 | Decision date | 15 September 2026 |
 | Source issue | SP-011 |
 | Acceptance criterion | AC-SP-011-01 through AC-SP-011-08 |
 | Outcome | Accepted |
 | Accountable person | Syed Ahmed, Founder/backend product decision owner |
-| Review status | Owner acceptance recorded; design/specification completion only, with provider, implementation, device and recovery verification retained |
+| Review status | Owner acceptance recorded; pilot recovery and strict residency clauses amended by accepted SP-050 lean-pilot policy |
 | Repository base | `024007d` on `main` before the completion revision |
 
 ## 1. Accepted evidence
@@ -20,6 +20,13 @@
 | [ACT-SP-011-03 acceptance evidence](../design/ACT-SP-011-03-acceptance-evidence.md) | Version 1.0 | `DC62B39A41640F6EF77A109880677DFC62A9F26D4DC9FD495FE400D5C27367C4` |
 | [Synthetic race fixtures](../../contracts/sp-011/cloud-lifecycle-fixtures.json) | `sp-011-cloud-lifecycle-v1`; contract 1.0; 17 cases | `A8B955E9E3021C862D584BEFB094553F001BF7828B08513D6B4A978E1D19D6A4` |
 | [Dependency-free validator](../../tests/media/validate-sp011-contract.cjs) | Node contract validator | `0357EDACAE16342E923A7B9707281967206CD394198DF65FD83F3E309DAF2F90` |
+
+The linked version 1.0 artifacts remain the exact historical evidence for the
+original review. Version 1.1 changes only the deployment policy: dedicated
+recovery is deferred during the lean pilot and strict Australia-only processing
+is replaced by Sydney primary placement with global delivery permitted. The
+upload, quota, authorization, deletion, retention and incomplete-fragment
+controls remain unchanged.
 
 ## 2. Accepted outcomes
 
@@ -44,19 +51,24 @@
    timeout.
 9. Fragment cleanup begins immediately after interruption, cancellation or
    failure and must be verified within one hour or alert without falsely
-   releasing quota. Quarantine is unreadable and excluded from recovery backup.
+   releasing quota. Quarantine is unreadable and excluded from any
+   provider-managed or future recovery process.
 10. Playback/download URLs have a maximum five-minute lifetime and require
     current authorization when minted or renewed.
 11. Withdrawal/deletion advances authoritative generations and writes durable
     suppression before asynchronous cleanup. It defeats queued, transferring,
     verifying, offline and restored state.
-12. Active verified objects receive separate restricted Australian recovery
-    coverage. Noncurrent recovery versions remain inaccessible and expire after
-    no more than seven days unless a separately approved hold applies.
-13. Restore occurs in isolation and replays newer deletion, withdrawal and grant
-    revocation before any object becomes readable.
-14. Server-side in-scope data, processing, logs, queues, fragments and recovery
-    remain in Australia while authorized worldwide access is allowed.
+12. The lean pilot has no Soccolo-operated recovery copy for active media, no
+    cross-region replication and no customer recovery guarantee. Any
+    provider-managed backup is incidental and is not described as a product
+    feature.
+13. If recovery is introduced after the pilot, it must restore in isolation and
+    replay newer deletion, withdrawal and grant revocation before any object
+    becomes readable.
+14. The primary application-data project uses Sydney. Global network delivery,
+    operational provider infrastructure and authorized worldwide access are
+    permitted; personalized/private responses remain authorization-checked and
+    excluded from shared caching.
 15. Dual-camera recordings are one logical group of synchronized source objects;
     all required sources count toward quota and must verify for cloud success.
     Branded/social exports are separate and never uploaded automatically.
@@ -87,9 +99,10 @@ the design corpus only; it is not evidence from a cloud service or mobile app.
   suppression-first reconnect and offline denial are fixture-backed.
 - **AC-SP-011-06 — Accepted for design:** subordinate thumbnails, unreadable
   quarantine, disabled resume and one-hour fragment cleanup are fixed.
-- **AC-SP-011-07 — Accepted for design:** active-object recovery is separate;
-  seven-day noncurrent recovery and deletion replay before restore access are
-  fixed.
+- **AC-SP-011-07 — Accepted as amended for the lean pilot:** dedicated media
+  recovery is deliberately deferred. No backup/recovery promise is made; the
+  original device copy is the user's practical fallback. If recovery is later
+  commissioned, deletion replay before access remains mandatory.
 - **AC-SP-011-08 — Accepted for design:** local/cloud, expiry, full allowance,
   turn-off, withdrawal, pending deletion and external-copy notices are explicit.
 
@@ -98,12 +111,12 @@ the design corpus only; it is not evidence from a cloud service or mobile app.
 This decision does not claim:
 
 - a selected or contractually approved processor/provider;
-- provisioned Australian storage, functions, logs, queues or recovery systems;
+- provisioned storage, functions, logs, queues or recovery systems;
 - an implemented upload, quarantine validator, quota ledger or signed-link
   service;
 - provider-enforced token revocation or one-hour physical fragment deletion;
 - working mobile offline reconciliation or device deletion;
-- a completed recovery-copy purge or isolated restore rehearsal;
+- any pilot media recovery capability, recovery-copy purge or isolated restore rehearsal;
 - privacy/legal approval, production readiness or authorization to use real
   youth media; or
 - completion of future `SP-017`/`SP-023` resumable-upload requirements.
@@ -115,9 +128,10 @@ abuse, provider and device evidence.
 ## 6. Owner decision
 
 Syed Ahmed accepted the exact version 1.0 lifecycle, invariant, fixture and
-evidence artifacts on 15 September 2026. He authorized `ACT-SP-011-02`,
-`ACT-SP-011-03` and `SP-011` to be completed, committed and published to the
-GitHub repository.
+evidence artifacts on 15 September 2026. Later that day he accepted version 1.1
+through SP-050, retaining all access/upload/deletion controls while deferring
+dedicated recovery and allowing global delivery around a Sydney primary. He
+authorized the amendment and SP-050 completion to be committed.
 
 Any material change to authority, allowance, expiry, upload resume, credential
 or link lifetime, quota accounting, cleanup window, withdrawal/deletion order,

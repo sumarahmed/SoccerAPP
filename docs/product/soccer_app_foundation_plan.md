@@ -2,6 +2,8 @@
 
 > Synchronized 8 September 2026 from the [complete planning source](../../packages/soccer_agent_activity_package_20260908/docs/baseline/soccer_app_foundation_plan.md). This page contains the full source text with repository-relative navigation. Edit the canonical file under `packages/soccer_agent_activity_package_20260908/`, then run `node tools/sync-docs.cjs` from the repository root. Plain filenames, machine-data references and package regeneration commands in the source are relative to the [canonical package](../../packages/soccer_agent_activity_package_20260908/README.md).
 
+> **Current lean-pilot override — accepted 15 September 2026:** The [SP-050 decision](../decisions/SP-050-lean-pilot-hosting-and-recovery.md) supersedes older proposals below for strict Australian-only processing, paid staging, Melbourne recovery copies and pilot RPO/RTO. Sydney primary placement and private-data authorization remain; global delivery is permitted and dedicated recovery is deferred until post-pilot.
+
 Revised 6 September 2026. Version 6 adds the detailed MFA, recovery, restricted player-session and end-to-end gap-review requirements to the accepted hierarchy, architecture and business model. Ages 5–18, both recording modes, local/cloud storage, and the SDLC/agent workflow remain in scope. Planning and visual design only; no application code, working database, infrastructure, purchases, or deployments have been created.
 
 **1. Recommended direction**

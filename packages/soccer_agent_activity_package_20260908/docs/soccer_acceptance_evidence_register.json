@@ -3868,7 +3868,7 @@
     {
       "acceptance_id": "AC-SP-050-01",
       "source_issue": "SP-050",
-      "requirement": "Sydney primary, separate staging/prod, web function routing, secrets, private media and Melbourne recovery",
+      "requirement": "Sydney primary, global delivery allowed, development/production separation, scoped secrets and private media controls",
       "gate": "G1",
       "owner_role": "Operator/security lead",
       "reviewer_role": "Operator / security reviewer",
@@ -3889,7 +3889,7 @@
     {
       "acceptance_id": "AC-SP-050-02",
       "source_issue": "SP-050",
-      "requirement": "costs/region boundaries/RPO-RTO scope documented",
+      "requirement": "pilot runs without dedicated recovery or RPO/RTO guarantees; lowest-cost provider choices, data-loss disclosure and post-pilot recovery gate documented",
       "gate": "G1",
       "owner_role": "Operator/security lead",
       "reviewer_role": "Operator / security reviewer",

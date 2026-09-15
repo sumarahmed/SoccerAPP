@@ -2,6 +2,8 @@
 
 > Synchronized 8 September 2026 from the [complete planning source](../../packages/soccer_agent_activity_package_20260908/docs/soccer_delivery_master_plan.md). This page contains the full source text with repository-relative navigation. Edit the canonical file under `packages/soccer_agent_activity_package_20260908/`, then run `node tools/sync-docs.cjs` from the repository root. Plain filenames, machine-data references and package regeneration commands in the source are relative to the [canonical package](../../packages/soccer_agent_activity_package_20260908/README.md).
 
+> **Current lean-pilot override — accepted 15 September 2026:** The [SP-050 decision](../decisions/SP-050-lean-pilot-hosting-and-recovery.md) supersedes older proposals below for strict Australian-only processing, paid staging, Melbourne recovery copies and pilot RPO/RTO. Sydney primary placement and private-data authorization remain; global delivery is permitted and dedicated recovery is deferred until post-pilot.
+
 Review edition • Updated 8 September 2026 • Planning and design only
 
 **Latest planning revision:** The [agent activity plan](../delivery/soccer_agent_activity_plan.md) drills the requirements into 390 activities with explicit goals and handoffs. Section 8's five priorities are reconciled into SP-151–SP-165, existing task scopes, dependencies, all CSV variants and the acceptance register. The companion `soccer_product_wishlist.md` holds deferred enhancements. Earlier ZIPs remain dated snapshots.

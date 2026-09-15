@@ -2,6 +2,8 @@
 
 > Synchronized 8 September 2026 from the [complete planning source](../../packages/soccer_agent_activity_package_20260908/docs/baseline/soccer_sdlc_security_and_agent_delivery_review.md). This page contains the full source text with repository-relative navigation. Edit the canonical file under `packages/soccer_agent_activity_package_20260908/`, then run `node tools/sync-docs.cjs` from the repository root. Plain filenames, machine-data references and package regeneration commands in the source are relative to the [canonical package](../../packages/soccer_agent_activity_package_20260908/README.md).
 
+> **Current lean-pilot override — accepted 15 September 2026:** The [SP-050 decision](../decisions/SP-050-lean-pilot-hosting-and-recovery.md) supersedes older proposals below for strict Australian-only processing, paid staging, Melbourne recovery copies and pilot RPO/RTO. Sydney primary placement and private-data authorization remain; global delivery is permitted and dedicated recovery is deferred until post-pilot.
+
 Prepared 5 September 2026; extended 6 September 2026 for club/direct-parent administration and scoped coach controls. “SDFC” is interpreted as **SDLC: software development lifecycle**. This governs the SDLC and original risk themes for the soccer app for ages 5–18; the companion end-to-end security/gap review audits all six plans and the financial workbook. It is a review of the proposed design and delivery process. No implemented system or working database exists to scan or penetration-test, and no security control is certified by this review. No application code has been written. Pricing and original vendor capability checks retain their stated 5 September review date.
 
 **1. Recommendation and readiness**

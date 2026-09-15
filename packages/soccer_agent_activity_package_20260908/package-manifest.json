@@ -41,8 +41,8 @@
     },
     {
       "path": "docs/activities/P01.md",
-      "bytes": 142870,
-      "sha256": "02eccc2be0e25347d25448e1146109ba12fd2a1b47abde5b97caa634c1416302"
+      "bytes": 143119,
+      "sha256": "236c921cc5c6c7e051aa9862bbe2de2197564918f8fec9a67f3aea325b0a20c7"
     },
     {
       "path": "docs/activities/P02.md",
@@ -141,13 +141,13 @@
     },
     {
       "path": "docs/soccer_acceptance_evidence_register.json",
-      "bytes": 354143,
-      "sha256": "46c6da0f73879da6b0ad15633e50012968b3d9ccd3bc1e1212c0f0d7b6afae3c"
+      "bytes": 354257,
+      "sha256": "cfaa0ff28a5116c47e0131ab649261035e416e9b4820ca14f2b27011e385f7cd"
     },
     {
       "path": "docs/soccer_agent_activity_manifest.json",
-      "bytes": 1080530,
-      "sha256": "d72bbb9bc084c7d0e9560a9565b60efef689680654a65e10045f1698578b810f"
+      "bytes": 1080779,
+      "sha256": "4a68f146718f480d703ec5ff822f74fbd1374fa2e9d39b7f948cb1afe3ea28f5"
     },
     {
       "path": "docs/soccer_agent_activity_plan.md",
@@ -156,8 +156,8 @@
     },
     {
       "path": "docs/soccer_agent_activity_tasks.csv",
-      "bytes": 179057,
-      "sha256": "e1d00fda583eb7f7c9b73bcdf5cb21ae80dac4c6bdc633f4bfd199be8a1e0f87"
+      "bytes": 179115,
+      "sha256": "5e8cf302cc3677e52094abae7f1ad8919dc0edf73dd0f03312a08b71e581bc7c"
     },
     {
       "path": "docs/soccer_agent_execution_playbook.md",
@@ -166,8 +166,8 @@
     },
     {
       "path": "docs/soccer_delivery_backlog.md",
-      "bytes": 552713,
-      "sha256": "dca1c45fc1da03f4c18c454f5f56577d578a8f01b3d926201378488f88496681"
+      "bytes": 552948,
+      "sha256": "74135cab3d63d4b5c1e61af8d9557ad00a32ab4b24a09f6a2d570520729de958"
     },
     {
       "path": "docs/soccer_delivery_master_plan.md",
@@ -186,18 +186,18 @@
     },
     {
       "path": "docs/soccer_linear_import.csv",
-      "bytes": 572731,
-      "sha256": "5f2d3f88e3d6f73e36dfe2253643ef5276e76bec1e83f7e4a96bb86215301cf5"
+      "bytes": 572966,
+      "sha256": "89a75c1752fef98d37f8a564aa0741b1a52f32f347b01ac3a30613867ce690b3"
     },
     {
       "path": "docs/soccer_linear_manifest.json",
-      "bytes": 1195085,
-      "sha256": "621558a326f5a1e7bbd1da70742ff1da7d8aef5e89ff7427c5c1f438031f45c6"
+      "bytes": 1195592,
+      "sha256": "3564864539982902a34663a0d5525038ade5fb671a05c68bafa94c39c152ffcc"
     },
     {
       "path": "docs/soccer_linear_remaining.csv",
-      "bytes": 562481,
-      "sha256": "dbc5599d763c5480cc28c5b19402095e2ccf0bca35a820d873c804e430b09d7b"
+      "bytes": 562716,
+      "sha256": "12e3d067a77e9ea4c27f05dc1a51235df4d2a21bd4012d4678b0dbb3aff43f9d"
     },
     {
       "path": "docs/soccer_linear_setup_and_import.md",
@@ -241,8 +241,8 @@
     },
     {
       "path": "tools/activity-slices.cjs",
-      "bytes": 44972,
-      "sha256": "23fc7bcc944b2cf67e838b0eecdcbebc43ff1a322ce141c6b4bb3fa289b833d9"
+      "bytes": 45049,
+      "sha256": "94e8133ab29675c0ff8f30660de7193d0e499d1bf006f1517032398d568c5065"
     },
     {
       "path": "tools/build-activity-plan.cjs",
