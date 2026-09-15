@@ -1,0 +1,82 @@
+{
+  "fixtureSet": "sp-059-lean-pilot-identity-v1",
+  "contractVersion": "1.0",
+  "acceptedOn": "2026-09-15",
+  "configuration": {
+    "adultMfaMethod": "totp",
+    "smsMfaEnabled": false,
+    "passkeysEnabled": false,
+    "enterpriseSsoEnabled": false,
+    "socialLoginCountsAsMfa": false,
+    "emailRecoveryGrantsProtectedAccess": false,
+    "customRecoveryCodesEnabled": false,
+    "freshMfaWindowSeconds": 300,
+    "pairingCodeLifetimeSeconds": 600,
+    "pairingCodeSingleUse": true,
+    "recoveryEnrollmentTokenLifetimeSeconds": 900,
+    "recoveryResult": "enrollment_only",
+    "revokeExistingSessionsAfterRecovery": true,
+    "childEmailRequired": false,
+    "childAuthenticatorRequired": false,
+    "playerCredentialContainsAdultRefreshToken": false,
+    "lastRequiredFactorRemovalAllowed": false
+  },
+  "alwaysMfaRoles": [
+    "platform_administrator",
+    "club_administrator",
+    "coach"
+  ],
+  "adultStepUpActions": [
+    "enable_cloud",
+    "view_private_cloud_media",
+    "share_private_media",
+    "change_guardian",
+    "pair_player_device",
+    "change_factor",
+    "change_recovery_contact",
+    "export_private_data"
+  ],
+  "playerAllowedActions": [
+    "read_permitted_plan",
+    "record_local_practice",
+    "append_own_practice_event",
+    "upload_under_existing_guardian_policy",
+    "stop_recording"
+  ],
+  "playerDeniedActions": [
+    "read_sibling_data",
+    "manage_billing",
+    "change_guardian",
+    "change_factor",
+    "enable_cloud",
+    "share_private_media",
+    "administer_club",
+    "grant_consent"
+  ],
+  "scenarios": [
+    {"id":"admin-aal1","expected":{"allowed":false,"next":"mfa_challenge"}},
+    {"id":"coach-aal1-direct-api","expected":{"allowed":false,"next":"mfa_challenge"}},
+    {"id":"parent-local-only-aal1","expected":{"allowed":true,"scope":"local_only"}},
+    {"id":"parent-private-media-aal1","expected":{"allowed":false,"next":"mfa_challenge"}},
+    {"id":"social-login-without-totp","expected":{"allowed":false,"assurance":"aal1"}},
+    {"id":"fresh-sensitive-action","expected":{"allowed":true,"maximumAgeSeconds":300}},
+    {"id":"stale-sensitive-action","expected":{"allowed":false,"next":"fresh_totp"}},
+    {"id":"remove-last-required-factor","expected":{"allowed":false,"reason":"mfa_policy_required"}},
+    {"id":"promoted-coach-without-factor","expected":{"allowed":false,"scope":"enrollment_only"}},
+    {"id":"second-factor-replacement","expected":{"allowed":true,"order":["verify_backup","enroll_replacement","verify_replacement","remove_lost","revoke_old_sessions"]}},
+    {"id":"email-only-all-factors-lost","expected":{"protectedAccess":false,"scope":"recovery_status_only"}},
+    {"id":"manual-recovery-approved","expected":{"protectedAccess":false,"scope":"enrollment_only","tokenLifetimeSeconds":900}},
+    {"id":"recovery-token-replay","expected":{"allowed":false,"reason":"single_use"}},
+    {"id":"recovery-token-expired","expected":{"allowed":false,"reason":"expired"}},
+    {"id":"recovery-completed","expected":{"oldSessionsValid":false,"newFactorRequired":true}},
+    {"id":"pairing-code-valid","expected":{"allowed":true,"scope":"one_player_one_device","lifetimeSeconds":600}},
+    {"id":"pairing-code-second-use","expected":{"allowed":false,"reason":"single_use"}},
+    {"id":"pairing-code-expired","expected":{"allowed":false,"reason":"expired"}},
+    {"id":"player-reads-sibling","expected":{"allowed":false,"reason":"player_scope"}},
+    {"id":"player-enables-cloud","expected":{"allowed":false,"reason":"adult_guardian_required"}},
+    {"id":"shared-device-restart","expected":{"mode":"restricted_player","adultAreaVisible":false}},
+    {"id":"adult-return","expected":{"allowed":true,"requiresDeliberateUnlock":true,"serverStepUpWhenRequired":true}},
+    {"id":"revoked-player-device-renewal","expected":{"allowed":false,"reason":"device_grant_revoked"}},
+    {"id":"support-asks-for-live-totp","expected":{"allowed":false,"reason":"support_secret_prohibited"}}
+  ]
+}
