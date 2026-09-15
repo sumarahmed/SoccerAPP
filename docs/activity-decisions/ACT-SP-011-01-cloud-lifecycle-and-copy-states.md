@@ -14,7 +14,8 @@
 Syed Ahmed reviewed and accepted the recommended cloud lifecycle, allowance,
 retention, copy-state, withdrawal and deletion-notice rules on 15 September
 2026. He authorized the exact accepted specification and activity decision to be
-committed locally.
+committed locally, then subsequently authorized GitHub publication with the
+completed `SP-011` evidence.
 
 ## Accepted evidence
 
@@ -53,4 +54,5 @@ residency configuration. `ACT-SP-011-02` must specify and fixture-test the
 quota/access/fragment/offline/deletion/recovery races. `ACT-SP-011-03` must
 verify all eight source criteria before `SP-011` may be accepted.
 
-No GitHub push or publication is authorized by this local-commit decision.
+GitHub publication was subsequently authorized on 15 September 2026 as part of
+the accepted `SP-011` completion.

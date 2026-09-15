@@ -1,0 +1,133 @@
+{
+  "fixtureSet": "sp-011-cloud-lifecycle-v1",
+  "contractVersion": "1.0",
+  "configuration": {
+    "resumableUploadEnabled": false,
+    "unstartedReservationLifetimeSeconds": 900,
+    "uploadCredentialLifetimeSeconds": 900,
+    "maximumContinuousUploadAttemptSeconds": 3600,
+    "uploadInactivityTimeoutSeconds": 300,
+    "fragmentCleanupDeadlineSeconds": 3600,
+    "playbackUrlLifetimeSeconds": 300,
+    "activeCloudRetentionDays": 30,
+    "noncurrentRecoveryDays": 7,
+    "serverTimeAuthoritative": true,
+    "quarantineReadable": false,
+    "quarantineIncludedInRecovery": false,
+    "retryStartsAtByteZero": true
+  },
+  "quotaInvariants": {
+    "equation": "availableBytes = limitBytes - usedBytes - reservedBytes",
+    "reservationAtomic": true,
+    "oneAllowanceSourcePerReservation": true,
+    "allRequiredObjectsBeforeFinalize": true,
+    "releaseOnlyAfterCleanupVerified": true,
+    "recoveryBytesCountAgainstCustomerAllowance": false,
+    "automaticDeletionToMakeSpace": false
+  },
+  "authorizationCheckpoints": [
+    "reservation",
+    "uploadAdmission",
+    "finalization",
+    "newRetry",
+    "playbackUrlMint",
+    "externalShareGrant",
+    "deleteOrWithdraw",
+    "allowanceMigration"
+  ],
+  "reconnectOrder": [
+    "refreshAuthority",
+    "applySuppression",
+    "applyDeviceDeletion",
+    "pullCurrentState",
+    "submitSessionEvents",
+    "createNewUploadReservations"
+  ],
+  "scenarios": [
+    {
+      "id": "concurrent-final-quota",
+      "category": "quota",
+      "expected": {"acceptedReservations": 1, "oversubscribed": false, "loserState": "quota_paused"}
+    },
+    {
+      "id": "duplicate-reservation-identical",
+      "category": "idempotency",
+      "expected": {"reservationCount": 1, "receiptReused": true, "quotaChargedTwice": false}
+    },
+    {
+      "id": "operation-reuse-changed-payload",
+      "category": "idempotency",
+      "expected": {"result": "generation_conflict", "mutationCount": 0}
+    },
+    {
+      "id": "unstarted-reservation-expiry",
+      "category": "expiry",
+      "expected": {"expiresAfterSeconds": 900, "state": "expired", "reservedBytesReleased": true}
+    },
+    {
+      "id": "transient-same-attempt-retry",
+      "category": "upload",
+      "expected": {"userResumeOffered": false, "detachedResume": false, "attemptCeilingSeconds": 3600}
+    },
+    {
+      "id": "interrupted-upload-restart",
+      "category": "fragments",
+      "expected": {"state": "cleanup_pending", "cleanupRequestedImmediately": true, "cleanupDeadlineSeconds": 3600, "fragmentsReusable": false, "retryStartsAtByte": 0}
+    },
+    {
+      "id": "withdraw-while-queued",
+      "category": "withdrawal",
+      "expected": {"uploadStarts": false, "access": "denied", "suppressionWritten": true}
+    },
+    {
+      "id": "withdraw-during-transfer",
+      "category": "withdrawal",
+      "expected": {"finalization": "dependency_revoked", "access": "denied", "fragmentAction": "cleanup"}
+    },
+    {
+      "id": "delete-during-verification",
+      "category": "deletion",
+      "expected": {"cloudAvailable": false, "finalization": "dependency_revoked", "objectAction": "cleanup"}
+    },
+    {
+      "id": "dual-group-one-view-missing",
+      "category": "group",
+      "expected": {"state": "upload_incomplete", "cloudAvailable": false, "requiredViews": 2}
+    },
+    {
+      "id": "actual-bytes-exceed-reservation",
+      "category": "quota",
+      "expected": {"finalization": "capacity_denied", "cloudAvailable": false, "borrowedCapacity": false}
+    },
+    {
+      "id": "expiry-with-live-playback-url",
+      "category": "access",
+      "expected": {"newUrlDenied": true, "existingUrlMaximumResidualSeconds": 300, "downloadedBytesRetractable": false}
+    },
+    {
+      "id": "offline-stale-reupload",
+      "category": "offline",
+      "expected": {"suppressionAppliedBeforeUpload": true, "uploadStarts": false, "deletionGenerationWins": true}
+    },
+    {
+      "id": "delete-everywhere-reconnect",
+      "category": "offline",
+      "expected": {"cloudAccess": "denied", "deviceDeletionAppliedBeforeUpload": true, "localCopyResult": "deleted"}
+    },
+    {
+      "id": "restore-after-newer-tombstone",
+      "category": "recovery",
+      "expected": {"restoreEnvironment": "isolated", "tombstonesReplayedBeforeAccess": true, "restoredObjectReadable": false}
+    },
+    {
+      "id": "fragment-cleanup-deadline-failure",
+      "category": "operations",
+      "expected": {"quotaReleased": false, "successReported": false, "operatorAlert": true}
+    },
+    {
+      "id": "sponsorship-ends-active-copy",
+      "category": "allowance",
+      "expected": {"newReservationsAllowed": false, "existingExpiryChanged": false, "sponsorMediaAccess": false}
+    }
+  ]
+}

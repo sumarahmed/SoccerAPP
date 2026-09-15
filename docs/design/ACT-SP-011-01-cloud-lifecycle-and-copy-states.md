@@ -291,6 +291,8 @@ or labels in this specification.
 | Withdrawal/deletion notices | Accepted in sections 8 and 10 |
 | Unresolved downstream inputs identified | Retained explicitly in section 11 |
 
-Syed Ahmed accepted these exact recommendations and authorized a local Git
-commit on 15 September 2026. `ACT-SP-011-01` is complete as a design activity.
-`ACT-SP-011-02`, `ACT-SP-011-03` and the overall `SP-011` outcome remain open.
+Syed Ahmed accepted these exact recommendations and initially authorized a local
+Git commit on 15 September 2026. He subsequently accepted the complete `SP-011`
+evidence and authorized GitHub publication. `ACT-SP-011-01` is complete as a
+design activity; its downstream enforcement is fixed by `ACT-SP-011-02` and the
+overall design acceptance is recorded by `ACT-SP-011-03`.
