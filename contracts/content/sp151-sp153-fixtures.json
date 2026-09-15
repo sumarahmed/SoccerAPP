@@ -1,0 +1,29 @@
+{
+  "contract": "soccolo-sp151-sp153-foundation-v1",
+  "catalog": { "offered": ["D01","D02","D03","D04","D05","D06","D07","D08","D09","D10"], "deferred": ["D11","D12"], "variantSuffix": ".base.v1" },
+  "pathways": [
+    {"id":"ball-control","steps":["D01.base.v1","D02.base.v1","D03.base.v1"],"next":["D04.base.v1","D08.base.v1"]},
+    {"id":"passing","steps":["D05.base.v1","D06.base.v1","D07.base.v1"],"next":["D10.base.v1"]},
+    {"id":"move-turn","steps":["D03.base.v1","D04.base.v1","D08.base.v1","D09.base.v1"],"next":["repeat-approved"]},
+    {"id":"receive-finish","steps":["D05.base.v1","D06.base.v1","D10.base.v1"],"next":["repeat-or-return"]}
+  ],
+  "precedence": ["safety-or-approval","authority-or-assignment","age-supervision-ability","resources-and-time","workload-conflict","next-path-step","easier-alternative","no-recommendation"],
+  "recommendationFixtures": [
+    {"case":"no-equipment","result":"easier-approved-or-none","oneAction":true,"reason":true},
+    {"case":"limited-time","result":"one-short-eligible-action","oneAction":true,"reason":true},
+    {"case":"missed-session","result":"resume-current-eligible-step","oneAction":true,"reason":true},
+    {"case":"younger-advanced","result":"age-suitable-approved-only","oneAction":true,"reason":true},
+    {"case":"older-beginner","result":"foundation-neutral-language","oneAction":true,"reason":true},
+    {"case":"conflicting-club-assignments","result":"current-authorized-assignment-only","oneAction":true,"reason":true},
+    {"case":"missing-required-input","result":"no-recommendation","oneAction":false,"reason":true},
+    {"case":"offline-stale","result":"display-last-signed-no-recalculation","oneAction":false,"reason":true}
+  ],
+  "invariants": {"completionChangesAbility":false,"completionChangesWorkload":false,"inventUnapprovedActivity":false},
+  "protocols": [
+    {"id":"P01-D01-v1","attempts":2,"unit":"controlled-touches-per-20-seconds","retestDays":7,"recordingRequired":false},
+    {"id":"P02-D03-v1","attempts":4,"unit":"controlled-stop-journeys","retestDays":7,"recordingRequired":false},
+    {"id":"P03-D05-v1","attempts":6,"unit":"valid-ground-passes-through-gate","retestDays":7,"recordingRequired":false}
+  ],
+  "comparabilityFields": ["protocol-version","setup","equipment","surface","assistance","observation-source","foot-or-side"],
+  "skillFixtures": ["matching-conditions","changed-surface","changed-assistance","coach-observation","parent-limited-observation","no-video-valid","unsafe-no-result","missing-fields-no-result","append-only-correction"]
+}

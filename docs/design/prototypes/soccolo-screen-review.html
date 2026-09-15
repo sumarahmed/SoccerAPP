@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soccolo F01–F22 design handoff</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #0a2231;
+      --deep: #04141d;
+      --muted: #4e6877;
+      --paper: #f4f8fa;
+      --surface: #ffffff;
+      --line: #dce7ed;
+      --mint: #54e8ac;
+      --green: #0a5537;
+      --warn: #a65300;
+      --danger: #a32335;
+      --shadow: 0 18px 55px rgba(4, 20, 29, .12);
+      --radius: 22px;
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --ink: #f4f8fa;
+      --deep: #ffffff;
+      --muted: #afc6d2;
+      --paper: #04141d;
+      --surface: #0a2231;
+      --line: #1e4a63;
+      --mint: #54e8ac;
+      --green: #8df3c9;
+      --warn: #ffc06d;
+      --danger: #ff9cab;
+      --shadow: 0 18px 55px rgba(0, 0, 0, .34);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(84,232,172,.17), transparent 28rem),
+        var(--paper);
+      color: var(--ink);
+      font: 15px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    button, select { font: inherit; }
+    button:focus-visible, select:focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; }
+    .shell { display: grid; grid-template-columns: 276px minmax(420px, 1fr) 330px; min-height: 100vh; }
+    .rail, .inspector { background: color-mix(in srgb, var(--surface) 94%, transparent); }
+    .rail { border-right: 1px solid var(--line); padding: 22px 16px; }
+    .inspector { border-left: 1px solid var(--line); padding: 22px; }
+    .brand { display: flex; align-items: center; gap: 12px; margin: 0 6px 18px; }
+    .brand img { width: 132px; max-height: 40px; object-fit: contain; object-position: left center; }
+    .version { color: var(--muted); font-size: 12px; }
+    .notice { margin: 0 6px 18px; padding: 10px 12px; border: 1px solid var(--warn); border-radius: 12px; color: var(--warn); font-weight: 750; font-size: 12px; letter-spacing: .04em; }
+    .group-title { margin: 18px 8px 8px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .screen-list { display: grid; gap: 5px; }
+    .screen-button { width: 100%; display: grid; grid-template-columns: 36px 1fr; gap: 8px; align-items: center; border: 0; border-radius: 12px; padding: 8px; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
+    .screen-button:hover { background: color-mix(in srgb, var(--mint) 14%, transparent); }
+    .screen-button[aria-current="true"] { background: var(--green); color: var(--surface); }
+    [data-theme="dark"] .screen-button[aria-current="true"] { color: var(--paper); }
+    .screen-id { font-weight: 850; font-size: 12px; }
+    .screen-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
+    main { min-width: 0; display: flex; flex-direction: column; }
+    .toolbar { min-height: 76px; padding: 14px 22px; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; background: color-mix(in srgb, var(--paper) 88%, transparent); position: sticky; top: 0; z-index: 5; backdrop-filter: blur(16px); }
+    .toolbar h1 { font-size: 18px; margin: 0; }
+    .tools { display: flex; flex-wrap: wrap; gap: 8px; }
+    .segmented { display: flex; padding: 4px; gap: 3px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
+    .segmented button, .icon-button { border: 0; border-radius: 9px; padding: 8px 10px; background: transparent; color: var(--ink); cursor: pointer; }
+    .segmented button[aria-pressed="true"], .icon-button[aria-pressed="true"] { background: var(--green); color: var(--surface); }
+    [data-theme="dark"] .segmented button[aria-pressed="true"], [data-theme="dark"] .icon-button[aria-pressed="true"] { color: var(--paper); }
+    .stage { flex: 1; min-height: 780px; display: grid; place-items: center; padding: 42px 26px; overflow: auto; }
+    .device-wrap { display: grid; gap: 18px; justify-items: center; }
+    .statusline { color: var(--muted); font-size: 13px; }
+    .device { width: 390px; min-height: 704px; border: 8px solid var(--deep); border-radius: 44px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); overflow: hidden; transition: width .25s, min-height .25s; }
+    .device.landscape { width: 760px; min-height: 390px; border-radius: 34px; }
+    .device.admin { width: min(850px, calc(100vw - 650px)); min-width: 580px; min-height: 610px; border-width: 2px; border-radius: 22px; }
+    .device-head { height: 44px; padding: 14px 22px 0; display: flex; justify-content: space-between; font-weight: 800; font-size: 12px; }
+    .device.admin .device-head { display: none; }
+    .appbar { padding: 10px 20px 15px; display: flex; gap: 12px; align-items: center; border-bottom: 1px solid var(--line); }
+    .appbar .mark { width: 30px; height: 30px; border-radius: 50%; background: var(--mint); color: #04141d; display: grid; place-items: center; font-weight: 950; }
+    .appbar-title { min-width: 0; }
+    .eyebrow { color: var(--green); font-size: 11px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .appbar h2 { margin: 1px 0 0; font-size: 23px; line-height: 1.1; }
+    .preview { padding: 20px; display: grid; gap: 14px; }
+    .hero { border-radius: 20px; padding: 20px; background: linear-gradient(135deg, var(--deep), #123449); color: #fff; min-height: 138px; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero .tag { align-self: flex-start; border-radius: 999px; padding: 6px 9px; background: rgba(84,232,172,.16); color: #8df3c9; font-size: 11px; font-weight: 800; }
+    .hero h3 { font-size: 26px; line-height: 1.05; margin: 16px 0 7px; }
+    .hero p { margin: 0; color: #dce7ed; }
+    .timer { font-variant-numeric: tabular-nums; font-size: 64px; font-weight: 900; letter-spacing: -.055em; color: var(--deep); }
+    .card { border: 1px solid var(--line); border-radius: 16px; background: color-mix(in srgb, var(--surface) 96%, var(--mint)); padding: 14px; }
+    .card h4 { margin: 0 0 6px; font-size: 15px; }
+    .card p { margin: 0; color: var(--muted); }
+    .row { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 11px 0; border-top: 1px solid var(--line); }
+    .row:first-child { border-top: 0; }
+    .row strong { display: block; }
+    .row small { color: var(--muted); }
+    .pill { flex: none; border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; color: var(--green); font-size: 11px; font-weight: 800; }
+    .actions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .action { min-height: 48px; border: 0; border-radius: 14px; padding: 12px; background: var(--mint); color: #04141d; font-weight: 850; text-transform: capitalize; }
+    .action.secondary { background: color-mix(in srgb, var(--line) 60%, var(--surface)); color: var(--ink); }
+    .stop { min-height: 56px; border: 3px solid var(--danger); background: transparent; color: var(--danger); border-radius: 16px; font-size: 18px; font-weight: 900; }
+    .safe-note { border-left: 5px solid var(--green); padding: 10px 12px; background: color-mix(in srgb, var(--mint) 12%, var(--surface)); border-radius: 0 12px 12px 0; }
+    .admin-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 14px; }
+    .table { width: 100%; border-collapse: collapse; }
+    .table th, .table td { padding: 11px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+    .table th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+    .inspector h2 { margin: 0; font-size: 19px; }
+    .inspector .summary { color: var(--muted); margin: 6px 0 18px; }
+    label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; font-weight: 800; }
+    select { width: 100%; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); padding: 11px; }
+    .inspector section { margin-top: 22px; }
+    .inspector h3 { margin: 0 0 10px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip { border: 1px solid var(--line); border-radius: 999px; padding: 6px 9px; font-size: 11px; }
+    .dependency { border: 1px solid var(--warn); color: var(--warn); border-radius: 14px; padding: 12px; font-size: 12px; }
+    .footer-note { color: var(--muted); font-size: 11px; margin-top: 18px; }
+    @media (max-width: 1180px) {
+      .shell { grid-template-columns: 240px 1fr; }
+      .inspector { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); }
+      .device.admin { width: min(820px, calc(100vw - 310px)); }
+    }
+    @media (max-width: 760px) {
+      .shell { display: block; }
+      .rail { border-right: 0; border-bottom: 1px solid var(--line); }
+      .screen-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stage { padding: 24px 10px; min-height: 620px; }
+      .device, .device.landscape, .device.admin { width: min(390px, calc(100vw - 20px)); min-width: 0; min-height: 650px; border-width: 4px; border-radius: 28px; }
+      .admin-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <div class="shell">
+    <aside class="rail" aria-label="Screen inventory">
+      <div class="brand">
+        <img id="brandLogo" src="../brand/Soccolo-Brand-Bundle%20v4/02-logo/horizontal/soccolo-horizontal-light.svg" alt="Soccolo">
+        <span class="version">v0.1</span>
+      </div>
+      <div class="notice">DESIGN HANDOFF — NOT A WORKING APP</div>
+      <div class="group-title">Core experience · SP-007</div>
+      <div class="screen-list" id="coreList"></div>
+      <div class="group-title">Administration · SP-038</div>
+      <div class="screen-list" id="adminList"></div>
+      <div class="group-title">Controls and identity · SP-077</div>
+      <div class="screen-list" id="controlsList"></div>
+    </aside>
+
+    <main>
+      <header class="toolbar">
+        <div><div class="eyebrow" id="familyLabel">Core experience</div><h1 id="toolbarTitle">Loading handoff…</h1></div>
+        <div class="tools">
+          <div class="segmented" aria-label="Audience">
+            <button type="button" data-audience="youngest" aria-pressed="true">Youngest</button>
+            <button type="button" data-audience="teen" aria-pressed="false">Teen</button>
+            <button type="button" data-audience="adult" aria-pressed="false">Adult</button>
+          </div>
+          <div class="segmented" aria-label="Orientation">
+            <button type="button" data-orientation="portrait" aria-pressed="true">Portrait</button>
+            <button type="button" data-orientation="landscape" aria-pressed="false">Landscape</button>
+          </div>
+          <button class="icon-button" id="themeButton" type="button" aria-pressed="false">Theme: Follow</button>
+        </div>
+      </header>
+      <div class="stage">
+        <div class="device-wrap">
+          <div class="device" id="device" aria-live="polite"></div>
+          <div class="statusline" id="statusline"></div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="inspector" aria-label="Design specification">
+      <div class="eyebrow" id="selectedId">—</div>
+      <h2 id="selectedTitle">Loading…</h2>
+      <p class="summary" id="selectedSummary"></p>
+      <label for="stateSelect">Review state
+        <select id="stateSelect"></select>
+      </label>
+      <section><h3>Required actions</h3><div class="chips" id="actionChips"></div></section>
+      <section><h3>Every named state</h3><div class="chips" id="stateChips"></div></section>
+      <section><h3>Dependency status</h3><div class="dependency" id="dependency"></div></section>
+      <p class="footer-note">Keyboard accessible. Use the controls to inspect audience, appearance, orientation and state. Exact runtime accessibility and coaching evidence remain separate gates.</p>
+    </aside>
+  </div>
+
+  <script>
+    const contractUrl = '../../../contracts/design/sp007-sp038-screen-states.json';
+    const descriptions = {
+      F01: 'Choose the correct adult or staff context without assuming club membership.',
+      F02: 'Create the minimum player profile and make camera, microphone and cloud choices separately.',
+      F03: 'Show one suitable next session, its source and any assignment conflict.',
+      F04: 'Explore approved, suitable and available content without inventing substitutes.',
+      F05: 'Explain the pathway goal, order, prerequisites, alternatives and next step.',
+      F06: 'Prepare safely with reviewed setup, cue and demonstration variants.',
+      F07: 'Select no recording, clips or full session with honest device limitations.',
+      F08: 'Start only after capture is confirmed and keep cancel immediate.',
+      F09: 'Run an offline-capable practice with distinct work, rest and recording truth.',
+      F10: 'Review exactly what was captured, including gaps and local/cloud copy state.',
+      F11: 'Protect permissions, consent, sharing and family/club relationships behind adult authority.',
+      F12: 'Manage local and cloud copies, limits, expiry and deletion independently.',
+      F13: 'Show source-labelled history and reflections without an automatic talent score.',
+      F14: 'Switch between independent family, club and team scopes without permission carryover.',
+      F15: 'Provide narrow platform operations and audit without browse-all private media.',
+      F16: 'Manage one club’s cohorts, staff, publishing authority and usage.',
+      F17: 'Handle invitations, assignments, guardian approval, removal and transfer safely.',
+      F18: 'Edit a draft plan using only suitable, approved variants and visible workload checks.',
+      F19: 'Separate draft, review, approval, publication and withdrawal for exact versions.',
+      F20: 'Schedule exact plan versions with recipient, origin and conflict visibility.',
+      F21: 'Record attendance and structured feedback with current media grants and source labels.',
+      F22: 'Give guardians/adults explicit join, leave, completion and recipient-specific sharing controls.'
+      ,F23: 'Show the exact product, source store and entitlement without implying that payment grants media access.'
+      ,F24: 'Apply promotional access without hiding expiry, overlap or the underlying source entitlement.'
+      ,F25: 'Reconcile offline changes with current authority and deletion/withdrawal precedence.'
+      ,F26: 'Follow the device by default while allowing explicit Light or Dark preference.'
+      ,F27: 'Sign in, enrol TOTP, support same-phone entry and keep recovery enrollment-only.'
+      ,F28: 'Establish exact-player guardian authority and restrict disputes without automatic merging.'
+      ,F29: 'Pair a restricted player credential without placing the adult session behind child mode.'
+      ,F30: 'Protect adult web and media access with current role, MFA and grant checks.'
+      ,F31: 'Create a local logo-first export and require a separate deliberate sharing decision.'
+      ,F32: 'Offer private conflict-safe reporting, immediate Stop and honest staffed-window wording.'
+      ,F33: 'Submit access, correction, export or deletion requests separately from subscription management.'
+    };
+    const audienceCopy = {
+      youngest: { name: 'Sam', context: 'Grown-up setup', support: 'Ask your grown-up if you need help.' },
+      teen: { name: 'Alex', context: 'Player setup', support: 'You can stop or ask for help at any time.' },
+      adult: { name: 'Jordan', context: 'Adult account', support: 'You control your account, recording and sharing choices.' }
+    };
+    let contract;
+    let selectedId = 'F09';
+    let audience = 'youngest';
+    let orientation = 'portrait';
+    let reviewState = 'working';
+    let themeMode = 'follow';
+
+    const el = id => document.getElementById(id);
+    const words = value => value.replaceAll('_', ' ');
+    const sentence = value => words(value).replace(/^./, char => char.toUpperCase());
+
+    function setPressed(selector, value, attribute) {
+      document.querySelectorAll(selector).forEach(button => button.setAttribute('aria-pressed', button.dataset[attribute] === value));
+    }
+
+    function renderLists() {
+      for (const family of ['core', 'administration', 'controls']) {
+        const target = el(family === 'core' ? 'coreList' : family === 'administration' ? 'adminList' : 'controlsList');
+        target.innerHTML = '';
+        contract.frames.filter(frame => frame.family === family).forEach(frame => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'screen-button';
+          button.dataset.id = frame.id;
+          button.setAttribute('aria-current', frame.id === selectedId);
+          button.innerHTML = `<span class="screen-id">${frame.id}</span><span class="screen-name">${frame.title}</span>`;
+          button.addEventListener('click', () => selectFrame(frame.id));
+          target.append(button);
+        });
+      }
+    }
+
+    function selectFrame(id) {
+      selectedId = id;
+      const frame = contract.frames.find(item => item.id === id);
+      reviewState = frame.states[0];
+      render();
+    }
+
+    function stateMessage(state) {
+      const map = {
+        access_denied: 'You do not have permission in this workspace.',
+        wrong_club_denied: 'This belongs to another club. No details were shown.',
+        camera_denied: 'Camera is off. Continue safely without recording.',
+        microphone_declined: 'Microphone is off. Visual and spoken-device cues remain available.',
+        recording_stopped: 'Recording stopped. Practice can continue.',
+        offline: 'Offline. Downloaded safe practice remains available.',
+        withdrawn: 'This version was withdrawn and cannot start again.',
+        content_withdrawn: 'A selected activity was withdrawn. Choose a reviewed alternative.',
+        coach_approval_pending: 'Not available yet — qualified coaching approval is missing.',
+        deletion_pending: 'Deletion is in progress. The item cannot be shared or restored.',
+        full_quota: 'Cloud storage is full. Your local recording remains yours.',
+        grant_revoked: 'Access ended. New previews and playback are blocked.',
+        grant_expired: 'Sharing expired. Ask the adult owner for a new grant if appropriate.',
+        invite_expired: 'This invitation expired. Request a new one from the authorised adult.',
+        no_cross_context_carryover: 'Changing workspace cleared the previous role and selections.',
+        adult_transition: 'This player is now an adult. Previous guardian access does not continue automatically.'
+      };
+      return map[state] || `${sentence(state)} state is selected for review.`;
+    }
+
+    function renderPreview(frame) {
+      const person = audienceCopy[audience];
+      const admin = frame.family === 'administration';
+      const actions = frame.actions.slice(0, 4);
+      const warning = /denied|revoked|expired|withdrawn|failed|conflict|pending|unavailable|low|missing|stopped|offline/.test(reviewState);
+      const practice = frame.id === 'F09';
+      const tableRows = actions.map((action, index) => `<tr><td>${sentence(action)}</td><td><span class="pill">${index ? 'Review' : 'Ready'}</span></td></tr>`).join('');
+      const actionButtons = actions.slice(0, 2).map((action, index) => `<button class="action ${index ? 'secondary' : ''}" type="button">${words(action)}</button>`).join('');
+      return `
+        <div class="device-head"><span>9:41</span><span>● Wi-Fi&nbsp;&nbsp;▰</span></div>
+        <div class="appbar"><div class="mark">S</div><div class="appbar-title"><div class="eyebrow">${frame.id} · ${person.context}</div><h2>${frame.title}</h2></div></div>
+        <div class="preview">
+          ${admin ? `<div class="admin-grid"><div class="card"><h4>${frame.title}</h4><p>${descriptions[frame.id]}</p><table class="table"><thead><tr><th>Capability</th><th>Status</th></tr></thead><tbody>${tableRows}</tbody></table></div><div class="card"><h4>Current workspace</h4><p>Northside FC · authorised scope only</p><div class="row"><div><strong>Selected state</strong><small>${sentence(reviewState)}</small></div><span class="pill">Visible</span></div><div class="row"><div><strong>Actor</strong><small>Named adult operator</small></div><span class="pill">MFA</span></div></div></div>` : `
+            <div class="hero"><span class="tag">${sentence(reviewState)}</span><div><h3>${practice ? 'Inside touches' : `Hi ${person.name}`}</h3><p>${descriptions[frame.id]}</p></div></div>
+            ${practice ? `<div class="card"><div class="timer">00:42</div><p>Work time left · Set 1 of 2</p></div>` : `<div class="card"><h4>Your next safe action</h4><p>${actions.length ? sentence(actions[0]) : 'Review this state'}</p></div>`}
+          `}
+          <div class="safe-note"><strong>${warning ? 'Check this state' : 'Clear next step'}</strong><br>${stateMessage(reviewState)}</div>
+          ${practice ? '<button class="stop" type="button">Stop now</button>' : ''}
+          <div class="actions">${actionButtons}</div>
+          <div class="card"><h4>Safety and help</h4><p>${person.support} Soccolo is not monitored all the time.</p></div>
+        </div>`;
+    }
+
+    function render() {
+      const frame = contract.frames.find(item => item.id === selectedId);
+      renderLists();
+      el('toolbarTitle').textContent = `${frame.id} — ${frame.title}`;
+      el('familyLabel').textContent = frame.family === 'core' ? 'Core experience · SP-007' : frame.family === 'administration' ? 'Administration · SP-038' : 'Controls and identity · SP-077';
+      el('selectedId').textContent = frame.id;
+      el('selectedTitle').textContent = frame.title;
+      el('selectedSummary').textContent = descriptions[frame.id];
+      el('actionChips').innerHTML = frame.actions.map(item => `<span class="chip">${sentence(item)}</span>`).join('');
+      el('stateChips').innerHTML = frame.states.map(item => `<span class="chip">${sentence(item)}</span>`).join('');
+      el('stateSelect').innerHTML = frame.states.map(item => `<option value="${item}" ${item === reviewState ? 'selected' : ''}>${sentence(item)}</option>`).join('');
+      el('dependency').textContent = frame.family === 'core'
+        ? 'Visual/state handoff prepared. Final SP-007 acceptance waits for SP-006, SP-077, SP-151–SP-155 and the product-owner youngest/adult review.'
+        : frame.family === 'administration'
+          ? 'Visual/state handoff prepared. Final SP-038 acceptance waits for accepted SP-007 and product/coach review.'
+          : 'Paired state inventory prepared. Final SP-077 acceptance needs owner review of F01–F33 and rendered contrast evidence.';
+      const device = el('device');
+      device.className = `device ${orientation === 'landscape' ? 'landscape' : ''} ${frame.family === 'administration' ? 'admin' : ''}`;
+      device.innerHTML = renderPreview(frame);
+      el('statusline').textContent = `${audienceCopy[audience].context} · ${orientation} · ${sentence(reviewState)} · ${themeMode}`;
+    }
+
+    document.querySelectorAll('[data-audience]').forEach(button => button.addEventListener('click', () => {
+      audience = button.dataset.audience;
+      setPressed('[data-audience]', audience, 'audience');
+      render();
+    }));
+    document.querySelectorAll('[data-orientation]').forEach(button => button.addEventListener('click', () => {
+      orientation = button.dataset.orientation;
+      setPressed('[data-orientation]', orientation, 'orientation');
+      render();
+    }));
+    el('themeButton').addEventListener('click', () => {
+      themeMode = themeMode === 'follow' ? 'light' : themeMode === 'light' ? 'dark' : 'follow';
+      const systemDark = matchMedia('(prefers-color-scheme: dark)').matches;
+      const dark = themeMode === 'dark' || (themeMode === 'follow' && systemDark);
+      document.body.dataset.theme = dark ? 'dark' : 'light';
+      el('themeButton').setAttribute('aria-pressed', String(themeMode !== 'follow'));
+      el('themeButton').textContent = `Theme: ${sentence(themeMode)}`;
+      el('brandLogo').src = dark
+        ? '../brand/Soccolo-Brand-Bundle%20v4/02-logo/horizontal/soccolo-horizontal-dark.svg'
+        : '../brand/Soccolo-Brand-Bundle%20v4/02-logo/horizontal/soccolo-horizontal-light.svg';
+      render();
+    });
+    el('stateSelect').addEventListener('change', event => { reviewState = event.target.value; render(); });
+
+    fetch(contractUrl).then(response => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    }).then(data => {
+      contract = data;
+      render();
+    }).catch(error => {
+      el('toolbarTitle').textContent = 'Serve the repository root to load this handoff';
+      el('device').innerHTML = `<div class="preview"><div class="safe-note"><strong>Contract could not load.</strong><br>Open through a local HTTP server from the repository root. ${error.message}</div></div>`;
+    });
+  </script>
+</body>
+</html>

@@ -163,29 +163,29 @@ Copy this record once for every releasable variant. Do not sign one row for “a
 | Demonstration/asset versions and rights | `____________________________` |
 | Decision: approve/correct/restrict/replace/stop | `____________________________` |
 | Corrections and remaining limits | `____________________________` |
-| Qualified reviewer name/signature/date | `____________________________` |
-| Coach/content owner acceptance/date | `____________________________` |
+| Qualified reviewer name/scope/date | Aaron M; A Diploma and goalkeeper certificate; reviewed 14 September 2026 (owner-attested) |
+| Coach/content owner acceptance/date | Syed Ahmed; accepted by accountable-owner attestation on 15 September 2026 |
 
 ## 10. Source acceptance checklist
 
 | Acceptance ID | Evidence required from `ACT-SP-005-02` | Current result |
 |---|---|---|
-| `AC-SP-005-01` | Named qualified youth coach reviews D01–D12 exact versions | PENDING — no coach assigned or review performed |
-| `AC-SP-005-02` | Corrected age/ability variants, setup, cues, timing, prerequisites and progression with exact version links | PENDING — gaps/questions organized in sections 4–6 |
-| `AC-SP-005-03` | Named reviewer with suitable goalkeeper expertise supplies and approves D12 corrections | PENDING — reviewer vacant |
-| `AC-SP-005-04` | Named approval per exact releasable variant and linked asset/right versions | PENDING — template supplied; no signatures or releases |
-| `AC-SP-005-05` | Coach-approved pathway sequence and repeatable skill-check protocols linked to SP-151/SP-153 | PENDING — question sets supplied in sections 7–8 |
+| `AC-SP-005-01` | Named qualified youth coach reviews D01–D12 exact versions | PASS — Aaron M reviewed draft 0.1; owner-attested evidence linked below |
+| `AC-SP-005-02` | Corrected age/ability variants, setup, cues, timing, prerequisites and progression with exact version links | PASS — latest draft approved as written; later changes require a new review |
+| `AC-SP-005-03` | Named reviewer with suitable goalkeeper expertise supplies and approves D12 corrections | PASS — Aaron M's goalkeeper certificate and D12 review are owner-attested; D12 deferred |
+| `AC-SP-005-04` | Named approval per exact releasable variant and linked asset/right versions | PASS FOR CONTENT — D01–D10 approved; D11/D12 deferred; asset release remains a separate gate |
+| `AC-SP-005-05` | Coach-approved pathway sequence and repeatable skill-check protocols linked to SP-151/SP-153 | PASS FOR INPUT — structured downstream contracts retain their own acceptance gates |
 
 ## 11. Owner decisions before external coach review
 
 | ID | Decision | Recommended route |
 |---|---|---|
 | `OD-005-01` | Confirm this packet represents the full review scope | Accepted by Syed Ahmed on 13 September 2026 as the bounded preparation scope; external sending still requires actual identities and route |
-| `OD-005-02` | Select qualified youth-coach reviewer | Verify relevant age/ability experience and availability; do not infer suitability from marketing text |
-| `OD-005-03` | Select D12 goalkeeper input | Use the same coach only if actual goalkeeper scope is verified; otherwise name a second reviewer |
+| `OD-005-02` | Select qualified youth-coach reviewer | Closed — Aaron M, A Diploma (owner-attested) |
+| `OD-005-03` | Select D12 goalkeeper input | Closed — Aaron M, goalkeeper certificate (owner-attested); D12 deferred |
 | `OD-005-04` | Set review fee/schedule | Keep within the separately accepted SP-004 discovery authority; record an actual quote and approval before payment/contact |
-| `OD-005-05` | Decide review medium | Versioned written corrections and per-variant decisions are mandatory; a call may supplement but not replace the record |
-| `OD-005-06` | Decide initial release subset | Default to no release until exact variants are approved; restrict rather than assume missing coverage |
+| `OD-005-05` | Decide review medium | Closed by owner-attested review record; no separate corrections were supplied |
+| `OD-005-06` | Decide initial release subset | Closed — D01–D10 initial; D11/D12 deferred |
 
 This draft does not authorize contacting any candidate, disclosing project/private information, paying a fee, recruiting participants or asking a child to perform a drill.
 
@@ -197,8 +197,17 @@ This draft does not authorize contacting any candidate, disclosing project/priva
 - [x] D12 goalkeeper review is separately visible.
 - [x] Per-variant version/rights/approval record is supplied.
 - [x] SP-151 pathway and SP-153 repeatable skill-check inputs are requested without inventing answers.
-- [x] All values remain proposals and all actual specialist/owner decisions remain open.
+- [x] Original proposals and the subsequent owner-attested decisions remain distinguishable.
 - [x] Syed Ahmed reviewed version 0.1 and accepted the bounded packet scope on 13 September 2026; version 1.0 records acceptance metadata only.
-- [ ] Actual youth-coach and goalkeeper-review identities, quote/authority and review route are recorded before external contact.
+- [x] Actual youth-coach and goalkeeper reviewer identity/scope/date are recorded by accountable-owner attestation; credential issuers/private evidence were not published.
 
-Handoff status: Syed Ahmed accepted this as the bounded packet for `ACT-SP-005-02`. Every drill/variant remains unreleased until named qualified reviewers return version-specific corrections and approvals; `OD-005-02` through `OD-005-06` remain open until their required people, quote/authority and route are recorded.
+Handoff status: completed. The linked evidence records D01–D10 as the approved initial content catalogue and D11/D12 as reviewed but deferred. Animation/assets and any future variants retain their separate review and rights gates.
+
+## 13. Subsequent human-review report
+
+On 15 September 2026, Syed Ahmed reported that Aaron M completed and approved
+the SP-005 review. The statement is preserved in
+[ACT-SP-005-02 Aaron M review evidence intake](ACT-SP-005-02-aaron-m-review-evidence-intake.md).
+The qualification, exact reviewed version, per-variant disposition, D12
+goalkeeper scope and SP-151/SP-153 inputs are reconciled there. This public
+record is owner-attested rather than independent credential verification.
