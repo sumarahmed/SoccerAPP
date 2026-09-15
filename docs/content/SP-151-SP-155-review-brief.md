@@ -22,8 +22,9 @@ Age suitability and ability are separate, and older beginners receive mature
 language. SP-006 animation sample evidence is also a formal input.
 
 **Recorded input:** The owner attests Aaron M approved the latest D01–D12 draft,
-with D01–D10 as the initial release set. The structured SP-151 contract still
-waits for SP-006 and final owner acceptance.
+with D01–D10 as the initial release set. Actual A01–A03 samples now exist and
+are provisionally owner-accepted; the structured SP-151 contract still waits
+for SP-006's final coaching/release evidence and final owner acceptance.
 
 ## SP-152 — Deterministic next-session rules
 
@@ -98,8 +99,9 @@ and reminder frequency.
 
 1. SP-005 evidence is complete by owner attestation: Aaron M's qualification,
    reviewed draft, D01–D10 initial set, D11/D12 deferral and date are recorded.
-2. Complete SP-006 by supplying actual A01/D01, A02/D06 and A03/D04 animation
-   samples with source/rights and coach-review evidence.
+2. Complete SP-006 by closing the remaining editable-source, view, timing,
+   source-rights, animator-QA and rendered coach-review gates for the actual
+   A01/D01, A02/D06 and A03/D04 samples now in the repository.
 3. Review the versioned contracts and fixtures now prepared for SP-151–SP-155.
 4. Record accountable product/safeguarding acceptance of the recommended
    SP-154/SP-155 values and the SP-153 seven-day retest floor.

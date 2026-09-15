@@ -3,9 +3,9 @@
 | Family | Verification result | Remaining action |
 |---|---|---|
 | SP-005 | PASS — D01–D10 initial; D11/D12 reviewed and deferred | None for this design/content gate |
-| SP-006 | PLACEHOLDER MODE / PRODUCTION OPEN | A01/D01, A02/D06 and A03/D04 design placeholders exist; supply actual samples, rights/source record, and Aaron M rendered-result acceptance before player release |
+| SP-006 | PROVISIONAL OWNER ACCEPTANCE / PLAYER-RELEASE OPEN | Actual A01/D01, A02/D06 and A03/D04 samples and setup stills exist and are accepted for now; supply remaining production/source-rights evidence and Aaron M rendered-result acceptance before player release |
 | SP-077 | REVIEW-READY | Product owner accepts paired themes and remaining implementation-stage device limitation |
-| SP-151 | CONTRACT PASS / PREDECESSOR BLOCKED | Accept contract after SP-006 |
+| SP-151 | CONTRACT PASS / PREDECESSOR PARTIAL | Actual animation samples now exist; final acceptance still follows completed SP-006 coaching/release gates |
 | SP-152 | CONTRACT PASS / PREDECESSOR BLOCKED | Accept after SP-151 |
 | SP-153 | CONTRACT PASS / PREDECESSOR BLOCKED | Accept protocol/retest defaults after SP-151 |
 | SP-154 | REVIEW-READY | Accept service-capacity, response, clip and access values |
@@ -23,4 +23,4 @@
 
 ## Conclusion
 
-The repository-native review package covers all F01–F33 states and the proposed child contracts. SP-006 now has stable, visibly non-playable design placeholders, but its three production animations remain a player-release gate. Human acceptance of the prepared SP-077 and SP-151–SP-155 values is also not inferred from preparation. Therefore SP-007 and final SP-038 verification remain open; marking either family complete now would bypass explicit predecessor and owner-review gates.
+The repository-native review package covers all F01–F33 states and the proposed child contracts. SP-006 now has three actual, byte-verified review samples with provisional product-owner acceptance; its editable-source, alternate/slow view, caption/narration, rights, animator-QA and Aaron M rendered-result gates remain open, so player release is still prohibited. Human acceptance of the prepared SP-077 and SP-151–SP-155 values is also not inferred from preparation. Therefore SP-007 and final SP-038 verification remain open; marking either family complete now would bypass explicit predecessor and owner-review gates.

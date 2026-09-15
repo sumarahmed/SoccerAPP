@@ -6,7 +6,7 @@
 | Coach source | Aaron M, A Diploma; owner-attested review on 14 September 2026 |
 | Initial catalogue | D01–D10, source draft 0.1 |
 | Deferred | D11 and D12 are reviewed but unavailable in the initial catalogue |
-| Formal status | Prepared; acceptance cannot close until SP-006 animation evidence exists |
+| Formal status | Prepared; actual SP-006 samples exist, but acceptance waits for final coaching/release gates |
 
 ## Exact pathways
 
@@ -23,4 +23,4 @@ An offered path must contain an eligible start, ordered steps, and a next step. 
 
 ## Outstanding predecessor
 
-A01/D01, A02/D06, and A03/D04 have written briefs but no actual animation samples. Those steps remain content-visible for contract review but cannot be represented as fully asset-covered or release-ready until SP-006 is accepted.
+A01/D01, A02/D06 and A03/D04 now have actual byte-verified review samples with provisional product-owner acceptance. They may support the next contract review, but they are not fully asset-covered or player-release ready until SP-006 records editable/source-rights evidence, remaining views and timing outputs, animator QA and Aaron M's rendered-result acceptance.

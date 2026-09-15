@@ -2,6 +2,8 @@
 *.json text eol=lf
 *.cjs text eol=lf
 *.pdf binary
+*.png binary
+*.mp4 binary
 # The canonical package contains byte-verified historical snapshots and media.
 packages/soccer_agent_activity_package_20260908/** -text
 # Preserve standard CRLF CSV records without reporting CR as trailing whitespace.

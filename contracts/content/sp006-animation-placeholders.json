@@ -1,12 +1,13 @@
 {
   "contract": "soccolo-sp006-animation-placeholders-v1",
-  "status": "design-placeholder-only",
+  "status": "superseded-by-review-assets",
   "playerReleaseAllowed": false,
   "countsAsAnimationAcceptanceEvidence": false,
+  "supersededBy": "contracts/content/sp006-animation-review-assets.json",
   "assets": [
-    {"id":"A01","drill":"D01","file":"docs/design/prototypes/assets/A01-D01-placeholder.svg","productionStatus":"not-produced","coachRenderedReview":"pending"},
-    {"id":"A02","drill":"D06","file":"docs/design/prototypes/assets/A02-D06-placeholder.svg","productionStatus":"not-produced","coachRenderedReview":"pending"},
-    {"id":"A03","drill":"D04","file":"docs/design/prototypes/assets/A03-D04-placeholder.svg","productionStatus":"not-produced","coachRenderedReview":"pending"}
+    {"id":"A01","drill":"D01","file":"docs/design/prototypes/assets/A01-D01-placeholder.svg","productionStatus":"superseded-placeholder","coachRenderedReview":"pending"},
+    {"id":"A02","drill":"D06","file":"docs/design/prototypes/assets/A02-D06-placeholder.svg","productionStatus":"superseded-placeholder","coachRenderedReview":"pending"},
+    {"id":"A03","drill":"D04","file":"docs/design/prototypes/assets/A03-D04-placeholder.svg","productionStatus":"superseded-placeholder","coachRenderedReview":"pending"}
   ],
   "replacementRequires": ["editable-source","main-view","alternate-view","slow-view","setup-still","poster-still","separate-captions","separate-narration","source-rights","animator-qa","aaron-render-review","approved-version-link"]
 }

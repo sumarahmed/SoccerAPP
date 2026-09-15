@@ -8,4 +8,4 @@
 
 Automated fixture validation is provided by `tests/content/validate-sp151-sp153-contract.cjs`.
 
-**Handoff result:** the specification is review-ready, but SP-151 must not be marked accepted while predecessor SP-006 lacks the three actual animation samples and their coach acceptance.
+**Handoff result:** the specification is review-ready and the three actual SP-006 animation samples now exist with provisional product-owner acceptance. SP-151 must not be marked finally accepted until SP-006 records its remaining coach and player-release evidence.
