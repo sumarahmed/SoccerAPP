@@ -1,0 +1,73 @@
+{
+  "fixtureSet": "sp-048-entitlement-lifecycle-v1",
+  "contractVersion": "1.0",
+  "classification": "synthetic",
+  "catalogStatus": "proposed_not_for_sale",
+  "configuration": {
+    "childFacingPurchases": false,
+    "purchaseGrantsGuardianship": false,
+    "purchaseGrantsMediaAccess": false,
+    "seatConsumesStaff": false,
+    "couponStackingEnabled": false,
+    "automaticPurchaseTransferBetweenSoccoloAccounts": false,
+    "complimentaryPilotAutoConverts": false,
+    "maximumComplimentaryPilotDays": 30,
+    "coachProAvailableInitially": false,
+    "extraStorageAvailableInitially": false,
+    "paymentMetadataAllowsChildData": false
+  },
+  "proposedCatalog": [
+    {"code": "starter_v1", "priceAud": 0, "interval": "none", "status": "proposed_not_for_sale"},
+    {"code": "family_monthly_v1", "priceAud": 14.99, "interval": "month", "profiles": 4, "cloudGb": 20, "status": "proposed_not_for_sale"},
+    {"code": "family_annual_v1", "priceAud": 119.99, "interval": "year", "profiles": 4, "cloudGb": 20, "status": "proposed_not_for_sale"},
+    {"code": "club_seat_monthly_v1", "priceAud": 5, "interval": "month", "minimumSeats": 25, "cloudGbPerSeat": 5, "status": "proposed_not_for_sale"},
+    {"code": "club_seat_annual_v1", "priceAud": 48, "interval": "year", "minimumSeats": 25, "cloudGbPerSeat": 5, "status": "proposed_not_for_sale"},
+    {"code": "invited_club_coach_v1", "priceAud": 0, "interval": "included", "consumesSeat": false, "status": "proposed_not_for_sale"},
+    {"code": "coach_pro_later_v1", "priceAud": null, "interval": "unavailable", "status": "deferred"},
+    {"code": "extra_storage_later_v1", "priceAud": null, "interval": "unavailable", "status": "deferred"}
+  ],
+  "requiredF23States": [
+    "no_purchase", "pending", "authentication_required", "trialing", "active",
+    "grace", "cancelled_at_period_end", "expired", "restore_in_progress",
+    "restore_complete", "restore_account_conflict", "provider_unavailable",
+    "covered_by_another_source"
+  ],
+  "requiredF24States": [
+    "capacity_available", "capacity_full", "assignment_pending",
+    "scheduled_increase", "scheduled_reduction", "invoice_pending", "active",
+    "grace_or_past_due", "cancelled", "pilot_ending", "coupon_valid",
+    "coupon_invalid", "reconciliation_mismatch"
+  ],
+  "scenarios": [
+    {"id": "pending-purchase-no-grant", "category": "lifecycle", "expected": {"featureGranted": false}},
+    {"id": "verified-activation-one-grant", "category": "lifecycle", "expected": {"featureGrantCount": 1, "backendVerified": true}},
+    {"id": "duplicate-provider-event", "category": "idempotency", "expected": {"eventReceiptCount": 1, "featureGrantCount": 1}},
+    {"id": "forged-provider-event", "category": "authenticity", "expected": {"accepted": false, "featureGrantCount": 0}},
+    {"id": "cross-environment-provider-event", "category": "environment", "expected": {"productionMutation": false}},
+    {"id": "delayed-old-event", "category": "ordering", "expected": {"ledgerRolledBack": false, "currentStateFetched": true}},
+    {"id": "cancel-at-period-end", "category": "lifecycle", "expected": {"accessUntilVerifiedEnd": true, "localMediaDeleted": false}},
+    {"id": "refund-or-chargeback", "category": "lifecycle", "expected": {"paidFeatureReconciled": true, "personalMediaDeleted": false}},
+    {"id": "family-club-overlap", "category": "overlap", "expected": {"validBenefitsUnioned": true, "sourcesPreserved": true, "mediaAccessGrantedByPayment": false}},
+    {"id": "one-upload-one-allowance", "category": "allowance", "expected": {"allowanceSourcesCharged": 1}},
+    {"id": "two-club-isolation", "category": "overlap", "expected": {"storageAutomaticallyPooled": false, "crossClubAccess": false}},
+    {"id": "atomic-final-club-seat", "category": "seat", "expected": {"successfulAllocations": 1, "capacityExceeded": false}},
+    {"id": "coach-invitation-included", "category": "coach", "expected": {"seatsConsumed": 0, "separateCoachPurchaseRequired": false, "accessBeforeMembershipMfa": false}},
+    {"id": "seat-grants-no-authority", "category": "seat", "expected": {"guardianshipGranted": false, "mediaAccessGranted": false}},
+    {"id": "sponsorship-end", "category": "overlap", "expected": {"newSponsoredAllocation": false, "historyPreserved": true, "existingCloudExpiryPreserved": true}},
+    {"id": "restore-original-account", "category": "restore", "expected": {"entitlementRestored": true, "localOnlyMediaRestored": false}},
+    {"id": "restore-other-account", "category": "restore", "expected": {"automaticTransfer": false, "foreignIdentityRevealed": false, "supportOrOriginalSignInRequired": true}},
+    {"id": "account-delete-subscription-separate", "category": "deletion", "expected": {"providerCancellationAssumed": false, "dataRequestBlockedOnCancellation": false}},
+    {"id": "provider-metadata-child-data", "category": "privacy", "expected": {"accepted": false}},
+    {"id": "valid-family-coupon", "category": "promotion", "expected": {"redemptions": 1, "packageCapabilitiesChanged": false, "renewalPriceShown": true}},
+    {"id": "expired-or-ineligible-coupon", "category": "promotion", "expected": {"priceChanged": false, "featureGranted": false}},
+    {"id": "duplicate-coupon-redemption", "category": "promotion", "expected": {"redemptions": 1, "featureGrantCount": 1}},
+    {"id": "cross-environment-coupon", "category": "promotion", "expected": {"productionDiscountApplied": false}},
+    {"id": "coupon-stacking-attempt", "category": "promotion", "expected": {"appliedCouponCount": 1, "stacked": false}},
+    {"id": "promotion-renewal-disclosure", "category": "promotion", "expected": {"normalPriceShown": true, "discountedPriceShown": true, "futureRenewalShown": true}},
+    {"id": "club-seat-coupon", "category": "promotion", "expected": {"capacityExceeded": false, "discountGrantsExtraSeats": false}},
+    {"id": "promotion-removal", "category": "promotion", "expected": {"historyDeleted": false, "mediaDeleted": false, "activePaidPeriodEndedEarly": false}},
+    {"id": "complimentary-pilot-expiry", "category": "promotion", "expected": {"automaticallyCharged": false, "autoConverted": false}},
+    {"id": "f23-child-context", "category": "presentation", "expected": {"priceShown": false, "couponShown": false, "purchasePressureShown": false}},
+    {"id": "f24-billing-contact", "category": "presentation", "expected": {"billingContactGetsAdminRole": false, "billingContactGetsMediaAccess": false}}
+  ]
+}
