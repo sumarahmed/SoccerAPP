@@ -2,7 +2,7 @@
   "contract": "soccolo-sp063-operator-controls-v1",
   "version": "1.0",
   "preparedOn": "2026-09-16",
-  "status": "review-ready-human-evidence-pending",
+  "status": "accepted-pilot-operations-design-setup",
   "costPosture": "free-plan-pilot",
   "recoveryPosture": {
     "dedicatedBackup": false,
@@ -12,17 +12,17 @@
     "originalDeviceCopyRequired": true
   },
   "roles": {
-    "primaryOperator": "Syed Ahmed (proposed)",
-    "alternateRecoveryCustodian": "unassigned",
-    "destructiveDataApprover": "unassigned-until-participant-data-service",
+    "primaryOperator": "Syed Ahmed",
+    "alternateRecoveryCustodian": "confirmed-private-register",
+    "destructiveDataApprover": "confirmed-private-alternate-service-assignment-pending",
     "independentSecurityReviewer": "unassigned"
   },
   "services": [
-    {"id":"github-account","state":"active","mfaEvidence":"owner-confirmation-pending","backupEvidence":"owner-confirmation-pending"},
+    {"id":"github-account","state":"active","mfaEvidence":"owner-attested-2026-09-16","backupEvidence":"owner-attested-2026-09-16"},
     {"id":"github-public-planning","state":"active","secretClass":"none-permitted"},
     {"id":"github-private-implementation","state":"active","secretClass":"no-production-or-participant-data"},
-    {"id":"linear","state":"active","mfaEvidence":"passkey-and-session-review-pending","secretClass":"none-permitted"},
-    {"id":"google-identity","state":"active","mfaEvidence":"owner-confirmation-pending","backupEvidence":"owner-confirmation-pending"},
+    {"id":"linear","state":"active","mfaEvidence":"owner-attested-security-review-2026-09-16","secretClass":"none-permitted"},
+    {"id":"google-identity","state":"active","mfaEvidence":"owner-attested-2026-09-16","backupEvidence":"owner-attested-2026-09-16"},
     {"id":"runway-standard","state":"active","use":"review-media-only"},
     {"id":"supabase-development","state":"not-provisioned","gate":"primary-and-backup-totp"},
     {"id":"supabase-pilot-production","state":"not-provisioned","gate":"second-owner-and-separate-credentials-before-participant-data"},
@@ -35,6 +35,8 @@
     "alternate-recovery-custodian",
     "primary-and-alternate-alert-route"
   ],
+  "humanConfirmationState": "all-five-owner-attested-2026-09-16",
+  "tabletopState": "passed-written-response-paths-no-destructive-live-test",
   "runbooks": [
     "privileged-compromise",
     "lost-factor",

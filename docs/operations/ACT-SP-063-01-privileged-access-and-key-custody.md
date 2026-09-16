@@ -6,7 +6,7 @@
 | Contract version | 1.0 review candidate |
 | Prepared | 16 September 2026 |
 | Accountable owner | Operator/security reviewer; Syed Ahmed is the proposed pilot primary operator |
-| Current state | Review-ready specification; account settings and alternate operator still require human confirmation |
+| Current state | Accepted specification; owner confirmed account settings, alternate custody and alert route on 16 September 2026 |
 | Cost posture | Free-plan pilot; no paid security or recovery add-on authorized |
 | Secret handling | No password, TOTP seed, recovery code, API key, private key, phone number or personal address belongs in this public repository or Linear |
 
@@ -46,19 +46,19 @@ pages: [GitHub 2FA recovery methods](https://docs.github.com/en/authentication/s
 
 | Role | Pilot assignment | May do | Must not do |
 |---|---|---|---|
-| Primary operator | Proposed: Syed Ahmed | Configure provider account, revoke/rotate scoped credentials, invoke documented containment | Place secrets in public planning, use child data for testing or claim a restore capability that does not exist |
-| Alternate account-recovery custodian | **Unassigned — human decision required** | Hold one sealed/offline recovery path or retain separate provider ownership after accepting the duty | Use routine development credentials, browse participant media or hold every primary factor |
-| Destructive-data approver | **Unassigned until a real participant-data service is provisioned** | Confirm account/project deletion and independently verify scope | Be the same sole actor who initiated a consequential production deletion |
+| Primary operator | Syed Ahmed | Configure provider account, revoke/rotate scoped credentials, invoke documented containment | Place secrets in public planning, use child data for testing or claim a restore capability that does not exist |
+| Alternate account-recovery custodian | **Confirmed in private operator record; identity/contact intentionally not public** | Hold one sealed/offline recovery path or retain separate provider ownership after accepting the duty | Use routine development credentials, browse participant media or hold every primary factor |
+| Destructive-data approver | **Private alternate confirmed; service-specific assignment waits for participant-data provisioning** | Confirm account/project deletion and independently verify scope | Be the same sole actor who initiated a consequential production deletion |
 | Independent security reviewer | **Unassigned** | Review this design now and exact implemented accounts/configuration before real participant data | Self-approve controls they alone implemented |
 
 The destructive-data approver is the required **separate deletion authority**
 once a participant-data service or recovery copy exists.
 
-For the current solo, pre-data stage, the absence of an alternate does not
-authorize real participant data. It is a provisioning gate. Before the first
-private participant account or cloud video, appoint a trusted adult or contracted
-operator as alternate and record their identity/contact only in the private
-operator register, not this public repository.
+The alternate was selected, contacted and recorded privately on 16 September
+2026. Their identity/contact and recovery material are intentionally absent from
+this public repository. Before the first private participant account or cloud
+video, the selected person must also receive the exact provider ownership and
+separate-deletion role for each newly provisioned service.
 
 ## 4. Authentication and recovery minimum
 
@@ -127,5 +127,6 @@ are lost. This is why the second method is mandatory before real participant use
 ## 7. Completion state
 
 The operator inventory, custody model and loss/compromise procedure satisfy
-ACT-SP-063-01 at the specification level. Live settings, a named alternate and
-an independent reviewer remain open and are listed in ACT-SP-063-03.
+ACT-SP-063-01. The owner confirmed the five non-secret setup results on 16
+September 2026. Independent review and service-specific runtime evidence remain
+pre-participant/implementation gates listed in ACT-SP-063-03.

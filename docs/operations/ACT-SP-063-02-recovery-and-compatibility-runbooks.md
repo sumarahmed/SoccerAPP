@@ -6,9 +6,9 @@
 | Runbook version | 1.0 review candidate |
 | Prepared | 16 September 2026 |
 | Pilot owner | Proposed: Syed Ahmed |
-| Alternate | Unassigned; required before real participant cloud data |
+| Alternate | Confirmed in private operator record; exact provider role required before real participant cloud data |
 | Recovery posture | Accepted SP-050 lean pilot: no Soccolo backup/RPO/RTO promise; users retain original device recordings |
-| Runtime status | Specification only; no Supabase project, deployed app, alert route or restore rehearsal exists |
+| Runtime status | Accepted runbook and non-destructive tabletop; no Supabase project, deployed app or restore rehearsal exists |
 
 ## 1. Honest pilot recovery boundary
 
@@ -140,6 +140,7 @@ accounts/settings exist. No destructive live test is authorized by this document
 
 ## 8. Completion state
 
-This document completes ACT-SP-063-02 at the specification level. ACT-SP-063-03
-must record the owner decisions and non-secret setup/rehearsal evidence before
-SP-063 can be accepted.
+This document completes ACT-SP-063-02 at the specification level. The owner
+confirmed account/custody/alert setup and accepted the non-destructive tabletop
+on 16 September 2026. Live Supabase, app/client, restore and independent-review
+evidence remains with later provisioning and implementation gates.

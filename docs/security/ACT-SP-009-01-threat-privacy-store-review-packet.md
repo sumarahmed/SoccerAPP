@@ -56,10 +56,10 @@ This is a product/security recommendation, not legal advice or a store approval.
 | SP-060 | [Web/API and media evidence](ACT-SP-060-03-acceptance-evidence.md) | Accepted design input |
 | SP-061 | [Retention and data-rights evidence](ACT-SP-061-03-acceptance-evidence.md) | Accepted design input |
 | SP-062 | [Safeguarding/accessibility evidence](../design/ACT-SP-062-03-acceptance-evidence.md) | Accepted design input; qualified safeguarding review still a release gate |
-| SP-063 | [Prepared acceptance candidate](../operations/ACT-SP-063-03-acceptance-evidence.md) | **Open** — runbooks now exist; owner setup confirmations, alternate custody and security review remain |
+| SP-063 | [Accepted operator/key/recovery decision](../decisions/SP-063-operator-key-and-recovery-runbooks.md) | Accepted pilot design/setup input; live Supabase/runtime and independent-review gates remain |
 
 `ACT-SP-009-01` may be reviewed as a packet. `ACT-SP-009-02` and `SP-009`
-must not be marked complete until SP-063 and the named human decision are
+must not be marked complete until the named security/privacy human decision is
 resolved.
 
 ## 3. S01–S27 control, owner and gate map
@@ -76,7 +76,7 @@ specialist or operator decision remains required.
 | S04 | SP-037/SP-059 server-side adult capability and restricted player sessions | Identity/backend lead, G3 | Design; paired-device/API bypass tests remain Runtime |
 | S05 | SP-011/SP-061 versioned consent, guardianship and adulthood transitions | Product/privacy owner, G1/G3 | Design; privacy review and reconnect tests remain Human/Runtime |
 | S06 | SP-011/SP-061 deletion-first suppression and no resurrection | Backend/privacy lead, G3 | Design; storage, restore and offline races remain Runtime |
-| S07 | SP-011/SP-050 separate metadata/object recovery | Operator, G3 | Lean pilot accepts no recovery promise; truthful notice required; SP-063 open |
+| S07 | SP-011/SP-050 separate metadata/object recovery | Operator, G3 | SP-063 accepts the truthful no-recovery pilot runbook; actual post-pilot restore evidence remains later |
 | S08 | SP-011/SP-060 reservation, quarantine, validation and bounded processing | Backend lead, G3 | Design; malformed/concurrent upload tests remain Runtime |
 | S09 | SP-003 plus private SP-012 repository/CI boundary | Technical/operator lead, G2/G3 | Private repo and read-only CI exist; protected branch and reviewer unresolved |
 | S10 | SP-003 untrusted-instruction and destination policy | Agent workflow owner, G2 | Design; later adversarial run evidence required |
@@ -84,7 +84,7 @@ specialist or operator decision remains required.
 | S12 | SP-003 evidence binding plus private current-commit checks | Technical lead, G2 | Checks pass; GitHub plan cannot enforce them on private `main` |
 | S13 | Pinned GitHub Actions and secret/static guards in private repo | Technical lead, G2/G3 | Partial Runtime; app dependency locks and Dart/mobile scans do not yet exist |
 | S14 | SP-005/SP-006/SP-151–153 content and review records | Coach/content owner, G1/G3 | Pilot drills reviewed; animation placeholders and release-asset gates remain explicit |
-| S15 | SP-050 limits plus proposed SP-063 operations | Operator/founder, G1/G3 | **Open** — runbooks prepared; owner setup confirmations, alternate and reviewer remain |
+| S15 | SP-050 plus accepted SP-063 operations | Operator/founder, G1/G3 | Pilot runbooks, account/custody attestation and tabletop accepted; deployed alerts/restore and independent review remain later |
 | S16 | SP-048 commerce contract and later sandbox/release activities | Billing/release owner, G5 | Design only; no production payments or store release authorized |
 | S17 | SP-001/SP-050/SP-061 market/data assumptions | Founder/privacy adviser, G1/G5 | Australia-first direction fixed; specialist review and final notices remain Human |
 | S18 | SP-037 scope model and private SP-039 RLS/projection proof | Backend/security lead, G3 | First two-club/two-household runtime suite passes; wider APIs remain Runtime |
@@ -111,15 +111,15 @@ specialist or operator decision remains required.
 | R07 | SP-060 quarantine and bounded validation contract | Isolated media-worker implementation and malformed-file tests |
 | R08 | SP-010/SP-047 device-protection contract | Physical-device theft, switch, preview, backup and temporary-file tests |
 | R09 | SP-061 record schedule and rights workflow | Privacy acceptance and implemented restore/offline suppression |
-| R10 | No accepted SP-063 restore runbook | **Open before SP-009 completion** |
-| R11 | No accepted SP-063 key/custody runbook | **Open before SP-009 completion** |
+| R10 | Accepted SP-063 no-recovery/rebuild runbook | Actual post-pilot restore remains a later implementation decision |
+| R11 | Accepted SP-063 key/custody runbook and owner attestation | Provider/runtime review and independent security evidence remain |
 | R12 | SP-060 abuse-budget design | Measured thresholds, queue limits and cost circuit breakers |
 | R13 | SP-062 safeguarding state machine | Named qualified safeguarding owner and rehearsal |
 | R14 | SP-005/SP-006/SP-062 content/accessibility work | Final release assets, assistive-technology and outdoor/device evidence |
-| R15 | No accepted SP-063 compatibility/emergency runbook | **Open before SP-009 completion** |
-| R16 | No accepted SP-063 operational ownership/runbook | **Open before SP-009 completion** |
+| R15 | Accepted SP-063 compatibility/emergency runbook | Deployed old-client and scoped-switch evidence remain later |
+| R16 | Accepted SP-063 primary/alternate ownership and alert runbook | Runtime alert/timing and coverage evidence remain later |
 | R17 | SP-048 commerce boundaries | Provider roles, refund/deletion/reconciliation sandbox evidence |
-| R18 | SP-061 processor terms; current first-market recommendation below | Named privacy adviser, current supplier/DPA/store review; SP-063 open |
+| R18 | SP-061 processor terms plus SP-063 provider-provisioning gates | Named privacy adviser and current supplier/DPA/store review remain |
 | R19 | Lean-pilot scope decisions exist | Updated implementation/support estimates and measured usage remain open |
 | R20 | Stable SP/ACT/AC manifests and repository validators | Open predecessors and independent acceptance must not be bypassed |
 
@@ -183,14 +183,12 @@ Current official references:
 
 The following remain explicit and are not converted into approvals by this packet:
 
-1. Complete SP-063 owner setup confirmation, alternate-custody and review steps
-   against the prepared operator, recovery, alert and compatibility runbooks.
-2. Name the accountable privacy/security reviewer and independent reviewer for
+1. Name the accountable privacy/security reviewer and independent reviewer for
    `ACT-SP-009-02`.
-3. Name a safeguarding owner before any real-child pilot.
-4. Obtain a current store/privacy decision on Apple Kids Category participation,
+2. Name a safeguarding owner before any real-child pilot.
+3. Obtain a current store/privacy decision on Apple Kids Category participation,
    Google target-age selections, SDK inventory and the release privacy policy.
-5. Keep real child data and store publication prohibited until those decisions are
+4. Keep real child data and store publication prohibited until those decisions are
    tied to the exact build/configuration under review.
 
 Recommended owner response to `ACT-SP-009-02` after those inputs exist:
@@ -209,6 +207,6 @@ no advertising/behavioural analytics for the pilot, and the requirement to retai
 specialist and runtime gates. This completes `ACT-SP-009-01` as preparation work.
 
 The acceptance does not name the missing privacy/security or safeguarding reviewers,
-records the subsequent SP-007/SP-038 design acceptance but does not resolve SP-063,
-does not perform `ACT-SP-009-02`, and does not authorize real-child data or store
-release.
+records the subsequent SP-007/SP-038 and SP-063 acceptance, but does not perform
+`ACT-SP-009-02`, name its independent reviewer, or authorize real-child data or
+store release.

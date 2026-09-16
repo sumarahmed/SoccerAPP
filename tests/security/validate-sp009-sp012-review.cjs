@@ -32,7 +32,7 @@ for (let index = 1; index <= 8; index += 1) {
 }
 
 requireCheck(packet.includes('ACT-SP-009-02` and `SP-009` remain open'), 'SP-009 open state is missing');
-requireCheck(packet.includes('SP-063') && packet.includes('**Open**'), 'SP-063 blocker is missing');
+requireCheck(packet.includes('SP-063') && packet.includes('Accepted pilot design/setup input'), 'SP-063 accepted input is missing');
 requireCheck(environment.includes('403 — Upgrade to GitHub Pro or make this repository public'), 'branch-protection limitation is missing');
 requireCheck(ci.includes('cc21c9c12fadcf6c014244adc822b598b7867381'), 'CI evidence is not commit-bound');
 requireCheck(ci.includes('18 pgTAP policy assertions passed'), 'database assertion count is missing');

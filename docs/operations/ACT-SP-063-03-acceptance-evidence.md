@@ -4,25 +4,26 @@
 |---|---|
 | Activity | `ACT-SP-063-03` — Verify and hand off: Specify operator, key and recovery runbooks |
 | Source issue | `SP-063` |
-| Evidence version | 0.1 review candidate |
+| Evidence version | 1.0 accepted |
 | Prepared | 16 September 2026 |
-| Repository base | `1fc31583e404846d49e3bcebd9e9a9b639d67a47` on `main` before this preparation revision |
-| Accountable owner/reviewer | Operator/security reviewer; not yet assigned independently |
-| Current outcome | **REVIEW-READY / HUMAN SETUP EVIDENCE REQUIRED / NOT ACCEPTED** |
+| Repository base | `a6a004b09922416a6e852da600e74da8b154426d` on `main` before this acceptance revision |
+| Accountable owner/reviewer | Syed Ahmed as primary pilot operator; independent security reviewer remains a pre-participant gate |
+| Current outcome | **ACCEPTED FOR PILOT OPERATIONS DESIGN/SETUP / RUNTIME AND INDEPENDENT REVIEW RETAINED** |
 
 ## 1. Evidence bundle
 
 - [Privileged access and key custody](ACT-SP-063-01-privileged-access-and-key-custody.md), version 1.0.
 - [Recovery, alerts, withdrawal and compatibility runbooks](ACT-SP-063-02-recovery-and-compatibility-runbooks.md), version 1.0.
 - [Machine-checkable operator-control fixture](../../contracts/operations/sp063-operator-controls.json), version 1.0.
+- [Non-destructive tabletop verification](SP-063-tabletop-verification.md), version 1.0.
 - `node tests/operations/validate-sp063-contract.cjs`.
 
 ## 2. Criterion assessment
 
 | Criterion | Current result | Evidence / missing input |
 |---|---|---|
-| AC-SP-063-01 — vendor MFA, backup factor/custodian, privileged recovery, separate deletion authority, auth/config rebuild, audit/alerts and mobile compatibility | **PASS — written contract; LIVE EVIDENCE PENDING** | Both runbooks specify the controls. Human confirmation of actual provider settings, alternate custody and a tabletop remains missing. |
-| AC-SP-063-02 — R10/R11/R15/R16/R18 | **PASS — mapped design; SPECIALIST/RUNTIME EVIDENCE PENDING** | Recovery honesty, key compromise, compatible clients, operator coverage and supplier gates are mapped. No live restore, alert delivery, old-client test, privacy review or independent security decision is claimed. |
+| AC-SP-063-01 — vendor MFA, backup factor/custodian, privileged recovery, separate deletion authority, auth/config rebuild, audit/alerts and mobile compatibility | **PASS — contract plus owner setup attestation** | Runbooks specify the controls; owner confirmed all five existing-account/custody/alert steps; Supabase and service-specific destructive roles remain future provisioning gates. |
+| AC-SP-063-02 — R10/R11/R15/R16/R18 | **PASS — pilot design/tabletop** | Recovery honesty, key compromise, compatible clients, operator coverage and supplier gates are mapped and walked through. No live restore, deployed old-client test, privacy opinion or independent security certification is claimed. |
 
 ## 3. What the owner needs to obtain, and where
 
@@ -69,11 +70,15 @@ application review and permission/team-scoped API keys.
 10. Retain independent security/privacy review as a gate before real child data;
     owner acceptance of this specification does not replace that reviewer.
 
-## 5. Remaining decision
+## 5. Owner disposition and retained gates
 
-SP-063 should be marked accepted only after the owner accepts the proposed
-decisions and reports the non-secret results for steps 1–5. Step 6 is a mandatory
-future provisioning gate because Supabase does not yet exist. The first tabletop
-may be limited to existing accounts plus synthetic content/configuration; actual
-cloud restore evidence remains a later implementation activity under the SP-050
-pilot posture.
+Syed Ahmed reported all five current security steps complete and accepted the
+ten proposed decisions on 16 September 2026. The tabletop passed for written
+response paths without destructive or credential-bearing tests. SP-063 is
+complete as free-plan pilot operations design/setup work.
+
+Supabase remains unprovisioned, so its factor, second-owner, environment and
+runtime evidence are mandatory future provisioning gates. Actual cloud restore,
+alert timing, content withdrawal, old-client behavior and independent security/
+privacy review remain later implementation and pre-real-child evidence. This
+acceptance does not authorize real child data by itself.
