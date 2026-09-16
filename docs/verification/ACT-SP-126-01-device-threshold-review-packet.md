@@ -4,11 +4,11 @@
 |---|---|
 | Activity | `ACT-SP-126-01` — Prepare review packet: Approve measurable feasibility and device thresholds |
 | Source issue | `SP-126` |
-| Packet version | 0.1 review candidate |
+| Packet version | 1.0 accepted protocol; device inventory incomplete |
 | Prepared | 16 September 2026 |
 | Accountable owner | Syed Ahmed acting as current founder/mobile owner |
-| Required human action | Record exact available devices; accept or revise the proposed support promise and thresholds |
-| Status | Review-ready; no device result or support claim is accepted by this packet |
+| Required human action | Complete exact model/OS/storage/battery inventory before device trials |
+| Status | Protocol accepted by Syed Ahmed on 16 September 2026; no device result or support claim is accepted by this packet |
 
 ## 1. Accepted inputs
 
@@ -49,10 +49,10 @@ model from its appearance or a retail family name.
 
 | Slot | Exact model/model number | OS and build | Total/free storage | Battery health or observed condition | Synthetic/adult media allowed? | Candidate role |
 |---|---|---|---|---|---|---|
-| iPhone | Owner to supply | Owner to supply | Owner to supply | Owner to supply | Owner to confirm | Required candidate |
-| Android phone | Owner to supply | Owner to supply | Owner to supply | Owner to supply | Owner to confirm | Required candidate |
-| iPad | Owner to supply | Owner to supply | Owner to supply | Owner to supply | Owner to confirm | Additional layout/device candidate |
-| Other owned device | Optional | Optional | Optional | Optional | Owner to confirm | Additional evidence only |
+| iPhone | iPhone 16 Pro Max; exact model number pending | Pending | Pending | Pending | Pending | Required iOS candidate |
+| iPhone | iPhone 17 Pro; exact model number pending | Pending | Pending | Pending | Pending | Additional/newer iOS candidate |
+| Android phone | Samsung phone described by owner as "latest"; exact product and model number pending | Pending | Pending | Pending | Pending | Required Android candidate after identification |
+| iPad | iPad Air; generation and exact model number pending | Pending | Pending | Pending | Pending | Additional layout/device candidate |
 
 Windows remains the development host. A physical iPhone/iPad result also requires
 a valid signed build from an authorized macOS/Xcode route. No paid build service,
@@ -100,24 +100,32 @@ cannot establish physical camera, battery, storage or thermal behaviour.
 
 Syed Ahmed, with a mobile lead if one is assigned, must:
 
-1. fill the exact device inventory in section 3;
-2. accept or revise the pilot support promise in section 2;
-3. accept or revise the repeats and thresholds in section 4, including the
-   proposed dual-source skew/drift value;
-4. confirm that every test device may hold synthetic/consenting-adult footage;
-5. identify any existing no-incremental-cost iOS build route, or retain iOS as
+1. complete the exact model number, OS/build, free-storage and battery fields in
+   section 3;
+2. confirm that every test device may hold synthetic/consenting-adult footage;
+3. identify any existing no-incremental-cost iOS build route, or retain iOS as
    blocked without authorizing spend; and
-6. record the dated decision before SP-014 through SP-016 device trials begin.
+4. record the final inventory decision before SP-014 through SP-016 device trials
+   begin.
+
+Syed Ahmed accepted the support promise, repeats and thresholds in sections 2 and
+4 on 16 September 2026, including the proposed dual-source skew/drift value. He
+reported access to an iPhone 16 Pro Max, iPhone 17 Pro, iPad Air and a latest-model
+Samsung phone. The incomplete identifiers above are intentionally not converted
+into claims about generation, operating system, storage, battery condition or
+test-media authority.
 
 ## 7. Acceptance checklist
 
-- [ ] `AC-SP-126-01` — thresholds and measurement method are dated and accepted
+- [x] `AC-SP-126-01` — thresholds and measurement method are dated and accepted
   before SP-014 onward.
-- [ ] `AC-SP-126-02` — every failure has a truthful fallback or explicit exclusion.
-- [ ] `AC-SP-126-03` — only synthetic/consenting-adult test footage is authorized.
+- [x] `AC-SP-126-02` — every specified failure has a truthful fallback or explicit
+  exclusion; execution evidence remains future work.
+- [ ] `AC-SP-126-03` — the owner must confirm that each named device may hold only
+  synthetic/consenting-adult test footage for these trials.
 - [ ] Exact named devices and OS versions are recorded.
 - [ ] No physical-device result, iOS build route or paid access has been invented.
 
-Until the owner supplies and accepts the missing values, `ACT-SP-126-01`,
-`ACT-SP-126-02` and SP-126 remain open. This packet prepares the review; it does
-not itself establish device support.
+`ACT-SP-126-01` is accepted as decision preparation. Until the owner supplies and
+accepts the missing inventory and test-media values, `ACT-SP-126-02` and SP-126
+remain open. This packet does not itself establish device support.
