@@ -1,12 +1,26 @@
 # ACT-SP-152-02 — Recommendation fixtures
 
-| Required case | Expected deterministic result |
-|---|---|
-| No equipment | Offer the named no-equipment/easier approved alternative; otherwise no recommendation |
-| Limited time | Offer one eligible short activity; never compress or combine workload |
-| Missed session | Resume the current eligible step; no punishment or automatic jump |
-| Younger advanced player | Apply age/supervision gates before ability; offer only an age-suitable approved variant |
-| Older beginner | Offer the foundation variant using neutral language |
-| Conflicting club assignments | Current authorized club assignment wins; do not combine workloads |
+Version `sp152-v1` contains concrete machine-readable inputs and expected
+outputs in `contracts/content/sp151-sp153-fixtures.json`.
 
-Machine-readable inputs, outputs, explanations, missing-input and offline cases are in `contracts/content/sp151-sp153-fixtures.json`.
+| Fixture | Expected deterministic result |
+|---|---|
+| No ball | No action, `BALL_REQUIRED`; no drill is invented |
+| Limited time | One exact activity whose full approved duration fits |
+| Missed session | Resume one current eligible step; no catch-up stacking |
+| Younger advanced player | Repeat the exact age-suitable step; no older-age branch |
+| Older beginner | Exact foundation variant with neutral explanation |
+| Conflicting club assignments | No action, `ASSIGNMENT_CONFLICT`; select/reschedule through an authorized route |
+| Missing supervision input | No action, `REQUIRED_INPUT_MISSING` |
+| Withdrawn next variant | No action, `CONTENT_WITHDRAWN` |
+| Expired assignment | No action, `ASSIGNMENT_EXPIRED` |
+| Current signed offline result | Display that one signed result without recalculation |
+| Stale signed offline result | No action, `OFFLINE_RECOMMENDATION_EXPIRED` |
+| Parent attempts to edit ability | No action, `EDIT_NOT_ALLOWED` |
+| Completion without reassessment | Repeat the current step; assessed ability remains unchanged |
+| Approved easier alternative | Return the one exact named fallback |
+
+Each expected output has one action object or `null`, a stable reason code and a
+plain-language explanation. Inputs carry sufficient age, pathway, assignment,
+resource, duration, authority and freshness facts for the expected decision;
+unknowns are explicit rather than inferred.

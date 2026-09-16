@@ -86,16 +86,100 @@
     "inventAlternativeAllowed": false,
     "partnerAndReboundInterchangeableByDefault": false
   },
+  "recommendationRules": {
+    "version": "sp152-v1",
+    "status": "accepted-pilot-baseline",
+    "accountableOwner": "Syed Ahmed",
+    "coachingApprover": "Aaron M",
+    "approvedDate": "2026-09-16",
+    "selectedContextRequired": true,
+    "editableTodayInputs": ["available-time", "equipment", "space", "assistance"],
+    "immutableEvaluatorInputs": ["content-approval", "withdrawal", "safety", "age", "assessed-ability", "assignment-origin", "coaching-evidence"],
+    "assignmentConflictResult": "no-recommendation",
+    "missingBallResult": "no-recommendation",
+    "limitedTimeRequiresFullApprovedDuration": true,
+    "missedSessionStacksWorkload": false,
+    "guardianMayRequestReassessment": true,
+    "coachApprovedEvidenceChangesProgression": true,
+    "offline": {
+      "calculateNewRecommendation": false,
+      "displaySignedRecommendationOnly": true,
+      "sameLocalDecisionDayOnly": true,
+      "maximumHours": 24
+    }
+  },
   "precedence": ["safety-or-approval", "authority-or-assignment", "age-supervision-ability", "resources-and-time", "workload-conflict", "next-path-step", "easier-alternative", "no-recommendation"],
   "recommendationFixtures": [
-    {"case": "no-equipment", "result": "easier-approved-or-none", "oneAction": true, "reason": true},
-    {"case": "limited-time", "result": "one-short-eligible-action", "oneAction": true, "reason": true},
-    {"case": "missed-session", "result": "resume-current-eligible-step", "oneAction": true, "reason": true},
-    {"case": "younger-advanced", "result": "age-suitable-approved-only", "oneAction": true, "reason": true},
-    {"case": "older-beginner", "result": "foundation-neutral-language", "oneAction": true, "reason": true},
-    {"case": "conflicting-club-assignments", "result": "current-authorized-assignment-only", "oneAction": true, "reason": true},
-    {"case": "missing-required-input", "result": "no-recommendation", "oneAction": false, "reason": true},
-    {"case": "offline-stale", "result": "display-last-signed-no-recalculation", "oneAction": false, "reason": true}
+    {
+      "case": "no-equipment",
+      "input": {"selectedContext": "household", "pathway": "ball-control", "candidate": "D01.base.v1", "ballAvailable": false, "availableMinutes": 15},
+      "expected": {"action": null, "reasonCode": "BALL_REQUIRED", "explanation": "A ball is required for the approved pilot activities."}
+    },
+    {
+      "case": "limited-time",
+      "input": {"selectedContext": "household", "pathway": "ball-control", "candidate": "D01.base.v1", "candidateApprovedMinutes": 8, "availableMinutes": 10, "ballAvailable": true},
+      "expected": {"action": {"type": "start", "variant": "D01.base.v1"}, "reasonCode": "FULL_ACTIVITY_FITS", "explanation": "This complete approved activity fits the available time."}
+    },
+    {
+      "case": "missed-session",
+      "input": {"selectedContext": "household", "pathway": "ball-control", "currentStep": "D02.base.v1", "assignmentCurrent": true, "variantCurrent": true, "missedPreviousSession": true},
+      "expected": {"action": {"type": "resume", "variant": "D02.base.v1"}, "reasonCode": "RESUME_CURRENT_STEP", "explanation": "Resume the current approved step without adding catch-up workload.", "stackWorkload": false}
+    },
+    {
+      "case": "younger-advanced",
+      "input": {"selectedContext": "household", "pathway": "ball-control", "age": 7, "assessedAbility": "advanced", "currentStep": "D03.base.v1"},
+      "expected": {"action": {"type": "repeat", "variant": "D03.base.v1"}, "reasonCode": "AGE_ROUTE_ENDPOINT", "explanation": "Repeat the age-suitable approved step; the age 8+ branch is unavailable."}
+    },
+    {
+      "case": "older-beginner",
+      "input": {"selectedContext": "household", "pathway": "ball-control", "age": 16, "assessedAbility": "foundation"},
+      "expected": {"action": {"type": "start", "variant": "D01.base.v1"}, "reasonCode": "FOUNDATION_START", "explanation": "Start with the foundation activity that matches current experience."}
+    },
+    {
+      "case": "conflicting-club-assignments",
+      "input": {"selectedContext": "household", "currentAssignments": [{"origin": "club-a", "variant": "D03.base.v1"}, {"origin": "club-b", "variant": "D05.base.v1"}]},
+      "expected": {"action": null, "reasonCode": "ASSIGNMENT_CONFLICT", "explanation": "Two current assignments conflict; choose or reschedule through an authorized route."}
+    },
+    {
+      "case": "missing-required-input",
+      "input": {"selectedContext": "household", "pathway": "receive-finish", "candidate": "D10.base.v1", "supervision": "unknown"},
+      "expected": {"action": null, "reasonCode": "REQUIRED_INPUT_MISSING", "explanation": "Required supervision information is missing."}
+    },
+    {
+      "case": "withdrawn-next-variant",
+      "input": {"selectedContext": "household", "pathway": "ball-control", "candidate": "D03.base.v1", "withdrawn": true},
+      "expected": {"action": null, "reasonCode": "CONTENT_WITHDRAWN", "explanation": "The next activity is withdrawn and cannot be offered."}
+    },
+    {
+      "case": "expired-assignment",
+      "input": {"selectedContext": "club", "candidate": "D05.base.v1", "assignmentCurrent": false},
+      "expected": {"action": null, "reasonCode": "ASSIGNMENT_EXPIRED", "explanation": "The assignment is no longer current."}
+    },
+    {
+      "case": "offline-current",
+      "input": {"offline": true, "signedVariant": "D02.base.v1", "sameLocalDecisionDay": true, "ageHours": 4, "signatureValid": true},
+      "expected": {"action": {"type": "display-signed", "variant": "D02.base.v1"}, "reasonCode": "SIGNED_OFFLINE_CURRENT", "explanation": "Displaying the current signed recommendation without recalculation.", "calculatedOffline": false}
+    },
+    {
+      "case": "offline-stale",
+      "input": {"offline": true, "signedVariant": "D02.base.v1", "sameLocalDecisionDay": false, "ageHours": 25, "signatureValid": true},
+      "expected": {"action": null, "reasonCode": "OFFLINE_RECOMMENDATION_EXPIRED", "explanation": "Reconnect to receive a current recommendation.", "calculatedOffline": false}
+    },
+    {
+      "case": "parent-edit-ability",
+      "input": {"selectedContext": "household", "actor": "guardian", "requestedEdit": "assessed-ability"},
+      "expected": {"action": null, "reasonCode": "EDIT_NOT_ALLOWED", "explanation": "Assessed ability can change only through coach-approved evidence."}
+    },
+    {
+      "case": "completion-without-reassessment",
+      "input": {"selectedContext": "household", "pathway": "ball-control", "currentStep": "D03.base.v1", "completed": true, "coachReassessment": false, "assessedAbility": "foundation"},
+      "expected": {"action": {"type": "repeat", "variant": "D03.base.v1"}, "reasonCode": "REASSESSMENT_REQUIRED", "explanation": "Completion records practice; coach-approved reassessment is required for progression.", "assessedAbilityAfter": "foundation", "workloadIncrease": false}
+    },
+    {
+      "case": "approved-easier-alternative",
+      "input": {"selectedContext": "household", "pathway": "passing", "candidate": "D06.base.v1", "candidateEligible": false, "namedFallback": "D05.base.v1", "fallbackEligible": true},
+      "expected": {"action": {"type": "start-easier", "variant": "D05.base.v1"}, "reasonCode": "NAMED_EASIER_ALTERNATIVE", "explanation": "The exact approved easier alternative is eligible."}
+    }
   ],
   "invariants": {
     "completionChangesAbility": false,
@@ -105,11 +189,89 @@
     "positionRelevanceBlocksEligibility": false,
     "inventUnapprovedActivity": false
   },
+  "skillCheckRules": {
+    "version": "sp153-v1",
+    "status": "accepted-pilot-baseline",
+    "accountableOwner": "Syed Ahmed",
+    "coachingApprover": "Aaron M",
+    "approvedDate": "2026-09-16",
+    "formalComparableRetestMinimumDays": 7,
+    "earlyRetest": "valid-standalone-not-trend-comparable",
+    "maximumReplacementAttemptsPerInvalidAttempt": 1,
+    "incompleteSafeMeasuredSetResult": "NO_RESULT",
+    "recordingRequired": false,
+    "comparisonPopulation": "same-player-only",
+    "ageNormsAllowed": false,
+    "talentScoresAllowed": false,
+    "timerCompletionCertifiesTechnique": false,
+    "childReflectionCreatesFormalResult": false,
+    "observationSources": ["coach-observed", "guardian-observed", "adult-player-self-observed"],
+    "assistanceModes": ["none", "standard-verbal-cue", "adult-setup", "adult-retrieval", "partner-service", "physical-assistance"],
+    "correctionMode": "append-only"
+  },
   "protocols": [
-    {"id": "P01-D01-v1", "attempts": 2, "unit": "controlled-touches-per-20-seconds", "retestDays": 7, "recordingRequired": false},
-    {"id": "P02-D03-v1", "attempts": 4, "unit": "controlled-stop-journeys", "retestDays": 7, "recordingRequired": false},
-    {"id": "P03-D05-v1", "attempts": 6, "unit": "valid-ground-passes-through-gate", "retestDays": 7, "recordingRequired": false}
+    {
+      "id": "P01-D01-v1",
+      "drillVariant": "D01.base.v1",
+      "setup": {"ballCount": 1, "areaMetres": [2, 2], "surface": "clear-level-recorded", "footwearRecorded": true},
+      "familiarisation": {"attempts": 1, "durationSeconds": 20, "scored": false, "restAfterSeconds": 30},
+      "measured": {"attempts": 2, "durationSecondsEach": 20, "restSeconds": 30},
+      "unit": "controlled-alternating-touches-per-set",
+      "result": "store-each-set-raw-count",
+      "unsuccessfulExecution": "uncontrolled-touch-not-counted-no-extra-time",
+      "invalidAttempt": ["external-interruption", "wrong-setup", "unobservable-set", "unsafe-condition"],
+      "permittedAssistance": ["none", "standard-verbal-cue", "adult-setup"],
+      "stopConditions": ["pain", "distress", "dizziness", "unsafe-surface", "obstruction", "uncontrolled-ball-path", "lost-safe-space"],
+      "retestDays": 7,
+      "recordingRequired": false
+    },
+    {
+      "id": "P02-D03-v1",
+      "drillVariant": "D03.base.v1",
+      "setup": {"ballCount": 1, "markerCount": 2, "laneLengthMetresRecorded": true, "safeRunOffRequired": true, "cueModeRecorded": true, "surface": "clear-level-recorded", "footwearRecorded": true},
+      "familiarisation": {"attempts": 1, "unit": "journey", "scored": false, "resetAfter": true},
+      "measured": {"attempts": 4, "resetAfterEach": true},
+      "unit": "controlled-stop-journeys-out-of-four",
+      "result": "integer-0-to-4",
+      "unsuccessfulExecution": "valid-journey-zero-outcome",
+      "invalidAttempt": ["external-interruption", "wrong-route-or-setup", "unobservable-stop", "unsafe-condition"],
+      "permittedAssistance": ["none", "standard-verbal-cue", "adult-setup"],
+      "stopConditions": ["pain", "distress", "dizziness", "unsafe-surface", "obstruction", "uncontrolled-ball-path", "lost-safe-space"],
+      "retestDays": 7,
+      "recordingRequired": false
+    },
+    {
+      "id": "P03-D05-v1",
+      "drillVariant": "D05.base.v1",
+      "setup": {"ballCount": 1, "gateConeCount": 2, "passDistanceRecorded": true, "gateWidthRecorded": true, "safeRetrievalSpaceRequired": true, "ballSurfaceFootwearRecorded": true, "footOrSideRecorded": true, "retrievalModeRecorded": true},
+      "familiarisation": {"attempts": 1, "unit": "pass", "scored": false, "resetAfter": true},
+      "measured": {"attempts": 6, "resetAfterEach": true},
+      "unit": "valid-ground-passes-through-gate-out-of-six",
+      "result": "integer-0-to-6",
+      "unsuccessfulExecution": "missed-gate-valid-zero-outcome",
+      "invalidAttempt": ["external-interruption", "wrong-setup", "unsafe-retrieval", "unobservable-attempt", "unsafe-condition"],
+      "permittedAssistance": ["none", "adult-setup", "adult-retrieval", "partner-service"],
+      "stopConditions": ["pain", "distress", "dizziness", "unsafe-surface", "obstruction", "uncontrolled-ball-path", "lost-safe-space"],
+      "retestDays": 7,
+      "recordingRequired": false
+    }
   ],
-  "comparabilityFields": ["protocol-version", "setup", "equipment", "surface", "assistance", "observation-source", "foot-or-side"],
-  "skillFixtures": ["matching-conditions", "changed-surface", "changed-assistance", "coach-observation", "parent-limited-observation", "no-video-valid", "unsafe-no-result", "missing-fields-no-result", "append-only-correction"]
+  "comparabilityFields": ["protocol-version", "setup-dimensions", "equipment-and-ball", "surface", "footwear", "measured-attempt-count", "familiarisation-and-rest", "assistance-and-service", "observation-source", "foot-or-side", "material-environment"],
+  "skillFixtures": [
+    {"case": "matching-conditions", "input": {"allComparabilityFieldsMatch": true, "daysSincePrior": 7}, "expected": {"valid": true, "comparable": true, "state": "COMPARABLE"}},
+    {"case": "changed-surface", "input": {"changedFields": ["surface"], "safe": true}, "expected": {"valid": true, "comparable": false, "state": "NOT_COMPARABLE_CHANGED_CONDITIONS"}},
+    {"case": "changed-assistance", "input": {"changedFields": ["assistance-and-service"], "safe": true}, "expected": {"valid": true, "comparable": false, "state": "NOT_COMPARABLE_CHANGED_CONDITIONS"}},
+    {"case": "coach-observation", "input": {"observationSource": "coach-observed"}, "expected": {"valid": true, "sourceRetained": true}},
+    {"case": "parent-limited-observation", "input": {"observationSource": "guardian-observed"}, "expected": {"valid": true, "sourceRetained": true, "certifiesTechnique": false, "changesProgression": false}},
+    {"case": "adult-self-observation", "input": {"observationSource": "adult-player-self-observed"}, "expected": {"valid": true, "sourceRetained": true}},
+    {"case": "no-video-valid", "input": {"video": null, "sufficientDirectObservation": true}, "expected": {"valid": true, "state": "VALID_NO_VIDEO"}},
+    {"case": "unsafe-no-result", "input": {"safe": false}, "expected": {"valid": false, "state": "NO_RESULT"}},
+    {"case": "missing-fields-no-result", "input": {"missingRequiredFields": ["setup-dimensions"]}, "expected": {"valid": false, "state": "NO_RESULT"}},
+    {"case": "unsuccessful-valid-attempt", "input": {"protocol": "P03-D05-v1", "missedGate": true, "externalInterference": false}, "expected": {"valid": true, "attemptOutcome": 0}},
+    {"case": "external-invalid-replaced", "input": {"externalInterference": true, "replacementNumber": 1}, "expected": {"valid": true, "replacementAllowed": true}},
+    {"case": "too-many-invalid-no-result", "input": {"externalInterference": true, "replacementNumber": 2}, "expected": {"valid": false, "replacementAllowed": false, "state": "NO_RESULT"}},
+    {"case": "early-retest-standalone", "input": {"daysSincePrior": 4, "safe": true}, "expected": {"valid": true, "comparable": false, "state": "VALID_STANDALONE_EARLY_RETEST"}},
+    {"case": "timer-completion-no-certification", "input": {"timerCompleted": true, "observedSkillResult": false}, "expected": {"valid": false, "certifiesTechnique": false, "changesProgression": false, "state": "NO_RESULT"}},
+    {"case": "append-only-correction", "input": {"correctionRequested": true}, "expected": {"appendOnly": true, "originalRetained": true, "requiredFields": ["original-result", "replacement-value", "reason", "author", "observation-source", "protocol-version", "timestamp"]}}
+  ]
 }

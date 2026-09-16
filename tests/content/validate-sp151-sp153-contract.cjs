@@ -69,9 +69,46 @@ c.eligibility.inventAlternativeAllowed === false || fail('unapproved alternative
 c.eligibility.partnerAndReboundInterchangeableByDefault === false || fail('partner and rebound cannot be interchangeable by default');
 c.precedence.length === 8 || fail('ordered precedence incomplete');
 
+const rules = c.recommendationRules;
+rules.version === 'sp152-v1' && rules.status === 'accepted-pilot-baseline' || fail('SP-152 accepted ruleset missing');
+rules.accountableOwner === 'Syed Ahmed' && rules.coachingApprover === 'Aaron M' || fail('SP-152 approval metadata missing');
+rules.selectedContextRequired === true || fail('one selected context must be required');
+equal(rules.editableTodayInputs, ['available-time', 'equipment', 'space', 'assistance'], 'editable inputs changed');
+['content-approval', 'withdrawal', 'safety', 'age', 'assessed-ability', 'assignment-origin', 'coaching-evidence'].every(field => rules.immutableEvaluatorInputs.includes(field)) || fail('immutable evaluator input missing');
+rules.assignmentConflictResult === 'no-recommendation' || fail('assignment conflicts must not be silently resolved');
+rules.missingBallResult === 'no-recommendation' || fail('missing ball must not invent an activity');
+rules.limitedTimeRequiresFullApprovedDuration === true || fail('limited time cannot compress an activity');
+rules.missedSessionStacksWorkload === false || fail('missed sessions cannot stack workload');
+rules.guardianMayRequestReassessment === true && rules.coachApprovedEvidenceChangesProgression === true || fail('reassessment authority mismatch');
+rules.offline.calculateNewRecommendation === false || fail('offline mode cannot calculate a recommendation');
+rules.offline.displaySignedRecommendationOnly === true || fail('offline mode must use signed recommendations only');
+rules.offline.sameLocalDecisionDayOnly === true && rules.offline.maximumHours === 24 || fail('offline freshness boundary mismatch');
+
 const required = ['no-equipment', 'limited-time', 'missed-session', 'younger-advanced', 'older-beginner', 'conflicting-club-assignments'];
-required.every(name => c.recommendationFixtures.some(fixture => fixture.case === name && fixture.reason)) || fail('required recommendation fixture missing');
-c.recommendationFixtures.every(fixture => fixture.reason && (fixture.oneAction || fixture.result.includes('no-recommendation') || fixture.case === 'offline-stale')) || fail('fixture lacks one action or explicit none');
+const fixtureByCase = new Map(c.recommendationFixtures.map(fixture => [fixture.case, fixture]));
+required.every(name => fixtureByCase.has(name)) || fail('required recommendation fixture missing');
+fixtureByCase.size === c.recommendationFixtures.length || fail('duplicate recommendation fixture case');
+for (const fixture of c.recommendationFixtures) {
+  fixture.input && typeof fixture.input === 'object' || fail(`${fixture.case} input missing`);
+  fixture.expected && typeof fixture.expected === 'object' || fail(`${fixture.case} expected output missing`);
+  fixture.expected.reasonCode?.trim() || fail(`${fixture.case} reason code missing`);
+  fixture.expected.explanation?.trim() || fail(`${fixture.case} explanation missing`);
+  if (fixture.expected.action !== null) {
+    typeof fixture.expected.action === 'object' && !Array.isArray(fixture.expected.action) || fail(`${fixture.case} must return one action object`);
+    fixture.expected.action.type?.trim() || fail(`${fixture.case} action type missing`);
+    isApprovedVariant(fixture.expected.action.variant) || fail(`${fixture.case} action uses an unavailable or inexact variant`);
+  }
+}
+fixtureByCase.get('no-equipment').expected.action === null || fail('no-equipment must return no action when the ball is missing');
+fixtureByCase.get('limited-time').input.candidateApprovedMinutes <= fixtureByCase.get('limited-time').input.availableMinutes || fail('limited-time fixture does not fit');
+fixtureByCase.get('missed-session').expected.stackWorkload === false || fail('missed session stacks workload');
+fixtureByCase.get('younger-advanced').expected.action.variant === 'D03.base.v1' || fail('younger advanced fixture bypasses the age route');
+fixtureByCase.get('older-beginner').expected.action.variant === 'D01.base.v1' || fail('older beginner does not receive the foundation start');
+fixtureByCase.get('conflicting-club-assignments').expected.action === null || fail('conflicting assignments must return no action');
+fixtureByCase.get('offline-current').expected.calculatedOffline === false || fail('current offline result was recalculated');
+fixtureByCase.get('offline-stale').expected.action === null && fixtureByCase.get('offline-stale').expected.calculatedOffline === false || fail('stale offline result must return no action without calculation');
+fixtureByCase.get('completion-without-reassessment').expected.assessedAbilityAfter === fixtureByCase.get('completion-without-reassessment').input.assessedAbility || fail('completion changed assessed ability');
+fixtureByCase.get('completion-without-reassessment').expected.workloadIncrease === false || fail('completion increased workload');
 c.invariants.completionChangesAbility === false || fail('completion cannot change ability');
 c.invariants.completionChangesWorkload === false || fail('completion cannot change workload');
 c.invariants.parentObservationChangesProgression === false || fail('parent observation cannot change progression');
@@ -79,9 +116,49 @@ c.invariants.coachApprovedAssessmentRequired === true || fail('coach-approved as
 c.invariants.positionRelevanceBlocksEligibility === false || fail('position relevance cannot block eligibility');
 c.invariants.inventUnapprovedActivity === false || fail('unapproved activities cannot be invented');
 
-c.protocols.length === 3 || fail('three skill protocols required');
-c.protocols.every(protocol => protocol.recordingRequired === false && protocol.retestDays === 7) || fail('skill protocol safety/default mismatch');
-['protocol-version', 'setup', 'equipment', 'surface', 'assistance', 'observation-source', 'foot-or-side'].every(field => c.comparabilityFields.includes(field)) || fail('comparability field missing');
-['no-video-valid', 'unsafe-no-result', 'parent-limited-observation', 'append-only-correction'].every(name => c.skillFixtures.includes(name)) || fail('skill fixture missing');
+c.skillCheckRules.version === 'sp153-v1' && c.skillCheckRules.status === 'accepted-pilot-baseline' || fail('SP-153 accepted protocol catalog missing');
+c.skillCheckRules.accountableOwner === 'Syed Ahmed' && c.skillCheckRules.coachingApprover === 'Aaron M' || fail('SP-153 approval metadata missing');
+c.skillCheckRules.formalComparableRetestMinimumDays === 7 || fail('formal retest minimum must be seven days');
+c.skillCheckRules.earlyRetest === 'valid-standalone-not-trend-comparable' || fail('early retest policy mismatch');
+c.skillCheckRules.maximumReplacementAttemptsPerInvalidAttempt === 1 || fail('invalid-attempt replacement limit mismatch');
+c.skillCheckRules.incompleteSafeMeasuredSetResult === 'NO_RESULT' || fail('incomplete safe measured set must produce no result');
+c.skillCheckRules.recordingRequired === false || fail('recording cannot be required');
+c.skillCheckRules.comparisonPopulation === 'same-player-only' || fail('comparison must be personal only');
+c.skillCheckRules.ageNormsAllowed === false && c.skillCheckRules.talentScoresAllowed === false || fail('norms or talent scores cannot be allowed');
+c.skillCheckRules.timerCompletionCertifiesTechnique === false || fail('timer completion cannot certify technique');
+c.skillCheckRules.childReflectionCreatesFormalResult === false || fail('child reflection cannot create a formal result');
+equal(c.skillCheckRules.observationSources, ['coach-observed', 'guardian-observed', 'adult-player-self-observed'], 'observation sources changed');
+c.skillCheckRules.correctionMode === 'append-only' || fail('corrections must be append-only');
 
-console.log(`PASS: SP-151 accepted pathway contract and SP-152-SP-153 fixtures; ${c.pathways.length} pathways, ${c.pathways.reduce((total, pathway) => total + pathway.ageSegments.length, 0)} age routes, ${c.recommendationFixtures.length + c.skillFixtures.length} deterministic fixtures.`);
+c.protocols.length === 3 || fail('three skill protocols required');
+equal(c.protocols.map(protocol => protocol.id), ['P01-D01-v1', 'P02-D03-v1', 'P03-D05-v1'], 'protocol identities changed');
+equal(c.protocols.map(protocol => protocol.drillVariant), ['D01.base.v1', 'D03.base.v1', 'D05.base.v1'], 'protocol drill bindings changed');
+for (const protocol of c.protocols) {
+  protocol.setup && typeof protocol.setup === 'object' || fail(`${protocol.id} setup missing`);
+  protocol.familiarisation?.attempts === 1 && protocol.familiarisation.scored === false || fail(`${protocol.id} familiarisation mismatch`);
+  protocol.measured?.attempts > 0 || fail(`${protocol.id} measured attempts missing`);
+  protocol.unit?.trim() && protocol.result?.trim() || fail(`${protocol.id} result contract missing`);
+  protocol.unsuccessfulExecution?.trim() || fail(`${protocol.id} unsuccessful-execution rule missing`);
+  protocol.invalidAttempt?.length > 0 || fail(`${protocol.id} invalid-attempt rules missing`);
+  protocol.permittedAssistance?.length > 0 || fail(`${protocol.id} permitted assistance missing`);
+  protocol.stopConditions?.length >= 5 || fail(`${protocol.id} stop conditions incomplete`);
+  protocol.recordingRequired === false && protocol.retestDays === 7 || fail(`${protocol.id} safety/default mismatch`);
+}
+['protocol-version', 'setup-dimensions', 'equipment-and-ball', 'surface', 'footwear', 'measured-attempt-count', 'familiarisation-and-rest', 'assistance-and-service', 'observation-source', 'foot-or-side', 'material-environment'].every(field => c.comparabilityFields.includes(field)) || fail('comparability field missing');
+
+const skillFixtureByCase = new Map(c.skillFixtures.map(fixture => [fixture.case, fixture]));
+skillFixtureByCase.size === c.skillFixtures.length || fail('duplicate skill fixture case');
+['matching-conditions', 'changed-surface', 'changed-assistance', 'coach-observation', 'parent-limited-observation', 'adult-self-observation', 'no-video-valid', 'unsafe-no-result', 'missing-fields-no-result', 'unsuccessful-valid-attempt', 'external-invalid-replaced', 'too-many-invalid-no-result', 'early-retest-standalone', 'timer-completion-no-certification', 'append-only-correction'].every(name => skillFixtureByCase.has(name)) || fail('skill fixture missing');
+skillFixtureByCase.get('matching-conditions').expected.comparable === true || fail('matching results must be comparable');
+skillFixtureByCase.get('changed-surface').expected.valid === true && skillFixtureByCase.get('changed-surface').expected.comparable === false || fail('changed surface must remain standalone');
+skillFixtureByCase.get('parent-limited-observation').expected.certifiesTechnique === false && skillFixtureByCase.get('parent-limited-observation').expected.changesProgression === false || fail('parent observation limits missing');
+skillFixtureByCase.get('no-video-valid').expected.valid === true || fail('no-video result should be valid when sufficiently observed');
+skillFixtureByCase.get('unsafe-no-result').expected.state === 'NO_RESULT' || fail('unsafe attempt must produce no result');
+skillFixtureByCase.get('unsuccessful-valid-attempt').expected.valid === true && skillFixtureByCase.get('unsuccessful-valid-attempt').expected.attemptOutcome === 0 || fail('unsuccessful execution was treated as invalid');
+skillFixtureByCase.get('external-invalid-replaced').expected.replacementAllowed === true || fail('first external invalid attempt must allow replacement');
+skillFixtureByCase.get('too-many-invalid-no-result').expected.replacementAllowed === false && skillFixtureByCase.get('too-many-invalid-no-result').expected.state === 'NO_RESULT' || fail('replacement limit not enforced');
+skillFixtureByCase.get('early-retest-standalone').expected.valid === true && skillFixtureByCase.get('early-retest-standalone').expected.comparable === false || fail('early retest must remain standalone');
+skillFixtureByCase.get('timer-completion-no-certification').expected.certifiesTechnique === false && skillFixtureByCase.get('timer-completion-no-certification').expected.changesProgression === false || fail('timer completion changed skill state');
+skillFixtureByCase.get('append-only-correction').expected.appendOnly === true && skillFixtureByCase.get('append-only-correction').expected.originalRetained === true || fail('correction history is not append-only');
+
+console.log(`PASS: SP-151-SP-153 accepted content contracts; ${c.pathways.length} pathways, ${c.pathways.reduce((total, pathway) => total + pathway.ageSegments.length, 0)} age routes, ${c.protocols.length} skill protocols, ${c.recommendationFixtures.length + c.skillFixtures.length} deterministic fixtures.`);
