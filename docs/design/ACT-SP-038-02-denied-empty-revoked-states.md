@@ -5,7 +5,7 @@
 | Activity | `ACT-SP-038-02` — Design denied, empty and revoked states |
 | Specification version | 1.0 accepted design direction |
 | Prepared | 15 September 2026 |
-| Current status | Accepted by Syed Ahmed as the locked paired-state direction; runtime evidence and final family acceptance pending |
+| Current status | Accepted by Syed Ahmed as the locked paired-state direction; SP-038 family accepted on 16 September 2026 and runtime evidence remains later |
 
 ## 1. State grammar
 
@@ -71,7 +71,7 @@ and require current MFA/approval where the accepted contract requires it.
 ## 5. Handoff result
 
 Syed Ahmed reviewed and locked this state set on 15 September 2026. It is
-machine-inventoried in `contracts/design/sp007-sp038-screen-states.json`. This
-activity-level acceptance does not claim that a web application, permissions,
-database, assistive technology or actual revocation has been implemented or
-tested, and it does not close ACT-SP-038-03 or SP-038.
+machine-inventoried in `contracts/design/sp007-sp038-screen-states.json`.
+ACT-SP-038-03 and the SP-038 design family were accepted on 16 September. The
+acceptance does not claim that a web application, permissions, database,
+assistive technology or actual revocation has been implemented or tested.

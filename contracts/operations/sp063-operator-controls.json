@@ -1,0 +1,48 @@
+{
+  "contract": "soccolo-sp063-operator-controls-v1",
+  "version": "1.0",
+  "preparedOn": "2026-09-16",
+  "status": "review-ready-human-evidence-pending",
+  "costPosture": "free-plan-pilot",
+  "recoveryPosture": {
+    "dedicatedBackup": false,
+    "customerRpoPromise": false,
+    "customerRtoPromise": false,
+    "participantDataRestoreClaim": false,
+    "originalDeviceCopyRequired": true
+  },
+  "roles": {
+    "primaryOperator": "Syed Ahmed (proposed)",
+    "alternateRecoveryCustodian": "unassigned",
+    "destructiveDataApprover": "unassigned-until-participant-data-service",
+    "independentSecurityReviewer": "unassigned"
+  },
+  "services": [
+    {"id":"github-account","state":"active","mfaEvidence":"owner-confirmation-pending","backupEvidence":"owner-confirmation-pending"},
+    {"id":"github-public-planning","state":"active","secretClass":"none-permitted"},
+    {"id":"github-private-implementation","state":"active","secretClass":"no-production-or-participant-data"},
+    {"id":"linear","state":"active","mfaEvidence":"passkey-and-session-review-pending","secretClass":"none-permitted"},
+    {"id":"google-identity","state":"active","mfaEvidence":"owner-confirmation-pending","backupEvidence":"owner-confirmation-pending"},
+    {"id":"runway-standard","state":"active","use":"review-media-only"},
+    {"id":"supabase-development","state":"not-provisioned","gate":"primary-and-backup-totp"},
+    {"id":"supabase-pilot-production","state":"not-provisioned","gate":"second-owner-and-separate-credentials-before-participant-data"},
+    {"id":"release-and-monitoring-providers","state":"not-provisioned","gate":"inventory-before-account-creation"}
+  ],
+  "requiredHumanConfirmations": [
+    "github-mfa-and-recovery",
+    "google-two-step-and-recovery",
+    "linear-passkey-sessions-apps-and-api-keys",
+    "alternate-recovery-custodian",
+    "primary-and-alternate-alert-route"
+  ],
+  "runbooks": [
+    "privileged-compromise",
+    "lost-factor",
+    "auth-and-config-rebuild",
+    "content-withdrawal",
+    "older-client-safe-degradation",
+    "operator-unavailable"
+  ],
+  "riskCoverage": ["R10","R11","R15","R16","R18"],
+  "prohibitedSecretLocations": ["public-repository","linear","agent-prompt","command-output","build-artifact"]
+}

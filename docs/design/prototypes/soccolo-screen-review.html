@@ -323,10 +323,10 @@
       el('stateChips').innerHTML = frame.states.map(item => `<span class="chip">${sentence(item)}</span>`).join('');
       el('stateSelect').innerHTML = frame.states.map(item => `<option value="${item}" ${item === reviewState ? 'selected' : ''}>${sentence(item)}</option>`).join('');
       el('dependency').textContent = frame.family === 'core'
-        ? 'Visual/state handoff prepared. Final SP-007 acceptance waits for SP-006, SP-077, SP-151–SP-155 and the product-owner youngest/adult review.'
+        ? 'Accepted SP-007 design handoff. Runtime, device and participant verification remains with later implementation activities.'
         : frame.family === 'administration'
-          ? 'Visual/state handoff prepared. Final SP-038 acceptance waits for accepted SP-007 and product/coach review.'
-          : 'Paired state inventory prepared. Final SP-077 acceptance needs owner review of F01–F33 and rendered contrast evidence.';
+          ? 'Accepted SP-038 design handoff. Server authorization, responsive-browser and assistive-technology evidence remains later.'
+          : 'Accepted SP-077 paired appearance contract. Native-device and assistive-technology verification remains later.';
       const device = el('device');
       device.className = `device ${orientation === 'landscape' ? 'landscape' : ''} ${frame.family === 'administration' ? 'admin' : ''}`;
       device.innerHTML = renderPreview(frame);

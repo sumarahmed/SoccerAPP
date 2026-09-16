@@ -3,12 +3,12 @@
 | Field | Review value |
 |---|---|
 | Activity | `ACT-SP-007-01` — Accept integrated outcome: Complete core screen and state design |
-| Handoff version | 0.1 review draft |
+| Handoff version | 1.0 accepted design handoff |
 | Prepared | 15 September 2026 |
 | Repository base | `32deae4df0f0903a892abb0bdf183657d9642508` on `main` |
 | Design route | Clearly labelled, editable repository handoff; Figma is optional under AC-SP-007-01 |
 | Brand source | `Soccolo-Brand-Bundle v4` |
-| Current status | Reviewable design prepared; integrated acceptance blocked by listed predecessors and owner review |
+| Current status | Accepted by Syed Ahmed on 16 September 2026; SP-007 complete as design/specification work |
 
 ## 1. Review artifacts
 
@@ -91,9 +91,10 @@ variant IDs rather than assuming that the drill name alone is releasable.
 | Acceptance | Current result |
 |---|---|
 | AC-SP-007-01 editable Figma or labelled handoff | Prepared — labelled editable repository handoff supplied |
-| AC-SP-007-02 all F01–F13 states and responsive training view | Prepared as design contract and machine inventory; owner review pending |
-| AC-SP-007-03 youngest and adult routes reviewed | Pending actual product-owner review |
+| AC-SP-007-02 all F01–F13 states and responsive training view | Accepted as design contract and machine inventory |
+| AC-SP-007-03 youngest and adult routes reviewed | Accepted by the product owner |
 
-Final SP-007 acceptance also waits for SP-151–SP-155, as the source backlog
-requires. Those activities carry real coaching, workload and safeguarding
-inputs; placeholder copy in this handoff is not their approval.
+SP-077 and SP-151–SP-155 are accepted predecessor decisions. Syed Ahmed accepted
+the integrated F01–F13 result, including the youngest-player and adult routes,
+on 16 September 2026. Runtime, device and participant evidence remains with the
+later implementation and validation activities.

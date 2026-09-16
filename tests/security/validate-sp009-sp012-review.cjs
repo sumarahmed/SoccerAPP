@@ -39,8 +39,9 @@ requireCheck(ci.includes('18 pgTAP policy assertions passed'), 'database asserti
 requireCheck(evidence.includes('**PARTIAL / ACCEPTED INTERIM RISK / NOT COMPLETE**'), 'SP-012 outcome is overstated');
 requireCheck(decision.includes('completes only the agent preparation activity'), 'ACT-SP-009-01 decision scope is missing');
 requireCheck(decision.includes('`ACT-SP-009-02`') && decision.includes('`SP-009` remain open'), 'ACT-SP-009-01 decision overstates family closure');
-requireCheck(/SP-151–SP-155\s+are now accepted/.test(integrated), 'SP-007 dependency reconciliation is missing');
-requireCheck(integrated.includes('SP-006 is not a direct SP-007 predecessor'), 'SP-006 boundary is missing');
+requireCheck(integrated.includes('SP-007 | ACCEPTED DESIGN CONTRACT'), 'SP-007 accepted state is missing');
+requireCheck(integrated.includes('SP-038 | ACCEPTED DESIGN CONTRACT'), 'SP-038 accepted state is missing');
+requireCheck(integrated.includes('PLAYER-RELEASE NOT ALLOWED'), 'SP-006 player-release boundary is missing');
 requireCheck(!/SP-009[^\n]{0,50}(?:is|:)[^\n]{0,20}(?:complete|accepted)/i.test(packet), 'SP-009 is incorrectly claimed complete');
 requireCheck(!/SP-012[^\n]{0,50}(?:is|:)[^\n]{0,20}(?:complete|accepted)/i.test(evidence), 'SP-012 is incorrectly claimed complete');
 

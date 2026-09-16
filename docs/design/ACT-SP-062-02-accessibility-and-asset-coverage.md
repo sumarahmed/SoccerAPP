@@ -48,7 +48,7 @@ screen evidence is blocked and administration entries are provisional.
 | Flow | Required coverage | Current disposition |
 |---|---|---|
 | F27 sign-in/MFA/recovery | Labels, autofill/paste, QR manual path, non-visual error/recovery, no forced recording | Contract defined; runtime evidence pending |
-| F28 player/guardian authority | Accessible player selection, authority explanation, dispute state and safe exit | Contract defined; SP-007 screen evidence blocked |
+| F28 player/guardian authority | Accessible player selection, authority explanation, dispute state and safe exit | SP-007 design accepted; implementation and assistive-technology evidence remain |
 | F29 coach/club access | Exact scope, expiry/revocation, readable status and conflict-safe route | Contract defined; SP-038 admin evidence provisional |
 | F30 practice/recording | Immediate accessible Stop, permission denial, captions/cues, orientation and reduced motion | Contract defined; content and runtime evidence blocked |
 | F31 media/export/share | Recipient/purpose/expiry stated, non-colour status, intro/outro has no flashing or essential visual-only instruction | Brand/export assets accepted; runtime evidence pending |

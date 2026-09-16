@@ -47,20 +47,20 @@ This is a product/security recommendation, not legal advice or a store approval.
 
 | Predecessor | Repository evidence | State for SP-009 |
 |---|---|---|
-| SP-007 | [Integrated SP-007/SP-038 verification](../design/SP-007-SP-038-integrated-verification.md) | **Open / final review-ready** — SP-151–SP-155 are accepted; explicit SP-077 visual acceptance and the product-owner youngest/adult route decision remain |
+| SP-007 | [Accepted core-screen decision](../decisions/SP-007-core-screen-and-state-design.md) | Accepted design input; runtime/device evidence remains later |
 | SP-008 | [Data map and access matrix](../decisions/SP-008-data-map-and-access-matrix.md) | Accepted design input |
 | SP-010 | [Recording/local-protection evidence](../design/ACT-SP-010-01-acceptance-evidence.md) | Accepted design input |
 | SP-011 | [Cloud lifecycle evidence](../design/ACT-SP-011-03-acceptance-evidence.md) | Accepted design input |
-| SP-038 | [Integrated SP-007/SP-038 verification](../design/SP-007-SP-038-integrated-verification.md) | **Open** — final verification depends on SP-007 |
+| SP-038 | [Accepted administration-flow decision](../decisions/SP-038-administration-and-membership-flows.md) | Accepted design input; runtime authorization/browser evidence remains later |
 | SP-059 | [Identity and MFA evidence](ACT-SP-059-03-acceptance-evidence.md) | Accepted design input |
 | SP-060 | [Web/API and media evidence](ACT-SP-060-03-acceptance-evidence.md) | Accepted design input |
 | SP-061 | [Retention and data-rights evidence](ACT-SP-061-03-acceptance-evidence.md) | Accepted design input |
 | SP-062 | [Safeguarding/accessibility evidence](../design/ACT-SP-062-03-acceptance-evidence.md) | Accepted design input; qualified safeguarding review still a release gate |
-| SP-063 | [Source family](../delivery/soccer_delivery_backlog.md#sp-063--specify-operator-key-and-recovery-runbooks) | **Open** — no operator/key/recovery runbook artifacts exist |
+| SP-063 | [Prepared acceptance candidate](../operations/ACT-SP-063-03-acceptance-evidence.md) | **Open** — runbooks now exist; owner setup confirmations, alternate custody and security review remain |
 
 `ACT-SP-009-01` may be reviewed as a packet. `ACT-SP-009-02` and `SP-009`
-must not be marked complete until the three open predecessors and the named human
-decision are resolved.
+must not be marked complete until SP-063 and the named human decision are
+resolved.
 
 ## 3. S01–S27 control, owner and gate map
 
@@ -84,13 +84,13 @@ specialist or operator decision remains required.
 | S12 | SP-003 evidence binding plus private current-commit checks | Technical lead, G2 | Checks pass; GitHub plan cannot enforce them on private `main` |
 | S13 | Pinned GitHub Actions and secret/static guards in private repo | Technical lead, G2/G3 | Partial Runtime; app dependency locks and Dart/mobile scans do not yet exist |
 | S14 | SP-005/SP-006/SP-151–153 content and review records | Coach/content owner, G1/G3 | Pilot drills reviewed; animation placeholders and release-asset gates remain explicit |
-| S15 | SP-050 limits plus proposed SP-063 operations | Operator/founder, G1/G3 | **Open** — no accepted operator, alert, key or recovery runbooks |
+| S15 | SP-050 limits plus proposed SP-063 operations | Operator/founder, G1/G3 | **Open** — runbooks prepared; owner setup confirmations, alternate and reviewer remain |
 | S16 | SP-048 commerce contract and later sandbox/release activities | Billing/release owner, G5 | Design only; no production payments or store release authorized |
 | S17 | SP-001/SP-050/SP-061 market/data assumptions | Founder/privacy adviser, G1/G5 | Australia-first direction fixed; specialist review and final notices remain Human |
 | S18 | SP-037 scope model and private SP-039 RLS/projection proof | Backend/security lead, G3 | First two-club/two-household runtime suite passes; wider APIs remain Runtime |
 | S19 | SP-037/SP-084/SP-151–153 immutable content/pathway rules | Content/technical leads, G3 | Design; SP-086/SP-156 implementation remains |
 | S20 | SP-037/SP-059/SP-061 invitations, departures and guardian transitions | Identity/privacy owner, G3 | Design; runtime lifecycle coverage remains |
-| S21 | SP-037/SP-059/SP-060 privileged web/API boundaries | Web/security reviewer, G3 | Design; SP-038 final verification and portal implementation remain open |
+| S21 | SP-037/SP-059/SP-060 privileged web/API boundaries | Web/security reviewer, G3 | SP-038 design accepted; portal/API implementation remains open |
 | S22 | SP-037/SP-048/SP-154 separate billing, assignment and media grants | Product/privacy/technical owners, G3 | Design; end-to-end grant/revocation tests remain Runtime |
 | S23 | SP-047 and planned SP-051 local namespaces/migration/outbox work | Mobile/backend lead, G3 | Design only; real SQLite/device evidence remains Runtime |
 | S24 | SP-048 and planned SP-052/SP-054 billing ledger/webhook work | Billing/backend lead, G3/G5 | Design only; provider sandbox evidence remains Runtime |
@@ -130,7 +130,7 @@ specialist or operator decision remains required.
 | Flutter player experience | Restricted player credential; local-first practice; immediate Stop; camera/microphone optional; no adult capability inherited from device mode | Design covered; app/device implementation absent |
 | Adult/guardian mobile experience | Explicit player context; guardian authority; recording/upload/share/purchase behind adult authorization | Design covered; implementation absent |
 | Coach/club experience | Limited enrollment/completion projection; no household authority or media access by role; assigned feedback only | Design covered; first RLS projection proof passes |
-| Administrative web | Server-mediated adult session, MFA/step-up, no service key/browser-wide token, attributable privileged actions | Design covered; SP-038 final verification and portal absent |
+| Administrative web | Server-mediated adult session, MFA/step-up, no service key/browser-wide token, attributable privileged actions | SP-038 design accepted; portal/runtime evidence absent |
 | Direct API/database/storage | Canonical server scope, RLS and ownership-preserving references; direct-client negative tests; purpose-bound media grants | First SP-039 suite passes; complete endpoint/storage coverage absent |
 | Offline/reconnect | Local namespace isolation; deletion/withdrawal wins; expired authority cannot silently replay | Design covered; SQLite/device/runtime proof absent |
 
@@ -183,15 +183,14 @@ Current official references:
 
 The following remain explicit and are not converted into approvals by this packet:
 
-1. Resolve and record the actual current state of SP-007 and SP-038 against their
-   remaining repository gates.
-2. Complete SP-063 operator, key-custody, recovery, alert and compatibility runbooks.
-3. Name the accountable privacy/security reviewer and independent reviewer for
+1. Complete SP-063 owner setup confirmation, alternate-custody and review steps
+   against the prepared operator, recovery, alert and compatibility runbooks.
+2. Name the accountable privacy/security reviewer and independent reviewer for
    `ACT-SP-009-02`.
-4. Name a safeguarding owner before any real-child pilot.
-5. Obtain a current store/privacy decision on Apple Kids Category participation,
+3. Name a safeguarding owner before any real-child pilot.
+4. Obtain a current store/privacy decision on Apple Kids Category participation,
    Google target-age selections, SDK inventory and the release privacy policy.
-6. Keep real child data and store publication prohibited until those decisions are
+5. Keep real child data and store publication prohibited until those decisions are
    tied to the exact build/configuration under review.
 
 Recommended owner response to `ACT-SP-009-02` after those inputs exist:
@@ -210,5 +209,6 @@ no advertising/behavioural analytics for the pilot, and the requirement to retai
 specialist and runtime gates. This completes `ACT-SP-009-01` as preparation work.
 
 The acceptance does not name the missing privacy/security or safeguarding reviewers,
-does not resolve SP-007, SP-038 or SP-063, does not perform `ACT-SP-009-02`, and does
-not authorize real-child data or store release.
+records the subsequent SP-007/SP-038 design acceptance but does not resolve SP-063,
+does not perform `ACT-SP-009-02`, and does not authorize real-child data or store
+release.

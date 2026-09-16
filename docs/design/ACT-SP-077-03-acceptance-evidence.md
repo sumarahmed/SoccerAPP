@@ -1,5 +1,8 @@
 # ACT-SP-077-03 — Acceptance evidence
 
+Owner decision: **Accepted by Syed Ahmed on 16 September 2026**. SP-077 is
+complete as design/specification work.
+
 | Criterion | Result | Evidence |
 |---|---|---|
 | AC-SP-077-01 Follow device default | Pass for contract/prototype | Fixture F26 and prototype initialize `follow` |
@@ -9,4 +12,7 @@
 
 Commands: `node tests/design/validate-sp077-theme.cjs` and `node tests/design/validate-sp007-sp038-handoff.cjs`.
 
-**Remaining limit:** actual native-device and assistive-technology review is implementation-stage evidence, not available from this HTML handoff. Product-owner visual acceptance is still required before SP-077 is marked Done.
+**Remaining limit:** actual native-device and assistive-technology review is
+implementation-stage evidence, not available from this HTML handoff. It remains
+a later implementation obligation and does not reopen this accepted design
+decision.

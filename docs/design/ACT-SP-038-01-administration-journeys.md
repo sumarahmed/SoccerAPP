@@ -6,7 +6,7 @@
 | Specification version | 1.0 accepted design direction |
 | Prepared | 15 September 2026 |
 | Repository base | `32deae4df0f0903a892abb0bdf183657d9642508` on `main` |
-| Current status | Accepted by Syed Ahmed as the locked design direction; final family completion waits for accepted SP-007 and ACT-SP-038-03 |
+| Current status | Accepted by Syed Ahmed as the locked design direction; SP-007 and ACT-SP-038-03 were accepted on 16 September 2026 |
 
 ## 1. Common authority boundary
 
@@ -63,7 +63,7 @@ or active sessions retain the exact snapshot actually used.
 
 Syed Ahmed reviewed the interactive handoff and locked this specification as
 the accepted administration design direction on 15 September 2026. Its visual
-states are in the shared prototype and fixture. This acceptance does not close
-SP-038: the implementation must retain the eventual accepted SP-007 version
-and exact SP-037 authorization decision, and ACT-SP-038-03 must verify the
-integrated family.
+states are in the shared prototype and fixture. SP-007 and ACT-SP-038-03 were
+accepted on 16 September, closing SP-038 as design/specification work. The
+implementation must retain the accepted SP-007 version and exact SP-037
+authorization decision and provide its own runtime evidence.

@@ -1,11 +1,11 @@
 {
   "contract": "soccolo-sp006-animation-review-assets-v1",
-  "status": "provisional-owner-accepted",
+  "status": "pilot-design-accepted",
   "decisionDate": "2026-09-16",
-  "decisionQualifier": "accepted-for-now",
+  "decisionQualifier": "accepted-for-pilot-sample-design-gate",
   "playerReleaseAllowed": false,
   "countsAsAnimationSampleEvidence": true,
-  "countsAsFinalSP006AcceptanceEvidence": false,
+  "countsAsSP006PilotAcceptanceEvidence": true,
   "coachRenderedReview": "pending",
   "sourceRightsReview": "pending",
   "assets": [

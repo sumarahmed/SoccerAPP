@@ -8,7 +8,7 @@
 | Decision date | 15 September 2026 |
 | Outcome | Accepted |
 | Accountable person | Syed Ahmed, acting as Founder/product design owner |
-| Acceptance scope | Paired error/revocation and responsive design direction only; ACT-SP-038-03 and SP-038 remain open |
+| Acceptance scope | Paired error/revocation and responsive design direction; the later 16 September 2026 SP-038 decision records accepted ACT-SP-038-03 and family closure |
 | Repository base | `32deae4df0f0903a892abb0bdf183657d9642508` on `main` |
 
 Syed Ahmed reviewed the interactive handoff and locked the SP-038 design on 15
@@ -36,5 +36,5 @@ September 2026.
 ## Retained limits
 
 No responsive browser, accessibility technology, role change, queued command or
-revocation was executed. Final SP-038 acceptance remains blocked by SP-007 and
-ACT-SP-038-03 evidence.
+revocation was executed. SP-007 and ACT-SP-038-03 were subsequently accepted as
+design/specification evidence on 16 September 2026; runtime proof remains later.
