@@ -10,6 +10,7 @@ const sourceManifestPath = path.join(root, 'packages', 'soccer_agent_activity_pa
 const decisionsDir = path.join(root, 'docs', 'decisions');
 const activityDecisionsDir = path.join(root, 'docs', 'activity-decisions');
 const sp009ExceptionPath = path.join(root, 'docs', 'security', 'ACT-SP-009-02-owner-risk-exception.md');
+const sp012RoutePath = path.join(root, 'docs', 'operations', 'SP-012-windows-android-ios-development-route.md');
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const activityManifest = readJson(activityManifestPath);
@@ -172,8 +173,22 @@ if (fs.existsSync(sp009ExceptionPath)) {
   }
   const relativePath = path.relative(root, sp009ExceptionPath).split(path.sep).join('/');
   statusOverrides['ACT-SP-009-02'] = {
+    statusLabel: 'Open · risk exception',
     exceptionLabel: 'Owner exception recorded; H1/H2/H3/L1 and specialist review remain unresolved',
     evidenceLabel: 'Read SP-009 owner risk exception (not acceptance)',
+    evidenceUrl: `https://github.com/sumarahmed/SoccerAPP/blob/main/${relativePath}`
+  };
+}
+if (fs.existsSync(sp012RoutePath)) {
+  const route = fs.readFileSync(sp012RoutePath, 'utf8');
+  if (!route.includes('`ACT-SP-012-03` and `SP-012` remain **open**')) {
+    throw new Error('SP-012 interim route must preserve the open family status');
+  }
+  const relativePath = path.relative(root, sp012RoutePath).split(path.sep).join('/');
+  statusOverrides['ACT-SP-012-03'] = {
+    statusLabel: 'Open · interim route',
+    exceptionLabel: 'Windows/Android development route accepted; SP-012 and iOS verification remain open',
+    evidenceLabel: 'Read SP-012 interim platform route (not family acceptance)',
     evidenceUrl: `https://github.com/sumarahmed/SoccerAPP/blob/main/${relativePath}`
   };
 }

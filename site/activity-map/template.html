@@ -1495,7 +1495,7 @@ html>body{padding:0}</style>
     const activity = byId.get(id);
     document.getElementById('flow-detail-id').textContent = activity.id + ' · ' + activity.source;
     document.getElementById('flow-detail-title').textContent = activity.title;
-    document.getElementById('flow-detail-badge').textContent = activity.status || (activity.exceptionLabel ? 'Review open · exception' : activity.execution);
+    document.getElementById('flow-detail-badge').textContent = activity.status || activity.statusLabel || activity.execution;
     document.getElementById('flow-detail-meta').textContent = activity.phase + ' — ' + data.phases[activity.phase][0] + ' · ' + activity.gate + ' · ' + activity.kind + (activity.status ? ' · ' + activity.status + ' ' + activity.statusDate : '') + (activity.exceptionLabel ? ' · ' + activity.exceptionLabel : '');
     document.getElementById('flow-detail-goal').textContent = activity.goal;
     document.getElementById('flow-detail-deliverable').textContent = activity.deliverables.join('; ');

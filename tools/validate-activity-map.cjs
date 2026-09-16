@@ -42,8 +42,13 @@ assert.ok(data.activityDecisions.some(decision => decision.activity === 'ACT-SP-
 assert.equal(statusOverrides['ACT-SP-001-01'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-001-02'].status, 'Accepted');
 assert.equal(statusOverrides['ACT-SP-009-02'].status, undefined, 'Owner exception must not mark SP-009 accepted');
+assert.equal(statusOverrides['ACT-SP-009-02'].statusLabel, 'Open · risk exception');
 assert.ok(statusOverrides['ACT-SP-009-02'].exceptionLabel.includes('specialist review remain unresolved'));
 assert.ok(statusOverrides['ACT-SP-009-02'].evidenceUrl.endsWith('/docs/security/ACT-SP-009-02-owner-risk-exception.md'));
+assert.equal(statusOverrides['ACT-SP-012-03'].status, undefined, 'Interim route must not mark SP-012 accepted');
+assert.equal(statusOverrides['ACT-SP-012-03'].statusLabel, 'Open · interim route');
+assert.ok(statusOverrides['ACT-SP-012-03'].exceptionLabel.includes('SP-012 and iOS verification remain open'));
+assert.ok(statusOverrides['ACT-SP-012-03'].evidenceUrl.endsWith('/docs/operations/SP-012-windows-android-ios-development-route.md'));
 assert.equal(statusOverrides['ACT-SP-005-01'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-005-02'].status, 'Accepted');
 assert.equal(statusOverrides['ACT-SP-006-01'].status, 'Accepted');
