@@ -1346,8 +1346,8 @@ html>body{padding:0}</style>
         const isContext = !chainMode && selectedPhase !== 'all' && activity.phase !== selectedPhase;
         return {
           group: 'nodes',
-          data: { id, label: (activity.status ? '✓ ' : '') + shortId(id), activity },
-          classes: [activity.execution.toLowerCase(), activity.status ? 'done' : '', activity.status ? activity.status.toLowerCase() : '', isContext ? 'context' : '', chainSet.has(id) ? 'on-chain' : ''].filter(Boolean).join(' ')
+          data: { id, label: (activity.status ? '✓ ' : activity.exceptionLabel ? '⚠ ' : '') + shortId(id), activity },
+          classes: [activity.execution.toLowerCase(), activity.status ? 'done' : '', activity.status ? activity.status.toLowerCase() : '', activity.exceptionLabel ? 'exception' : '', isContext ? 'context' : '', chainSet.has(id) ? 'on-chain' : ''].filter(Boolean).join(' ')
         };
       });
     const edges = [];
@@ -1400,6 +1400,9 @@ html>body{padding:0}</style>
         'background-color': accepted, 'background-opacity': 1,
         'border-width': 3, 'border-color': accepted,
         'color': acceptedText, 'font-weight': 700, 'z-index': 12
+      }},
+      { selector: 'node.exception', style: {
+        'border-width': 3, 'border-color': human, 'font-weight': 700, 'z-index': 11
       }},
       { selector: 'edge', style: {
         'width': 1, 'line-color': border, 'target-arrow-color': border,
@@ -1492,8 +1495,8 @@ html>body{padding:0}</style>
     const activity = byId.get(id);
     document.getElementById('flow-detail-id').textContent = activity.id + ' · ' + activity.source;
     document.getElementById('flow-detail-title').textContent = activity.title;
-    document.getElementById('flow-detail-badge').textContent = activity.status || activity.execution;
-    document.getElementById('flow-detail-meta').textContent = activity.phase + ' — ' + data.phases[activity.phase][0] + ' · ' + activity.gate + ' · ' + activity.kind + (activity.status ? ' · ' + activity.status + ' ' + activity.statusDate : '');
+    document.getElementById('flow-detail-badge').textContent = activity.status || (activity.exceptionLabel ? 'Review open · exception' : activity.execution);
+    document.getElementById('flow-detail-meta').textContent = activity.phase + ' — ' + data.phases[activity.phase][0] + ' · ' + activity.gate + ' · ' + activity.kind + (activity.status ? ' · ' + activity.status + ' ' + activity.statusDate : '') + (activity.exceptionLabel ? ' · ' + activity.exceptionLabel : '');
     document.getElementById('flow-detail-goal').textContent = activity.goal;
     document.getElementById('flow-detail-deliverable').textContent = activity.deliverables.join('; ');
     fillLinks('flow-detail-deps', activity.dependencies.slice());

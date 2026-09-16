@@ -9,6 +9,7 @@ const activityManifestPath = path.join(root, 'packages', 'soccer_agent_activity_
 const sourceManifestPath = path.join(root, 'packages', 'soccer_agent_activity_package_20260908', 'docs', 'soccer_linear_manifest.json');
 const decisionsDir = path.join(root, 'docs', 'decisions');
 const activityDecisionsDir = path.join(root, 'docs', 'activity-decisions');
+const sp009ExceptionPath = path.join(root, 'docs', 'security', 'ACT-SP-009-02-owner-risk-exception.md');
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const activityManifest = readJson(activityManifestPath);
@@ -160,6 +161,20 @@ for (const decision of activityDecisions) {
     statusDate: decision.date,
     evidenceLabel: `${decision.activity} decision v${decision.version}`,
     evidenceUrl: decision.evidenceUrl
+  };
+}
+
+// An owner risk exception is visible evidence, not an accepted activity.
+if (fs.existsSync(sp009ExceptionPath)) {
+  const exception = fs.readFileSync(sp009ExceptionPath, 'utf8');
+  if (!exception.includes('`ACT-SP-009-02` and `SP-009` remain open')) {
+    throw new Error('SP-009 owner exception must preserve the open review status');
+  }
+  const relativePath = path.relative(root, sp009ExceptionPath).split(path.sep).join('/');
+  statusOverrides['ACT-SP-009-02'] = {
+    exceptionLabel: 'Owner exception recorded; H1/H2/H3/L1 and specialist review remain unresolved',
+    evidenceLabel: 'Read SP-009 owner risk exception (not acceptance)',
+    evidenceUrl: `https://github.com/sumarahmed/SoccerAPP/blob/main/${relativePath}`
   };
 }
 

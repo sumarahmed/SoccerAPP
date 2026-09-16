@@ -10,6 +10,7 @@ const decision = fs.readFileSync(path.join(root, 'docs/activity-decisions/ACT-SP
 const integrated = fs.readFileSync(path.join(root, 'docs/design/SP-007-SP-038-integrated-verification.md'), 'utf8');
 const claudia = fs.readFileSync(path.join(root, 'docs/security/reviews/ACT-SP-009-claudia-independent-review-2026-09-16.md'), 'utf8');
 const disposition = fs.readFileSync(path.join(root, 'docs/security/ACT-SP-009-02-claudia-findings-disposition.md'), 'utf8');
+const ownerException = fs.readFileSync(path.join(root, 'docs/security/ACT-SP-009-02-owner-risk-exception.md'), 'utf8');
 const gateMap = fs.readFileSync(path.join(root, 'docs/security/ACT-SP-009-consolidated-security-gate-map.md'), 'utf8');
 const sharing = fs.readFileSync(path.join(root, 'docs/security/ACT-SP-009-sharing-feedback-and-reporting-classification.md'), 'utf8');
 const store = fs.readFileSync(path.join(root, 'docs/security/ACT-SP-009-store-release-verification-checklist.md'), 'utf8');
@@ -66,7 +67,11 @@ for (const id of ['H1', 'H2', 'H3', 'H4', 'M1', 'M2', 'M3', 'M4', 'L1']) {
 }
 for (const id of ['H1', 'H2', 'H3', 'L1']) {
   requireCheck(new RegExp(`\\| ${id} \\|[^\\n]*OPEN — NOT REMEDIATED`).test(disposition), `${id} must remain open`);
+  requireCheck(ownerException.includes(`| ${id} —`), `${id} owner exception consequence missing`);
 }
+requireCheck(disposition.includes('ACT-SP-009-02-owner-risk-exception.md'), 'owner exception is not linked from disposition');
+requireCheck(ownerException.includes('synthetic-only development') && ownerException.includes('real children') && ownerException.includes('outside this exception'), 'owner exception scope is not bounded');
+requireCheck(ownerException.includes('`ACT-SP-009-02` and `SP-009` remain open') && ownerException.includes('Claudia') && ownerException.includes('`revise`'), 'owner exception overstates independent acceptance');
 for (const id of ['H4', 'M1', 'M2', 'M3', 'M4']) {
   requireCheck(new RegExp(`\\| ${id} \\|[^\\n]*REMEDIATED`).test(disposition), `${id} remediation status missing`);
 }

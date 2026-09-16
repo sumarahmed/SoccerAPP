@@ -41,6 +41,9 @@ assert.ok(data.activityDecisions.some(decision => decision.activity === 'ACT-SP-
 assert.ok(data.activityDecisions.some(decision => decision.activity === 'ACT-SP-006-01'));
 assert.equal(statusOverrides['ACT-SP-001-01'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-001-02'].status, 'Accepted');
+assert.equal(statusOverrides['ACT-SP-009-02'].status, undefined, 'Owner exception must not mark SP-009 accepted');
+assert.ok(statusOverrides['ACT-SP-009-02'].exceptionLabel.includes('specialist review remain unresolved'));
+assert.ok(statusOverrides['ACT-SP-009-02'].evidenceUrl.endsWith('/docs/security/ACT-SP-009-02-owner-risk-exception.md'));
 assert.equal(statusOverrides['ACT-SP-005-01'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-005-02'].status, 'Accepted');
 assert.equal(statusOverrides['ACT-SP-006-01'].status, 'Accepted');
@@ -83,9 +86,10 @@ assert.equal(statusOverrides['ACT-SP-063-03'].status, 'Accepted');
 assert.equal(statusOverrides['ACT-SP-077-01'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-077-02'].status, 'Completed');
 assert.equal(statusOverrides['ACT-SP-077-03'].status, 'Accepted');
-assert.ok(template.includes("(activity.status ? '✓ ' : '') + shortId(id)"), 'Completed activities need an always-visible checkmark');
+assert.ok(template.includes("(activity.status ? '✓ ' : activity.exceptionLabel ? '⚠ ' : '') + shortId(id)"), 'Completed activities need a checkmark and open exceptions need a warning');
 assert.ok(template.includes("activity.status ? 'done' : ''"), 'Completed activities need a dedicated visual state');
 assert.ok(template.includes("selector: 'node.done'"), 'Completed activity styling is missing');
+assert.ok(template.includes("selector: 'node.exception'"), 'Open risk exception styling is missing');
 assert.ok(template.includes('const acceptedEvidenceLink ='), 'Accepted evidence link must not shadow the accepted-evidence collection');
 assert.ok(!template.includes('const acceptedEvidence = document.'), 'Accepted evidence collection is shadowed in its initialization block');
 

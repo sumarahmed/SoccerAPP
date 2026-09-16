@@ -4,10 +4,11 @@
 |---|---|
 | Source review | [Claudia independent adversarial design review](reviews/ACT-SP-009-claudia-independent-review-2026-09-16.md) |
 | Reviewed commit | `2a4f4001d7b1d50078c065f075db542d27f09670` |
-| Disposition version | 1.0 |
+| Disposition version | 1.1 — owner risk exception recorded; findings unchanged |
 | Disposition date | 16 September 2026 |
-| Owner instruction | Preserve every finding; remediate only H4 and M1–M4 |
-| SP-009 state | Open; this bounded revision is not ACT-SP-009-02 acceptance |
+| Owner instruction | Preserve every finding; remediate only H4 and M1–M4; subsequently defer H1, H2, H3 and L1 with an explicit owner exception |
+| Owner exception | [Synthetic-only development risk exception](ACT-SP-009-02-owner-risk-exception.md); not specialist approval or release authorization |
+| SP-009 state | Open; neither bounded remediation nor owner exception is ACT-SP-009-02 acceptance |
 
 ## Finding register
 
@@ -31,4 +32,10 @@ device, store form, network traffic or human specialist review has passed.
 
 No change in this revision may be interpreted as resolving H1, H2, H3 or L1.
 Those findings remain part of the preserved independent review and continue to
-block their stated scopes. SP-009 and ACT-SP-009-02 remain open.
+block their stated scopes. The founder has accepted an explicit exception to
+continue synthetic-only development without fixing them now; the exception
+does not authorize real-child onboarding/recording, privileged recovery or
+release capabilities. Consenting-adult test footage remains within the
+synthetic-development exception.
+SP-009 and ACT-SP-009-02 remain open pending the source-required specialist
+decision.
