@@ -4,11 +4,11 @@
 |---|---|
 | Activity | `ACT-SP-126-01` — Prepare review packet: Approve measurable feasibility and device thresholds |
 | Source issue | `SP-126` |
-| Packet version | 1.0 accepted protocol; device inventory incomplete |
+| Packet version | 1.1 accepted iPhone-focused protocol |
 | Prepared | 16 September 2026 |
 | Accountable owner | Syed Ahmed acting as current founder/mobile owner |
-| Required human action | Complete exact model/OS/storage/battery inventory before device trials |
-| Status | Protocol accepted by Syed Ahmed on 16 September 2026; no device result or support claim is accepted by this packet |
+| Required human action | Capture OS/build, storage and current condition immediately before each physical-device run |
+| Status | Accepted by Syed Ahmed on 16 September 2026 as the SP-126 threshold decision; no physical-device result is claimed |
 
 ## 1. Accepted inputs
 
@@ -23,9 +23,11 @@ condition. Those facts must be supplied before `ACT-SP-126-02` can be accepted.
 
 ## 2. Recommended pilot support promise
 
-1. Treat one named iPhone and one named Android phone as the minimum candidate
-   pilot matrix. Test additional owned devices, including the iPad, but do not
-   claim them as supported until they pass the same applicable cases.
+1. Focus the initial pilot feasibility matrix on iPhone. Use the iPhone 16 Pro Max
+   as the primary physical candidate and the iPhone 17 Pro as the additional/newer
+   candidate. Android is outside the initial support claim until an exact device
+   is named and separately accepted; the iPad Air 5th generation supplements
+   layout and applicable device evidence but is not a phone-support substitute.
 2. Make single-camera capture the pilot baseline. Keep dual capture experimental,
    capability-detected and disabled on every unmeasured camera combination.
 3. Target app-generated MP4 or MOV containing H.264/AVC at 720p and approximately
@@ -49,14 +51,17 @@ model from its appearance or a retail family name.
 
 | Slot | Exact model/model number | OS and build | Total/free storage | Battery health or observed condition | Synthetic/adult media allowed? | Candidate role |
 |---|---|---|---|---|---|---|
-| iPhone | iPhone 16 Pro Max; exact model number pending | Pending | Pending | Pending | Pending | Required iOS candidate |
-| iPhone | iPhone 17 Pro; exact model number pending | Pending | Pending | Pending | Pending | Additional/newer iOS candidate |
-| Android phone | Samsung phone described by owner as "latest"; exact product and model number pending | Pending | Pending | Pending | Pending | Required Android candidate after identification |
-| iPad | iPad Air; generation and exact model number pending | Pending | Pending | Pending | Pending | Additional layout/device candidate |
+| iPhone | iPhone 16 Pro Max | Record immediately before each run | Record immediately before each run | Owner-reported: Normal; 90% maximum capacity; 503 cycles; manufactured October 2024; first used April 2025 | Synthetic and consenting-adult footage authorized | Primary physical pilot candidate |
+| iPhone | iPhone 17 Pro | Record immediately before each run | Record immediately before each run | Record immediately before each run | Synthetic and consenting-adult footage authorized | Additional/newer physical iPhone candidate |
+| iPad | iPad Air 5th generation | Record immediately before each run | Record immediately before each run | Record immediately before each run | Synthetic and consenting-adult footage authorized | Supplemental layout and applicable device candidate |
+| Android phone | Owner-reported Samsung phone; exact product/model not supplied | Not accepted | Not accepted | Not accepted | Not authorized in this decision | Explicitly excluded from the initial pilot support claim |
 
 Windows remains the development host. A physical iPhone/iPad result also requires
 a valid signed build from an authorized macOS/Xcode route. No paid build service,
-developer membership or hardware purchase is authorized by this packet.
+developer membership or hardware purchase is authorized by this packet. Apple
+simulators may exercise multiple OS versions, layouts and deterministic states,
+but cannot establish camera, battery, storage, thermal, interruption or signing
+behaviour and never replace the named physical-device runs.
 
 ## 4. Measurement protocol
 
@@ -100,13 +105,10 @@ cannot establish physical camera, battery, storage or thermal behaviour.
 
 Syed Ahmed, with a mobile lead if one is assigned, must:
 
-1. complete the exact model number, OS/build, free-storage and battery fields in
-   section 3;
-2. confirm that every test device may hold synthetic/consenting-adult footage;
-3. identify any existing no-incremental-cost iOS build route, or retain iOS as
-   blocked without authorizing spend; and
-4. record the final inventory decision before SP-014 through SP-016 device trials
-   begin.
+The owner must record the exact OS/build, free storage and current battery/device
+condition at the start of each physical run. The executor must also identify an
+authorized iOS build route before physical execution; its absence blocks execution
+without reopening this threshold decision or authorizing spend.
 
 Syed Ahmed accepted the support promise, repeats and thresholds in sections 2 and
 4 on 16 September 2026, including the proposed dual-source skew/drift value. He
@@ -115,17 +117,32 @@ Samsung phone. The incomplete identifiers above are intentionally not converted
 into claims about generation, operating system, storage, battery condition or
 test-media authority.
 
+The owner subsequently confirmed that the reported Normal battery condition,
+90% maximum capacity, 503 cycles, October 2024 manufacture date and April 2025
+first-use date belong specifically to the iPhone 16 Pro Max. These are retained
+as owner-reported inventory facts, not an executed feasibility result.
+
+The owner then fixed the pilot focus to iPhone, identified the tablet as an iPad
+Air 5th generation, authorized the Apple devices for synthetic and
+consenting-adult test footage, and required simulator coverage across applicable
+versions. The unnamed Samsung phone is therefore explicitly excluded rather than
+treated as Android evidence. No child footage is authorized.
+
 ## 7. Acceptance checklist
 
 - [x] `AC-SP-126-01` — thresholds and measurement method are dated and accepted
   before SP-014 onward.
 - [x] `AC-SP-126-02` — every specified failure has a truthful fallback or explicit
   exclusion; execution evidence remains future work.
-- [ ] `AC-SP-126-03` — the owner must confirm that each named device may hold only
-  synthetic/consenting-adult test footage for these trials.
-- [ ] Exact named devices and OS versions are recorded.
-- [ ] No physical-device result, iOS build route or paid access has been invented.
+- [x] `AC-SP-126-03` — the accepted Apple matrix is restricted to synthetic or
+  consenting-adult test footage; child footage is not authorized.
+- [x] The accepted physical matrix is named and Android is explicitly excluded;
+  exact OS/build and storage are mandatory per-run evidence rather than guessed
+  decision-time values.
+- [x] No physical-device result, iOS build route or paid access has been invented.
 
-`ACT-SP-126-01` is accepted as decision preparation. Until the owner supplies and
-accepts the missing inventory and test-media values, `ACT-SP-126-02` and SP-126
-remain open. This packet does not itself establish device support.
+`ACT-SP-126-01`, `ACT-SP-126-02` and SP-126 are accepted as a dated threshold,
+measurement and scope decision. This completion unlocks preparation for the
+affected feasibility work; it does not establish device support. Actual physical
+results, build access and supported/excluded outcomes remain evidence for SP-014
+through SP-016 and the applicable release gates.

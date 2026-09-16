@@ -8,8 +8,8 @@
 | Decision date | 16 September 2026 |
 | Outcome | Accepted |
 | Accountable person | Syed Ahmed, Founder/product owner acting as current mobile owner |
-| Acceptance scope | Measurement protocol and recommended pilot thresholds only; `ACT-SP-126-02` and SP-126 remain open |
-| Exact artifact | [Device feasibility threshold review packet](../verification/ACT-SP-126-01-device-threshold-review-packet.md), version 1.0 |
+| Acceptance scope | Measurement protocol and recommended pilot thresholds; subsequently incorporated into accepted SP-126 decision version 1.0 |
+| Exact artifact | [Device feasibility threshold review packet](../verification/ACT-SP-126-01-device-threshold-review-packet.md), version 1.1 |
 
 Syed Ahmed accepted the recommended pilot support promise, repeat counts,
 measurement method, failure fallbacks and thresholds, including the proposed
@@ -22,8 +22,7 @@ generation and Samsung product/model are unresolved. OS/build, free storage,
 battery condition and authorization for synthetic/consenting-adult test media
 remain pending for every device.
 
-This decision accepts `ACT-SP-126-01` preparation only. It does not claim that a
-build exists, a device test ran, any camera combination is supported, iOS build
-access exists, or a physical device may hold test media. `ACT-SP-126-02` and
-SP-126 remain open until the inventory is completed and the final human decision
-is recorded before SP-014 through SP-016 trials.
+This decision originally accepted `ACT-SP-126-01` preparation only. The later
+[SP-126 source decision](../decisions/SP-126-measurable-feasibility-and-device-thresholds.md)
+records the completed human threshold/scope decision and preserves every
+unexecuted implementation and physical-device limit.
