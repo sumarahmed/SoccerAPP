@@ -4,11 +4,16 @@
 |---|---|
 | Activity | `ACT-SP-009-01` — Prepare review packet: Review threats, privacy, and store audience |
 | Source | `SP-009` |
-| Packet version | 1.0 owner-accepted preparation packet |
+| Packet version | 1.1 bounded remediation candidate |
 | Prepared | 16 September 2026 |
 | Accountable decision | Security reviewer/privacy adviser with founder |
-| Independent reviewer | Not assigned |
-| Status | Recommendations accepted by Syed Ahmed on 16 September 2026; `ACT-SP-009-01` complete as decision preparation; `ACT-SP-009-02` and `SP-009` remain open |
+| Independent review | [Claudia review preserved verbatim](reviews/ACT-SP-009-claudia-independent-review-2026-09-16.md); disposition `revise` |
+| Status | H4 and M1–M4 remediated in specification by owner instruction; H1, H2, H3 and L1 remain open; `ACT-SP-009-02` and `SP-009` remain open |
+
+The exact finding-by-finding status is in the
+[bounded remediation disposition](ACT-SP-009-02-claudia-findings-disposition.md).
+“Remediated” means a missing classification or gate is now explicit; it does
+not claim runtime, provider, store, device or specialist evidence.
 
 ## 1. Recommended decision
 
@@ -21,8 +26,9 @@ subject to all of the following boundaries:
 2. The pilot has no advertising, behavioural marketing, public profiles, public
    rankings, unrestricted chat, stranger discovery or routine coach access to
    private recordings.
-3. Local practice remains useful when camera, microphone, cloud upload or sharing
-   is declined. Recording and private cloud backup remain optional adult choices.
+3. Local practice remains useful when camera, microphone, temporary private cloud
+   copy or sharing is declined. Recording and temporary private cloud copy remain
+   optional adult choices. The cloud copy is not a backup and has no recovery promise.
 4. Australian primary hosting and worldwide authenticated access are retained.
    No statement promises that every processor, support path, log or delivery edge
    is physically confined to Australia.
@@ -50,7 +56,7 @@ This is a product/security recommendation, not legal advice or a store approval.
 | SP-007 | [Accepted core-screen decision](../decisions/SP-007-core-screen-and-state-design.md) | Accepted design input; runtime/device evidence remains later |
 | SP-008 | [Data map and access matrix](../decisions/SP-008-data-map-and-access-matrix.md) | Accepted design input |
 | SP-010 | [Recording/local-protection evidence](../design/ACT-SP-010-01-acceptance-evidence.md) | Accepted design input |
-| SP-011 | [Cloud lifecycle evidence](../design/ACT-SP-011-03-acceptance-evidence.md) | Accepted design input |
+| SP-011 | [Governing cloud lifecycle decision v1.1](../decisions/SP-011-cloud-consent-deletion-and-recovery-contract.md); [historical v1.0 evidence](../design/ACT-SP-011-03-acceptance-evidence.md) | Accepted as amended: Sydney-primary/global delivery; dedicated recovery and strict Australia-only processing superseded; upload/quota/auth/deletion/fragment controls retained |
 | SP-038 | [Accepted administration-flow decision](../decisions/SP-038-administration-and-membership-flows.md) | Accepted design input; runtime authorization/browser evidence remains later |
 | SP-059 | [Identity and MFA evidence](ACT-SP-059-03-acceptance-evidence.md) | Accepted design input |
 | SP-060 | [Web/API and media evidence](ACT-SP-060-03-acceptance-evidence.md) | Accepted design input |
@@ -63,6 +69,10 @@ must not be marked complete until the named security/privacy human decision is
 resolved.
 
 ## 3. S01–S27 control, owner and gate map
+
+The [consolidated S01–S27/R01–R20 gate map](ACT-SP-009-consolidated-security-gate-map.md)
+is normative for obligation, owner, timing, evidence and capability-disable
+fallback. The tables below are a compact status view and must not narrow that map.
 
 Status meanings: **Design** means a reviewed contract exists; **Runtime** means
 implementation evidence is still required; **Human** means a named accountable
@@ -127,12 +137,12 @@ specialist or operator decision remains required.
 
 | Surface | Required boundary | Review status |
 |---|---|---|
-| Flutter player experience | Restricted player credential; local-first practice; immediate Stop; camera/microphone optional; no adult capability inherited from device mode | Design covered; app/device implementation absent |
+| Flutter player experience | Restricted player credential; local-first practice; immediate Stop; camera/microphone optional; no adult capability inherited from device mode | Design covered; app/device implementation absent; H3 recording-authority finding remains open |
 | Adult/guardian mobile experience | Explicit player context; guardian authority; recording/upload/share/purchase behind adult authorization | Design covered; implementation absent |
-| Coach/club experience | Limited enrollment/completion projection; no household authority or media access by role; assigned feedback only | Design covered; first RLS projection proof passes |
+| Coach/club experience | Limited enrollment/completion projection; no household authority or media access by role; structured assigned feedback only | [Sharing/feedback classification](ACT-SP-009-sharing-feedback-and-reporting-classification.md) supplied for H4; grants remain disabled pending runtime/store evidence |
 | Administrative web | Server-mediated adult session, MFA/step-up, no service key/browser-wide token, attributable privileged actions | SP-038 design accepted; portal/runtime evidence absent |
 | Direct API/database/storage | Canonical server scope, RLS and ownership-preserving references; direct-client negative tests; purpose-bound media grants | First SP-039 suite passes; complete endpoint/storage coverage absent |
-| Offline/reconnect | Local namespace isolation; deletion/withdrawal wins; expired authority cannot silently replay | Design covered; SQLite/device/runtime proof absent |
+| Offline/reconnect | Local namespace isolation; deletion/withdrawal wins; expired authority cannot silently replay | Design covered; exact disable gates and negative suites are in the [provider/device matrix](ACT-SP-009-provider-device-capability-gates.md) |
 
 ## 6. First-market and store recommendation
 
@@ -159,6 +169,8 @@ specialist or operator decision remains required.
   selection cannot later be changed.
 - Provide an accurate privacy policy describing collection, use, recipients,
   retention, withdrawal and deletion.
+- Complete the [build-bound Apple/Google release checklist](ACT-SP-009-store-release-verification-checklist.md)
+  against the exact build, SDK inventory, traffic and store draft.
 
 ### Google Play
 
@@ -167,8 +179,14 @@ specialist or operator decision remains required.
 - Apply Families Policy to children and unknown-age users, including child-suitable
   content, accurate Data safety/IARC answers, approved SDK behavior and disclosure of
   camera/microphone data.
-- Keep chat, stranger discovery and public sharing out of the pilot. If any social
-  feature is later added, require adult management and the store-required safety flow.
+- Keep chat, stranger discovery and public sharing out of the pilot. Existing
+  local external handoff, private coach media grants, structured feedback and
+  safeguarding reports are classified in the
+  [sharing/feedback artifact](ACT-SP-009-sharing-feedback-and-reporting-classification.md).
+  Private coach grants remain disabled until adult management, safety notice,
+  report/revoke/block-or-withdraw, authorization and store evidence passes.
+- Complete the [build-bound Apple/Google release checklist](ACT-SP-009-store-release-verification-checklist.md)
+  against the exact build, SDK inventory, traffic, Data safety and deletion flows.
 
 Current official references:
 
@@ -181,14 +199,28 @@ Current official references:
 
 ## 7. Outstanding findings and human decisions
 
-The following remain explicit and are not converted into approvals by this packet:
+Claudia's H4 and M1–M4 findings have bounded specification remediations linked
+above. The following owner-directed findings remain preserved and unresolved:
 
-1. Name the accountable privacy/security reviewer and independent reviewer for
+1. **H1 — privileged recovery:** two-human approval and the stronger commercial
+   Level 0 entry gate remain missing. Privileged recovery stays blocked.
+2. **H2 — guardian verification:** the operational verification standard,
+   uncertainty/pending states and capacity/refusal route remain missing. Real-child
+   onboarding stays blocked.
+3. **H3 — other people captured:** authority/removal rules for teammates,
+   spectators and other people remain missing. Real-child recording/group capture
+   stays blocked; H4 sharing classification does not cure H3.
+4. **L1 — Australian Code wording/applicability:** Claudia's wording and
+   specialist-applicability finding remains open by owner instruction.
+
+Additional human/release inputs remain:
+
+5. Name the accountable privacy/security reviewer and independent reviewer for
    `ACT-SP-009-02`.
-2. Name a safeguarding owner before any real-child pilot.
-3. Obtain a current store/privacy decision on Apple Kids Category participation,
+6. Name a safeguarding owner before any real-child pilot.
+7. Obtain a current store/privacy decision on Apple Kids Category participation,
    Google target-age selections, SDK inventory and the release privacy policy.
-4. Keep real child data and store publication prohibited until those decisions are
+8. Keep real child data and store publication prohibited until those decisions are
    tied to the exact build/configuration under review.
 
 Recommended owner response to `ACT-SP-009-02` after those inputs exist:
@@ -201,12 +233,12 @@ Recommended owner response to `ACT-SP-009-02` after those inputs exist:
 
 ## 8. Owner disposition
 
-Syed Ahmed accepted the recommendations in this packet on 16 September 2026,
+Syed Ahmed accepted the version 1.0 recommendations in this packet on 16 September 2026,
 including the Australia-first child-safety boundary, truthful store declarations,
 no advertising/behavioural analytics for the pilot, and the requirement to retain
 specialist and runtime gates. This completes `ACT-SP-009-01` as preparation work.
 
-The acceptance does not name the missing privacy/security or safeguarding reviewers,
-records the subsequent SP-007/SP-038 and SP-063 acceptance, but does not perform
-`ACT-SP-009-02`, name its independent reviewer, or authorize real-child data or
-store release.
+Version 1.1 preserves Claudia's independent `revise` report and implements only
+the owner-authorized H4/M1–M4 remediation. H1, H2, H3 and L1 remain findings.
+The earlier preparation acceptance does not perform `ACT-SP-009-02`, resolve
+those findings, authorize real-child data or authorize store release.
