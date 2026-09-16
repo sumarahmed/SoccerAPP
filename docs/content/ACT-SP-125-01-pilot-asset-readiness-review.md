@@ -92,3 +92,10 @@ their sign-off or create missing media.
 
 `ACT-SP-125-01` is a complete preparation packet. `ACT-SP-125-02` and SP-125
 remain open; zero released variants or player-ready assets are claimed.
+
+On 16 September 2026 Syed Ahmed chose to defer production of the full D01–D12
+video set while researching generation options. The three SP-006 design samples
+may be used only in a synthetic/consenting-adult internal prototype under the
+[SP-012 platform route](../operations/SP-012-windows-android-ios-development-route.md).
+This sequencing choice does not reduce the D01–D10 release scope, approve any
+sample for players or close SP-125.

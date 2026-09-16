@@ -16,6 +16,7 @@
 - [Accepted SP-003 run/evidence policy](../delivery/ACT-SP-003-03-acceptance-evidence.md)
 - [Accepted SP-008 data/access decision](../decisions/SP-008-data-map-and-access-matrix.md)
 - [SP-009 review packet](../security/ACT-SP-009-01-threat-privacy-store-review-packet.md)
+- [Accepted Windows/Android development and iPhone-target route](SP-012-windows-android-ios-development-route.md)
 - [Private implementation commit](https://github.com/sumarahmed/Soccolo-app/commit/cc21c9c12fadcf6c014244adc822b598b7867381)
 - [Successful private workflow run](https://github.com/sumarahmed/Soccolo-app/actions/runs/35044438851)
 
@@ -46,6 +47,12 @@ Syed Ahmed reviewed this disposition on 16 September 2026 and accepted the priva
 free-plan route with protected-branch enforcement deferred for now. This is acceptance
 of the documented interim risk and evidence, not acceptance or completion of
 `ACT-SP-012-03` or SP-012.
+
+Syed Ahmed subsequently accepted Windows Flutter development with Android as the
+local integration target and iPhone as the unchanged pilot target. The linked
+platform-route record permits synthetic-only work and defers a macOS/Xcode
+build environment to the first iOS integration gate. It does not change the
+criterion results above or close this family.
 
 ## Recommended route
 
