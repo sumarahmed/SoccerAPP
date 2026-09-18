@@ -3,13 +3,13 @@
 | Field | Value |
 |---|---|
 | Source issue | SP-126 |
-| Decision version | 1.0 |
+| Decision version | 1.1 — 19 September 2026 device-scope amendment |
 | Decision date | 16 September 2026 |
 | Outcome | Accepted |
 | Accountable person | Syed Ahmed, Founder/product owner acting as current mobile owner |
 | Acceptance criterion | AC-SP-126-01 through AC-SP-126-03 |
 | Acceptance scope | Dated protocol, thresholds, named Apple candidate scope and truthful exclusions; no implementation or physical test result |
-| Exact artifact | [Device feasibility threshold review packet](../verification/ACT-SP-126-01-device-threshold-review-packet.md), version 1.1 |
+| Exact artifact | [Device feasibility threshold review packet](../verification/ACT-SP-126-01-device-threshold-review-packet.md), version 1.2 |
 
 ## Accepted decision
 
@@ -17,7 +17,9 @@ Syed Ahmed accepted the SP-126 measurement protocol and fixed the initial pilot
 feasibility scope to iPhone:
 
 - iPhone 16 Pro Max is the primary physical candidate;
-- iPhone 17 Pro is the additional/newer physical iPhone candidate;
+- the secondary iPhone 17 is excluded from this physical test round by the
+  owner's 19 September 2026 clarification; it is not a required candidate and
+  no support claim for it follows from testing the iPhone 16 Pro Max;
 - iPad Air 5th generation provides supplemental layout and applicable device
   evidence but does not replace phone testing;
 - Apple simulators cover applicable OS-version, layout and deterministic-state
@@ -40,7 +42,7 @@ including repeats, measurement fields and truthful disable/exclusion fallbacks.
 
 | Criterion | Result | Evidence and limit |
 |---|---|---|
-| AC-SP-126-01 — Dated thresholds and measurement method | **ACCEPTED** | Packet version 1.1 fixes the method before SP-014 onward; results remain unexecuted |
+| AC-SP-126-01 — Dated thresholds and measurement method | **ACCEPTED** | Packet version 1.1 fixed the method before SP-014 onward; version 1.2 narrows the physical-device scope without changing thresholds. Threshold-complete results remain unexecuted |
 | AC-SP-126-02 — Truthful fallback or exclusion | **ACCEPTED** | Every specified miss disables/excludes the affected mode/device; Android is explicitly outside the initial claim |
 | AC-SP-126-03 — Synthetic/adult footage | **ACCEPTED** | Owner authorized the named Apple devices only for synthetic and consenting-adult test footage; no child footage is authorized |
 
@@ -53,8 +55,11 @@ membership, build service or hardware purchase is authorized here.
 
 The iPhone 16 Pro Max battery inventory is owner-reported as Normal, 90% maximum
 capacity, 503 cycles, manufactured October 2024 and first used April 2025. No
-physical feasibility run has occurred. The iPhone 17 Pro and iPad condition must
-be recorded at execution time.
+threshold-complete physical feasibility run has occurred. The iPad condition
+must be recorded if a supplemental iPad run is executed. The earlier iPhone 17
+candidate designation is superseded; its condition need not be collected for
+the current test round. The accepted thresholds and per-candidate repeat counts
+are unchanged.
 
 This decision completes SP-126 as a protocol and scope decision only. It does not
 claim supported hardware, working capture, Android support, iOS build access,

@@ -4,11 +4,11 @@
 |---|---|
 | Activity | `ACT-SP-126-01` — Prepare review packet: Approve measurable feasibility and device thresholds |
 | Source issue | `SP-126` |
-| Packet version | 1.1 accepted iPhone-focused protocol |
+| Packet version | 1.2 accepted iPhone-focused protocol; 19 September device-scope amendment |
 | Prepared | 16 September 2026 |
 | Accountable owner | Syed Ahmed acting as current founder/mobile owner |
 | Required human action | Capture OS/build, storage and current condition immediately before each physical-device run |
-| Status | Accepted by Syed Ahmed on 16 September 2026 as the SP-126 threshold decision; no physical-device result is claimed |
+| Status | Accepted by Syed Ahmed on 16 September 2026; physical test scope narrowed by owner on 19 September to iPhone 16 Pro Max only. No threshold-complete physical-device result is claimed |
 
 ## 1. Accepted inputs
 
@@ -23,11 +23,12 @@ condition. Those facts must be supplied before `ACT-SP-126-02` can be accepted.
 
 ## 2. Recommended pilot support promise
 
-1. Focus the initial pilot feasibility matrix on iPhone. Use the iPhone 16 Pro Max
-   as the primary physical candidate and the iPhone 17 Pro as the additional/newer
-   candidate. Android is outside the initial support claim until an exact device
-   is named and separately accepted; the iPad Air 5th generation supplements
-   layout and applicable device evidence but is not a phone-support substitute.
+1. Focus the initial pilot feasibility matrix on the owner's iPhone 16 Pro Max
+   as the **only required physical phone**. The secondary iPhone 17 is excluded
+   from this test round at the owner's direction; do not claim support for it.
+   Android is outside the initial support claim until an exact device is named
+   and separately accepted. The iPad Air 5th generation may supplement layout
+   evidence but is not a phone-support substitute.
 2. Make single-camera capture the pilot baseline. Keep dual capture experimental,
    capability-detected and disabled on every unmeasured camera combination.
 3. Target app-generated MP4 or MOV containing H.264/AVC at 720p and approximately
@@ -52,7 +53,7 @@ model from its appearance or a retail family name.
 | Slot | Exact model/model number | OS and build | Total/free storage | Battery health or observed condition | Synthetic/adult media allowed? | Candidate role |
 |---|---|---|---|---|---|---|
 | iPhone | iPhone 16 Pro Max | Record immediately before each run | Record immediately before each run | Owner-reported: Normal; 90% maximum capacity; 503 cycles; manufactured October 2024; first used April 2025 | Synthetic and consenting-adult footage authorized | Primary physical pilot candidate |
-| iPhone | iPhone 17 Pro | Record immediately before each run | Record immediately before each run | Record immediately before each run | Synthetic and consenting-adult footage authorized | Additional/newer physical iPhone candidate |
+| iPhone | Secondary iPhone 17; exact variant not relied on | Not in this test round | Not in this test round | Not in this test round | Earlier Apple synthetic/adult authorization does not create a required run | Excluded from the current physical test matrix by owner on 19 September |
 | iPad | iPad Air 5th generation | Record immediately before each run | Record immediately before each run | Record immediately before each run | Synthetic and consenting-adult footage authorized | Supplemental layout and applicable device candidate |
 | Android phone | Owner-reported Samsung phone; exact product/model not supplied | Not accepted | Not accepted | Not accepted | Not authorized in this decision | Explicitly excluded from the initial pilot support claim |
 
@@ -117,6 +118,14 @@ Samsung phone. The incomplete identifiers above are intentionally not converted
 into claims about generation, operating system, storage, battery condition or
 test-media authority.
 
+On 19 September 2026, the owner clarified that their actual phone for these
+tests is the **iPhone 16 Pro Max**. The iPhone 17 is a secondary device they do
+not wish to bring for testing. This later instruction supersedes the earlier
+17 Pro candidate role; its exact variant is not needed or asserted. The accepted
+thresholds and per-candidate repeats are unchanged, but the current physical
+matrix contains only the 16 Pro Max. No cross-device or iPhone 17 support claim
+can follow from its results.
+
 The owner subsequently confirmed that the reported Normal battery condition,
 90% maximum capacity, 503 cycles, October 2024 manufacture date and April 2025
 first-use date belong specifically to the iPhone 16 Pro Max. These are retained
@@ -136,7 +145,8 @@ treated as Android evidence. No child footage is authorized.
   exclusion; execution evidence remains future work.
 - [x] `AC-SP-126-03` — the accepted Apple matrix is restricted to synthetic or
   consenting-adult test footage; child footage is not authorized.
-- [x] The accepted physical matrix is named and Android is explicitly excluded;
+- [x] The amended physical matrix has one named iPhone candidate; the secondary
+  iPhone 17 and Android are explicitly excluded;
   exact OS/build and storage are mandatory per-run evidence rather than guessed
   decision-time values.
 - [x] No physical-device result, iOS build route or paid access has been invented.

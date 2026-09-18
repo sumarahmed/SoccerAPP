@@ -9,7 +9,7 @@
 | Outcome | Accepted |
 | Accountable person | Syed Ahmed, Founder/product owner acting as current mobile owner |
 | Acceptance scope | Measurement protocol and recommended pilot thresholds; subsequently incorporated into accepted SP-126 decision version 1.0 |
-| Exact artifact | [Device feasibility threshold review packet](../verification/ACT-SP-126-01-device-threshold-review-packet.md), version 1.1 |
+| Exact artifact | [Device feasibility threshold review packet](../verification/ACT-SP-126-01-device-threshold-review-packet.md), version 1.2 |
 
 Syed Ahmed accepted the recommended pilot support promise, repeat counts,
 measurement method, failure fallbacks and thresholds, including the proposed
@@ -26,3 +26,9 @@ This decision originally accepted `ACT-SP-126-01` preparation only. The later
 [SP-126 source decision](../decisions/SP-126-measurable-feasibility-and-device-thresholds.md)
 records the completed human threshold/scope decision and preserves every
 unexecuted implementation and physical-device limit.
+
+On 19 September 2026 the owner narrowed the current physical test matrix to
+their iPhone 16 Pro Max only. The secondary iPhone 17 is not to be brought for
+this round. This later scope instruction supersedes its earlier candidate role;
+the historical inventory above remains a record of what was reported at the
+time, not a current test requirement.
