@@ -6,7 +6,7 @@
 | Evidence version | 1.0 owner-reviewed interim evidence |
 | Prepared | 16 September 2026 |
 | Technical owner | Syed Ahmed |
-| Required reviewer | Operator/security reviewer — unassigned |
+| Required reviewer | Security: Claudia, owner-named 18 September 2026; operator reviewer and SP-012 review evidence pending |
 | Overall result | **PARTIAL / ACCEPTED INTERIM RISK / NOT COMPLETE** |
 
 ## Evidence bundle
@@ -19,16 +19,18 @@
 - [Accepted Windows/Android development and iPhone-target route](SP-012-windows-android-ios-development-route.md)
 - [Private implementation commit](https://github.com/sumarahmed/Soccolo-app/commit/cc21c9c12fadcf6c014244adc822b598b7867381)
 - [Successful private workflow run](https://github.com/sumarahmed/Soccolo-app/actions/runs/35044438851)
+- [Current private branch checks at `f92c555`](https://github.com/sumarahmed/Soccolo-app/actions/runs/35295705237)
+- [Successful manual Codemagic iOS simulator build with retained `.app` and ZIP artifacts](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aac949fcc80aea022028fcc)
 
 ## Source acceptance results
 
 | Criterion | Result | Evidence and limit |
 |---|---|---|
 | AC-SP-012-01 — Explicit private repo | **PASS** | Authenticated GitHub API confirms `sumarahmed/Soccolo-app` is private; public planning is intentionally separate |
-| AC-SP-012-02 — Protected branch and reviewers | **BLOCKED** | GitHub plan rejects protection for a private repository; actual operator/security reviewer unassigned |
-| AC-SP-012-03 — Current-commit checks | **PASS for execution** | Both workflow jobs passed exact commit `cc21c9c`; checks are not enforceable merge requirements |
+| AC-SP-012-02 — Protected branch and reviewers | **BLOCKED** | GitHub plan rejects protection for a private repository; Claudia is named for security but operator review and enforceable approval are absent |
+| AC-SP-012-03 — Current-commit checks | **PASS for execution** | Foundation workflow passed private draft-branch commit `f92c555` on 18 September 2026; checks are not enforceable merge requirements |
 | AC-SP-012-04 — Isolated dev/staging | **PARTIAL** | Disposable local/CI development is isolated; hosted dev and staging are not provisioned |
-| AC-SP-012-05 — Scoped identities | **PARTIAL** | Owner and read-only Actions scopes recorded; reviewer and environment deploy identities absent |
+| AC-SP-012-05 — Scoped identities | **PARTIAL** | Owner and read-only Actions scopes recorded; Claudia is identified for security review, but operator and environment deploy identities are absent |
 | AC-SP-012-06 — No production secrets in PR jobs | **PASS for current workflow** | No production environment exists; workflow requests read-only contents and consumes no secrets; static guard passes |
 | AC-SP-012-07 — Release-plan limitations addressed | **PASS for foundation** | README and evidence prohibit real-child/production use and identify Docker, review, hosting and protection limitations |
 | AC-SP-012-08 — Failing change demonstrably blocked | **BLOCKED** | Negative guard detects unsafe input, but no branch rule can prevent a failing candidate from merge/push |
@@ -37,8 +39,9 @@
 
 `ACT-SP-012-01` has a usable candidate record and `ACT-SP-012-02` has actual
 current-commit CI/database evidence. They remain review candidates rather than accepted
-activities because SP-009 is open and the designated operator/security reviewer is
-not assigned.
+activities because SP-009 is open and the designated operator review is not
+assigned or performed. Claudia's owner-named security role is not an SP-012
+approval; no review from her of this evidence is recorded.
 
 `ACT-SP-012-03` and SP-012 must remain open. Passing CI must not be relabelled as
 protected CI, and the free-plan limitation must not be hidden by a process-only promise.
@@ -54,6 +57,16 @@ platform-route record permits synthetic-only work and defers a macOS/Xcode
 build environment to the first iOS integration gate. It does not change the
 criterion results above or close this family.
 
+The owner then authorized a Codemagic trial restricted to the private
+`Soccolo-app` repository and reported an active paid Apple Developer Program
+membership. The manual Codemagic build at `f92c555` passed Flutter analysis,
+tests and an **unsigned simulator** compile; the artifacts panel retained
+`Runner.app.zip` and `soccolo-ios-simulator.zip`. This establishes a cloud macOS
+compile route without a local Mac. It is not a signed IPA, a physical iPhone
+test, or evidence of configured Apple signing. No Apple key was created or
+entered. The protected-branch, operator-review and hosted-environment gaps
+remain as shown above.
+
 ## Recommended route
 
 1. Review and resolve SP-009, including its open predecessors and specialist gate.
@@ -61,5 +74,6 @@ criterion results above or close this family.
    synthetic, single-owner foundation stage.
 3. Before the first additional writer or hosted/real-child environment, enable
    enforceable private branch protection (GitHub plan upgrade or approved alternative),
-   name the reviewer, and run the failed-then-corrected PR proof.
+   confirm Claudia's scoped security review, assign an operator reviewer, and
+   run the failed-then-corrected PR proof.
 4. Reissue this evidence against the then-current commit and configuration.

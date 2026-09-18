@@ -53,3 +53,24 @@ security/privacy review.
 See the [SP-012 acceptance evidence](ACT-SP-012-03-acceptance-evidence.md) for
 the unchanged criterion-level partial/blocked result. This is a dated platform
 choice and work authorization, not a completion record or release approval.
+
+## 18 September 2026 — Codemagic trial selected
+
+Syed Ahmed selected Codemagic's personal macOS build route because he has no
+local Mac. The private `Soccolo-app` repository is connected to his Codemagic
+personal account with access restricted to that repository. A manual-only,
+unsigned iOS simulator workflow is versioned on the private
+`feat/sp014-local-camera-feasibility` branch. It runs the project's pinned
+Flutter version, analysis and tests before an iOS simulator build; it has no
+automatic trigger, signing credential, publishing step or child-data route.
+
+The 18 September manual build at private commit `f92c555` passed Flutter
+analysis, tests and an unsigned iOS simulator compile. Codemagic retained a
+downloadable simulator app and ZIP in the [build artifacts](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aac949fcc80aea022028fcc).
+This is a feasibility probe, not a physical iPhone result. Syed Ahmed reports
+an active paid Apple Developer Program membership; signing access and device
+provisioning are not configured or verified. Do not add Apple credentials,
+enable TestFlight or claim physical iPhone support until the exact signing
+route receives separate approval and is tested. Codemagic access and this
+unsigned build do not resolve the protected-branch or operator-review gaps in
+SP-012.
