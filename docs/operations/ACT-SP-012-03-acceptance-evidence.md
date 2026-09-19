@@ -77,3 +77,15 @@ remain as shown above.
    confirm Claudia's scoped security review, assign an operator reviewer, and
    run the failed-then-corrected PR proof.
 4. Reissue this evidence against the then-current commit and configuration.
+
+## 20 September 2026 — owner defers paid branch controls
+
+Syed Ahmed directed that no additional money be spent on private-repository
+branch protection at this stage and deferred the failed-change blocking proof.
+Continue the bounded synthetic/consenting-adult work under the existing
+single-owner, private-repository interim route. Keep `AC-SP-012-02` and
+`AC-SP-012-08` **blocked**, and keep `ACT-SP-012-03` and SP-012 **open**; this
+instruction accepts proceeding with the documented interim limitation, not an
+enforceable merge gate or a passing negative proof. Revisit these controls
+before additional writers, hosted or real-child environments, or a release
+decision. This decision does not alter the other criterion outcomes above.
