@@ -37,3 +37,9 @@ present in that build. The owner's observation is retained, but this build
 cannot establish SP-015's continuous-rest, chapter-offset, Pause/Resume or
 30-minute criteria. No SP-015 source criterion or activity is marked complete;
 the review awaits a distinct implementation/build reference if one exists.
+
+The owner clarified that after the two D01 rounds, **Next drill** opened the
+D04 Cone Weave design preview. This identifies the tested navigation as the
+existing D01 exercise-clip flow, not chapter seeking inside a full-session
+recording. The successful owner test remains credited to the SP-014 clip
+candidate; no additional SP-015 build or test is inferred.
