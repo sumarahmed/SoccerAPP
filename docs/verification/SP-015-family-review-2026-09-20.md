@@ -22,3 +22,18 @@ The accepted [SP-010 recording contract](../decisions/SP-010-recording-and-local
 4. Assemble `ACT-SP-015-03` from actual results and request the mobile lead/device QA decision. Keep SP-015 **open** until its criteria are evidenced. Keep the existing exercise-clip mode as the supported internal fallback if full-session feasibility fails.
 
 This is a review recommendation, not authorization to publish, use child footage, claim full-session support, or mark SP-015 Done. [SP-014's dated scope amendment](../decisions/SP-014-iphone-first-pilot-feasibility-scope.md) leaves its measurement/handoff open, and SP-015 formally depends on SP-014. The owner's [SP-012 interim-route decision](../operations/ACT-SP-012-03-acceptance-evidence.md) defers paid branch protection and the failed-change proof while retaining their blocked status. Preparatory SP-015 review may proceed under that bounded synthetic route; formal ACT-SP-015 execution and acceptance retain the source dependency and reviewer requirements.
+
+## Owner follow-up on build 4
+
+The owner reported testing a continuous recording and asked to mark the SP-015
+flow complete, identifying Codemagic build `6aaf07998be471e28abda84b` as the
+candidate. The authenticated build status identifies source commit
+`323aa848c49c18a48f948f48b30c6b3d3c6dfa0c`. Inspection of that exact
+source shows the D01 exercise-clip route: capture stops and saves round 1,
+displays that the test rest is **not recorded**, and starts a separate capture
+for round 2. The repository describes two separate round clips and D04 as a
+design preview. No full-session chapter or chapter-seeking implementation is
+present in that build. The owner's observation is retained, but this build
+cannot establish SP-015's continuous-rest, chapter-offset, Pause/Resume or
+30-minute criteria. No SP-015 source criterion or activity is marked complete;
+the review awaits a distinct implementation/build reference if one exists.
