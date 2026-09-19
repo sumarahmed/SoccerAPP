@@ -6,6 +6,7 @@
 | Source family | [SP-015 — Prove full-session mode and chapters](../delivery/soccer_delivery_backlog.md#sp-015--prove-full-session-mode-and-chapters) |
 | Public planning base | `7a2cbaa0b57cc2b65072e8e32785aa5521ec412c` |
 | Private implementation base | `41ed5327a0e149b1495cbc3e1c53595f1a7e77d6` on `feat/sp014-local-camera-feasibility` |
+| Owner walkthrough | **Completed** on build 4; observed route maps to the SP-014 exercise-clip flow |
 | Review disposition | Preparation recommended; no ACT-SP-015 activity or source criterion accepted here |
 
 ## Evidence and gap
@@ -43,3 +44,11 @@ D04 Cone Weave design preview. This identifies the tested navigation as the
 existing D01 exercise-clip flow, not chapter seeking inside a full-session
 recording. The successful owner test remains credited to the SP-014 clip
 candidate; no additional SP-015 build or test is inferred.
+
+The owner reconfirmed that this was the same build and reported seeing recording
+through rest and Pause/Resume parts. The walkthrough is recorded as completed,
+but its interpretation conflicts with the pinned source: round 1 finalizes
+before an explicitly unrecorded rest, round 2 starts a new capture, and the
+only `Pause clip` control is on playback. No capture Pause/Resume or chapter
+navigation exists in the candidate. The SP-015 acceptance test therefore has
+no matching implementation to evaluate in this build.

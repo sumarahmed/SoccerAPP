@@ -13,6 +13,12 @@ The private [SP-016 clip-safety review](https://github.com/sumarahmed/Soccolo-ap
 
 The source [SP-016 criteria](../delivery/soccer_delivery_backlog.md#sp-016--test-media-interruptions-and-device-limits) additionally require call/permission/camera-loss, low-space, abrupt-termination, heat/battery and recoverable-part cases, truthful failure states and a supported-device floor. The private review identifies open gaps in pre-capture storage reserve/refusal, staging-file recovery/quarantine, re-verification of final files on relaunch and iOS backup exclusion. It has no independent QA acceptance. SP-016 also formally depends on SP-014 and SP-015; the [SP-015 family review](SP-015-family-review-2026-09-20.md) has not found a full-session implementation in build 4.
 
+The owner also reported testing full-session recording through rest and
+Pause/Resume on build 4. The owner walkthrough is complete, but the identified
+build implements separate exercise clips and unrecorded rest; its `Pause clip`
+control pauses playback, not capture. This report is retained without scoring
+the unimplemented full-session or SP-016 recovery criteria as passed.
+
 ## Recommendation
 
 1. Prepare a controlled `ACT-SP-016-01` failure matrix using disposable synthetic fixtures. Implement and test free-space reserve/refusal, failed-write/finalization behavior, staging-file recovery or quarantine and relaunch re-verification before repeating the affected device cases. A failure must never become a false `REC` or `Saved` claim.
