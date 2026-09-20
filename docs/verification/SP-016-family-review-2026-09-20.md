@@ -5,6 +5,7 @@
 | Date | 20 September 2026 |
 | Source family | [SP-016 — Test media interruptions and device limits](../delivery/soccer_delivery_backlog.md#sp-016--test-media-interruptions-and-device-limits) |
 | Candidate | Private Soccolo-app build 4, Codemagic `6aaf07998be471e28abda84b`, source `323aa848c49c18a48f948f48b30c6b3d3c6dfa0c` |
+| Owner physical-device check | **Completed for reported clip cases** on iPhone 16 Pro Max / iOS 26.6.2 |
 | Disposition | Preparatory review only; no ACT-SP-016 activity or acceptance criterion completed |
 
 ## Current evidence
@@ -27,3 +28,15 @@ the unimplemented full-session or SP-016 recovery criteria as passed.
 4. Send `ACT-SP-016-03` to the independent QA reviewer only after the matrix and recovery evidence exist. Keep SP-016 open; the current clip smoke evidence cannot establish full-session recovery or a supported-device floor.
 
 This review changes no product support claim or participant-data authorization.
+
+## Owner disposition of further checks
+
+The owner confirmed the physical-device check is complete for the cases they
+performed and directed that relaunch re-verification work be deferred for now.
+The attempted local code change for that check was discarded before commit; the
+private implementation remains at its prior clean commit. The completed owner
+check includes the reported playable interrupted build 4 clip and retained
+clip playback after ordinary restart. It does not include controlled
+low-storage, corrupted-final-file, abrupt native-capture termination, thermal
+or independent-QA outcomes. The relaunch verification gap remains recorded as
+deferred, and SP-016's source acceptance remains open.
