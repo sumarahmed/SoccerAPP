@@ -8,6 +8,9 @@
 | Public planning base | `5f03370b` on `SoccerAPP-repo/main` |
 | Private implementation base | `b8a10da5753dd1b5ce019845fd57112b9be8084b` on `Soccolo-app/feat/sp014-local-camera-feasibility` |
 | Last owner-tested iPhone build source | `323aa848c49c18a48f948f48b30c6b3d3c6dfa0c` |
+| Founder/technical lead | Syed Ahmed |
+| Delivery owner | Syed Ahmed |
+| Review independence | Syed Ahmed fills both roles; no independent delivery-owner review is claimed |
 | Review disposition | **Deferred with evidence gaps; SP-018 is not accepted** |
 
 ## Review boundary and decision rule
@@ -109,8 +112,11 @@ presented as SP-018's revised estimate.
 
 ### HG-SP-018-01 — Assign review authority
 
-Record the actual founder/technical lead and delivery owner. If one person fills
-both roles, record that fact and the resulting lack of independent review.
+**Completed 25 September 2026.** Syed Ahmed authorized recording himself as both
+founder/technical lead and delivery owner. This satisfies role assignment for
+the readiness review, but it does not provide independent review. Any source
+criterion or later release gate that specifically requires an independent
+reviewer remains open until a different qualified person supplies that review.
 
 ### HG-SP-018-02 — Choose the bounded route through open predecessors
 
