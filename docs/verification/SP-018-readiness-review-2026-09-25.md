@@ -6,7 +6,7 @@
 | Source family | [SP-018 — Accept feasibility and revise scope/estimates](../delivery/soccer_delivery_backlog.md#sp-018--accept-feasibility-and-revise-scopeestimates) |
 | Governing activity | [ACT-SP-018-01](../delivery/activities/P03.md#act-sp-018-01--accept-integrated-outcome-accept-feasibility-and-revise-scopeestimates) |
 | Public planning base | `5f03370b` on `SoccerAPP-repo/main` |
-| Private implementation base | `b8a10da5753dd1b5ce019845fd57112b9be8084b` on `Soccolo-app/feat/sp014-local-camera-feasibility` |
+| Private implementation base | `8bc319b83b7f6c033e07d89cb9b4591e6f368a2e` on `Soccolo-app/feat/sp014-local-camera-feasibility` |
 | Last owner-tested iPhone build source | `323aa848c49c18a48f948f48b30c6b3d3c6dfa0c` |
 | Founder/technical lead | Syed Ahmed |
 | Delivery owner | Syed Ahmed |
@@ -60,14 +60,14 @@ authoritative: the local fixture is preparation, not SP-017 completion.
 |---|---|---|---|
 | SP-006 | **Accepted — bounded sample/design scope** | [Pilot animation acceptance](../content/ACT-SP-006-02-provisional-acceptance.md) closes sample/design work; no current file is approved for player release | Accepted predecessor at its recorded scope; release workload remains in the revised estimate |
 | SP-009 | **Open** | [Threat/privacy packet](../security/ACT-SP-009-01-threat-privacy-store-review-packet.md) retains H1, H2, H3 and L1; the owner exception is synthetic-planning risk acceptance, not specialist approval | Blocking |
-| SP-013 | **Open / no accepted activity evidence located** | Backlog requires one controlled assignment with bounded cost, status links, cancellation, injected-instruction handling and reviewed acceptance | Blocking |
+| SP-013 | **Open; controlled-run evidence added** | [Run evidence](SP-013-controlled-run-evidence-2026-09-26.md) records the actual local-model run, zero external spend, supervisor cancellation and reviewed replacement; injected-instruction handling and the human rollup remain open | Blocking |
 | SP-014 | **Open** | [Scope decision](../decisions/SP-014-iphone-first-pilot-feasibility-scope.md) is complete, but measurement and handoff are explicitly incomplete; the owner-tested build supports exercise clips | Blocking |
-| SP-015 | **Open** | [Family review](SP-015-family-review-2026-09-20.md) confirms the tested source produces separate round clips, not the required full-session source and chapters | Blocking |
-| SP-016 | **Open** | [Family review](SP-016-family-review-2026-09-20.md) records preparatory evidence only; storage, termination, thermal/battery, recovery and independent-QA evidence remain open | Blocking |
+| SP-015 | **Open; local fixture added** | [Local evidence](SP-015-local-fixture-evidence-2026-09-26.md) records 12/12 deterministic part/chapter/gap tests at `014de71`; physical capture, 30-minute device measurement and handoff remain open | Blocking |
+| SP-016 | **Open; local recovery matrix added** | [Local evidence](SP-016-local-recovery-evidence-2026-09-26.md) records 18/18 injected failure/recovery tests at `8bc319b`; native device, thermal/battery and independent-QA evidence remain open | Blocking |
 | SP-017 | **Open; local preparation improved** | Commit `b8a10da5` passes 28 synthetic contract cases; no separately authorized hosted path, actual network/provider evidence or final handoff exists | Blocking |
 | SP-037 | **Accepted — design/specification scope** | [Acceptance evidence](../delivery/ACT-SP-037-03-acceptance-evidence.md) accepts hierarchy/capability design; runtime and accountable security gates remain downstream | Accepted predecessor at its stated scope |
 | SP-038 | **Accepted — design/specification scope** | [Acceptance evidence](../design/ACT-SP-038-03-acceptance-evidence.md) accepts administration/membership design; runtime evidence remains downstream | Accepted predecessor at its stated scope |
-| SP-039 | **Open; static implementation evidence exists** | Private implementation validator passes 15 checks, but states that database execution is still required; no ACT-SP-039-03 accepted handoff was located | Blocking |
+| SP-039 | **Open; local database attempt recorded** | [Attempt evidence](SP-039-local-database-attempt-2026-09-26.md) records 15 passing static checks and the pinned CLI, but Docker/PostgreSQL/Podman/WSL are unavailable, so pgTAP remains unexecuted | Blocking |
 | SP-051 | **Open / no accepted execution evidence located** | Local persistence, account-switch, offline, crash/outbox, tombstone and interrupted-upload phone demonstrations remain required | Blocking |
 | SP-052 | **Open / no accepted sandbox evidence located** | Apple/Google sandbox and Stripe test-mode purchase, restore, refund, order and expiry cases remain required | Blocking |
 | SP-064 | **Accepted — zero-spend planning scope** | [Decision](../decisions/SP-064-requirements-and-estimate-gaps.md) accepts reconciliation and eight explicit gaps; it expressly is not the revised SP-018 estimate | Accepted predecessor at its stated scope; gaps flow into AC-SP-018-02 |
@@ -120,7 +120,15 @@ reviewer remains open until a different qualified person supplies that review.
 
 ### HG-SP-018-02 — Choose the bounded route through open predecessors
 
-After reviewing this ledger, the founder/technical lead must choose whether to:
+**Completed 26 September 2026 for the zero-spend local route.** Syed Ahmed
+authorized local-only evidence preparation with no host installation, paid
+service, hosted provider, physical-device claim or specialist contact. That
+route produced the SP-013 run record, SP-015 session fixture, SP-016 recovery
+matrix and SP-039 execution-attempt record linked above. It did not waive their
+remaining source criteria.
+
+Any expansion beyond that route still requires the founder/technical lead to
+choose whether to:
 
 - fund/authorize the missing feasibility work;
 - retain a truthful fallback or exclude an unsupported capability/device;
