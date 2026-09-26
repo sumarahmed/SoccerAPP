@@ -68,3 +68,28 @@ finished from that exact source SHA and produced `soccolo_mobile.ipa`, version
 60-second H.264 calibration and two 30-minute iPhone 16 Pro Max runs remain the
 human physical-device gate for `ACT-SP-015-02`; SP-015 remains open until those
 results and the owner's acceptance decision are recorded.
+
+### Build 6 physical rejection and build 7 correction
+
+On 27 September 2026, the owner ran build 6's 60-second calibration on the
+iPhone 16 Pro Max. Finalization failed truthfully with iOS `VideoError`,
+OSStatus `-12847`, and no Saved claim. The owner also reported the display
+sleeping during the intended long capture. Inspection identified that the
+verifier copied the MP4 to a staging name ending `.mp4.partial`; iOS AVPlayer
+rejected that path before the final `.mp4` rename. Build 6 is rejected for
+SP-015 and supplies no accepted capture result.
+
+Corrective source commit
+[`32025d2`](https://github.com/sumarahmed/Soccolo-app/commit/32025d2b9744088fe45549ac14af95f74fb03f00)
+uses `.partial.mp4`, disables the iOS idle timer only while capture is active,
+and adds an in-app browser for every verified app-private session. Incomplete
+or failed attempts remain excluded from the saved-session browser. Static
+analysis, 20 Flutter tests, all 12/18/28 SP-015/016/017 contract cases, the
+guarded H.264 target check and Android debug compilation passed.
+
+Codemagic Ad Hoc build
+[`6ab83b9913ca7741e618c615`](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ab83b9913ca7741e618c615)
+finished from that exact source and produced `soccolo_mobile.ipa`, version
+`0.1.0 (7)`, 29,296,353 bytes. Build success does not resolve the physical
+gate: build 7 must first pass the 60-second save/H.264/playback check before
+either 30-minute run proceeds.
