@@ -93,3 +93,12 @@ finished from that exact source and produced `soccolo_mobile.ipa`, version
 `0.1.0 (7)`, 29,296,353 bytes. Build success does not resolve the physical
 gate: build 7 must first pass the 60-second save/H.264/playback check before
 either 30-minute run proceeds.
+
+On 27 September 2026, the owner supplied build 7's copied calibration report.
+Session `1790462332057499` saved one verified rear/portrait original with four
+chapters and no gaps: 60,011 ms capture, 60,068 ms playable duration,
+46,951,393 bytes, MP4 H.264 `avc1`, 29.999 fps, 720×1280, rotation 0°, 57 ms
+start confirmation and 155 ms finalization. The manifest reports no rendered
+duplicate. This passes the measurable save/codec/structure portion of the
+calibration. Explicit owner confirmation of keep-awake behavior and playback
+from every chapter row remains required before the first 30-minute run.
