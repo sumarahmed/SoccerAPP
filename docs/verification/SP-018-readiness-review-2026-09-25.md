@@ -67,7 +67,7 @@ authoritative: the local fixture is preparation, not SP-017 completion.
 | SP-017 | **Open; local preparation improved** | Commit `b8a10da5` passes 28 synthetic contract cases; no separately authorized hosted path, actual network/provider evidence or final handoff exists | Blocking |
 | SP-037 | **Accepted — design/specification scope** | [Acceptance evidence](../delivery/ACT-SP-037-03-acceptance-evidence.md) accepts hierarchy/capability design; runtime and accountable security gates remain downstream | Accepted predecessor at its stated scope |
 | SP-038 | **Accepted — design/specification scope** | [Acceptance evidence](../design/ACT-SP-038-03-acceptance-evidence.md) accepts administration/membership design; runtime evidence remains downstream | Accepted predecessor at its stated scope |
-| SP-039 | **Execution passed; acceptance handoff pending** | [Local evidence](SP-039-local-database-attempt-2026-09-26.md) records WSL 2/Docker setup, a clean migration and synthetic-seed reset, 18/18 passing pgTAP assertions, full repository verification and disposable shutdown at `8bc319b` | Blocking until the founder/technical lead and delivery owner accept the bounded local result |
+| SP-039 | **Accepted — bounded local feasibility scope** | [Acceptance evidence](../delivery/ACT-SP-039-03-acceptance-evidence.md) and [execution evidence](SP-039-local-database-attempt-2026-09-26.md) record Syed Ahmed's dual-role acceptance after WSL 2/Docker setup, a clean migration and synthetic-seed reset, 18/18 passing pgTAP assertions, full repository verification and disposable shutdown at `8bc319b` | Accepted predecessor at its recorded scope; hosted, production and independent-security evidence remain downstream gates |
 | SP-051 | **Open / no accepted execution evidence located** | Local persistence, account-switch, offline, crash/outbox, tombstone and interrupted-upload phone demonstrations remain required | Blocking |
 | SP-052 | **Open / no accepted sandbox evidence located** | Apple/Google sandbox and Stripe test-mode purchase, restore, refund, order and expiry cases remain required | Blocking |
 | SP-064 | **Accepted — zero-spend planning scope** | [Decision](../decisions/SP-064-requirements-and-estimate-gaps.md) accepts reconciliation and eight explicit gaps; it expressly is not the revised SP-018 estimate | Accepted predecessor at its stated scope; gaps flow into AC-SP-018-02 |
@@ -75,13 +75,13 @@ authoritative: the local fixture is preparation, not SP-017 completion.
 | SP-081 | **Open / no accepted composition evidence located** | On-device branded composition depends on SP-014, SP-015, SP-080 and SP-126 and requires measured representative-device encoding results | Blocking |
 | SP-126 | **Accepted — protocol/scope decision** | [Decision](../decisions/SP-126-measurable-feasibility-and-device-thresholds.md) accepts thresholds, fallbacks and synthetic/adult fixture limits; it claims no successful physical run | Accepted predecessor at its stated scope; actual results remain in SP-014–SP-016/SP-081 |
 
-Current count: **5 accepted at their bounded scope; 11 blocking/open**.
+Current count: **6 accepted at their bounded scope; 10 blocking/open**.
 
 ## SP-018 acceptance criteria
 
 | Criterion | Current result | Evidence-based reason |
 |---|---|---|
-| AC-SP-018-01 — Media and scoped database evidence, device limits, animation/admin workload and full club/family architecture | **FAIL — OPEN** | SP-039 now has passing local database execution, and animation samples and administration designs exist, but SP-009, SP-014–SP-017, SP-039 acceptance handoff, SP-051–SP-052, SP-065 and SP-081 remain open |
+| AC-SP-018-01 — Media and scoped database evidence, device limits, animation/admin workload and full club/family architecture | **FAIL — OPEN** | SP-039 is accepted at bounded local feasibility scope, and animation samples and administration designs exist, but SP-009, SP-014–SP-017, SP-051–SP-052, SP-065 and SP-081 remain open |
 | AC-SP-018-02 — Revised engineering/content/cloud/recovery estimate supersedes the family-only range | **FAIL — OPEN** | SP-064 records explicit estimate gaps and an assumption-based workbook; no evidence-backed revised estimate, actual capacity plan or approved supplier scope exists |
 | AC-SP-018-03 — No invented supplier quote | **PASS for the current review** | No supplier response is represented as received; missing prices remain explicit gaps and the baseline workbook is not treated as a quote or approved budget |
 
@@ -126,8 +126,9 @@ service, hosted provider, physical-device claim or specialist contact. He then
 separately authorized the required zero-spend WSL 2 and Docker Desktop host
 setup and the Windows restart. That route produced the SP-013 run record,
 SP-015 session fixture, SP-016 recovery matrix and passing SP-039 local database
-execution record linked above. It did not waive their remaining source criteria
-or independently accept the new SP-039 handoff.
+execution record linked above. Syed Ahmed subsequently accepted SP-039 in both
+recorded roles at its bounded local scope. That acceptance does not waive other
+source criteria or claim an independent security review.
 
 Any expansion beyond that route still requires the founder/technical lead to
 choose whether to:

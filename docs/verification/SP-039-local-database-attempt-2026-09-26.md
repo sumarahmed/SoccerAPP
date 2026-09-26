@@ -6,7 +6,7 @@
 | Source | [SP-039](../delivery/soccer_delivery_backlog.md#sp-039--prove-scoped-database-and-storage-foundation) |
 | Implementation revision | `8bc319b83b7f6c033e07d89cb9b4591e6f368a2e` |
 | External spend | AUD 0 |
-| Disposition | **PASS — disposable local migration, synthetic seed and 18 pgTAP assertions executed successfully** |
+| Disposition | **ACCEPTED — disposable local migration, synthetic seed and 18 pgTAP assertions executed successfully** |
 
 ## Commands and results
 
@@ -41,6 +41,8 @@ immediate revocation and unrelated-club denial across all 18 assertions.
 This is disposable local feasibility evidence at implementation revision
 `8bc319b83b7f6c033e07d89cb9b4591e6f368a2e`. It does not prove a hosted
 environment, production operations, provider controls, real-child data handling
-or independent review. The implementation produced no tracked change. SP-039
-has passed its local execution proof and remains pending founder/technical-lead
-and delivery-owner acceptance at the recorded bounded scope.
+or independent review. The implementation produced no tracked change. Syed
+Ahmed accepted SP-039 on 26 September 2026 in both the Founder/technical-lead
+and Delivery-owner roles at this bounded scope; see the
+[acceptance evidence](../delivery/ACT-SP-039-03-acceptance-evidence.md). No
+independent security or delivery review is claimed.
