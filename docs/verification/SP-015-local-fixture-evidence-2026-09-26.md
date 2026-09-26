@@ -102,3 +102,9 @@ start confirmation and 155 ms finalization. The manifest reports no rendered
 duplicate. This passes the measurable save/codec/structure portion of the
 calibration. Explicit owner confirmation of keep-awake behavior and playback
 from every chapter row remains required before the first 30-minute run.
+
+The owner subsequently confirmed that the camera remained active/the screen
+stayed awake throughout the calibration and that all four chapter rows played
+correctly. Build 7 therefore passes the complete 60-second calibration gate;
+the continuous 30-minute rear/portrait run may proceed. This does not yet pass
+either required 30-minute measurement or close SP-015.
