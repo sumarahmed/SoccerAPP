@@ -41,3 +41,30 @@ battery or thermal behavior, verify iOS seeking, or satisfy `ACT-SP-015-02` and
 so that predecessor is now available. No SP-015 source criterion is marked
 accepted yet; the exercise-clip mode remains the tested internal fallback while
 physical full-session work proceeds.
+
+## Signed physical-device candidate
+
+The owner accepted the reviewed implementation route and authorized a full
+build on 26 September 2026. Mobile source commit
+[`ec9a0aa`](https://github.com/sumarahmed/Soccolo-app/commit/ec9a0aa8d4d9f245b6b0a1016d657764c8e47511)
+implements the separate internal full-session diagnostic, original-part
+manifest, source-offset chapter navigation, programmed-rest capture, truthful
+Pause/Resume gaps, direct H.264 request and iOS fail-closed `avc1` inspection.
+It creates no rendered aggregate video.
+
+Verification against that source completed as follows:
+
+- Flutter static analysis: no issues;
+- Flutter tests: 19/19 passed;
+- SP-015 synthetic contract suite: 12/12 passed;
+- SP-016 and SP-017 regression suites: 18/18 and 28/28 passed;
+- Android debug compile: passed; and
+- guarded `camera_avfoundation 0.10.3` H.264 patch target check: passed.
+
+Codemagic Ad Hoc build
+[`6ab7a5b8f0d54ec5b548c4f4`](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ab7a5b8f0d54ec5b548c4f4)
+finished from that exact source SHA and produced `soccolo_mobile.ipa`, version
+`0.1.0 (6)`, 29,292,611 bytes. This proves buildability/signing only. A
+60-second H.264 calibration and two 30-minute iPhone 16 Pro Max runs remain the
+human physical-device gate for `ACT-SP-015-02`; SP-015 remains open until those
+results and the owner's acceptance decision are recorded.
