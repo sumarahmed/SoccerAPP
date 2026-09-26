@@ -3,10 +3,16 @@
 | Field | Value |
 |---|---|
 | Source issue | SP-014 |
-| Decision date | 19 September 2026 |
+| Decision version | 2.0 |
+| Original scope date | 19 September 2026 |
+| Decision date | 26 September 2026 |
+| Acceptance date | 26 September 2026 |
 | Accountable owner | Syed Ahmed |
+| Accountable person | Syed Ahmed |
+| Outcome | Accepted |
+| Acceptance criterion | AC-SP-014-01, AC-SP-014-02 and AC-SP-014-03 at the amended local-only iPhone feasibility scope |
 | Decision | Accepted for the bounded, synthetic/consenting-adult pilot feasibility review |
-| Completion status | Scope decision complete; SP-014 measurement and handoff **not complete** |
+| Completion status | **SP-014 accepted at the amended local-only iPhone feasibility scope**; see [ACT-SP-014-03 acceptance](../verification/ACT-SP-014-03-iphone-feasibility-acceptance.md) |
 
 ## Accepted scope
 
@@ -57,3 +63,19 @@ SP-012 and SP-013 remain formal predecessors in the source activity graph.
 Their accepted interim-risk route permits bounded synthetic development; it
 does not automatically mark those gates or SP-014 Done. SP-015 full-session and
 SP-016 storage/termination work remain separate later claims.
+
+## Later execution and acceptance
+
+On 26 September 2026, Syed Ahmed completed and accepted the bounded build-5
+physical-device route described in this amendment. Three ten-minute runs, three
+typical two-round sessions, portrait/landscape and rear/front camera coverage
+were reported passed on the iPhone 16 Pro Max. The signed artifact, exact source,
+measured media/timing sample, screenshot digests, criterion disposition and
+retained limits are recorded in the
+[ACT-SP-014-03 acceptance](../verification/ACT-SP-014-03-iphone-feasibility-acceptance.md).
+
+The observed codec was HEVC `hvc1`. The owner accepted it only as a local iPhone
+feasibility exception; H.264 remains the main-build target. This later acceptance
+supersedes this document's earlier statement that SP-014 measurement and handoff
+were incomplete. It does not change the separate statuses of SP-012/SP-013 or
+complete SP-015/SP-016.

@@ -36,6 +36,8 @@ The test suite verifies:
 This is a local schema/state prototype. It does not capture camera media, prove
 codec behavior, run for 30 minutes on a physical device, measure file size,
 battery or thermal behavior, verify iOS seeking, or satisfy `ACT-SP-015-02` and
-`ACT-SP-015-03`. The formal SP-014 predecessor is also still open. Therefore no
-SP-015 source criterion is marked accepted and the exercise-clip mode remains
-the tested internal fallback.
+`ACT-SP-015-03`. SP-014 was subsequently
+[accepted at its bounded iPhone feasibility scope](ACT-SP-014-03-iphone-feasibility-acceptance.md),
+so that predecessor is now available. No SP-015 source criterion is marked
+accepted yet; the exercise-clip mode remains the tested internal fallback while
+physical full-session work proceeds.

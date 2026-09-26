@@ -61,7 +61,7 @@ authoritative: the local fixture is preparation, not SP-017 completion.
 | SP-006 | **Accepted — bounded sample/design scope** | [Pilot animation acceptance](../content/ACT-SP-006-02-provisional-acceptance.md) closes sample/design work; no current file is approved for player release | Accepted predecessor at its recorded scope; release workload remains in the revised estimate |
 | SP-009 | **Open** | [Threat/privacy packet](../security/ACT-SP-009-01-threat-privacy-store-review-packet.md) retains H1, H2, H3 and L1; the owner exception is synthetic-planning risk acceptance, not specialist approval | Blocking |
 | SP-013 | **Open; controlled-run evidence added** | [Run evidence](SP-013-controlled-run-evidence-2026-09-26.md) records the actual local-model run, zero external spend, supervisor cancellation and reviewed replacement; injected-instruction handling and the human rollup remain open | Blocking |
-| SP-014 | **Open** | [Scope decision](../decisions/SP-014-iphone-first-pilot-feasibility-scope.md) is complete, but measurement and handoff are explicitly incomplete; the owner-tested build supports exercise clips | Blocking |
+| SP-014 | **Accepted — bounded local iPhone feasibility scope** | [Acceptance evidence](ACT-SP-014-03-iphone-feasibility-acceptance.md) records the signed build, three ten-minute runs, three typical sessions, front/rear and portrait/landscape owner acceptance; HEVC is local-only and H.264 remains a main-build target | Accepted predecessor at its recorded scope; Android, release and H.264 claims remain downstream |
 | SP-015 | **Open; local fixture added** | [Local evidence](SP-015-local-fixture-evidence-2026-09-26.md) records 12/12 deterministic part/chapter/gap tests at `014de71`; physical capture, 30-minute device measurement and handoff remain open | Blocking |
 | SP-016 | **Open; local recovery matrix added** | [Local evidence](SP-016-local-recovery-evidence-2026-09-26.md) records 18/18 injected failure/recovery tests at `8bc319b`; native device, thermal/battery and independent-QA evidence remain open | Blocking |
 | SP-017 | **Open; local preparation improved** | Commit `b8a10da5` passes 28 synthetic contract cases; no separately authorized hosted path, actual network/provider evidence or final handoff exists | Blocking |
@@ -75,13 +75,13 @@ authoritative: the local fixture is preparation, not SP-017 completion.
 | SP-081 | **Open / no accepted composition evidence located** | On-device branded composition depends on SP-014, SP-015, SP-080 and SP-126 and requires measured representative-device encoding results | Blocking |
 | SP-126 | **Accepted — protocol/scope decision** | [Decision](../decisions/SP-126-measurable-feasibility-and-device-thresholds.md) accepts thresholds, fallbacks and synthetic/adult fixture limits; it claims no successful physical run | Accepted predecessor at its stated scope; actual results remain in SP-014–SP-016/SP-081 |
 
-Current count: **6 accepted at their bounded scope; 10 blocking/open**.
+Current count: **7 accepted at their bounded scope; 9 blocking/open**.
 
 ## SP-018 acceptance criteria
 
 | Criterion | Current result | Evidence-based reason |
 |---|---|---|
-| AC-SP-018-01 — Media and scoped database evidence, device limits, animation/admin workload and full club/family architecture | **FAIL — OPEN** | SP-039 is accepted at bounded local feasibility scope, and animation samples and administration designs exist, but SP-009, SP-014–SP-017, SP-051–SP-052, SP-065 and SP-081 remain open |
+| AC-SP-018-01 — Media and scoped database evidence, device limits, animation/admin workload and full club/family architecture | **FAIL — OPEN** | SP-014 and SP-039 are accepted at their bounded feasibility scopes, and animation samples and administration designs exist, but SP-009, SP-013, SP-015–SP-017, SP-051–SP-052, SP-065 and SP-081 remain open |
 | AC-SP-018-02 — Revised engineering/content/cloud/recovery estimate supersedes the family-only range | **FAIL — OPEN** | SP-064 records explicit estimate gaps and an assumption-based workbook; no evidence-backed revised estimate, actual capacity plan or approved supplier scope exists |
 | AC-SP-018-03 — No invented supplier quote | **PASS for the current review** | No supplier response is represented as received; missing prices remain explicit gaps and the baseline workbook is not treated as a quote or approved budget |
 
@@ -97,7 +97,7 @@ must use optimistic/expected/pessimistic ranges for leaf work only.
 | Identity, MFA, recovery and child credentials | Accepted design contracts | SP-065 feasibility, supported provider limits, identity/recovery implementation scope and actual owner capacity |
 | Administrative web/API and authorization | SP-037/SP-038/SP-060 design contracts | Runtime API/RLS denial evidence, independent security scope and implementation estimate |
 | Media validation and optional cloud | SP-011 contract and SP-017 local fixture | Authorized hosted environment, provider/storage/transfer measurements, quarantine-worker scope and residual-access result |
-| iOS build and device work | SP-126 protocol and limited SP-014 owner smoke evidence | Completed SP-014–SP-016/SP-081 runs, Mac/build-service route, repeat count and reviewer effort |
+| iOS build and device work | SP-126 protocol plus accepted bounded SP-014 signed-build and iPhone evidence | Completed SP-015–SP-016/SP-081 runs, main-build H.264 route, further device limits and reviewer effort |
 | Content, animation and accessibility | Three SP-006 review samples and fixed minimum matrix | Release-asset production scope, source rights, coach/accessibility review effort and actual quote or internal rate |
 | Safeguarding, privacy and support | Design/runbook contracts | Resolution of SP-009 H1–H3/L1, named qualified reviewers, coverage model and measured/support-volume assumption |
 | Billing, subscriptions and support | Entitlement design contract | SP-052 sandbox evidence, provider fee inputs and purchase/recovery/refund workload |
