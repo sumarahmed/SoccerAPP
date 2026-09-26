@@ -108,3 +108,16 @@ stayed awake throughout the calibration and that all four chapter rows played
 correctly. Build 7 therefore passes the complete 60-second calibration gate;
 the continuous 30-minute rear/portrait run may proceed. This does not yet pass
 either required 30-minute measurement or close SP-015.
+
+The owner then supplied and accepted 30-minute session
+`1790462625360092` as the intentional Pause/Resume case. It saved 1,800,021 ms
+of captured presentation across two verified rear/portrait H.264 `avc1`
+originals (1,293,599,805 bytes total), six source-offset chapter segments and
+one accurately represented 8,091 ms frameless gap. Phase B is split across the
+two originals without fabricating frames; both programmed rests remain in the
+sources; no rendered duplicate exists. The owner accepted rear/portrait as the
+tested configuration instead of the proposed front/landscape combination.
+Battery delta, free-storage delta and thermal observations were not supplied
+and are not inferred. This accepted Pause/Resume result does not replace the
+required uninterrupted `1 part / 5 chapters / 0 gaps` 30-minute run, so SP-015
+remains open.
