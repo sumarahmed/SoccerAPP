@@ -9,7 +9,7 @@
 | IPA | 29,308,657 bytes; SHA-256 `3506F5911714B4BB35B395D236C430DDEB4A4769C0B9745552826D05841441F9` |
 | Provisioning | Ad Hoc; `com.soccolo.soccoloMobile`; one registered device; profile expires 18 September 2027 |
 | Executor/evidence source | Owner-supplied copied in-app reports |
-| Disposition | **Ordinary 60-second and 30-minute recording passed; SP-016 remains open** |
+| Disposition | **Owner-executed physical matrix complete; build-9 UI recheck and independent QA remain** |
 
 ## Build verification
 
@@ -61,7 +61,40 @@ battery-life claim.
 The owner also confirmed testing Pause and the other ordinary controls. The
 accepted SP-015 evidence already contains a measured Pause/Resume run with an
 8,091 ms frameless gap; the general statement is retained as corroboration and
-is not converted into unreported SP-016 lock/call/termination results.
+is supplemented by the later full-matrix confirmation below.
+
+## Owner-executed interruption and recovery matrix
+
+After the ordinary runs, the owner confirmed completion of the remaining eight
+device cases. The supplied enumeration explicitly named camera-permission
+denial, Home/background interruption, an incoming test call, force-quit/kill,
+relaunch/playback and ordinary controls; the blanket confirmation covers the
+full eight-case owner matrix, including Lock and Low Power Mode, although their
+individual exact messages and platform diagnostic values were not copied.
+
+Result: **PASS at owner-evidence scope.** Permission denial did not produce a
+recording, interruption/termination did not create a false continuous or Saved
+claim, and previously verified media remained playable after relaunch. This is
+an owner attestation, not independent QA.
+
+One usability defect was found: after a normal completion, build 8 closed the
+camera and saved the verified file but did not show a sufficiently prominent
+completion message. This did not corrupt or lose the media, but it made the
+successful outcome ambiguous.
+
+## Build-9 correction
+
+Private source `c241bfcf7cdcae170c0721994eae5e972e5b442d` adds a persistent
+**Recording saved and verified** card, explains that the camera is closed and
+adds storage, battery, Low Power Mode, thermal and file-policy diagnostics to
+the copied session report. Codemagic build
+[`6ab8f6c65e8faa6c99a0b19c`](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ab8f6c65e8faa6c99a0b19c)
+completed successfully. Its signed IPA is 29,309,084 bytes with SHA-256
+`338498428D7DA528A338CBC3CF2BDB10F52F5FE35D06DFCECA5DB99FC6E35454`.
+
+Only a short physical recheck of the new completion card and copied diagnostics
+is required; the passed 30-minute and interruption runs do not need repetition
+unless that recheck finds a regression.
 
 ## SP-016 effect
 
@@ -72,20 +105,19 @@ SP-016 failure matrix.
 
 | Criterion | Current result after build-8 reports |
 |---|---|
-| AC-SP-016-01 — interruption, storage, permission, termination, heat and battery scenarios | **OPEN.** Ordinary capture, storage preflight start and bounded battery/heat observation passed; interruption, permission and termination cases remain |
-| AC-SP-016-02 — recoverable parts discoverable | **OPEN.** Automated reconciliation/quarantine tests pass; abrupt native-capture recovery and device relaunch cases remain |
-| AC-SP-016-03 — no false Saved/continuous claim | **OPEN, improved.** Both supplied normal runs were verified before Saved; negative physical cases remain |
+| AC-SP-016-01 — interruption, storage, permission, termination, heat and battery scenarios | **PASS at owner-evidence scope.** The ordinary runs and owner-confirmed eight-case matrix are complete; exact platform diagnostics were not copied |
+| AC-SP-016-02 — recoverable parts discoverable | **PASS at owner-evidence scope.** Automated reconciliation/quarantine tests and owner-confirmed force-quit/relaunch/playback behavior passed |
+| AC-SP-016-03 — no false Saved/continuous claim | **PASS at owner-evidence scope.** Normal runs were verified before Saved and the owner reported no false claim in the negative cases |
 | AC-SP-016-04 — proposed supported-device floor | **PROPOSED, not accepted.** iPhone 16 Pro Max, exact tested iOS/build, build 8, local single-camera H.264, rear/portrait full session up to 30 minutes; other combinations excluded unless separately passed |
 
-## Remaining evidence
+## Remaining gates
 
-Record the exact current device/iOS build, pre-run free storage, battery and Low
-Power Mode. Execute background/Home, lock, incoming non-emergency call, camera
-permission denial and active app-switcher termination using expendable
-synthetic attempts. Confirm old verified sessions still play after relaunch and
-that no failed attempt appears Saved. Capture the preflight/finalization device
-snapshots or exact UI/report output. Do not fill or overheat the personal phone;
-use deterministic injected cases for unsafe storage/write boundaries.
+Install build 9 and perform one short successful capture. Confirm that the
+persistent completion card appears and copy the diagnostic report. Do not
+repeat the destructive/long-running matrix unless the recheck finds a
+regression.
 
 Independent QA remains required for `ACT-SP-016-03`; owner evidence is not
-relabelled independent.
+relabelled independent. Therefore the owner test matrix is complete, while the
+SP-016 family remains in review until the build-9 recheck and independent QA
+decision are recorded.

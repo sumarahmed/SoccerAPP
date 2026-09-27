@@ -13,6 +13,11 @@
 | Review independence | Syed Ahmed fills both roles; no independent delivery-owner review is claimed |
 | Review disposition | **Deferred with evidence gaps; SP-018 is not accepted** |
 
+> Status update, 27 September 2026: use the
+> [pilot-family build-readiness ledger](pilot-family-build-readiness-2026-09-27.md)
+> for the current count, SP-016 owner evidence and recommended execution order.
+> The historical snapshot below remains useful for its full criterion analysis.
+
 ## Review boundary and decision rule
 
 SP-018 is the human G2 feasibility rollup. Its activity requires accepted
@@ -75,7 +80,9 @@ authoritative: the local fixture is preparation, not SP-017 completion.
 | SP-081 | **Open / no accepted composition evidence located** | On-device branded composition depends on SP-014, SP-015, SP-080 and SP-126 and requires measured representative-device encoding results | Blocking |
 | SP-126 | **Accepted — protocol/scope decision** | [Decision](../decisions/SP-126-measurable-feasibility-and-device-thresholds.md) accepts thresholds, fallbacks and synthetic/adult fixture limits; it claims no successful physical run | Accepted predecessor at its stated scope; actual results remain in SP-014–SP-016/SP-081 |
 
-Current count: **7 accepted at their bounded scope; 9 blocking/open**.
+Snapshot count correction: **8 accepted at their bounded scope; 8
+blocking/open**. SP-126 is an accepted bounded protocol/scope predecessor and
+was inadvertently omitted from the original count.
 
 ## SP-018 acceptance criteria
 
