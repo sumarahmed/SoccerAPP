@@ -7,7 +7,7 @@
 | Implementation | [`014de71`](https://github.com/sumarahmed/Soccolo-app/commit/014de71cd51e79dfd0edfc5b471a5d1d77a84112) |
 | Validation | `node tests/media/validate-sp015-session-fixture.cjs` — 12/12 passed |
 | External spend/data | AUD 0; synthetic identifiers and timing only |
-| Disposition | **ACT-SP-015-01 preparatory fixture complete; SP-015 remains open** |
+| Disposition | **Superseded by the bounded iPhone [ACT-SP-015-03 acceptance](ACT-SP-015-03-iphone-full-session-acceptance.md)** |
 
 ## Evidence supplied
 
@@ -121,3 +121,12 @@ Battery delta, free-storage delta and thermal observations were not supplied
 and are not inferred. This accepted Pause/Resume result does not replace the
 required uninterrupted `1 part / 5 chapters / 0 gaps` 30-minute run, so SP-015
 remains open.
+
+## Subsequent owner acceptance
+
+The owner later reported completing the uninterrupted 30-minute run and
+directed SP-015 acceptance to proceed. The final criterion dispositions,
+aggregate-evidence limit and exclusions are recorded in the dated
+[ACT-SP-015-03 acceptance](ACT-SP-015-03-iphone-full-session-acceptance.md).
+That record supersedes this packet's earlier open disposition without altering
+the historical measurements or inventing a missing continuous-run report.

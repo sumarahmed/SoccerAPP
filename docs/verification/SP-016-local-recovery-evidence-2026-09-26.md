@@ -33,6 +33,8 @@ next-launch re-verification. The injected matrix covers:
 The fixture does not invoke a native camera, fill a real device, inspect real
 filesystem protection/backup attributes, measure heat or battery, prove iOS
 termination behavior, establish a supported-device floor or supply independent
-QA acceptance. SP-015 and the formal device predecessors remain open. These
-tests prepare the controlled failure matrix only and do not complete
+QA acceptance. SP-015 was subsequently
+[accepted at a bounded local-only iPhone scope](ACT-SP-015-03-iphone-full-session-acceptance.md),
+but the remaining formal device predecessors and SP-016 checks stay open.
+These tests prepare the controlled failure matrix only and do not complete
 `ACT-SP-016-02`, `ACT-SP-016-03` or SP-016.
