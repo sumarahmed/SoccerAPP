@@ -10,6 +10,17 @@
 
 ## Decision
 
+Local source/test review, 28 September: **revise before local closeout**. Review
+fixtures reproduced corrupt-canonical backup bypass and permanent quarantine
+after transient verification failure. Source review also found repeated writes
+inside failure handlers can bypass later cleanup/error reporting. All 59 Flutter
+tests passed, including characterization tests of the two unresolved defects;
+analysis and repository contracts passed. Controlled write rejection preserved
+existing files but is not native iOS ENOSPC evidence. Implement recovery/error
+handling corrections with injectable storage failures; no owner disk-filling
+test is required. The owner confirms intentional silent recording, satisfactory
+branding and export survival across update. Cloud remains deferred.
+
 Follow-up owner evidence: all ten combined local checklist cases were reported
 passed, with test 2 limited to a silent recording. Relaunch, airplane mode,
 cancellation/retry, background/lock, force-close recovery, deletion durability,
