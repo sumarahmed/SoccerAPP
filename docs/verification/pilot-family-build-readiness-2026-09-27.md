@@ -10,6 +10,13 @@
 
 ## Decision
 
+29 September release update: Build 17 packages the local recovery corrections.
+Apple-host Flutter checks passed; native tests had 13 passes, one existing
+device-only rendering skip and no failures. Signed artifact verification passed.
+The owner accepted the previous local workflow; a short update regression on
+Build 17 remains pending. This does not close independent review or establish
+native disk-full behavior. Cloud features remain deferred.
+
 Local correction follow-up: the three recovery findings are implemented in
 source, with 64 passing Flutter tests, clean analysis and repository checks.
 Fault injection covers staging-write and publication failures, preservation of
