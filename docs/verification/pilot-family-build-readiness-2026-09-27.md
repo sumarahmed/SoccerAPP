@@ -10,6 +10,15 @@
 
 ## Decision
 
+Local correction follow-up: the three recovery findings are implemented in
+source, with 64 passing Flutter tests, clean analysis and repository checks.
+Fault injection covers staging-write and publication failures, preservation of
+committed data, and continued cleanup after multiple errors. Backup restoration,
+retry after transient verification, legacy quarantine recovery and unknown-schema
+preservation are tested. No new binary or native iOS disk-full result is claimed.
+The earlier review disposition below is historical; device packaging/validation
+of this source revision and independent QA remain separate from source completion.
+
 Local source/test review, 28 September: **revise before local closeout**. Review
 fixtures reproduced corrupt-canonical backup bypass and permanent quarantine
 after transient verification failure. Source review also found repeated writes
