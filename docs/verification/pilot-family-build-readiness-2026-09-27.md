@@ -10,6 +10,15 @@
 
 ## Decision
 
+Follow-up owner evidence: all ten combined local checklist cases were reported
+passed, with test 2 limited to a silent recording. Relaunch, airplane mode,
+cancellation/retry, background/lock, force-close recovery, deletion durability,
+permission recovery and usability now have owner-reported evidence. See the
+[case table and limits](local-export-build16-owner-result-2026-09-28.md).
+Next engineering checks: controlled low-space behavior and frame-accurate timing;
+verify update persistence on the next release. Voiced-source audio remains
+unverified. Do not repeat the completed owner checklist without a relevant change.
+
 28 September local-export update: the owner reports Build 16 delete, view,
 export and save working as expected. The empty Saved exports defect is closed
 at functional smoke-test scope. See [the bounded device result](local-export-build16-owner-result-2026-09-28.md).

@@ -28,3 +28,30 @@ in this public planning record.
 Next action: retain these four functional passes and collect only the outstanding
 SP-081 timing/audio and failure-preservation evidence. Do not repeat the successful
 workflow solely to restate this result.
+
+## Follow-up combined local checklist — 28 September 2026
+
+The owner subsequently reported: “all 10 passed for number 2 video recordings
+is without any voice.” Record the following as owner-reported results on the
+delivered Build 16; no independent execution or new binary is implied.
+
+| Test | Result |
+| --- | --- |
+| 1. Branded opening and held-frame transition | Pass by visual inspection; exact timing not measured |
+| 2. Audio | Silent-recording case passed; voiced-source audio synchronization not exercised |
+| 3. Close/reopen persistence and playback | Pass |
+| 4. Airplane-mode local viewing/export/save | Pass |
+| 5. Export cancellation, preservation and retry | Pass |
+| 6. App switching/locking during export and return | Pass; completion versus interruption branch not separately specified |
+| 7. Force-close during export, recovery and fresh export | Pass |
+| 8. Cancel/confirm deletion, preserve original and persist deletion after relaunch | Pass |
+| 9. Photos permission denial, guidance and retry | Pass as reported in the ten-case checklist; no separate artifacts supplied |
+| 10. Local navigation, labels, progress and error usability | Pass |
+
+These results supersede the earlier missing owner evidence for the exercised
+local recovery and failure cases. They do not establish microphone capture,
+voiced-source audio synchronization, exact transition timestamps, controlled
+low-space behavior, update-over-install persistence, or execution of the skipped
+native rendering test. Remaining engineering work is controlled storage-failure
+testing and frame-accurate verification, followed by update persistence on the
+next actual release. Independent QA remains separate. Cloud work stays deferred.
