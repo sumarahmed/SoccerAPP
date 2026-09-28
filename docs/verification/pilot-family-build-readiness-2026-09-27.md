@@ -2,13 +2,19 @@
 
 | Field | Current record |
 |---|---|
-| Date | 27 September 2026 |
+| Date | 27 September 2026; local export evidence updated 28 September 2026 |
 | Governing rollup | [SP-018 readiness review](SP-018-readiness-review-2026-09-25.md) |
 | Scope | The sixteen SP-018 predecessor families needed to justify the pilot build |
 | Current position | **8 accepted at bounded scope; 8 still blocking/open** |
 | Recommended next family | **SP-017 — authorized cloud-media path** |
 
 ## Decision
+
+28 September local-export update: the owner reports Build 16 delete, view,
+export and save working as expected. The empty Saved exports defect is closed
+at functional smoke-test scope. See [the bounded device result](local-export-build16-owner-result-2026-09-28.md).
+This advances SP-081 runtime evidence without closing its remaining timing/audio,
+failure-preservation or independent-review gates; the family totals are unchanged.
 
 The SP-016 **owner-executed test matrix is complete**. The family is not yet
 formally accepted because build 9 needs one short completion-card recheck and
@@ -39,7 +45,7 @@ authorized test environment and real end-to-end evidence.
 | SP-052 | Open | Run Apple/Google sandbox plus Stripe test-mode purchase, restore, refund and expiry cases | Defer until sandbox accounts and billing scope are ready; never use real charges |
 | SP-064 | Accepted — zero-spend planning | Replace assumptions only when measured inputs or quotes exist | Carry gaps forward; do not invent a revised total |
 | SP-065 | Open | Prove MFA, recovery, assurance-level denial, child sessions and revocation | Run after identity-provider choice; combine security review with SP-009 where possible |
-| SP-081 | Open | Prove on-device branded composition, audio sync, cancel and low-space preservation | Reuse SP-014–SP-016 media fixtures; run before broad device expansion |
+| SP-081 | Open — Build 16 local workflow owner-passed | Retain successful delete/view/export/save evidence; complete measured timing/audio, cancel and low-space preservation checks | Review the remaining cases only; see the 28 September device result |
 | SP-126 | Accepted — protocol/scope | Apply thresholds to each measured result | Do not reopen the protocol decision |
 
 ## Recommended execution order
