@@ -19,6 +19,11 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 ## Documentation
 
+The owner-authorized [D01–D10 local product increment](docs/verification/local-product-increment-2026-09-29.md)
+adds the local navigation, practice, review/history, catalog and appearance areas.
+Approved settings remain unchanged and reused demonstrations are labeled
+placeholders. Cloud stays deferred; new-interface device acceptance is pending.
+
 **Accepted decisions:** [SP-001 launch and account assumptions](docs/decisions/SP-001-launch-and-account-assumptions.md) version 1.0 was accepted by the founder/product owner on 10 September 2026. [SP-075 ownership and discovery authority](docs/decisions/SP-075-ownership-and-discovery-authority.md), [SP-004 pilot metrics, budget and specialist scopes](docs/decisions/SP-004-pilot-metrics-budget-and-specialist-scopes.md) and [SP-003 agent scope and evidence policy](docs/decisions/SP-003-agent-scope-and-evidence-policy.md) version 1.0 were accepted on 11 September 2026. Syed Ahmed holds all primary accountable roles for the one-person company; all human backups and independent reviewers are explicitly vacant, incremental discovery spend is capped at AUD 0, only Syed may contact specialists, and no discovery brief has been issued. Pre-research thresholds, a Windows-only development/owned-device access plan, and exact run/evidence/review boundaries are fixed. The recorded vacancies and missing Mac build host block the sensitive or iOS actions that require real specialist, independent or macOS/Xcode evidence. These decisions do not claim participant recruitment, specialist approval, device-test results or implementation evidence.
 
 Explore the delivery dependencies and accepted status in the [automatically generated SoccerAPP activity execution map](https://sumarahmed.github.io/SoccerAPP/). GitHub Actions rebuilds and republishes it from the activity manifests and accepted decision records after relevant changes land on `main`.
