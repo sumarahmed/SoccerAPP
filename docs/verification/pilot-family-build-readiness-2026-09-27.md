@@ -2,20 +2,29 @@
 
 | Field | Current record |
 |---|---|
-| Date | 27 September 2026; local export evidence updated 28 September 2026 |
+| Date | 27 September 2026; local owner acceptance updated 29 September 2026 |
 | Governing rollup | [SP-018 readiness review](SP-018-readiness-review-2026-09-25.md) |
 | Scope | Local-first completion milestone; retain the sixteen-family SP-018 ledger for the wider roadmap |
 | Current position | **8 accepted at bounded scope; 8 open in the wider roadmap; cloud work deferred by owner** |
-| Recommended next family | **SP-081 — local export closeout, followed by local SP-051 persistence/recovery** |
+| Recommended next family | **Define the next local product scope; owner acceptance of the bounded media workflow is complete** |
 
 ## Decision
+
+29 September owner acceptance: Build 18 was reported working as expected with
+old exports, new-video export, close/reopen persistence and gallery saving. The
+reported export failure and requested update regression are closed at this
+owner-reported functional scope. Together with the prior ten-case checklist and
+owner local acceptance, this completes owner acceptance of the bounded local
+media workflow. It does not count as independent QA, native disk-full testing,
+full SP-051 cloud acceptance, or wider SP-018/product approval. Cloud remains
+deferred; no additional build or repeat checklist is required just for closeout.
 
 Latest release update: Build 17 owner export testing exposed a duration-validation
 reference defect after encoding completed. Build 18 uses measured composition
 duration, retaining the existing tolerance and other output checks. Its native
 regression passed (14 native passes, one existing device-only skip); Flutter
-checks and signed package verification passed. Owner retry remains pending;
-do not close local export acceptance for the new release before that result.
+checks and signed package verification passed. The owner retry subsequently
+passed as recorded above. Older pending statements below are historical snapshots.
 
 29 September release update: Build 17 packages the local recovery corrections.
 Apple-host Flutter checks passed; native tests had 13 passes, one existing
