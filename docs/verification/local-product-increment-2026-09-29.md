@@ -51,3 +51,20 @@ skip and zero failures. Ad Hoc signing succeeded. Artifact inspection confirmed
 version 0.1.0 (19), exact source identity, the ten-drill catalog and unchanged
 branding. New-interface physical-device acceptance is still pending. Cloud remains
 deferred; this is not public/store release approval.
+
+## Owner prototype feedback and next review
+
+The owner reports that the experience works as expected for the prototype and
+does not request further design feedback now. This accepts the prototype concept
+and experience, not final visual design or every unreported device test.
+Original-recording deletion from My Videos is requested for the next update;
+saved-export deletion already exists. Confirmation and independent handling of
+originals, derivatives and Photos/Files copies are required in the proposed change.
+
+Recommended next review: local training plans and progress, drawing on the local
+parts of SP-096, SP-098 and SP-099. Proposed scope: save selected drills in an
+ordered plan, present a Today/next-drill flow, retain honest completion/skip/stop
+state, summarize local practice history and link attempts to their recordings.
+Retain approved per-drill prescriptions; do not invent progression rules, skill
+scores or combined workload advice. Cloud, multi-user authority and final media
+remain deferred. This recommendation is not implementation authorization.
