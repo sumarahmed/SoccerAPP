@@ -19,6 +19,10 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 ## Documentation
 
+The [local usability milestone](docs/verification/local-usability-2026-09-29.md)
+combines Build 20 feedback with local plans, history, storage and offline readiness.
+
+
 The owner-authorized [D01–D10 local product increment](docs/verification/local-product-increment-2026-09-29.md)
 adds the local navigation, practice, review/history, catalog and appearance areas.
 Approved settings remain unchanged and reused demonstrations are labeled
