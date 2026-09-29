@@ -41,3 +41,13 @@ Executed checks: Flutter analysis passed without issues; all 73 Flutter tests
 passed, including nine new local-product tests; the Android debug APK compiled;
 asset hashes and repository contracts passed. Planning documentation validation
 passed. No new signed iOS candidate or new-interface device acceptance is claimed.
+
+## Subsequent authorized iPhone candidate
+
+The owner subsequently authorized Build 19, source
+`1762c1f1b4e31ee15ae8fddce9d86af509ac7a03`. Apple-host analysis and Flutter tests
+passed; native simulator tests reported 14 passes, one physical-device rendering
+skip and zero failures. Ad Hoc signing succeeded. Artifact inspection confirmed
+version 0.1.0 (19), exact source identity, the ten-drill catalog and unchanged
+branding. New-interface physical-device acceptance is still pending. Cloud remains
+deferred; this is not public/store release approval.
