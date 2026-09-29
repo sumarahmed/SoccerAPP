@@ -1,5 +1,9 @@
 # Local usability milestone — 29 September 2026
 
+Current scope and pending work are in the [resume handoff](resume-handoff-2026-09-29.md).
+Accounts/sign-in were subsequently brought into scope; cross-device data and
+sync remain deferred. This report preserves the original build evidence.
+
 The owner authorized one combined local usability update after reviewing Build 20.
 Build 21 covers the four retained observations and the proposed local management
 family: plans, session guidance, media/history, device storage and offline readiness.
@@ -32,6 +36,30 @@ Local analysis, all 97 Flutter tests, Android debug control compilation, reposit
 contracts, asset hashes and documentation validation passed. Nine new tests cover
 plan/history operations, pause/restore timing, storage accounting and library
 filtering/deletion. The private implementation packet contains the device checklist.
+
+## Owner device feedback — 29 September 2026
+
+Owner reports device checklist items 1, 2, 3, 5, 6, 7 and 9 worked as expected.
+Filtering in item 8 also worked; storage-total refresh was not explicitly
+confirmed. Recording in item 4 worked, but export failed. Supplied diagnostics
+show `source-duration-mismatch` during preparation of a two-part recording,
+with decoded video tracks totaling 70102 ms and sufficient available storage.
+Source review found the export request compared capture-stopwatch duration to
+native video-track duration. The exact expected value is absent from this log.
+
+A local correction measures video tracks when preparing full-session exports,
+bounds chapters within their source parts and rebases them onto the measured
+timeline. Existing recordings are supported without rewriting manifests or
+originals. The native 50 ms validation and approved branding remain unchanged;
+diagnostics now include the expected duration and mismatch delta. Flutter
+analysis and all 100 tests passed, including three new export timeline cases.
+Native compilation and physical-device export verification remain outstanding.
+Overall Build 21 acceptance remains incomplete until successful retesting.
+
+Owner also requested readable long durations in My Videos. A local source
+correction displays minutes and remaining seconds for durations of at least one
+minute (800 seconds becomes 13 min 20 sec). Seconds remain for shorter videos.
+This change is not part of installed Build 21. No new build has been started.
 
 ## Signed Build 21 evidence
 

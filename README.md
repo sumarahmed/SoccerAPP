@@ -2,6 +2,18 @@
 
 Youth soccer training platform for ages 5–18, supporting direct-family and club-managed training.
 
+## Current handoff — 29 September 2026
+
+Start with the [resume handoff](docs/verification/resume-handoff-2026-09-29.md)
+and [current scope/backlog](docs/content/local-player-pathway-accessibility-review-2026-09-29.md).
+Build 21 has an owner-reported export failure; source corrections and improved
+instructions await native/device verification. Accounts, multiple profiles,
+protected Guardian management and persistent sign-in are now in scope. Player
+dashboards are requested; rewards and practice-only music are approved for
+implementation. SMS and export soundtracks are excluded. Cross-device data/sync,
+payments and club administration remain deferred. Provider selection is pending.
+The historical baseline below does not imply implementation or release approval.
+
 ## Product baseline
 
 - iOS and Android mobile training app.
