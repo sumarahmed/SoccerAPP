@@ -10,6 +10,13 @@
 
 ## Decision
 
+Latest release update: Build 17 owner export testing exposed a duration-validation
+reference defect after encoding completed. Build 18 uses measured composition
+duration, retaining the existing tolerance and other output checks. Its native
+regression passed (14 native passes, one existing device-only skip); Flutter
+checks and signed package verification passed. Owner retry remains pending;
+do not close local export acceptance for the new release before that result.
+
 29 September release update: Build 17 packages the local recovery corrections.
 Apple-host Flutter checks passed; native tests had 13 passes, one existing
 device-only rendering skip and no failures. Signed artifact verification passed.
