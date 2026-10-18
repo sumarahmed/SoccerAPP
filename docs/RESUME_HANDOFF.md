@@ -1,5 +1,7 @@
 # Soccolo current handoff
 
+[Standalone synthetic analyser findings](verification/analyser-synthetic-2026-10-18.md): two cloud experiments completed; detector coverage remains poor on the synthetic drill, and neither candidate improved it. Build 50 and personal-video privacy remain unchanged.
+
 Updated 18 October 2026. Current signed internal iPhone candidate: **0.2.0+50**. Read [current status](CURRENT_STATUS.md), the [build 50 checklist](verification/build50-iphone-checklist.md) and [current backlog](content/current-backlog.md).
 
 Build 50 adds the missing round analysis/comparison card to grouped saved recordings. Videos → Recordings → thumbnail or Video actions → Review video → Round 1/2 → scroll below round buttons. Build 49's instruction to reopen this screen was incorrect. Saved exports are rendered copies; use original recordings for analysis. Metadata and incomplete/split eligibility are preserved.

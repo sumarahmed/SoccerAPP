@@ -1,5 +1,7 @@
 # Soccolo current product status
 
+[Standalone synthetic analyser findings](verification/analyser-synthetic-2026-10-18.md): two cloud experiments completed; detector coverage remains poor on the synthetic drill, and neither candidate improved it. Build 50 and personal-video privacy remain unchanged.
+
 Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+50 (build 50)**. Automated checks and package verification passed. Build 48 active-round resume is owner-confirmed; touch accuracy remains unaccepted. This is a family pilot, not a production or App Store release.
 
 ## Where documentation is maintained
