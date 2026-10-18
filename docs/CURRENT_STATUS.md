@@ -43,3 +43,5 @@ Use the [build 47 iPhone acceptance checklist](verification/build47-iphone-check
 Recordings and exports remain silent and on-device. No new video/audio uploads, face/body data retention or media analytics telemetry are introduced. Deleting a video retains its touch total and round summary; protected player deletion removes that player's history. Estimates record drill/duration/algorithm context; best comparisons require matching player, drill, duration and algorithm. Unavailable analysis is never a fabricated zero. These summaries prepare for future analytics, not a delivered challenge dashboard.
 
 New difficulty/challenge levels, live counting, manual touch entry, cloud media sync, club administration/content publishing and live payments are outside this release. Final drill demonstrations and wider device acceptance remain open. See the [current backlog](content/current-backlog.md).
+
+For continuation in a new chat, read the [current handoff](RESUME_HANDOFF.md).
