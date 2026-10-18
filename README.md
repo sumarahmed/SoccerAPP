@@ -4,7 +4,7 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 ## Current release — 19 October 2026
 
-Build 53 is signed and package-verified for a YOLOX Tiny + optical-flow + Pose Lite trial, with expanded local memory diagnostics. Build 52 recovery is owner-confirmed; build 53 phone stability remains pending and the earlier termination cause is unconfirmed.
+Build 53 is signed and package-verified for a YOLOX Tiny + optical-flow + Pose Lite trial, with expanded local memory diagnostics. Build 52 stays open at Count unavailable, but the owner confirms Retry analysis crashes. The guard prevents automatic reruns; build 53 phone stability remains pending.
 
 - [Current product scope and release changes](docs/CURRENT_STATUS.md)
 - [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build53-iphone-checklist.md)

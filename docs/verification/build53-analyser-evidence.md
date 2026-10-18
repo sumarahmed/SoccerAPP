@@ -1,6 +1,6 @@
 # Build 53 analyser evidence and recommendation
 
-19 October 2026. Owner authorized another build and alternative-analyser evaluation after build 52 closed near its recorded pose-inference checkpoint at frame 390. The owner corrected an earlier reply: automatic restart did not occur; recovery guard worked. Root cause remains unconfirmed.
+19 October 2026. Owner authorized another build and alternative-analyser evaluation after earlier reports of analysis closing the app. Latest clarified build 52 behaviour: opening the round shows Count unavailable and stays open; tapping Retry analysis crashes. The guard prevents automatic reruns, but explicit analysis remains broken. The pose-inference/frame-390 diagnostic does not prove the exact failing operation or termination cause.
 
 ## Fresh local pose comparison
 

@@ -2,7 +2,7 @@
 
 The owner approved an internal iPhone trial of YOLOX Tiny + bounded optical flow for D01 Inside touches, accepting approximate counts. Earlier research advice to postpone packaging is superseded. [Local comparison](verification/analyser-candidates-2026-10-18.md): Tiny + flow counted 27 and 26 against approximately 29 each on build 47, and 37 against 38 on build 48. These are small-sample totals, not event-level accuracy. Camera-motion false positives remain unresolved; keep the camera still. Personal clips and traces stayed local.
 
-Updated **19 October 2026**. Build 53 is signed and package-verified for a YOLOX Tiny + optical-flow + Pose Lite trial, with expanded local memory diagnostics. Build 52 recovery is owner-confirmed; build 53 phone stability remains pending and the earlier termination cause is unconfirmed. This is a family pilot, not a production or App Store release.
+Updated **19 October 2026**. Build 53 is signed and package-verified for a YOLOX Tiny + optical-flow + Pose Lite trial, with expanded local memory diagnostics. Build 52 stays open at Count unavailable, but the owner confirms Retry analysis crashes. The guard prevents automatic reruns; build 53 phone stability remains pending. This is a family pilot, not a production or App Store release.
 
 ## Where documentation is maintained
 
@@ -30,7 +30,7 @@ Native automatic detection, touch analysis and on-device voice commands are iOS 
 
 Fresh local comparisons held the Tiny detector, flow and count rules constant. Full pose counted 27/26/37; Lite counted 27/28/37; smaller-input Full counted 27/27/36. Owner references are approximately 29/29/38. Lite pose invocation was about 24% faster on the Windows CPU run, with modestly lower sampled process RSS. This does not establish iPhone performance or contact-level accuracy. See [comparison and alternatives](verification/build53-analyser-evidence.md).
 
-The trial uses Lite under algorithm v5 and retains the confirmed interrupted-job guard. An interrupted build 52 round requires an explicit Retry after updating. Settings diagnostics now include physical footprint, available process headroom, sampled peak footprint, elapsed time and eight recent checkpoints before/after inference. Analysis pauses below an advisory 128 MiB reserve; this cannot guarantee prevention of a native fault or OS termination. Full remains bundled for internal native A/B testing, so the diagnostic package is not a size reduction.
+The trial uses Lite under algorithm v5 and retains the tested interrupted-job guard. An interrupted build 52 round requires an explicit Retry after updating. Settings diagnostics now include physical footprint, available process headroom, sampled peak footprint, elapsed time and eight recent checkpoints before/after inference. Analysis pauses below an advisory 128 MiB reserve; this cannot guarantee prevention of a native fault or OS termination. Full remains bundled for internal native A/B testing, so the diagnostic package is not a size reduction.
 
 ## Retained build 52 recovery
 
