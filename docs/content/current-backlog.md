@@ -2,9 +2,9 @@
 
 Updated 19 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative; older dated plans retain their original decisions.
 
-## Next: build 52 analysis stability acceptance
+## Next: build 53 Lite and analysis stability acceptance
 
-Soccolo **0.2.0+52** is the signed, package-verified internal iPhone candidate for analysis crash recovery, local diagnostics and Settings version/build information. Build 51 failed existing-recording analysis acceptance; crash resolution and count accuracy remain pending owner testing. Follow the [build 52 checklist](../verification/build52-iphone-checklist.md), prioritizing completion without closing, interrupted-job recovery and copyable diagnostics. Then compare manual counts. Keep footage local.
+Build 53 is signed and package-verified for a YOLOX Tiny + optical-flow + Pose Lite trial, with expanded local memory diagnostics. Build 52 recovery is owner-confirmed; build 53 phone stability remains pending and the earlier termination cause is unconfirmed. Follow the [build 53 checklist](../verification/build53-iphone-checklist.md), prioritizing completion without closing, interrupted-job recovery and copyable diagnostics. Then compare manual counts. Keep footage local.
 
 [Local comparison](../verification/analyser-candidates-2026-10-18.md) supports this limited experiment, not production acceptance. Camera movement can create false contacts; stationary-camera, stationary-ball and straight-roll checks remain necessary. Other drills need reference footage and drill-specific validation; they retain their previous experimental counter. Android implementation/performance are not established by this iPhone build.
 

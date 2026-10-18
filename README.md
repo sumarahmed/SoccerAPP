@@ -4,10 +4,10 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 ## Current release — 19 October 2026
 
-Soccolo **0.2.0+52** is the signed, package-verified internal iPhone candidate for analysis crash recovery, local diagnostics and Settings version/build information. Build 51 failed existing-recording analysis acceptance; crash resolution and count accuracy remain pending owner testing.
+Build 53 is signed and package-verified for a YOLOX Tiny + optical-flow + Pose Lite trial, with expanded local memory diagnostics. Build 52 recovery is owner-confirmed; build 53 phone stability remains pending and the earlier termination cause is unconfirmed.
 
 - [Current product scope and release changes](docs/CURRENT_STATUS.md)
-- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build52-iphone-checklist.md)
+- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build53-iphone-checklist.md)
 - [Published status and activity map](https://sumarahmed.github.io/SoccerAPP/)
 - [Documentation ownership and publishing procedure](docs/DOCUMENTATION_MAINTENANCE.md)
 
