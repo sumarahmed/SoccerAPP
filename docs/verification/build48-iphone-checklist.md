@@ -1,5 +1,7 @@
 # Build 48 iPhone acceptance checklist
 
+> Subsequent owner feedback confirms active-round resume. Counting remains unaccepted: 7 reported versus a reference of 38. Continue with the [build 49 checklist](build49-iphone-checklist.md); the other detailed checks below are not automatically accepted.
+
 Version 0.2.0+48. Updated 18 October 2026. Signed build, automated checks and package verification passed; device acceptance remains pending. See [current status](../CURRENT_STATUS.md).
 
 Build 47 owner feedback confirmed rest-stage pause/resume, but switching apps during either active recording round reset practice. Touch analysis also returned unavailable on a completed recording. Build 48 addresses active-round recovery and improves saved-video ball detection; recognition accuracy is not yet accepted.

@@ -2,9 +2,9 @@
 
 Updated 18 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative for implementation status; older dated plans retain their original decisions.
 
-## Next: owner iPhone acceptance of build 48
+## Next: build 49 counting validation
 
-Run the [checklist](../verification/build48-iphone-checklist.md), recording device/iOS version, result and reproduction steps. Prioritize app switching and screenshots during active rounds 1 and 2, repeated interruptions, camera reopening, retained round footage and remaining time. Recheck the already-passed rest recovery. Test improved tracking on uninterrupted completed recordings against manually counted references kept locally; split/paused rounds remain ineligible for counting. Continue themes, accessibility, Guardian and voice/accent acceptance. Fix reproduced failures before treating the candidate as accepted; do not infer touch accuracy from a successful build.
+The owner confirms build 48 active-round resume. Prioritize the [build 49 checklist](../verification/build49-iphone-checklist.md): compare the corrected Inside touches rule against the owner reference of 38 (build 48 reported 7), independent clips and stationary-ball/straight-roll controls. Keep video local. Other drills need their own reference evidence and counting rules; they retain the experimental generic rule for now. Preserve resume/rest recovery and continue screenshot, playback/export, accessibility, Guardian and voice acceptance. A signed build does not establish accuracy.
 
 ## Remaining product work
 
