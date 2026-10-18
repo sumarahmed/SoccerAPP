@@ -4,10 +4,10 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 ## Current release — 18 October 2026
 
-**Soccolo 0.2.0+46** is the current internal iPhone candidate. Signed build and automated checks passed; physical device acceptance is pending.
+**Soccolo 0.2.0+47** is the current signed internal iPhone candidate. Automated checks passed; physical acceptance of these fixes remains pending.
 
 - [Current product scope and release changes](docs/CURRENT_STATUS.md)
-- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build46-iphone-checklist.md)
+- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build47-iphone-checklist.md)
 - [Published status and activity map](https://sumarahmed.github.io/SoccerAPP/)
 - [Documentation ownership and publishing procedure](docs/DOCUMENTATION_MAINTENANCE.md)
 

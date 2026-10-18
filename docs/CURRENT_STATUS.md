@@ -1,6 +1,6 @@
 # Soccolo current product status
 
-Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+46 (build 46)**. Signed build and automated checks passed; physical iPhone acceptance is pending. This is a family pilot, not a production or App Store release.
+Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+47 (build 47)**. Signed build and automated checks passed; physical acceptance of these fixes remains pending. This is a family pilot, not a production or App Store release.
 
 ## Where documentation is maintained
 
@@ -24,22 +24,19 @@ Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+4
 
 Native automatic detection, touch analysis and on-device voice commands are iOS capabilities in this review candidate. Android has unavailable/manual fallbacks, not equivalent verified detection or voice support. Review features are gated in source and enabled in the internal candidate; microphone listening still requires opt-in and permission.
 
-## Build 46 changes
+## Build 47 changes
 
-- Camera clips are selected by default for new practice; No camera remains available. Setup offers front/rear switching with fresh positioning checks.
-- Brief inactive events pause the same round instead of resetting it; saving tolerates transient focus loss. Actual background keeps existing partial-recording safety handling.
-- Player identity is a right-aligned avatar and name. Summary analysis has one round selector and conditional retry; both rounds analyse automatically and successful results remain cached.
-- Comparison keeps player and demonstration videos side-by-side in consistent frames, with a shared round timeline, speed controls and replay. View in Videos is removed from comparison.
-- All ten drill cue entries are cleaned; legacy snapshot cues also suppress editorial coaching notes and presentation quotes.
-- Settings offers Follow device or regional English (Australia, India, Singapore, UK, US). Explicit selection requires the selected on-device model; commands remain opt-in, output remains tones-only, and stop confirms. Device testing is needed across speakers and accents.
-
-Build 45's single guided-camera summary, compact circular timer, setup recovery and cached results remain the baseline. See its [historical acceptance checklist](verification/build45-iphone-checklist.md).
+- Switching apps during rest after round 1 preserves the attempt, saved first round and remaining rest. Return to Resume practice and then round 2, without another setup loop. Saving/background races use the same paused checkpoint.
+- The bottom practice card fills the safe area; controls remain above the home indicator and the circular timer remains.
+- Setup status/indicators and comparison frames/labels follow light and dark themes.
+- Player name/avatar are removed from drill and summary screens. Remaining profile names start with uppercase for display; ownership and stored spelling remain unchanged.
+- Prior camera switching, round-2 screenshot handling, cues, Settings options and framed comparison were reported working by the owner on build 46. Theme and rest recovery are the new acceptance priorities.
 
 ## Verification and remaining work
 
-Build 46 passed cloud static analysis, 233 Flutter tests (five gated skips), 28 enabled-feature tests and 25 native iOS simulator tests (one skipped, zero failures). Six local repository contract suites passed. Signed IPA publication and package checks succeeded, including the version, cleaned cue catalogue and unchanged counting model. Automated layout fixtures do not establish camera accuracy.
+Build 47 passed cloud static analysis, 235 Flutter tests (five gated skips), 30 enabled-feature tests and 25 native iOS simulator tests (one skipped, zero failures). Signing and artifact publication succeeded. Six repository contract suites and light/dark 200% setup fixture checks passed. These checks do not establish physical interruption or recognition accuracy.
 
-Use the [build 46 iPhone acceptance checklist](verification/build46-iphone-checklist.md). Priorities are screenshot interruptions at round 2/save, camera switching, voice variety selection, comparison seeking and analysis reuse. The unchanged counting model remains experimental. Existing storage failures still need an honest retry; successful signing is not device acceptance.
+Use the [build 47 iPhone acceptance checklist](verification/build47-iphone-checklist.md). Actual app switching during active recording retains the existing safe partial-clip finalization; resumable rest is distinct from background recording or force-quit recovery. Touch analysis and regional voice accuracy remain device acceptance items. Historical evidence: [build 46 checklist](verification/build46-iphone-checklist.md).
 
 ## Data and scope boundaries
 

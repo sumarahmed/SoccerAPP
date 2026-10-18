@@ -2,9 +2,9 @@
 
 Updated 18 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative for implementation status; older dated plans retain their original decisions.
 
-## Next: owner iPhone acceptance of build 46
+## Next: owner iPhone acceptance of build 47
 
-Run the [checklist](../verification/build46-iphone-checklist.md), recording device/iOS version, result and reproduction steps. Prioritize completion/progress persistence, camera recovery, voice commands and cached touch analysis. Fix reproduced failures before treating the candidate as accepted. Collect counted reference recordings locally to assess touch-estimate accuracy; do not infer accuracy from a successful build.
+Run the [checklist](../verification/build47-iphone-checklist.md), recording device/iOS version, result and reproduction steps. Prioritize app switching during rest/saving, themed setup/comparison and the bottom safe area. Continue voice/accent and cached touch-analysis acceptance. Fix reproduced failures before treating the candidate as accepted. Collect counted reference recordings locally to assess touch-estimate accuracy; do not infer accuracy from a successful build.
 
 ## Remaining product work
 
