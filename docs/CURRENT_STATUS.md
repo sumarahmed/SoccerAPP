@@ -1,6 +1,6 @@
 # Soccolo current product status
 
-Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+47 (build 47)**. Signed build and automated checks passed; physical acceptance of these fixes remains pending. This is a family pilot, not a production or App Store release.
+Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+48 (build 48)**. Automated checks and package verification passed; physical acceptance remains pending. This is a family pilot, not a production or App Store release.
 
 ## Where documentation is maintained
 
@@ -24,19 +24,26 @@ Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+4
 
 Native automatic detection, touch analysis and on-device voice commands are iOS capabilities in this review candidate. Android has unavailable/manual fallbacks, not equivalent verified detection or voice support. Review features are gated in source and enabled in the internal candidate; microphone listening still requires opt-in and permission.
 
-## Build 47 changes
+## Build 48 changes
+
+- Switching apps during either iPhone recording round pauses the same attempt and retains the remaining time. Resume reopens the camera without repeating setup. Completed rounds remain present.
+- Silent local recording segments are joined for round playback; time away from the app is not recorded. Screenshot focus loss pauses the existing round. Interrupted camera startup/reopening remains retryable.
+- Saved-video counting now uses closer ball detection and a confident single-person pose fallback previously limited to setup. Confidence and coverage requirements are unchanged; algorithm version 2 triggers reanalysis rather than reusing old failed results. Touch accuracy remains unconfirmed.
+- Split/paused rounds retain footage and progress but remain ineligible for touch estimates. No totals are invented for unobserved activity.
+
+## Retained build 47 changes
 
 - Switching apps during rest after round 1 preserves the attempt, saved first round and remaining rest. Return to Resume practice and then round 2, without another setup loop. Saving/background races use the same paused checkpoint.
 - The bottom practice card fills the safe area; controls remain above the home indicator and the circular timer remains.
 - Setup status/indicators and comparison frames/labels follow light and dark themes.
 - Player name/avatar are removed from drill and summary screens. Remaining profile names start with uppercase for display; ownership and stored spelling remain unchanged.
-- Prior camera switching, round-2 screenshot handling, cues, Settings options and framed comparison were reported working by the owner on build 46. Theme and rest recovery are the new acceptance priorities.
+- Owner testing of build 47 confirmed rest-stage recovery but reported resets during active recording in both rounds and unavailable touch counts. This feedback drives build 48; the earlier build is not accepted for these behaviors.
 
 ## Verification and remaining work
 
-Build 47 passed cloud static analysis, 235 Flutter tests (five gated skips), 30 enabled-feature tests and 25 native iOS simulator tests (one skipped, zero failures). Signing and artifact publication succeeded. Six repository contract suites and light/dark 200% setup fixture checks passed. These checks do not establish physical interruption or recognition accuracy.
+Build 48 final-source cloud validation: clean static analysis, 241 Flutter tests passed (five gated skips), 36 enabled-feature tests passed and 27 native iOS tests passed (one skipped, zero failures). Six local repository contract suites passed. Signed build, artifact publication and package verification succeeded. Automated checks do not establish physical interruption or recognition accuracy.
 
-Use the [build 47 iPhone acceptance checklist](verification/build47-iphone-checklist.md). Actual app switching during active recording retains the existing safe partial-clip finalization; resumable rest is distinct from background recording or force-quit recovery. Touch analysis and regional voice accuracy remain device acceptance items. Historical evidence: [build 46 checklist](verification/build46-iphone-checklist.md).
+Use the [build 48 iPhone acceptance checklist](verification/build48-iphone-checklist.md). App switching during active iPhone recording saves a local segment and returns paused; recording restarts only on Resume. This is not background recording or force-quit recovery. Touch analysis and regional voice accuracy remain device acceptance items. Historical evidence: [build 47 checklist](verification/build47-iphone-checklist.md), [build 46 checklist](verification/build46-iphone-checklist.md).
 
 ## Data and scope boundaries
 

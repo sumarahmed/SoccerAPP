@@ -2,9 +2,9 @@
 
 Updated 18 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative for implementation status; older dated plans retain their original decisions.
 
-## Next: owner iPhone acceptance of build 47
+## Next: owner iPhone acceptance of build 48
 
-Run the [checklist](../verification/build47-iphone-checklist.md), recording device/iOS version, result and reproduction steps. Prioritize app switching during rest/saving, themed setup/comparison and the bottom safe area. Continue voice/accent and cached touch-analysis acceptance. Fix reproduced failures before treating the candidate as accepted. Collect counted reference recordings locally to assess touch-estimate accuracy; do not infer accuracy from a successful build.
+Run the [checklist](../verification/build48-iphone-checklist.md), recording device/iOS version, result and reproduction steps. Prioritize app switching and screenshots during active rounds 1 and 2, repeated interruptions, camera reopening, retained round footage and remaining time. Recheck the already-passed rest recovery. Test improved tracking on uninterrupted completed recordings against manually counted references kept locally; split/paused rounds remain ineligible for counting. Continue themes, accessibility, Guardian and voice/accent acceptance. Fix reproduced failures before treating the candidate as accepted; do not infer touch accuracy from a successful build.
 
 ## Remaining product work
 

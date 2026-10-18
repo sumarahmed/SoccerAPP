@@ -1,5 +1,7 @@
 # Build 47 iPhone acceptance checklist
 
+Historical candidate. Owner follow-up confirmed rest pause/resume, but active-round app switching still reset practice and touch counting returned unavailable. See the [build 48 follow-up checklist](build48-iphone-checklist.md). The remaining items below are not newly marked accepted.
+
 Version 0.2.0+47. Updated 18 October 2026. Signed build and automated checks passed; physical acceptance of these fixes remains pending. See [current status](../CURRENT_STATUS.md).
 
 Already reported working on build 46: camera switching, screenshot near round 2 end, cues, Settings options and framed comparison. Profile-avatar testing is superseded by the request to remove identity from drill/summary screens.
