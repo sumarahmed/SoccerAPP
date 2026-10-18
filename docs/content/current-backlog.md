@@ -1,14 +1,14 @@
 # Current pilot backlog
 
-[Candidate comparison](../verification/analyser-candidates-2026-10-18.md) now prioritises Tiny/MediaPipe perception, camera-motion handling and timestamp-labelled contact evaluation. The 37-count experimental rule is not a release candidate because it fails a negative control.
+Updated 19 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative; older dated plans retain their original decisions.
 
-The [synthetic analyser investigation](../verification/analyser-synthetic-2026-10-18.md) now separates detector and counter failures. Both initial candidates were rejected. Next counting work needs timestamp-labelled evidence and false-positive controls; no real clip has been uploaded to CI.
+## Next: build 51 approximate-count trial
 
-Updated 18 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative for implementation status; older dated plans retain their original decisions.
+The owner approved testing YOLOX Tiny + bounded optical flow in the existing internal iPhone app before collecting more footage. This supersedes the earlier research recommendation to defer packaging. Build 51 is signed and automated checks passed; physical acceptance is pending. Follow the [build 51 checklist](../verification/build51-iphone-checklist.md): reanalyse existing original Inside touches rounds, compare manual counts, and report analysis time or warming. Supply new videos only for materially wrong or unavailable results. Keep footage local.
 
-## Next: build 50 saved-review and counting validation
+[Local comparison](../verification/analyser-candidates-2026-10-18.md) supports this limited experiment, not production acceptance. Camera movement can create false contacts; stationary-camera, stationary-ball and straight-roll checks remain necessary. Other drills need reference footage and drill-specific validation; they retain their previous experimental counter. Android implementation/performance are not established by this iPhone build.
 
-The owner confirms build 48 active-round resume. Verify build 50 exposes counts and comparison for existing originals under Videos → Recordings; build 49 omitted this card. Prioritize the [build 50 checklist](../verification/build50-iphone-checklist.md): compare the corrected Inside touches rule against the owner reference of 38 (build 48 reported 7), independent clips and stationary-ball/straight-roll controls. Keep video local. Other drills need their own reference evidence and counting rules; they retain the experimental generic rule for now. Preserve resume/rest recovery and continue screenshot, playback/export, accessibility, Guardian and voice acceptance. A signed build does not establish accuracy.
+Active-round resume is owner-confirmed. Preserve it and continue screenshot, rest, playback/export, accessibility, Guardian and optional voice acceptance. A signed build does not establish accuracy.
 
 ## Remaining product work
 

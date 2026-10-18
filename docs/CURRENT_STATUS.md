@@ -1,10 +1,8 @@
 # Soccolo current product status
 
-[Candidate comparison report](verification/analyser-candidates-2026-10-18.md): local testing identifies YOLOX Tiny and MediaPipe as promising perception candidates. A 37-count prototype failed camera-motion controls; a stricter rule counted 17. Counting is not accepted, and build 50 is unchanged. All personal media and traces remained local.
+The owner approved an internal iPhone trial of YOLOX Tiny + bounded optical flow for D01 Inside touches, accepting approximate counts. Earlier research advice to postpone packaging is superseded. [Local comparison](verification/analyser-candidates-2026-10-18.md): Tiny + flow counted 27 and 26 against approximately 29 each on build 47, and 37 against 38 on build 48. These are small-sample totals, not event-level accuracy. Camera-motion false positives remain unresolved; keep the camera still. Personal clips and traces stayed local.
 
-[Standalone synthetic analyser findings](verification/analyser-synthetic-2026-10-18.md): two cloud experiments completed; detector coverage remains poor on the synthetic drill, and neither candidate improved it. Build 50 and personal-video privacy remain unchanged.
-
-Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+50 (build 50)**. Automated checks and package verification passed. Build 48 active-round resume is owner-confirmed; touch accuracy remains unaccepted. This is a family pilot, not a production or App Store release.
+Updated **19 October 2026**. Current signed internal iPhone candidate: **0.2.0+51**. Automated checks and package verification passed. Physical accuracy and performance remain pending. This is a family pilot, not a production or App Store release.
 
 ## Where documentation is maintained
 
@@ -28,11 +26,19 @@ Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+5
 
 Native automatic detection, touch analysis and on-device voice commands are iOS capabilities in this review candidate. Android has unavailable/manual fallbacks, not equivalent verified detection or voice support. Review features are gated in source and enabled in the internal candidate; microphone listening still requires opt-in and permission.
 
-## Build 50 saved-recording access
+## Build 51 experimental analyser
 
-Grouped saved recordings now show the selected round's analysis and Compare with demo beneath the round buttons. Open Videos → Recordings → Review video, then choose a round and scroll below the buttons. Build 49 omitted this card, so its instruction to reopen this screen for reanalysis was incorrect. Original metadata and split/incomplete eligibility are retained; saved exports are separate rendered copies. Algorithm v3 is unchanged. See the [build 50 checklist](verification/build50-iphone-checklist.md).
+D01 Inside touches receives YOLOX Tiny ball detection, bounded optical flow and heel/toe landmarks. A directly detected ball is required to confirm a candidate; flow only fills short gaps in motion context. Analysis remains automatic after recording. Insufficient tracking returns unavailable.
 
-## Retained build 49 counting correction
+Existing eligible original D01 recordings refresh old counts under Videos → Recordings → Review video → select Round 1/2 → analysis card below the buttons. Keep the app foreground while analysis runs. Other drills retain their previous v3 counter. Start with existing footage and supply new clips only for poor results. See the [build 51 checklist](verification/build51-iphone-checklist.md).
+
+The models and native processing are bundled for local execution. Runtime differences from the desktop prototype mean identical iPhone counts and speed are not promised. This trial does not establish Android implementation or performance.
+
+## Retained build 50 saved-recording access
+
+Grouped saved recordings now show the selected round's analysis and Compare with demo beneath the round buttons. Open Videos → Recordings → Review video, then choose a round and scroll below the buttons. Build 49 omitted this card, so its instruction to reopen this screen for reanalysis was incorrect. Original metadata and split/incomplete eligibility are retained; saved exports are separate rendered copies. Build 50 retained v3; build 51 replaces D01 only. See the [build 50 checklist](verification/build50-iphone-checklist.md).
+
+## Historical build 49 counting correction
 
 - The selected drill now selects the counting rule. Inside touches uses separate foot contacts, direction reversal and ball travel, so overlapping proximity zones do not merge repeated contacts. Portrait geometry and foot-selection jitter are handled explicitly.
 - Other drills retain the existing experimental generic rule; sole rolls and other actions need their own reference validation. Demonstration placeholders are not used to infer a drill.
@@ -56,7 +62,7 @@ Grouped saved recordings now show the selected round's analysis and Compare with
 
 ## Verification and remaining work
 
-Final-source cloud analyzer clean; 241 Flutter tests passed (seven gated skips), 38 enabled-feature tests passed and 33 native iOS tests passed (one skipped, zero failures). Six local static/synthetic contract suites passed. Signed IPA and package verification passed. Prioritize the [build 50 saved-review checklist](verification/build50-iphone-checklist.md), including the reference round, independent footage and stationary-ball/straight-roll controls.
+Static analysis clean; 242 Flutter tests passed (seven gated skips), 38 enabled-feature tests passed, and 39 native iOS tests passed (one existing simulator skip, zero failures). Signed IPA and package verification passed. Physical count accuracy, analysis latency, warming and offline operation require the [build 51 iPhone checklist](verification/build51-iphone-checklist.md). Automated tests cannot establish touch accuracy on personal footage.
 
 Build 48 final-source cloud validation: clean static analysis, 241 Flutter tests passed (five gated skips), 36 enabled-feature tests passed and 27 native iOS tests passed (one skipped, zero failures). Six local repository contract suites passed. Signed build, artifact publication and package verification succeeded. Automated checks do not establish physical interruption or recognition accuracy.
 
