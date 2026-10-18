@@ -50,3 +50,16 @@ The first build attempt failed at compile time on an unsupported `outputSegmenta
 Static analysis clean; 247 Flutter tests passed (seven existing skips), 38 enabled-feature tests passed, and 41 native iOS tests passed (one existing simulator skip, zero failures). Signed IPA and package verification passed.
 
 [Codemagic build](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad53d7a945eed1874c27fcf), source `2eb1d270f7358e1247d496c9b106870123bf8cd8`. IPA: 100,103,805 bytes; SHA-256 `71eb61b4053e621b405c981929962c2e206b3d2fc48520c81ddbaa96caad8049`. Package inspection verified ZIP integrity, bundle/version/build, pinned model hashes, provisioning profile and signature resources, plus the signed isolated bridge. About 4.96 MB larger than build 52 because both pose variants remain bundled. Physical iPhone acceptance is pending.
+
+## Build 53 device feedback — low-memory guard observed
+
+Owner reports no crash on this attempt. The screen shows Count unavailable and a low-memory pause. Copied diagnostics (recorded 2026-10-18T22:17:51Z, build 53 / Lite v5) show:
+
+- Before model loading: physical footprint 3,078.9 MiB, available headroom 297.1 MiB.
+- Frame 0 pose inference completed at 234 ms: footprint 3,226.2 MiB, available 149.8 MiB.
+- At frame 1 / 291 ms: footprint 3,256.6 MiB, available 119.4 MiB. The 128 MiB guard stopped analysis.
+- After failure cleanup / 303 ms: footprint 3,230.3 MiB, available 145.7 MiB; thermal state 0.
+
+This confirms the graceful low-memory stop for this attempt, not successful counting. The generic final stage `failed` follows a handled memory-pressure error; no count was produced. The UI's history-saving-not-confirmed text does not establish deletion or loss of previous history. The 3 GiB baseline predates this analyser job; it may include resources retained by earlier activity. The guard must not be lowered to force another inference near the process limit.
+
+Inspection found library thumbnail widgets retain VideoPlayerController instances for their mounted lifetime, including under pushed review routes. This is a candidate contributor, not measured attribution of the baseline. Next evidence: fresh process launch, one direct saved-round retry, and copied diagnostics to distinguish initial footprint from accumulation across attempts. Earlier crashes are not retrospectively proven to have the same cause. Build 53 remains the current signed build; no replacement was generated from this feedback.

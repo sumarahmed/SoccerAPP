@@ -1,5 +1,7 @@
 # Soccolo current product status
 
+Latest build 53 device evidence: no crash, but analysis stopped at frame 1 when headroom fell to 119.4 MiB. The low-memory guard worked; counting remains unavailable. Footprint was already 3,078.9 MiB before this job. Fresh-launch comparison is pending; do not lower the guard or claim a proven source of retained memory.
+
 The owner approved an internal iPhone trial of YOLOX Tiny + bounded optical flow for D01 Inside touches, accepting approximate counts. Earlier research advice to postpone packaging is superseded. [Local comparison](verification/analyser-candidates-2026-10-18.md): Tiny + flow counted 27 and 26 against approximately 29 each on build 47, and 37 against 38 on build 48. These are small-sample totals, not event-level accuracy. Camera-motion false positives remain unresolved; keep the camera still. Personal clips and traces stayed local.
 
 Updated **19 October 2026**. Build 53 is signed and package-verified for a YOLOX Tiny + optical-flow + Pose Lite trial, with expanded local memory diagnostics. Build 52 stays open at Count unavailable, but the owner confirms Retry analysis crashes. The guard prevents automatic reruns; build 53 phone stability remains pending. This is a family pilot, not a production or App Store release.
