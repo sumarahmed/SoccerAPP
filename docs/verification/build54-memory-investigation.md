@@ -1,6 +1,6 @@
-# Build 54 memory investigation — verification blocked
+# Build 54 memory investigation
 
-19 October 2026. Current signed app remains 0.2.0+53. Candidate source `f253d5452d0f6afb2ccd238844c18bf95bff14a3` on `feat/sp014-local-camera-feasibility` is version 0.2.0+54, but has NOT been compiled/tested on iOS or packaged. Codemagic rejected the build request with HTTP 402 (Payment Required); no build ID was returned. Billing/credit availability must be resolved before native verification and delivery. Do not describe this candidate as a proven fix.
+19 October 2026. Build 54 source `730851a0ade665f30ab335c0dddc5052e0cc165f` on `feat/sp014-local-camera-feasibility` passed native verification in Codemagic `6ad55079fe02de86d4f98ed2`. Final Flutter gates and signed package verification passed. The earlier request returned HTTP 402; the owner subsequently enabled pay-as-you-go. Do not describe the physical-device memory problem as fixed until accepted on iPhone.
 
 ## What the evidence establishes
 
@@ -22,6 +22,31 @@ The next device log should distinguish starting memory from accumulated retained
 
 ## Verification and next steps
 
-Local Flutter static analysis passed. Repository contract checks passed. Native tests were added for destination identity across 100 conversions, rewritten pixel content and replacement on rotated dimensions. Existing matched Full/Lite 600-frame native tests now require the new diagnostics and bounded output. These native tests are **not yet run** because Codemagic rejected the request. No new app was delivered.
+Local Flutter static analysis passed. Repository contract checks passed. Native tests were added for destination identity across 100 conversions, rewritten pixel content and replacement on rotated dimensions. Existing matched Full/Lite 600-frame native tests now require the new diagnostics and bounded output. These native tests subsequently passed in the single paid attempt below. Signed delivery is verified below.
 
-After resolving the Codemagic HTTP 402 response, run `ios-device-internal` against the candidate commit (or its reviewed successor), inspect the native compile and tests, final Flutter/enabled-feature gates and signed package before publishing an installable build. Keep personal footage local. Then test one existing owner round and compare starting, post-release and terminal footprint. If growth persists, use the stage evidence to isolate decoding/conversion, ball/flow or pose instead of swapping models blindly.
+Complete the final Flutter/enabled-feature gates and signed package checks before publishing an installable build. Keep personal footage local. Then test one existing owner round and compare starting, post-release and terminal footprint. If growth persists, use the stage evidence to isolate decoding/conversion, ball/flow or pose instead of swapping models blindly.
+
+## Paid CI continuation
+
+Owner enabled pay-as-you-go and requested optimized usage. One manual M2 attempt was started: `6ad55079fe02de86d4f98ed2`, source `730851a0ade665f30ab335c0dddc5052e0cc165f`. This supersedes the billing block above; completion succeeded. Added dependency caching for Dart, CocoaPods, hash-verified model assets and the two pinned native archives. Native binaries are rebuilt rather than trusting a stale compiled framework. Timeout reduced from 60 to 40 minutes; no automatic triggers/retries or additional concurrency. Required test gates remain enabled. Cache benefit will need measurement across runs; this initial run populates it.
+
+Future usage: local preflight first, batch changes, no app build for documentation-only updates, and inspect failure evidence before another paid attempt. At the published M2 rate, 20–30 billed minutes would be $1.90–$2.85; the invoice determines actual charges. Do not imply the timeout is a spending cap across runs.
+
+## Native verification result
+
+43 tests executed: 42 passed, one existing simulator skip, zero failures. The new test verified identical destination identity across 100 conversions, rewritten pixel content, and replacement when rotated dimensions change. Full and Lite each completed the same 600-frame portrait workload through the production entry point; retained initial readings, post-pool samples, stage measurements and bounded diagnostic output passed.
+
+| Pose | Whole-job time | Initial footprint | Peak sampled footprint | Completion footprint |
+|---|---:|---:|---:|---:|
+| Full | 65.68 s | 202.7 MiB | 378.2 MiB | 206.4 MiB |
+| Lite | 58.27 s | 206.4 MiB | 316.2 MiB | 206.9 MiB |
+
+These are simulator process readings from Full then Lite in the same process. Cross-run speed changes can reflect CI load and cache/order effects; they are not proof of optimization magnitude. The 3 GiB phone growth was not reproduced here. Reusable-buffer behavior is tested, but physical-device benefit remains unverified.
+
+## Signed delivery and paid-run record
+
+247 Flutter tests passed (seven existing skips), 38 enabled-feature tests passed, and 42 native tests passed (one existing simulator skip). Static analysis and signed package verification passed.
+
+[Internal build 54](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad55079fe02de86d4f98ed2). IPA 100,104,810 bytes; SHA-256 `8d0e8d3f0326eff854e1aeab99489dfaf62594cfe95feaf0b4455c874b676e6a`. Verified package integrity, bundle/version/build, pinned model hashes, provisioning/signature resources and isolated native bridge.
+
+One paid attempt, 19 October 2026 10:04:30–10:27:06 Sydney time: 22 minutes 36 seconds elapsed. At $0.095/minute that is approximately $2.15, not an invoice amount; billing rounding/tax may differ. Dependency caching was enabled on this run; future savings remain unmeasured. No automatic retry was used.
