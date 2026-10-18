@@ -2,19 +2,18 @@
 
 Youth soccer training platform for ages 5–18, supporting direct-family and club-managed training.
 
-## Current handoff — 29 September 2026
+## Current release — 18 October 2026
 
-Start with the [resume handoff](docs/verification/resume-handoff-2026-09-29.md)
-and [current scope/backlog](docs/content/local-player-pathway-accessibility-review-2026-09-29.md).
-Build 21 has an owner-reported export failure; source corrections and improved
-instructions await native/device verification. Accounts, multiple profiles,
-protected Guardian management and persistent sign-in are now in scope. Player
-dashboards are requested; rewards and practice-only music are approved for
-implementation. SMS and export soundtracks are excluded. Cross-device data/sync,
-payments and club administration remain deferred. Provider selection is pending.
-The historical baseline below does not imply implementation or release approval.
+**Soccolo 0.2.0+45** is the current signed internal iPhone candidate. Automated checks passed; physical device acceptance is pending.
 
-## Product baseline
+- [Current product scope and release changes](docs/CURRENT_STATUS.md)
+- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build45-iphone-checklist.md)
+- [Published status and activity map](https://sumarahmed.github.io/SoccerAPP/)
+- [Documentation ownership and publishing procedure](docs/DOCUMENTATION_MAINTENANCE.md)
+
+Implementation and internal build evidence are maintained in the private [Soccolo-app repository](https://github.com/sumarahmed/Soccolo-app), on `feat/sp014-local-camera-feasibility`, under `apps/mobile/`. This public repository contains sanitized product documentation and historical delivery contracts. Earlier September/October records below are historical, not the current release handoff.
+
+## Long-term product baseline (not a delivered-feature list)
 
 - iOS and Android mobile training app.
 - Responsive administration portal for platform, clubs, parents and coaches.
@@ -48,7 +47,7 @@ of original recordings from My Videos.
 
 Explore the delivery dependencies and accepted status in the [automatically generated SoccerAPP activity execution map](https://sumarahmed.github.io/SoccerAPP/). GitHub Actions rebuilds and republishes it from the activity manifests and accepted decision records after relevant changes land on `main`.
 
-**Next development step:** the [detailed foundation milestones](docs/foundation/development_foundation_milestones.md), added 10 September 2026, define 11 milestones and 33 work items for tooling, libraries, CI, contracts, local services, runnable tests, agent execution and device/provider feasibility. Read the [library baseline](docs/foundation/technology_and_libraries.md), [36 test specifications](docs/foundation/foundation_test_catalog.md) and [review report](docs/foundation/foundation_review.md). These are planned implementation tasks; the app stack and executable app tests are not yet installed.
+**Next development step:** the [detailed foundation milestones](docs/foundation/development_foundation_milestones.md), added 10 September 2026, define 11 milestones and 33 work items for tooling, libraries, CI, contracts, local services, runnable tests, agent execution and device/provider feasibility. Read the [library baseline](docs/foundation/technology_and_libraries.md), [36 test specifications](docs/foundation/foundation_test_catalog.md) and [review report](docs/foundation/foundation_review.md). This is the historical foundation plan; the Flutter app and executable tests now live in the private repository.
 
 Start with the [agent activity plan](docs/delivery/soccer_agent_activity_plan.md): **390 activities across twelve phases**, including **327 agent activities**, **21 human actions/decisions** and **42 human acceptance rollups**. Every activity has a goal, deliverable, executor role, predecessors and completion checks; the plan includes the first assignment batch.
 
@@ -79,6 +78,6 @@ The 10 September refinement lives in `docs/foundation/` and maps back to the unc
 
 Run `node tools/validate-docs.cjs` from the repository root. This checks the source/activity graphs, acceptance coverage, CSV parity, package hashes, generated documentation, activity-map output and relative links. To update documentation, edit canonical files under `packages/soccer_agent_activity_package_20260908/` and follow the [regeneration procedure](docs/delivery/package_inventory.md#updating-documentation).
 
-## Current status
+## Historical planning-package status — September 2026
 
 Documentation synchronized 8 September 2026; the development foundation plan and attributable SP-001/SP-075/SP-004/SP-003 decisions were added 10–11 September 2026. SP-001, SP-075, SP-004 and SP-003 are accepted through their dated decision artifacts. The three SP-003 agent-scope/evidence activities are complete, so bounded implementation-agent preparation may use the accepted run-contract and review policy without treating deferred specialist, independent-review or implementation evidence as complete. Newly dependency-ready P01 preparation may proceed under those controls. The frozen planning-package manifests still retain their original Backlog/Not started state, and foundation milestones remain proposed. No production application, live database, customer billing setup, live Linear import or autonomous agent dispatch is represented by this documentation update. Specialist review and implementation evidence remain required at the relevant downstream delivery gates.

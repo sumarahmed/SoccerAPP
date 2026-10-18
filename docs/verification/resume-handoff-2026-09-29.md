@@ -1,4 +1,12 @@
+> Historical dated record. For the current build, scope and acceptance status, see [current product status](../CURRENT_STATUS.md). Later releases may supersede the pending work described here.
+
 # Soccolo resume handoff — 29 September 2026
+
+## Subsequent outcome — October 2026
+
+The owner reported all six replacement build-21 export/storage retests passed. The combined family pilot subsequently added accounts, player isolation, Guardian, pathways, rewards and offline music. See the [historical family pilot summary](../content/family-practice-pilot-2026-10-05.md). The original export failure below is no longer the current release status for those retested cases.
+
+Build 45 is now the current internal candidate. Use [current status](../CURRENT_STATUS.md) for next actions; the original resume instructions below are preserved as history. Internal build/provider evidence remains private.
 
 Owner will resume when usage renews. No scheduled follow-up, new mobile build or
 provider provisioning is requested. Read this handoff and the linked scope first.

@@ -1,3 +1,5 @@
+> Historical dated record. For the current build, scope and acceptance status, see [current product status](../CURRENT_STATUS.md). Later releases may supersede the pending work described here.
+
 # SP-017 family review — opt-in cloud media path
 
 | Field | Review record |

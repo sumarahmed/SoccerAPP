@@ -1,3 +1,5 @@
+> Historical dated record. For the current build, scope and acceptance status, see [current product status](../CURRENT_STATUS.md). Later releases may supersede the pending work described here.
+
 # Local usability milestone — 29 September 2026
 
 Current scope and pending work are in the [resume handoff](resume-handoff-2026-09-29.md).

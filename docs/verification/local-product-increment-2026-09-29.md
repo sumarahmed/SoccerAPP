@@ -1,3 +1,5 @@
+> Historical dated record. For the current build, scope and acceptance status, see [current product status](../CURRENT_STATUS.md). Later releases may supersede the pending work described here.
+
 # D01–D10 local product increment
 
 Implementation source: `46cea1718865f2d9f3396b67b78ff89c73f4671e` in the

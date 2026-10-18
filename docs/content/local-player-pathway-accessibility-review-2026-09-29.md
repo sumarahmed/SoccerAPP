@@ -1,3 +1,5 @@
+> Historical dated record. For the current build, scope and acceptance status, see [current product status](../CURRENT_STATUS.md). Later releases may supersede the pending work described here.
+
 # Local player, pathway and accessibility review
 
 Date: 29 September 2026. Status: instruction update authorized; pathway and

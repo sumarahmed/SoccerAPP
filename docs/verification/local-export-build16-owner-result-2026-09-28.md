@@ -1,3 +1,5 @@
+> Historical dated record. For the current build, scope and acceptance status, see [current product status](../CURRENT_STATUS.md). Later releases may supersede the pending work described here.
+
 # Local export workflow — Build 16 owner result
 
 Date: 28 September 2026. Scope: internal iPhone pilot, version `0.1.0 (16)`.

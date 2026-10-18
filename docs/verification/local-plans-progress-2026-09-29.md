@@ -1,3 +1,5 @@
+> Historical dated record. For the current build, scope and acceptance status, see [current product status](../CURRENT_STATUS.md). Later releases may supersede the pending work described here.
+
 # Local plans, progress and original deletion
 
 The owner authorized implementation and an iPhone build following prototype
