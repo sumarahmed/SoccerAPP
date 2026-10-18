@@ -2,9 +2,9 @@
 
 Updated 19 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative; older dated plans retain their original decisions.
 
-## Next: build 51 approximate-count trial
+## Next: build 52 analysis stability acceptance
 
-The owner approved testing YOLOX Tiny + bounded optical flow in the existing internal iPhone app before collecting more footage. This supersedes the earlier research recommendation to defer packaging. Build 51 is signed and automated checks passed; physical acceptance is pending. Follow the [build 51 checklist](../verification/build51-iphone-checklist.md): reanalyse existing original Inside touches rounds, compare manual counts, and report analysis time or warming. Supply new videos only for materially wrong or unavailable results. Keep footage local.
+Soccolo **0.2.0+52** is the signed, package-verified internal iPhone candidate for analysis crash recovery, local diagnostics and Settings version/build information. Build 51 failed existing-recording analysis acceptance; crash resolution and count accuracy remain pending owner testing. Follow the [build 52 checklist](../verification/build52-iphone-checklist.md), prioritizing completion without closing, interrupted-job recovery and copyable diagnostics. Then compare manual counts. Keep footage local.
 
 [Local comparison](../verification/analyser-candidates-2026-10-18.md) supports this limited experiment, not production acceptance. Camera movement can create false contacts; stationary-camera, stationary-ball and straight-roll checks remain necessary. Other drills need reference footage and drill-specific validation; they retain their previous experimental counter. Android implementation/performance are not established by this iPhone build.
 

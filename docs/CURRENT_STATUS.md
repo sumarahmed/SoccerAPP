@@ -2,7 +2,7 @@
 
 The owner approved an internal iPhone trial of YOLOX Tiny + bounded optical flow for D01 Inside touches, accepting approximate counts. Earlier research advice to postpone packaging is superseded. [Local comparison](verification/analyser-candidates-2026-10-18.md): Tiny + flow counted 27 and 26 against approximately 29 each on build 47, and 37 against 38 on build 48. These are small-sample totals, not event-level accuracy. Camera-motion false positives remain unresolved; keep the camera still. Personal clips and traces stayed local.
 
-Updated **19 October 2026**. Current signed internal iPhone candidate: **0.2.0+51**. Automated checks and package verification passed. Physical accuracy and performance remain pending. This is a family pilot, not a production or App Store release.
+Updated **19 October 2026**. Soccolo **0.2.0+52** is the signed, package-verified internal iPhone candidate for analysis crash recovery, local diagnostics and Settings version/build information. Build 51 failed existing-recording analysis acceptance; crash resolution and count accuracy remain pending owner testing. This is a family pilot, not a production or App Store release.
 
 ## Where documentation is maintained
 
@@ -26,11 +26,19 @@ Updated **19 October 2026**. Current signed internal iPhone candidate: **0.2.0+5
 
 Native automatic detection, touch analysis and on-device voice commands are iOS capabilities in this review candidate. Android has unavailable/manual fallbacks, not equivalent verified detection or voice support. Review features are gated in source and enabled in the internal candidate; microphone listening still requires opt-in and permission.
 
-## Build 51 experimental analyser
+## Build 52 analysis recovery trial
+
+An interrupted native analysis leaves a per-round recovery marker; reopening that round offers Retry instead of automatically repeating the job. Previously saved aggregate history is retained. Older build 51 crashes did not leave this marker and cannot be detected retroactively.
+
+D01 releases the legacy setup detector, scopes the Tiny runtime to one job and releases decoded samples inside each frame's cleanup scope. Model weights and counting rules are unchanged. Settings / Guardian → App version reads the installed version/build. Analysis diagnostics shows a copyable, bounded local checkpoint of stage/frame progress, timestamp, version/build, algorithm and thermal state. It contains no player names, file paths or images and is not uploaded automatically.
+
+The native test adds two full 20-second jobs using the bundled animated demo. Synthetic success cannot establish stability on the owner's footage. Follow the [build 52 checklist](verification/build52-iphone-checklist.md); if analysis closes the app, copy diagnostics after reopening and before retrying.
+
+## Retained build 51 experimental analyser
 
 D01 Inside touches receives YOLOX Tiny ball detection, bounded optical flow and heel/toe landmarks. A directly detected ball is required to confirm a candidate; flow only fills short gaps in motion context. Analysis remains automatic after recording. Insufficient tracking returns unavailable.
 
-Existing eligible original D01 recordings refresh old counts under Videos → Recordings → Review video → select Round 1/2 → analysis card below the buttons. Keep the app foreground while analysis runs. Other drills retain their previous v3 counter. Start with existing footage and supply new clips only for poor results. See the [build 51 checklist](verification/build51-iphone-checklist.md).
+Existing eligible original D01 recordings refresh old counts under Videos → Recordings → Review video → select Round 1/2 → analysis card below the buttons. Keep the app foreground while analysis runs. Other drills retain their previous v3 counter. Start with existing footage and supply new clips only for poor results. Use the [build 52 recovery checklist](verification/build52-iphone-checklist.md).
 
 The models and native processing are bundled for local execution. Runtime differences from the desktop prototype mean identical iPhone counts and speed are not promised. This trial does not establish Android implementation or performance.
 
@@ -62,7 +70,7 @@ Grouped saved recordings now show the selected round's analysis and Compare with
 
 ## Verification and remaining work
 
-Static analysis clean; 242 Flutter tests passed (seven gated skips), 38 enabled-feature tests passed, and 39 native iOS tests passed (one existing simulator skip, zero failures). Signed IPA and package verification passed. Physical count accuracy, analysis latency, warming and offline operation require the [build 51 iPhone checklist](verification/build51-iphone-checklist.md). Automated tests cannot establish touch accuracy on personal footage.
+Static analysis clean; 246 Flutter tests passed (seven existing skips), 38 enabled-feature tests passed, and 40 native iOS tests passed (one existing simulator skip, zero failures). Signed IPA and package verification passed. Physical stability and count accuracy require the [build 52 iPhone checklist](verification/build52-iphone-checklist.md).
 
 Build 48 final-source cloud validation: clean static analysis, 241 Flutter tests passed (five gated skips), 36 enabled-feature tests passed and 27 native iOS tests passed (one skipped, zero failures). Six local repository contract suites passed. Signed build, artifact publication and package verification succeeded. Automated checks do not establish physical interruption or recognition accuracy.
 
