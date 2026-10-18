@@ -1,5 +1,7 @@
 # Soccolo current product status
 
+Build 54 is an unverified memory-investigation candidate: reusable orientation buffer and richer bounded diagnostics. Codemagic returned HTTP 402 (Payment Required); no new signed app exists. Build 53 remains current. [Investigation and verification gap](verification/build54-memory-investigation.md).
+
 Latest build 53 device evidence: no crash, but analysis stopped at frame 1 when headroom fell to 119.4 MiB. The low-memory guard worked; counting remains unavailable. Footprint was already 3,078.9 MiB before this job. A fresh-launch retry subsequently reached frame 384 / 26.7 seconds before the same guard, with about 75 MiB growth between frames 370 and 380. Its initial baseline is absent from the ring. Investigate per-stage native memory accumulation; do not lower the guard or claim a proven source.
 
 The owner approved an internal iPhone trial of YOLOX Tiny + bounded optical flow for D01 Inside touches, accepting approximate counts. Earlier research advice to postpone packaging is superseded. [Local comparison](verification/analyser-candidates-2026-10-18.md): Tiny + flow counted 27 and 26 against approximately 29 each on build 47, and 37 against 38 on build 48. These are small-sample totals, not event-level accuracy. Camera-motion false positives remain unresolved; keep the camera still. Personal clips and traces stayed local.
