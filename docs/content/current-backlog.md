@@ -1,5 +1,7 @@
 # Current pilot backlog
 
+[Candidate comparison](../verification/analyser-candidates-2026-10-18.md) now prioritises Tiny/MediaPipe perception, camera-motion handling and timestamp-labelled contact evaluation. The 37-count experimental rule is not a release candidate because it fails a negative control.
+
 The [synthetic analyser investigation](../verification/analyser-synthetic-2026-10-18.md) now separates detector and counter failures. Both initial candidates were rejected. Next counting work needs timestamp-labelled evidence and false-positive controls; no real clip has been uploaded to CI.
 
 Updated 18 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative for implementation status; older dated plans retain their original decisions.

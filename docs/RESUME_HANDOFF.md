@@ -1,5 +1,7 @@
 # Soccolo current handoff
 
+[Candidate comparison report](verification/analyser-candidates-2026-10-18.md): local testing identifies YOLOX Tiny and MediaPipe as promising perception candidates. A 37-count prototype failed camera-motion controls; a stricter rule counted 17. Counting is not accepted, and build 50 is unchanged. All personal media and traces remained local.
+
 [Standalone synthetic analyser findings](verification/analyser-synthetic-2026-10-18.md): two cloud experiments completed; detector coverage remains poor on the synthetic drill, and neither candidate improved it. Build 50 and personal-video privacy remain unchanged.
 
 Updated 18 October 2026. Current signed internal iPhone candidate: **0.2.0+50**. Read [current status](CURRENT_STATUS.md), the [build 50 checklist](verification/build50-iphone-checklist.md) and [current backlog](content/current-backlog.md).
