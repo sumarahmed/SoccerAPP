@@ -1,5 +1,7 @@
 # Build 49 iPhone acceptance checklist
 
+> Build 49 omitted the analysis card from grouped saved recordings. Use [build 50](build50-iphone-checklist.md) for the saved-recording retest path; the counting algorithm remains v3.
+
 Version 0.2.0+49. Updated 18 October 2026. Signed internal build, automated checks and package verification passed; device counting acceptance remains pending. See [current status](../CURRENT_STATUS.md).
 
 Owner testing confirms active-round resume works in build 48. Counting is not accepted: an uninterrupted Inside touches recording returned 7 against an owner reference of 38. Build 49 uses the selected drill to separate overlapping foot contacts for Inside touches. Other drills retain their experimental generic counter; this is not universal contact recognition.

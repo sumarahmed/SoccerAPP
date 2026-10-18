@@ -2,9 +2,9 @@
 
 Updated 18 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative for implementation status; older dated plans retain their original decisions.
 
-## Next: build 49 counting validation
+## Next: build 50 saved-review and counting validation
 
-The owner confirms build 48 active-round resume. Prioritize the [build 49 checklist](../verification/build49-iphone-checklist.md): compare the corrected Inside touches rule against the owner reference of 38 (build 48 reported 7), independent clips and stationary-ball/straight-roll controls. Keep video local. Other drills need their own reference evidence and counting rules; they retain the experimental generic rule for now. Preserve resume/rest recovery and continue screenshot, playback/export, accessibility, Guardian and voice acceptance. A signed build does not establish accuracy.
+The owner confirms build 48 active-round resume. Verify build 50 exposes counts and comparison for existing originals under Videos → Recordings; build 49 omitted this card. Prioritize the [build 50 checklist](../verification/build50-iphone-checklist.md): compare the corrected Inside touches rule against the owner reference of 38 (build 48 reported 7), independent clips and stationary-ball/straight-roll controls. Keep video local. Other drills need their own reference evidence and counting rules; they retain the experimental generic rule for now. Preserve resume/rest recovery and continue screenshot, playback/export, accessibility, Guardian and voice acceptance. A signed build does not establish accuracy.
 
 ## Remaining product work
 

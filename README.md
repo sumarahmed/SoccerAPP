@@ -4,10 +4,10 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 ## Current release — 18 October 2026
 
-**Soccolo 0.2.0+49** is the current signed internal iPhone candidate for drill-aware Inside touches counting. Automated checks and package verification passed. Build 48 active-round resume is owner-confirmed; counting accuracy remains unaccepted.
+**Soccolo 0.2.0+50** is the current signed internal iPhone candidate, adding the missing round-analysis card to saved drill recordings. Automated checks and package verification passed. Build 48 active-round resume is owner-confirmed; counting accuracy remains unaccepted.
 
 - [Current product scope and release changes](docs/CURRENT_STATUS.md)
-- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build49-iphone-checklist.md)
+- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build50-iphone-checklist.md)
 - [Published status and activity map](https://sumarahmed.github.io/SoccerAPP/)
 - [Documentation ownership and publishing procedure](docs/DOCUMENTATION_MAINTENANCE.md)
 
