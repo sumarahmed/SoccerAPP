@@ -1,6 +1,6 @@
 # Soccolo current product status
 
-Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+45 (build 45)**. Automated verification passed; physical iPhone acceptance is pending. This is a family pilot, not a production or App Store release.
+Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+46 (build 46)**. Signed build and automated checks passed; physical iPhone acceptance is pending. This is a family pilot, not a production or App Store release.
 
 ## Where documentation is maintained
 
@@ -24,20 +24,22 @@ Updated **18 October 2026**. Current signed internal iPhone candidate: **0.2.0+4
 
 Native automatic detection, touch analysis and on-device voice commands are iOS capabilities in this review candidate. Android has unavailable/manual fallbacks, not equivalent verified detection or voice support. Review features are gated in source and enabled in the internal candidate; microphone listening still requires opt-in and permission.
 
-## Build 45 changes
+## Build 46 changes
 
-- Guided camera completion goes directly to one Practice summary with drill picture, measured activity and comparison/touch analysis. The floating demo and duplicate completion step are removed from that handoff; existing no-camera completion is unchanged.
-- A durably saved attempt is no longer labelled unsaved solely because derived rewards/history refresh fails. Real persistence failures still show retry. The original device exception was not captured, so the reported case still needs retesting.
-- Smaller docked circular timer and less panel whitespace preserve more camera view. Every round/rest label has a dot. One lime cue sits above the timeline, fading over four seconds without a secondary Next label. Reduced motion keeps it opaque until hidden.
-- Setup checks align with the preview. Returning from interruption tries to resume the camera and recheck positioning; Resume camera is available on failure. Recovery never starts recording automatically.
-- Expanded demo playback uses tap-to-pause and a central Play overlay. Completed analysis estimates and tracking-unavailable outcomes are cached; explicit retry reruns analysis.
-- Voice handling supports revised partial transcripts and microphone-compatible tones/music. Actual device command reliability remains an acceptance check.
+- Camera clips are selected by default for new practice; No camera remains available. Setup offers front/rear switching with fresh positioning checks.
+- Brief inactive events pause the same round instead of resetting it; saving tolerates transient focus loss. Actual background keeps existing partial-recording safety handling.
+- Player identity is a right-aligned avatar and name. Summary analysis has one round selector and conditional retry; both rounds analyse automatically and successful results remain cached.
+- Comparison keeps player and demonstration videos side-by-side in consistent frames, with a shared round timeline, speed controls and replay. View in Videos is removed from comparison.
+- All ten drill cue entries are cleaned; legacy snapshot cues also suppress editorial coaching notes and presentation quotes.
+- Settings offers Follow device or regional English (Australia, India, Singapore, UK, US). Explicit selection requires the selected on-device model; commands remain opt-in, output remains tones-only, and stop confirms. Device testing is needed across speakers and accents.
+
+Build 45's single guided-camera summary, compact circular timer, setup recovery and cached results remain the baseline. See its [historical acceptance checklist](verification/build45-iphone-checklist.md).
 
 ## Verification and remaining work
 
-Build 45 passed static analysis, **227 Flutter tests** (four feature-gated skips), **21 enabled-feature tests**, and **24 native simulator tests** (one skipped, zero failures). Six local repository contract suites passed; these do not establish deployed backend acceptance. Signing and package checks succeeded. Automated light/dark large-text setup captures used a test camera.
+Build 46 passed cloud static analysis, 233 Flutter tests (five gated skips), 28 enabled-feature tests and 25 native iOS simulator tests (one skipped, zero failures). Six local repository contract suites passed. Signed IPA publication and package checks succeeded, including the version, cleaned cue catalogue and unchanged counting model. Automated layout fixtures do not establish camera accuracy.
 
-Use the [iPhone acceptance checklist](verification/build45-iphone-checklist.md). Device checks still cover progress saving, camera recovery, command reliability, immediate playback, analysis accuracy, exports, ownership and accessibility. Successful compilation is not real-camera accuracy evidence. Earlier owner-reported export fixes supersede the old build-21 failure for the cases actually retested; broad regression acceptance remains separate.
+Use the [build 46 iPhone acceptance checklist](verification/build46-iphone-checklist.md). Priorities are screenshot interruptions at round 2/save, camera switching, voice variety selection, comparison seeking and analysis reuse. The unchanged counting model remains experimental. Existing storage failures still need an honest retry; successful signing is not device acceptance.
 
 ## Data and scope boundaries
 
