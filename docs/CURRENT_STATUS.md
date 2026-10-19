@@ -1,12 +1,12 @@
 # Soccolo current product status
 
-Build 54 is signed and package-verified. It reuses the analysis orientation buffer and adds bounded per-stage memory diagnostics. Build 53 stopped safely for low memory; build 54 physical-device stability remains pending. [Investigation](verification/build54-memory-investigation.md).
+Build 55 (0.2.0+55) is signed and package-verified. Eleven manual on-device memory experiments are enabled in Settings / Guardian. Build 54 memory growth remains unresolved; this is a diagnostic candidate, not a counting or stability fix. Device experiment reports are pending. Static analysis passed; 249 Flutter tests passed with seven existing skips, two probe-enabled screen tests passed, 38 enabled-feature tests passed, and 49 native tests passed with one existing skip and zero failures. [Device experiments](verification/build55-memory-probes.md). [Investigation](verification/build54-memory-investigation.md).
 
 Latest build 53 device evidence: no crash, but analysis stopped at frame 1 when headroom fell to 119.4 MiB. The low-memory guard worked; counting remains unavailable. Footprint was already 3,078.9 MiB before this job. A fresh-launch retry subsequently reached frame 384 / 26.7 seconds before the same guard, with about 75 MiB growth between frames 370 and 380. Its initial baseline is absent from the ring. Investigate per-stage native memory accumulation; do not lower the guard or claim a proven source.
 
 The owner approved an internal iPhone trial of YOLOX Tiny + bounded optical flow for D01 Inside touches, accepting approximate counts. Earlier research advice to postpone packaging is superseded. [Local comparison](verification/analyser-candidates-2026-10-18.md): Tiny + flow counted 27 and 26 against approximately 29 each on build 47, and 37 against 38 on build 48. These are small-sample totals, not event-level accuracy. Camera-motion false positives remain unresolved; keep the camera still. Personal clips and traces stayed local.
 
-Updated **19 October 2026**. Build 54 is signed and package-verified. It reuses the analysis orientation buffer and adds bounded per-stage memory diagnostics. Build 53 stopped safely for low memory; build 54 physical-device stability remains pending.
+Updated **19 October 2026**. Build 55 (0.2.0+55) is signed and package-verified. Eleven manual on-device memory experiments are enabled in Settings / Guardian. Build 54 memory growth remains unresolved; this is a diagnostic candidate, not a counting or stability fix. Device experiment reports are pending.
 
 ## Where documentation is maintained
 
@@ -42,13 +42,13 @@ An interrupted native analysis leaves a per-round recovery marker; reopening tha
 
 D01 releases the legacy setup detector, scopes the Tiny runtime to one job and releases decoded samples inside each frame's cleanup scope. Model weights and counting rules are unchanged. Settings / Guardian → App version reads the installed version/build. Analysis diagnostics shows a copyable, bounded local checkpoint of stage/frame progress, timestamp, version/build, algorithm and thermal state. It contains no player names, file paths or images and is not uploaded automatically.
 
-The native test adds two full 20-second jobs using the bundled animated demo. Synthetic success cannot establish stability on the owner's footage. Follow the [build 54 checklist](verification/build54-iphone-checklist.md); if analysis closes the app, copy diagnostics after reopening and before retrying.
+The native test adds two full 20-second jobs using the bundled animated demo. Synthetic success cannot establish stability on the owner's footage. Follow the [build 54 checklist](verification/build55-memory-probes.md); if analysis closes the app, copy diagnostics after reopening and before retrying.
 
 ## Retained build 51 experimental analyser
 
 D01 Inside touches receives YOLOX Tiny ball detection, bounded optical flow and heel/toe landmarks. A directly detected ball is required to confirm a candidate; flow only fills short gaps in motion context. Analysis remains automatic after recording. Insufficient tracking returns unavailable.
 
-Existing eligible original D01 recordings refresh old counts under Videos → Recordings → Review video → select Round 1/2 → analysis card below the buttons. Keep the app foreground while analysis runs. Other drills retain their previous v3 counter. Start with existing footage and supply new clips only for poor results. Use the [build 54 checklist](verification/build54-iphone-checklist.md).
+Existing eligible original D01 recordings refresh old counts under Videos → Recordings → Review video → select Round 1/2 → analysis card below the buttons. Keep the app foreground while analysis runs. Other drills retain their previous v3 counter. Start with existing footage and supply new clips only for poor results. Use the [build 54 checklist](verification/build55-memory-probes.md).
 
 The models and native processing are bundled for local execution. Runtime differences from the desktop prototype mean identical iPhone counts and speed are not promised. This trial does not establish Android implementation or performance.
 
@@ -80,7 +80,7 @@ Grouped saved recordings now show the selected round's analysis and Compare with
 
 ## Verification and remaining work
 
-Static analysis clean; 247 Flutter tests passed (seven existing skips), 38 enabled-feature tests passed, and 41 native iOS tests passed (one existing simulator skip, zero failures). Signed IPA and package verification passed. Physical stability and count accuracy require the [build 53 iPhone checklist](verification/build54-iphone-checklist.md).
+Static analysis clean; 247 Flutter tests passed (seven existing skips), 38 enabled-feature tests passed, and 41 native iOS tests passed (one existing simulator skip, zero failures). Signed IPA and package verification passed. Physical stability and count accuracy require the [build 53 iPhone checklist](verification/build55-memory-probes.md).
 
 Build 48 final-source cloud validation: clean static analysis, 241 Flutter tests passed (five gated skips), 36 enabled-feature tests passed and 27 native iOS tests passed (one skipped, zero failures). Six local repository contract suites passed. Signed build, artifact publication and package verification succeeded. Automated checks do not establish physical interruption or recognition accuracy.
 

@@ -4,10 +4,10 @@ Youth soccer training platform for ages 5–18, supporting direct-family and clu
 
 ## Current release — 19 October 2026
 
-Build 54 is signed and package-verified. It reuses the analysis orientation buffer and adds bounded per-stage memory diagnostics. Build 53 stopped safely for low memory; build 54 physical-device stability remains pending.
+Build 55 (0.2.0+55) is signed and package-verified. Eleven manual on-device memory experiments are enabled in Settings / Guardian. Build 54 memory growth remains unresolved; this is a diagnostic candidate, not a counting or stability fix. Device experiment reports are pending.
 
 - [Current product scope and release changes](docs/CURRENT_STATUS.md)
-- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build54-iphone-checklist.md)
+- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build55-memory-probes.md)
 - [Published status and activity map](https://sumarahmed.github.io/SoccerAPP/)
 - [Documentation ownership and publishing procedure](docs/DOCUMENTATION_MAINTENANCE.md)
 

@@ -2,9 +2,9 @@
 
 Updated 19 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative; older dated plans retain their original decisions.
 
-## Next: build 53 Lite and analysis stability acceptance
+## Next: build 55 device memory experiments
 
-Build 54 is signed and package-verified. It reuses the analysis orientation buffer and adds bounded per-stage memory diagnostics. Build 53 stopped safely for low memory; build 54 physical-device stability remains pending.
+Build 55 (0.2.0+55) is signed and package-verified. Eleven manual on-device memory experiments are enabled in Settings / Guardian. Build 54 memory growth remains unresolved; this is a diagnostic candidate, not a counting or stability fix. Device experiment reports are pending.
 
 [Local comparison](../verification/analyser-candidates-2026-10-18.md) supports this limited experiment, not production acceptance. Camera movement can create false contacts; stationary-camera, stationary-ball and straight-roll checks remain necessary. Other drills need reference footage and drill-specific validation; they retain their previous experimental counter. Android implementation/performance are not established by this iPhone build.
 
