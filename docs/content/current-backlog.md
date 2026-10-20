@@ -1,14 +1,14 @@
 # Current pilot backlog
 
-Updated 19 October 2026. [Current release and scope](../CURRENT_STATUS.md) is authoritative; older dated plans retain their original decisions.
+Updated 20 October 2026. [Current status](../CURRENT_STATUS.md).
 
-## Next: build 55 device memory experiments
+## Next: shared Touch Count, local validation first
 
-Build 55 (0.2.0+55) is signed and package-verified. Eleven manual on-device memory experiments are enabled in Settings / Guardian. Build 54 memory growth remains unresolved; this is a diagnostic candidate, not a counting or stability fix. Device experiment reports are pending.
+Build 60 (0.2.0+60) remains the latest signed, package-verified internal iPhone build. The owner accepted experimental practicing-player/crop tracking on tested footage. This is a limited acceptance, not production validation across all drills. Shared Touch Count is the next local workstream: count playing contacts, exclude hands/reset handling, use selected drill as context, and defer optional contact-type breakdown.
 
-[Local comparison](../verification/analyser-candidates-2026-10-18.md) supports this limited experiment, not production acceptance. Camera movement can create false contacts; stationary-camera, stationary-ball and straight-roll checks remain necessary. Other drills need reference footage and drill-specific validation; they retain their previous experimental counter. Android implementation/performance are not established by this iPhone build.
+Resolve real contact versus nearby foot motion and duplicate/foot attribution before phone integration. The first prototype failed a stationary-ball negative. Annotate mixed contacts, validate independent toe taps and negatives, then progress through sole control, travelling contacts, passing/receiving and future airborne work. [Detailed public checkpoint](../verification/build60-touch-count-checkpoint.md).
 
-Active-round resume is owner-confirmed. Preserve it and continue screenshot, rest, playback/export, accessibility, Guardian and optional voice acceptance. A signed build does not establish accuracy.
+Preserve existing recording, rest/wake-lock, navigation, progress, saved results, analytics, date/tag and export-cover behavior. Continue device performance and broader-viewpoint checks; accepted tracking on tested footage is not universal accuracy.
 
 ## Remaining product work
 

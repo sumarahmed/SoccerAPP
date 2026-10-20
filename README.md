@@ -2,16 +2,17 @@
 
 Youth soccer training platform for ages 5–18, supporting direct-family and club-managed training.
 
-## Current release — 19 October 2026
+## Current checkpoint — 20 October 2026
 
-Build 55 (0.2.0+55) is signed and package-verified. Eleven manual on-device memory experiments are enabled in Settings / Guardian. Build 54 memory growth remains unresolved; this is a diagnostic candidate, not a counting or stability fix. Device experiment reports are pending.
+Build 60 (0.2.0+60) remains the latest signed, package-verified internal iPhone build. The owner accepted experimental practicing-player/crop tracking on tested footage. This is a limited acceptance, not production validation across all drills. Shared Touch Count is the next local workstream: count playing contacts, exclude hands/reset handling, use selected drill as context, and defer optional contact-type breakdown.
 
-- [Current product scope and release changes](docs/CURRENT_STATUS.md)
-- [Current backlog](docs/content/current-backlog.md) and [iPhone checklist](docs/verification/build55-memory-probes.md)
-- [Published status and activity map](https://sumarahmed.github.io/SoccerAPP/)
-- [Documentation ownership and publishing procedure](docs/DOCUMENTATION_MAINTENANCE.md)
+- [Current status](docs/CURRENT_STATUS.md) and [next-chat handoff](docs/RESUME_HANDOFF.md)
+- [Build 60 acceptance and Touch Count plan](docs/verification/build60-touch-count-checkpoint.md)
+- [Backlog](docs/content/current-backlog.md)
+- [Published activity map](https://sumarahmed.github.io/SoccerAPP/)
+- [Documentation procedure](docs/DOCUMENTATION_MAINTENANCE.md)
 
-Implementation and internal build evidence are maintained in the private [Soccolo-app repository](https://github.com/sumarahmed/Soccolo-app), on `feat/sp014-local-camera-feasibility`, under `apps/mobile/`. This public repository contains sanitized product documentation and historical delivery contracts. Earlier September/October records below are historical, not the current release handoff.
+Implementation and detailed evidence stay in private Soccolo-app on `feat/sp014-local-camera-feasibility`. This repository publishes sanitized documentation. The contact prototype remains research-only; no new app build at this checkpoint. Historical delivery approvals are unchanged.
 
 ## Long-term product baseline (not a delivered-feature list)
 

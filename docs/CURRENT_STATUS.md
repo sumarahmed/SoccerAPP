@@ -1,12 +1,10 @@
 # Soccolo current product status
 
-Build 55 (0.2.0+55) is signed and package-verified. Eleven manual on-device memory experiments are enabled in Settings / Guardian. Build 54 memory growth remains unresolved; this is a diagnostic candidate, not a counting or stability fix. Device experiment reports are pending. Static analysis passed; 249 Flutter tests passed with seven existing skips, two probe-enabled screen tests passed, 38 enabled-feature tests passed, and 49 native tests passed with one existing skip and zero failures. [Device experiments](verification/build55-memory-probes.md). [Investigation](verification/build54-memory-investigation.md).
+Updated 20 October 2026.
 
-Latest build 53 device evidence: no crash, but analysis stopped at frame 1 when headroom fell to 119.4 MiB. The low-memory guard worked; counting remains unavailable. Footprint was already 3,078.9 MiB before this job. A fresh-launch retry subsequently reached frame 384 / 26.7 seconds before the same guard, with about 75 MiB growth between frames 370 and 380. Its initial baseline is absent from the ring. Investigate per-stage native memory accumulation; do not lower the guard or claim a proven source.
+Build 60 (0.2.0+60) remains the latest signed, package-verified internal iPhone build. The owner accepted experimental practicing-player/crop tracking on tested footage. This is a limited acceptance, not production validation across all drills. Shared Touch Count is the next local workstream: count playing contacts, exclude hands/reset handling, use selected drill as context, and defer optional contact-type breakdown.
 
-The owner approved an internal iPhone trial of YOLOX Tiny + bounded optical flow for D01 Inside touches, accepting approximate counts. Earlier research advice to postpone packaging is superseded. [Local comparison](verification/analyser-candidates-2026-10-18.md): Tiny + flow counted 27 and 26 against approximately 29 each on build 47, and 37 against 38 on build 48. These are small-sample totals, not event-level accuracy. Camera-motion false positives remain unresolved; keep the camera still. Personal clips and traces stayed local.
-
-Updated **19 October 2026**. Build 55 (0.2.0+55) is signed and package-verified. Eleven manual on-device memory experiments are enabled in Settings / Guardian. Build 54 memory growth remains unresolved; this is a diagnostic candidate, not a counting or stability fix. Device experiment reports are pending.
+The first shared-contact prototype remains research-only after a failed zero-touch control; no new phone build is produced. [Current validation and drill rollout](verification/build60-touch-count-checkpoint.md). Older build-specific investigations below are historical, not the current release blocker list.
 
 ## Where documentation is maintained
 
