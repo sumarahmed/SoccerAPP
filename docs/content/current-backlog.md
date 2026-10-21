@@ -2,24 +2,23 @@
 
 [Current status](../CURRENT_STATUS.md) · [Milestone](../verification/touch-count-milestone-20261021.md).
 
-## Next accepted-estimate milestone
+## Build62 milestone and open follow-up
 
-1. Integrate accepted stronger behaviour only after native model/evidence parity,
-   resource and regression checks. Existing Build 61 shared/body analytics remain.
-2. Capability-based highest normal recording FPS with nominal 30 minimum; validate
-   saved video and explain low-FPS rejection without recording a zero result.
-3. Preserve shipped UI layouts, with incremental FPS/front-view/contact guidance.
-   Corrected preview awaits owner review; previous two previews rejected.
-4. Review/integrate dedicated D03 demo when supplied, test real D03 footage separately.
-5. Preserve accepted original counts, negative controls, prior history, one round
-   identity, body sums, exports and interruption/recovery behaviour.
-6. Document actual test limitations, commit reviewed work locally, request next-build
-   approval. Stronger estimate acceptance is not universal contact accuracy.
+Owner accepted the exact-source Build61 UI proposal and authorized Build62.
+Stronger v9/model fallback/recovered tracks, camera rate discovery, low-FPS
+rejection and UI additions are implemented locally. D03 is a temporary demo.
+See [milestone evidence](../verification/build62-stronger-touch-count.md).
+
+Keep OPEN: native cloud checks, device rates/resources and end-to-end counts;
+child head/thigh generalization and uncertain attribution; new front-view footage;
+real D03 validation; final demos and unseen catalogue-drill evidence. Rerun saved
+references and negative controls after every counting refinement. Mixed/side
+optimisation is deferred. A build milestone does not close accuracy research.
 
 ## Media coverage
 
 Dedicated demos bundled: D01 Inside touches, D04 Cone weave, D06 Receive and return.
-Dedicated demos missing: D02, D03, D05, D07, D08, D09, D10. Existing passing/juggling
+D03 now has an owner-accepted temporary placeholder. Dedicated demos missing: D02, D05, D07, D08, D09, D10. Existing passing/juggling
 test footage does not prove all 10 catalogue drills. No new head/thigh drill entries.
 
 ## Retained product work

@@ -1,3 +1,5 @@
+> Updated: owner approved the exact-source Build61 native-layout proposal and requested Build62. See [current milestone evidence](build62-stronger-touch-count.md). The checklist below is retained as the earlier planning snapshot, not current completion status.
+
 # Touch Count milestone and next-build checklist
 
 Updated 21 October 2026. [Current status](../CURRENT_STATUS.md).

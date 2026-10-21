@@ -7,15 +7,18 @@ estimates are accepted for the next milestone, not shipped.
 
 Preserve the accepted baseline, existing UI/analytics/export behaviour and private
 media. Front view is selected; side development retired, mixed tuning deferred.
-Highest supported normal recording FPS and low-FPS analysis rejection remain pending.
-Nominal29.97 is accepted as30. D03 demo/real footage are separate intake needs.
-
-The corrected UI preview is awaiting owner review. Earlier previews were rejected;
-use shipped native layouts with incremental additions. Build 41 theme, Build 47
-camera/identity corrections, Build 60 tips and Build 61 analytics remain authoritative.
+Build62 is explicitly authorized. Stronger v9, larger-model fallback and bounded
+recovered tracks are integrated locally;77 identical-evidence parity cases pass.
+Highest supported normal recording FPS first and below-minimum analysis rejection
+are local. Nominal29.97 is accepted as30. Verify actual rates on hardware.
+The exact Build61 native-layout preview was accepted; incremental setup/tips/result
+changes are implemented. D03 is bundled as a temporary24fps demo, independently
+from player-video analysis. Real D03 validation footage is still needed.
+Accuracy refinement and phone/native/resource testing remain OPEN.
+See [Build62 milestone](verification/build62-stronger-touch-count.md).
 
 Private handoff: Soccolo-app `apps/mobile/RESUME_HANDOFF_TOUCH_COUNT.md`.
-Implementation/tests/reviewed local commit precede explicit next-build approval.
+Complete native checks and record the authorized build outcome; do not claim installation until confirmed.
 Do not upload private media/traces or infer permission to deploy public docs.
 
 ## Historical record

@@ -3,8 +3,9 @@
 ## Current checkpoint — 21 October 2026
 
 Latest recorded successful internal build 61. Stronger local Touch Count estimates
-are accepted as the next milestone; camera FPS policy and stronger native integration
-remain pending. Corrected UI preview awaits owner review. Next build requires approval.
+are accepted for the authorized Build62 milestone. Stronger pipeline, camera FPS
+policy and accepted native-layout additions are implemented locally; native build
+and phone testing remain open. See [Build62](docs/verification/build62-stronger-touch-count.md).
 
 - [Current status](docs/CURRENT_STATUS.md)
 - [Handoff](docs/RESUME_HANDOFF.md)

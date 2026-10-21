@@ -15,20 +15,29 @@ was run on15 original-adult/round 2-child clips:14 totals unchanged, one extra
 unclassified wall-passing candidate remains unconfirmed, and no-touch stays zero.
 Personal footage, detailed traces and child-specific results remain private/local.
 
-## Next app milestone
+## Authorized Build 62 milestone
 
 - Preserve one estimated playing-contact total; drill is context, hands/reset
   handling and ground/rebound impacts excluded. Unknown attribution stays explicit.
 - Front-view guidance, whole player/ball/lane visible, stable camera and good light.
 - Highest supported normal recording FPS per camera/resolution, nominal 30 minimum
-  (29.97 accepted). Existing local opener only tries 60/30; maximum selection and
-  saved-video FPS rejection with an explanation are pending.
+  (29.97 accepted). Local opener now discovers rates and tries highest first down to30; nine
+  camera-policy tests pass. Below-minimum source/cadence rejection is implemented
+  locally; native/device validation remains open.
 - Preserve shipped UI composition and analytics/history/export behaviour. The
-  first two redesign previews were rejected; corrected layout preview awaits review.
-- Dedicated D03 demo and separate real detector-validation footage are pending.
+  first two redesign previews were rejected; the later exact-source Build61 native
+  layout preview was accepted and its additions are implemented locally.
+- D03 demo candidate (24fps) is bundled as an explicitly temporary demonstration. Separate real
+  detector-validation footage at nominal30fps or higher is still needed.
   Synthetic demos cannot establish real-player counting accuracy.
-- Validate locally, update docs and commit reviewed changes. The next app build
-  requires explicit owner approval. No new build or public deployment is claimed.
+- Validate locally, update docs and commit reviewed changes. The owner explicitly
+  authorized Build62; native cloud checks are pending. No cloud success, installation
+  or public website deployment is claimed yet.
+
+Local validation:77 cached-evidence Dart parity cases;157 Python tests;276 Flutter
+tests (11 skips);28 enabled camera/history/shared checks;6 milestone/dashboard checks.
+Static analysis passes. These checks do not certify end-to-end phone inference.
+See [Build62 milestone](verification/build62-stronger-touch-count.md).
 
 ## Existing pilot boundaries
 
