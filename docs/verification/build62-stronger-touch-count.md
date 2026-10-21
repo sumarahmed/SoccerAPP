@@ -20,7 +20,8 @@ its minimum-rate requirement are independent of the demo.
 - 28 enabled camera/history/shared/setup checks,49 enabled practice regressions and6 milestone/dashboard checks pass.
 - Flutter static analysis passes.
 - Native compilation/model execution and cloud packaging: pending.
-- Build commit/run/artifact: pending. No newer installation claimed yet.
+- Source commit: `6d69d89a7d64331e62ef51fd5644453210984637`, pushed and confirmed by Codemagic.
+- [Internal Build 62 run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) started; native checks and packaging remain pending. No newer installation claimed yet.
 
 These are local and identical-evidence checks, not proof of end-to-end phone
 accuracy. Personal videos, traces and detailed child results remain private/local.
