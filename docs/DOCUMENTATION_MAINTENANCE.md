@@ -1,6 +1,8 @@
 # Documentation ownership and release procedure
 
-Updated 18 October 2026.
+Updated 21 October2026.
+
+Current task is local reconciliation of both repos. Review and validate changes before committing; do not push/deploy documentation or trigger an app build without the required authorization. New app build explicitly awaits owner approval. Historical snapshot files are evidence, not active guidance.
 
 1. Maintain implementation status, source maps, detailed tests and internal installation/build evidence in the private Soccolo-app repository, currently on `feat/sp014-local-camera-feasibility`. Start at `apps/mobile/CURRENT_STATUS.md`.
 2. For each delivered candidate, update this repository's [current status](CURRENT_STATUS.md), [backlog](content/current-backlog.md), applicable acceptance checklist, README and `site/activity-map/template.html` status panel. Keep version, date and acceptance state aligned.

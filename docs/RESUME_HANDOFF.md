@@ -1,9 +1,22 @@
-# Soccolo current handoff — 20 October 2026
+# Soccolo handoff — 21 October 2026
 
-Build 60 (0.2.0+60) remains the latest signed, package-verified internal iPhone build. The owner accepted experimental practicing-player/crop tracking on tested footage. This is a limited acceptance, not production validation across all drills. Shared Touch Count is the next local workstream: count playing contacts, exclude hands/reset handling, use selected drill as context, and defer optional contact-type breakdown.
+Read [current status](CURRENT_STATUS.md), [milestone](verification/touch-count-milestone-20261021.md)
+and [backlog](content/current-backlog.md). Latest recorded successful internal
+build 61; stronger local estimates accepted for the next milestone, not shipped.
 
-Read [the current checkpoint](verification/build60-touch-count-checkpoint.md), [status](CURRENT_STATUS.md) and [backlog](content/current-backlog.md). The failed local foot-cycle prototype must not ship. Next work is mixed-contact annotation, contact confirmation and duplicate resolution, followed by independent negative controls and staged drill validation.
+Preserve the accepted baseline, existing UI/analytics/export behaviour and private
+media. Front view is selected; side development retired, mixed tuning deferred.
+Highest supported normal recording FPS and low-FPS analysis rejection remain pending.
+Nominal29.97 is accepted as30. D03 demo/real footage are separate intake needs.
 
-Private implementation: Soccolo-app branch `feat/sp014-local-camera-feasibility`, `apps/mobile/RESUME_HANDOFF_TOUCH_COUNT.md` and `TOUCH_COUNT_PLAN.md`. Public repository: SoccerAPP `main`. Personal footage and traces remain local; only sanitized summaries are published here. No new phone build at this checkpoint.
+The corrected UI preview is awaiting owner review. Earlier previews were rejected;
+use shipped native layouts with incremental additions. Build 41 theme, Build 47
+camera/identity corrections, Build 60 tips and Build 61 analytics remain authoritative.
 
-Preserve Guardian/player ownership, local media, prior successful scores on failed retries, one history entry per round and existing behavior/export improvements. Optional contact breakdown, airborne support and production accuracy remain future work.
+Private handoff: Soccolo-app `apps/mobile/RESUME_HANDOFF_TOUCH_COUNT.md`.
+Implementation/tests/reviewed local commit precede explicit next-build approval.
+Do not upload private media/traces or infer permission to deploy public docs.
+
+## Historical record
+
+[Previous documentation snapshot](RESUME_HANDOFF.history-20261021.md). Dated claims there are not current instructions.

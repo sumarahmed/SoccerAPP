@@ -1,18 +1,19 @@
 # SoccerTrainingApp
 
-Youth soccer training platform for ages 5–18, supporting direct-family and club-managed training.
+## Current checkpoint — 21 October 2026
 
-## Current checkpoint — 20 October 2026
+Latest recorded successful internal build 61. Stronger local Touch Count estimates
+are accepted as the next milestone; camera FPS policy and stronger native integration
+remain pending. Corrected UI preview awaits owner review. Next build requires approval.
 
-Build 60 (0.2.0+60) remains the latest signed, package-verified internal iPhone build. The owner accepted experimental practicing-player/crop tracking on tested footage. This is a limited acceptance, not production validation across all drills. Shared Touch Count is the next local workstream: count playing contacts, exclude hands/reset handling, use selected drill as context, and defer optional contact-type breakdown.
-
-- [Current status](docs/CURRENT_STATUS.md) and [next-chat handoff](docs/RESUME_HANDOFF.md)
-- [Build 60 acceptance and Touch Count plan](docs/verification/build60-touch-count-checkpoint.md)
+- [Current status](docs/CURRENT_STATUS.md)
+- [Handoff](docs/RESUME_HANDOFF.md)
+- [Current milestone/UI checklist](docs/verification/touch-count-milestone-20261021.md)
 - [Backlog](docs/content/current-backlog.md)
-- [Published activity map](https://sumarahmed.github.io/SoccerAPP/)
-- [Documentation procedure](docs/DOCUMENTATION_MAINTENANCE.md)
+- [Documentation cleanup](docs/DOCUMENTATION_RECONCILIATION_20261021.md)
 
-Implementation and detailed evidence stay in private Soccolo-app on `feat/sp014-local-camera-feasibility`. This repository publishes sanitized documentation. The contact prototype remains research-only; no new app build at this checkpoint. Historical delivery approvals are unchanged.
+Private implementation stays in Soccolo-app; personal footage stays local. This
+working-tree update does not deploy the public website or establish new formal acceptance.
 
 ## Long-term product baseline (not a delivered-feature list)
 
@@ -84,3 +85,7 @@ Run `node tools/validate-docs.cjs` from the repository root. This checks the sou
 Documentation synchronized 8 September 2026; the development foundation plan and attributable SP-001/SP-075/SP-004/SP-003 decisions were added 10–11 September 2026. SP-001, SP-075, SP-004 and SP-003 are accepted through their dated decision artifacts. The three SP-003 agent-scope/evidence activities are complete, so bounded implementation-agent preparation may use the accepted run-contract and review policy without treating deferred specialist, independent-review or implementation evidence as complete. Newly dependency-ready P01 preparation may proceed under those controls. The frozen planning-package manifests still retain their original Backlog/Not started state, and foundation milestones remain proposed. No production application, live database, customer billing setup, live Linear import or autonomous agent dispatch is represented by this documentation update. Specialist review and implementation evidence remain required at the relevant downstream delivery gates.
 
 For continuation in a new chat, read the [current handoff](docs/RESUME_HANDOFF.md).
+
+## Historical record
+
+[Previous documentation snapshot](README.history-20261021.md). Dated claims there are not current instructions.

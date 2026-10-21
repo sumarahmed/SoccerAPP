@@ -1,26 +1,34 @@
-# Current pilot backlog
+# Current backlog — 21 October 2026
 
-Updated 20 October 2026. [Current status](../CURRENT_STATUS.md).
+[Current status](../CURRENT_STATUS.md) · [Milestone](../verification/touch-count-milestone-20261021.md).
 
-## Next: shared Touch Count, local validation first
+## Next accepted-estimate milestone
 
-Build 60 (0.2.0+60) remains the latest signed, package-verified internal iPhone build. The owner accepted experimental practicing-player/crop tracking on tested footage. This is a limited acceptance, not production validation across all drills. Shared Touch Count is the next local workstream: count playing contacts, exclude hands/reset handling, use selected drill as context, and defer optional contact-type breakdown.
+1. Integrate accepted stronger behaviour only after native model/evidence parity,
+   resource and regression checks. Existing Build 61 shared/body analytics remain.
+2. Capability-based highest normal recording FPS with nominal 30 minimum; validate
+   saved video and explain low-FPS rejection without recording a zero result.
+3. Preserve shipped UI layouts, with incremental FPS/front-view/contact guidance.
+   Corrected preview awaits owner review; previous two previews rejected.
+4. Review/integrate dedicated D03 demo when supplied, test real D03 footage separately.
+5. Preserve accepted original counts, negative controls, prior history, one round
+   identity, body sums, exports and interruption/recovery behaviour.
+6. Document actual test limitations, commit reviewed work locally, request next-build
+   approval. Stronger estimate acceptance is not universal contact accuracy.
 
-Resolve real contact versus nearby foot motion and duplicate/foot attribution before phone integration. The first prototype failed a stationary-ball negative. Annotate mixed contacts, validate independent toe taps and negatives, then progress through sole control, travelling contacts, passing/receiving and future airborne work. [Detailed public checkpoint](../verification/build60-touch-count-checkpoint.md).
+## Media coverage
 
-Preserve existing recording, rest/wake-lock, navigation, progress, saved results, analytics, date/tag and export-cover behavior. Continue device performance and broader-viewpoint checks; accepted tracking on tested footage is not universal accuracy.
+Dedicated demos bundled: D01 Inside touches, D04 Cone weave, D06 Receive and return.
+Dedicated demos missing: D02, D03, D05, D07, D08, D09, D10. Existing passing/juggling
+test footage does not prove all 10 catalogue drills. No new head/thigh drill entries.
 
-## Remaining product work
+## Retained product work
 
-- Replace labelled temporary drill demonstrations with approved final assets and rights evidence.
-- Confirm Library content readiness separately from completed navigation/UI.
-- Validate large text, screen readers, reduced motion, contrasting footage and real camera/no-camera flows on devices.
-- Complete broader onboarding/provider and release-readiness checks; internal signing does not establish public distribution readiness.
+Approved final demo assets/rights; Library content readiness; physical accessibility,
+camera/lifecycle and resource checks; onboarding/provider and public-release readiness.
+Live counts, difficulty levels, cross-device media sync and live coach/payment
+services remain separately scoped future work. Existing Guardian/privacy rules remain.
 
-## Future scope requiring a separate definition
+## Historical record
 
-- Easy/medium/hard challenges, approved values/eligibility and analytics presentation. Retained round summaries are groundwork only; do not add difficulty controls now.
-- Live touch counting remains deferred. Post-recording counts stay automatic; no manual total-entry flow.
-- Club-owned demonstrations/pathways and administration, cross-device media sync, live coach services and payments.
-
-Existing Guardian protections, silent media, local ownership and player deletion rules remain unchanged. No new public acceptance of frozen delivery-plan tasks is implied.
+[Previous documentation snapshot](current-backlog.history-20261021.md). Dated claims there are not current instructions.

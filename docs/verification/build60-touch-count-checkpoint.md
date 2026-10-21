@@ -1,3 +1,5 @@
+> Historical Build 60 checkpoint, superseded for current instructions by [the21 October milestone](touch-count-milestone-20261021.md). Preserve original evidence below; claims of "latest" apply only to its original date.
+
 # Build 60 acceptance and shared Touch Count plan
 
 Updated 20 October 2026.
