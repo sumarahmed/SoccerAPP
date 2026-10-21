@@ -29,7 +29,7 @@ internal build started. This documentation pass changes no detector code or medi
 Current status/handoff, current milestone scope and UI contract supersede snapshots.
 The exact Build 61 native-layout preview is now owner-approved and its additions
 are implemented in committed Build 62 source. The owner confirmed Build 61 is
-installed. Build 62 is running in Codemagic; its successful package and installation
-are not yet established. The earlier table describes the initial cleanup only.
+installed. Build 62 completed successfully in Codemagic and the owner confirms installation.
+Device acceptance remains open. The earlier table describes the initial cleanup only.
 The former 60/30 opener is superseded by highest-supported-rate discovery down
 to nominal 30, with source/cadence rejection implemented. Historical evidence is retained.

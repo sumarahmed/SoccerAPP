@@ -1,13 +1,13 @@
 # Soccolo current status — 21 October 2026
 
-Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) is building; native simulator checks and later packaging are not yet confirmed. Build 61 remains the latest confirmed successful and installed build. Accuracy refinement and device acceptance remain open.
+Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) finished successfully: all native, Flutter and packaging stages passed. Build 62 is the latest successful internal build and the owner confirms it is installed. Accuracy refinement and device acceptance remain open.
 
-Latest successful internal iPhone build is **0.2.0+61**, confirmed by the owner
-as available in Codemagic and installed on their phone. Build 60 remains
-the accepted player/crop tracking baseline. Build 61 adds experimental shared
-contact counting and drill/body-part analytics; larger-model and recovered-track
-research improvements are not yet shipped. Acceptance of local stronger estimates
-is a milestone, not a claim of exact counts or resolved child generalization.
+Latest successful internal iPhone build is **0.2.0+62**, confirmed installed by
+the owner. Codemagic passed all native, Flutter and packaging stages for source
+`6d69d89`. Build 60 remains the accepted player/crop tracking baseline; Build 61
+is the previous installed release. Build 62 includes the stronger v9 counter,
+larger-model fallback and recovered tracks. Accepted estimates do not establish
+exact counts or resolved child generalization. Device testing remains open.
 
 ## Completed work
 
@@ -33,8 +33,8 @@ Personal footage, detailed traces and child-specific results remain private/loca
   detector-validation footage at nominal30fps or higher is still needed.
   Synthetic demos cannot establish real-player counting accuracy.
 - Local validation and both repository updates are committed and pushed. The owner explicitly
-  authorized Build 62; Codemagic is running native checks against source `6d69d89`. No cloud success, installation
-  or public website deployment is claimed yet.
+  authorized Build 62; Codemagic passed all stages for source `6d69d89` and the owner confirms installation.
+  Device testing remains open; no public app release or website deployment is claimed.
 
 Local validation:77 cached-evidence Dart parity cases;157 Python tests;276 Flutter
 tests (11 skips);28 enabled camera/history/shared checks;49 enabled practice regressions;6 milestone/dashboard checks.

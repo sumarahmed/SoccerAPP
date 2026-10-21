@@ -1,13 +1,12 @@
 # SoccerTrainingApp
 
-Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) is building; native simulator checks and later packaging are not yet confirmed. Build 61 remains the latest confirmed successful and installed build. Accuracy refinement and device acceptance remain open.
+Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) finished successfully: all native, Flutter and packaging stages passed. Build 62 is the latest successful internal build and the owner confirms it is installed. Accuracy refinement and device acceptance remain open.
 
 ## Current checkpoint — 21 October 2026
 
-Latest recorded successful internal build 61. Stronger local Touch Count estimates
+Latest successful and owner-confirmed installed internal build: 62. Stronger local Touch Count estimates
 are accepted for the authorized Build62 milestone. Stronger pipeline, camera FPS
-policy and accepted native-layout additions are implemented locally; native build
-and phone testing remain open. See [Build62](docs/verification/build62-stronger-touch-count.md).
+policy and accepted native-layout additions are implemented in Build 62; cloud checks passed and phone testing remains open. See [Build62](docs/verification/build62-stronger-touch-count.md).
 
 - [Current status](docs/CURRENT_STATUS.md)
 - [Handoff](docs/RESUME_HANDOFF.md)

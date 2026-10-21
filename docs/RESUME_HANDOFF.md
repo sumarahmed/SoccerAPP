@@ -1,11 +1,11 @@
 # Soccolo handoff — 21 October 2026
 
-Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) is building; native simulator checks and later packaging are not yet confirmed. Build 61 remains the latest confirmed successful and installed build. Accuracy refinement and device acceptance remain open.
+Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) finished successfully: all native, Flutter and packaging stages passed. Build 62 is the latest successful internal build and the owner confirms it is installed. Accuracy refinement and device acceptance remain open.
 
 Read [current status](CURRENT_STATUS.md), [milestone](verification/touch-count-milestone-20261021.md)
-and [backlog](content/current-backlog.md). Latest recorded successful internal
-build 61; the owner confirms it is installed on their phone. Stronger local
-estimates are accepted for the next milestone, not shipped.
+and [backlog](content/current-backlog.md). Latest successful internal build is 62;
+the owner confirms it is installed. The accepted stronger pipeline is included;
+its end-to-end device accuracy remains to be tested.
 
 Preserve the accepted baseline, existing UI/analytics/export behaviour and private
 media. Front view is selected; side development retired, mixed tuning deferred.
@@ -20,7 +20,7 @@ Accuracy refinement and phone/native/resource testing remain OPEN.
 See [Build62 milestone](verification/build62-stronger-touch-count.md).
 
 Private handoff: Soccolo-app `apps/mobile/RESUME_HANDOFF_TOUCH_COUNT.md`.
-Complete native checks and record the authorized build outcome; do not claim installation until confirmed.
+Native checks passed and installation is owner-confirmed. Begin the device-test report before any detector changes.
 Do not upload private media/traces or infer permission to deploy public docs.
 
 ## Historical record

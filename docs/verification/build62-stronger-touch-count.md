@@ -3,8 +3,7 @@
 Milestone tag: `milestone/build62-stronger-touch-count` in the private implementation repository. Both repositories have been committed and pushed; this documentation pass records the current checkpoint without closing refinement or device testing.
 
 21 October 2026. Owner authorizes this internal build and accepts the incremental
-UI proposal rendered from Build 61 native source. Latest confirmed installed
-version remains Build 61 until a newer installation is confirmed.
+UI proposal rendered from Build 61 native source. Build 62 is now the latest successful internal build and the owner confirms installation.
 
 Local implementation includes a versioned stronger shared counter, larger-model
 fallback and bounded track recovery, highest-supported normal camera FPS with
@@ -21,9 +20,9 @@ its minimum-rate requirement are independent of the demo.
 - 157 Python unit tests pass;276 default Flutter tests pass (11 skipped).
 - 28 enabled camera/history/shared/setup checks,49 enabled practice regressions and6 milestone/dashboard checks pass.
 - Flutter static analysis passes.
-- Native compilation/model execution and cloud packaging: pending.
+- Native simulator regression tests, cloud Flutter gates and signed packaging: all passed.
 - Source commit: `6d69d89a7d64331e62ef51fd5644453210984637`, pushed and confirmed by Codemagic.
-- [Internal Build 62 run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) started; native checks and packaging remain pending. No newer installation claimed yet.
+- [Internal Build 62 run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) finished successfully; all stages passed. Owner confirms Build 62 installation. Artifact: `soccolo_mobile.ipa`, `0.2.0+62`, 137,410,976 bytes.
 
 These are local and identical-evidence checks, not proof of end-to-end phone
 accuracy. Personal videos, traces and detailed child results remain private/local.
@@ -39,9 +38,8 @@ acceptance, public app release or website deployment is implied by this mileston
 
 ## Cloud checkpoint at this documentation pass
 
-Codemagic reports `building` for the source above. Model retrieval, optical-flow
-bridge compilation, dependency preparation, H.264 configuration and provisioning
-passed. Native simulator regression checks are still active; downstream Flutter
-cloud checks and signed IPA packaging are not yet confirmed. No installation or
-phone-count verification is claimed. Do not start a duplicate build while this run
-is active; inspect its outcome and logs before choosing the next action.
+Codemagic reports `finished`; every build action reports `success`, including native
+simulator regression tests, static analysis, Flutter suites, enabled-feature checks,
+signed IPA packaging and artifact publishing. The owner confirms Build 62 is installed.
+Next: device recording, actual FPS, preserved history, count comparisons and resource
+testing. Installation is not proof of counting accuracy. No new build is requested.

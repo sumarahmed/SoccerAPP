@@ -2,7 +2,7 @@
 
 Updated 21 October2026.
 
-The owner approved the Build 62 native-layout UI and internal build. Its source is committed/pushed and Codemagic is running; see [current build evidence](verification/build62-stronger-touch-count.md). Keep documentation synchronized with verified results. This authorization does not imply a public app release or website deployment. Historical snapshots remain dated evidence, not active guidance.
+The owner approved the Build 62 native-layout UI and internal build. Its source is committed/pushed, Codemagic succeeded and the owner confirms installation; see [current build evidence](verification/build62-stronger-touch-count.md). Keep documentation synchronized with verified results. This authorization does not imply a public app release or website deployment. Historical snapshots remain dated evidence, not active guidance.
 
 1. Maintain implementation status, source maps, detailed tests and internal installation/build evidence in the private Soccolo-app repository, currently on `feat/sp014-local-camera-feasibility`. Start at `apps/mobile/CURRENT_STATUS.md`.
 2. For each delivered candidate, update this repository's [current status](CURRENT_STATUS.md), [backlog](content/current-backlog.md), applicable acceptance checklist, README and `site/activity-map/template.html` status panel. Keep version, date and acceptance state aligned.

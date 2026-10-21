@@ -1,6 +1,6 @@
 # Current backlog — 21 October 2026
 
-Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) is building; native simulator checks and later packaging are not yet confirmed. Build 61 remains the latest confirmed successful and installed build. Accuracy refinement and device acceptance remain open.
+Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) finished successfully: all native, Flutter and packaging stages passed. Build 62 is the latest successful internal build and the owner confirms it is installed. Accuracy refinement and device acceptance remain open.
 
 [Current status](../CURRENT_STATUS.md) · [Milestone](../verification/touch-count-milestone-20261021.md).
 
@@ -11,7 +11,7 @@ Stronger v9/model fallback/recovered tracks, camera rate discovery, low-FPS
 rejection and UI additions are implemented locally. D03 is a temporary demo.
 See [milestone evidence](../verification/build62-stronger-touch-count.md).
 
-Keep OPEN: native cloud checks, device rates/resources and end-to-end counts;
+Cloud checks passed. Keep OPEN: device rates/resources and end-to-end counts;
 child head/thigh generalization and uncertain attribution; new front-view footage;
 real D03 validation; final demos and unseen catalogue-drill evidence. Rerun saved
 references and negative controls after every counting refinement. Mixed/side
