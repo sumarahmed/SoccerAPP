@@ -1,6 +1,7 @@
 # Soccolo current status — 21 October 2026
 
-Latest recorded successful internal iPhone build is **0.2.0+61**. Build 60 remains
+Latest successful internal iPhone build is **0.2.0+61**, confirmed by the owner
+as available in Codemagic and installed on their phone. Build 60 remains
 the accepted player/crop tracking baseline. Build 61 adds experimental shared
 contact counting and drill/body-part analytics; larger-model and recovered-track
 research improvements are not yet shipped. Acceptance of local stronger estimates

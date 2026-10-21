@@ -2,7 +2,8 @@
 
 Read [current status](CURRENT_STATUS.md), [milestone](verification/touch-count-milestone-20261021.md)
 and [backlog](content/current-backlog.md). Latest recorded successful internal
-build 61; stronger local estimates accepted for the next milestone, not shipped.
+build 61; the owner confirms it is installed on their phone. Stronger local
+estimates are accepted for the next milestone, not shipped.
 
 Preserve the accepted baseline, existing UI/analytics/export behaviour and private
 media. Front view is selected; side development retired, mixed tuning deferred.
