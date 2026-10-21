@@ -1,6 +1,6 @@
 # Documentation reconciliation — 21 October 2026
 
-## Removal/replacement list shown before edits
+## Earlier reconciliation record (historical)
 
 | Obsolete current claim | Replacement |
 | --- | --- |
@@ -20,11 +20,16 @@ Dated build/test evidence, accepted baselines, personal media, source code and
 formal delivery records. Replaced active documents have same-directory
 `.history-20261021.md` snapshots to retain working relative links. Historical
 claims remain dated evidence and must not be interpreted as current instructions.
-No whole repository cleanup, Git history rewrite, media upload, push, deployment
-or app build is part of this pass. Existing source changes are preserved.
+The initial cleanup did not rewrite Git history or delete media/source evidence.
+Subsequently, the owner approved Build 62, both repositories were pushed and the
+internal build started. This documentation pass changes no detector code or media.
 
 ## Current authority
 
 Current status/handoff, current milestone scope and UI contract supersede snapshots.
-UI preview is not approved/native implementation. The recorded Build 61 result is
-not a confirmation of the version currently installed on a user's device.
+The exact Build 61 native-layout preview is now owner-approved and its additions
+are implemented in committed Build 62 source. The owner confirmed Build 61 is
+installed. Build 62 is running in Codemagic; its successful package and installation
+are not yet established. The earlier table describes the initial cleanup only.
+The former 60/30 opener is superseded by highest-supported-rate discovery down
+to nominal 30, with source/cadence rejection implemented. Historical evidence is retained.

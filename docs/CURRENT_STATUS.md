@@ -1,5 +1,7 @@
 # Soccolo current status — 21 October 2026
 
+Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) is building; native simulator checks and later packaging are not yet confirmed. Build 61 remains the latest confirmed successful and installed build. Accuracy refinement and device acceptance remain open.
+
 Latest successful internal iPhone build is **0.2.0+61**, confirmed by the owner
 as available in Codemagic and installed on their phone. Build 60 remains
 the accepted player/crop tracking baseline. Build 61 adds experimental shared
@@ -30,12 +32,12 @@ Personal footage, detailed traces and child-specific results remain private/loca
 - D03 demo candidate (24fps) is bundled as an explicitly temporary demonstration. Separate real
   detector-validation footage at nominal30fps or higher is still needed.
   Synthetic demos cannot establish real-player counting accuracy.
-- Validate locally, update docs and commit reviewed changes. The owner explicitly
-  authorized Build62; native cloud checks are pending. No cloud success, installation
+- Local validation and both repository updates are committed and pushed. The owner explicitly
+  authorized Build 62; Codemagic is running native checks against source `6d69d89`. No cloud success, installation
   or public website deployment is claimed yet.
 
 Local validation:77 cached-evidence Dart parity cases;157 Python tests;276 Flutter
-tests (11 skips);28 enabled camera/history/shared checks;6 milestone/dashboard checks.
+tests (11 skips);28 enabled camera/history/shared checks;49 enabled practice regressions;6 milestone/dashboard checks.
 Static analysis passes. These checks do not certify end-to-end phone inference.
 See [Build62 milestone](verification/build62-stronger-touch-count.md).
 

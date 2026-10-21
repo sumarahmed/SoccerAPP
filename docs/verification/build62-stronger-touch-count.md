@@ -1,5 +1,7 @@
 # Build 62 — stronger Touch Count milestone
 
+Milestone tag: `milestone/build62-stronger-touch-count` in the private implementation repository. Both repositories have been committed and pushed; this documentation pass records the current checkpoint without closing refinement or device testing.
+
 21 October 2026. Owner authorizes this internal build and accepts the incremental
 UI proposal rendered from Build 61 native source. Latest confirmed installed
 version remains Build 61 until a newer installation is confirmed.
@@ -34,3 +36,12 @@ lenses, new front-view footage, real D03 validation and final demonstrations.
 Keep accepted references and zero-touch/hand controls in every regression pass.
 Mixed and side-view optimisation remain deferred. No formal delivery-plan
 acceptance, public app release or website deployment is implied by this milestone.
+
+## Cloud checkpoint at this documentation pass
+
+Codemagic reports `building` for the source above. Model retrieval, optical-flow
+bridge compilation, dependency preparation, H.264 configuration and provisioning
+passed. Native simulator regression checks are still active; downstream Flutter
+cloud checks and signed IPA packaging are not yet confirmed. No installation or
+phone-count verification is claimed. Do not start a duplicate build while this run
+is active; inspect its outcome and logs before choosing the next action.
