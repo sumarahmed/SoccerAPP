@@ -1,5 +1,40 @@
 # Soccolo handoff — 21 October 2026
 
+## Selected next-work path — 22 October 2026
+
+Use **NEW: Drill-owned crop** for forward drill-by-drill optimization on new
+videos. Follow the [saved direction and protocol](verification/drill-owned-crop-direction.md).
+The owner selects a development path, not a proven accuracy upgrade. Preserve
+the frozen benchmark, unresolved regressions, installed Build 62 and saved
+results. No build, publishing or media upload is authorized by this checkpoint.
+
+## Completed experimental benchmark — 22 October 2026
+
+Independent drill-owned recovery/composition is implemented locally and the
+descriptive benchmark is complete. Read [the latest outcome](verification/tiny-diagnostics-protocol.md).
+Regressions block promotion despite passing engineering tests and negative
+controls. Preserve old results; refine affected modules separately with event
+evidence, not count-target tuning. Personal comparisons/source snapshots remain
+local/private. No further build or publication is authorized by this checkpoint.
+
+## Revised numbering — 22 October 2026
+
+Use the [revised full list](content/DRILL_CATALOG_REVISED.md): local D11/D12 now
+mean thigh/head juggling. Previously reserved scan/choose/pass and goalkeeper
+collection move to D13/D14 and remain deferred. Preserve original signed/frozen
+contracts as historical records; do not reinterpret their old identifiers as
+approval of juggling. New app catalogue work and Tiny strategies are local only.
+
+## Superseding direction — 22 October 2026
+
+Continue Tiny-only experimental modular strategies in the private repository;
+the owner rejects the larger ball model going forward. Preserve installed Build
+62 and historical estimates. D03 Dribble and stop is the confirmed selected drill.
+Separate drill modules initially retain shared counting rules; native integration
+and per-drill accuracy/resource acceptance remain open. Do not initiate another
+build, commit or publish based on the historical Build 62 authorization below.
+See [device follow-up](verification/build62-device-testing.md).
+
 Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) finished successfully: all native, Flutter and packaging stages passed. Build 62 is the latest successful internal build and the owner confirms it is installed. Accuracy refinement and device acceptance remain open.
 
 Read [current status](CURRENT_STATUS.md), [milestone](verification/touch-count-milestone-20261021.md)
