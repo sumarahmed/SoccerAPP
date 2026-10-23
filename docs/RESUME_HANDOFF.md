@@ -1,5 +1,27 @@
 # Soccolo handoff — 21 October 2026
 
+## D03 checkpoint / D04 next — 24 October 2026
+
+The accepted local D03 MSD4 experiment is integrated in the private repository
+as `drill-owned-v5-camera-motion`; 121 focused/retained tests pass. Bounded tracking
+preserves release context, stationary starts require observed response, and a
+camera-compensated motion supplement uses foot approach and bracketed release.
+D03 foot proposals ignore hand/wrist context; this is an explicit experimental
+trade-off, not a proven handling exclusion. Other drills remain unchanged.
+
+Saved integration validation covers 37 frozen outputs, including 32 identical
+non-D03 outputs, three zero-touch controls and fresh three-video runs. Diagnostic
+quality failures and incomplete human event review remain; no independent accuracy
+or phone-performance claim. All personal evidence remains local/ignored.
+
+Next: D04 Cone weave. Read private
+`tools/analyser/tiny_strategy/D04_HANDOFF.md`, inventory owner-designated footage
+and labels, then run unchanged D04 (`--pipeline drill-owned --variants tiny-crop
+--max-dimension 1280 --drill D04`) before considering isolated fixes. D04 still
+uses drill-owned-v3; do not silently inherit D03 changes. Preserve full context,
+separate scoring intervals, and report unreviewed candidates separately from
+false positives. No build, upload, push or production change is authorized.
+
 ## Selected next-work path — 22 October 2026
 
 Use **NEW: Drill-owned crop** for forward drill-by-drill optimization on new

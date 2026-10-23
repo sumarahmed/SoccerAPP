@@ -1,5 +1,45 @@
 # Selected development path — 22 October 2026
 
+## D03 baseline follow-up — 23 October 2026
+
+The owner subsequently authorized a D03-specific initial-contact rule for a
+stationary ball started by a foot. The new experimental stage requires observed
+stationarity, foot intersection/movement, ball movement and independent pixel
+response, retaining hand safeguards and all-body accounting. Shared primitives
+are unchanged. 52 focused tests pass. Six frozen case/round replays retain their
+existing events, including stationary/no-touch negatives. The first new case
+gains no contact because its intermittent early direct ball observations cannot
+establish the rule's stationary history. No accuracy improvement is claimed;
+approximate human event frames and event-level diagnosis remain pending.
+Personal traces/images remain local; no production defaults, build or push.
+
+Owner whole-video count references and initial rolling-contact notes have since
+arrived for both sources. They remain local with source/report provenance.
+Timestamped contacts, uncertainty and reviewed negative intervals are still
+needed for event matching. Count discrepancies alone do not identify misses,
+false positives or duplicates; candidates remain unreviewed. No tuning occurred.
+
+Two newly supplied D03 diagnosis videos completed unchanged drill-owned Tiny/crop
+analysis with a 1280-pixel cap and fresh per-video inference. Both maintained
+nominal/measured 30 FPS and cleared existing diagnostic quality gates; contact
+accuracy remains unscored pending the owner's human event report. Source/code
+identity, evidence digests, frame timestamps and candidate accounting were checked.
+Detailed personal counts, timestamps, source hashes and standalone local timings
+remain in ignored private evidence. No phone performance claim or tuning result.
+
+Entire files were processed to retain available context; scoring intervals and
+boundary uncertainty remain explicit pending review. Neither file is sealed
+holdout. Diagnose the first case before selecting a fix. Use one-to-one event
+matching and distinguish matched contacts, misses, confirmed false positives,
+uncertain/unreviewed candidates and duplicates. An unmatched candidate is not a
+false positive without human-confirmed non-contact in the reviewed interval.
+Unclassified body attribution is separate from uncertain contact existence.
+
+No detector/counting changes, app build, push or media upload. The frozen
+benchmark, installed Build 62 and previous accepted estimates are preserved.
+
+## Selected direction
+
 The owner selects **NEW: Drill-owned crop** for forward optimization, one drill
 and case at a time on new videos. This is a development choice, not an accuracy
 acceptance, production promotion or authorization to build or publish.
