@@ -1,26 +1,22 @@
-# Soccolo handoff — 21 October 2026
+# Soccolo handoff — 24 October 2026
 
-## D03 checkpoint / D04 next — 24 October 2026
+## D04 accepted local pipeline — 24 October 2026
 
-The accepted local D03 MSD4 experiment is integrated in the private repository
-as `drill-owned-v5-camera-motion`; 121 focused/retained tests pass. Bounded tracking
-preserves release context, stationary starts require observed response, and a
-camera-compensated motion supplement uses foot approach and bracketed release.
-D03 foot proposals ignore hand/wrist context; this is an explicit experimental
-trade-off, not a proven handling exclusion. Other drills remain unchanged.
+The owner accepted the latest D04 response-locality experiment as the local
+Cone weave pipeline, revision `drill-owned-v11-local-passage`, and authorized
+cleanup, documentation and local commits. See [decision, operation and limits](verification/d04-pipeline-acceptance.md).
+D03 v5, other drills, Build 62, saved history and the frozen benchmark are preserved.
+Acceptance does not certify complete touch totals or authorize a native build,
+upload or push. One reviewed rolling-ball false proposal and threshold sensitivity
+remain open; full-video accuracy and held-out evaluation remain unresolved.
 
-Saved integration validation covers 37 frozen outputs, including 32 identical
-non-D03 outputs, three zero-touch controls and fresh three-video runs. Diagnostic
-quality failures and incomplete human event review remain; no independent accuracy
-or phone-performance claim. All personal evidence remains local/ignored.
+## Preserved D03 checkpoint
 
-Next: D04 Cone weave. Read private
-`tools/analyser/tiny_strategy/D04_HANDOFF.md`, inventory owner-designated footage
-and labels, then run unchanged D04 (`--pipeline drill-owned --variants tiny-crop
---max-dimension 1280 --drill D04`) before considering isolated fixes. D04 still
-uses drill-owned-v3; do not silently inherit D03 changes. Preserve full context,
-separate scoring intervals, and report unreviewed candidates separately from
-false positives. No build, upload, push or production change is authorized.
+D03 remains `drill-owned-v5-camera-motion`, accepted from MSD4. Its bounded
+tracking, stationary departure and camera-compensated motion are unchanged.
+Its foot hand/wrist bypass is an experimental trade-off, not a validated handling
+exclusion. The earlier integration's 121 tests, 37 frozen outputs and three fresh
+runs remain historical evidence; D04 acceptance does not modify those results.
 
 ## Selected next-work path — 22 October 2026
 

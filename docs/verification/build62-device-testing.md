@@ -1,5 +1,15 @@
 # Build 62 device testing
 
+## D04 accepted local pipeline — 24 October 2026
+
+The owner accepted the latest D04 response-locality experiment as the local
+Cone weave pipeline, revision `drill-owned-v11-local-passage`, and authorized
+cleanup, documentation and local commits. See [decision, operation and limits](d04-pipeline-acceptance.md).
+D03 v5, other drills, Build 62, saved history and the frozen benchmark are preserved.
+Acceptance does not certify complete touch totals or authorize a native build,
+upload or push. One reviewed rolling-ball false proposal and threshold sensitivity
+remain open; full-video accuracy and held-out evaluation remain unresolved.
+
 ## Latest engineering checkpoint — 22 October 2026
 
 Owner confirms D03 Dribble and stop as the selected drill and rejects the larger

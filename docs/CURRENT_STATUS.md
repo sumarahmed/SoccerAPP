@@ -1,4 +1,14 @@
-# Soccolo current status — 21 October 2026
+# Soccolo current status — 24 October 2026
+
+## D04 accepted local pipeline — 24 October 2026
+
+The owner accepted the latest D04 response-locality experiment as the local
+Cone weave pipeline, revision `drill-owned-v11-local-passage`, and authorized
+cleanup, documentation and local commits. See [decision, operation and limits](verification/d04-pipeline-acceptance.md).
+D03 v5, other drills, Build 62, saved history and the frozen benchmark are preserved.
+Acceptance does not certify complete touch totals or authorize a native build,
+upload or push. One reviewed rolling-ball false proposal and threshold sensitivity
+remain open; full-video accuracy and held-out evaluation remain unresolved.
 
 ## Selected direction — 22 October 2026
 
