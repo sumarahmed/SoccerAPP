@@ -1,5 +1,25 @@
 # Soccolo handoff — 24 October 2026
 
+## D15 V11 accepted and earlier selections committed — 28 October 2026
+
+The owner accepts D15 V11 and authorizes local commits in both repositories.
+Read [D15 operation, evidence and limits](verification/d15-pipeline-acceptance.md)
+and the [accepted pipeline register](verification/accepted-local-pipelines.md).
+D01 Image-side v1 remains the default `drill-owned-v11-image-side`; its
+previously uncommitted implementation/docs are included. D02 v3, D03 v5 and D04 v11
+remain accepted. **D05 remains pending**. D02's current intake/history docs are
+included without changing its counter. Build 62, saved history and frozen results
+are retained; no native build, media upload, push or publication is included.
+
+## D01 Image-side v1 selected — 26 October 2026
+
+Local D01 drill-owned default is now `drill-owned-v11-image-side`, composing
+v10 finite-width + distinct-response v3 + image-side gate. See
+[selection and limitations](verification/d01-pipeline-acceptance.md), and the app
+`D01_HANDOFF.md` / `D01_EXPERIMENTS.md` for the complete experiment inventory.
+Exact six-case replay parity does not certify accuracy or phone readiness.
+D03/D04, Build 62, saved history and the frozen benchmark remain unchanged.
+
 ## D04 accepted local pipeline — 24 October 2026
 
 The owner accepted the latest D04 response-locality experiment as the local

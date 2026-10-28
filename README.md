@@ -1,5 +1,14 @@
 # SoccerTrainingApp
 
+## Current local checkpoint — 28 October 2026
+
+The catalogue now contains 21 selectable drills: D01–D12 and D15–D23; D13/D14
+remain reserved. [Accepted local pipelines](docs/verification/accepted-local-pipelines.md) are D01 Image-side v1,
+D02 v3, D03 v5, D04 v11 and D15 V11. D05 remains pending. Local commits capture
+the accepted analyser source, documentation and existing catalogue expansion.
+Separate Library UI work, native integration and builds are outside this checkpoint.
+Build 62 and saved history remain unchanged; no push or publication is included.
+
 Build 62 source is committed and pushed: `6d69d89a7d64331e62ef51fd5644453210984637`. Milestone tag: `milestone/build62-stronger-touch-count`. [Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6ad8a3d893707fc384745ec3) finished successfully: all native, Flutter and packaging stages passed. Build 62 is the latest successful internal build and the owner confirms it is installed. Accuracy refinement and device acceptance remain open.
 
 ## Current checkpoint — 21 October 2026

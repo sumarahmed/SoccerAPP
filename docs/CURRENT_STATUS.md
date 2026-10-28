@@ -1,5 +1,14 @@
 # Soccolo current status — 24 October 2026
 
+## Current local checkpoint — 28 October 2026
+
+The catalogue now contains 21 selectable drills: D01–D12 and D15–D23; D13/D14
+remain reserved. [Accepted local pipelines](verification/accepted-local-pipelines.md) are D01 Image-side v1,
+D02 v3, D03 v5, D04 v11 and D15 V11. D05 remains pending. Local commits capture
+the accepted analyser source, documentation and existing catalogue expansion.
+Separate Library UI work, native integration and builds are outside this checkpoint.
+Build 62 and saved history remain unchanged; no push or publication is included.
+
 ## D04 accepted local pipeline — 24 October 2026
 
 The owner accepted the latest D04 response-locality experiment as the local
