@@ -1,5 +1,18 @@
 # Soccolo handoff — 24 October 2026
 
+## D16 V3 accepted — 28 October 2026
+
+The owner accepts D16's local `drill-owned-v3-push-return-cycles` pipeline and
+authorizes local Git commits. D16 is a forward lace push followed by a roll-back;
+one cycle counts as one D16 touch. The current catalogue corrects the earlier
+hand-drop wording. Six of 21 pipelines are now accepted: D01/D02/D03/D04/D15/D16;
+D05 stays pending. Counts are 7/13 on the two exposed sources, with unresolved
+D16_1 evidence and event review still open. Acceptance does not certify accuracy
+or update installed Build 62. No native build, media upload or push.
+
+[D16 operation, validation and limits](verification/d16-pipeline-acceptance.md).
+
+
 ## Library source checkpoint — 28 October 2026
 
 The owner authorizes a separate local commit of the Library implementation:

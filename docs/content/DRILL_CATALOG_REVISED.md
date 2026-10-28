@@ -1,5 +1,18 @@
 # Revised full drill list — 28 October 2026
 
+## D16 V3 accepted — 28 October 2026
+
+The owner accepts D16's local `drill-owned-v3-push-return-cycles` pipeline and
+authorizes local Git commits. D16 is a forward lace push followed by a roll-back;
+one cycle counts as one D16 touch. The current catalogue corrects the earlier
+hand-drop wording. Six of 21 pipelines are now accepted: D01/D02/D03/D04/D15/D16;
+D05 stays pending. Counts are 7/13 on the two exposed sources, with unresolved
+D16_1 evidence and event review still open. Acceptance does not certify accuracy
+or update installed Build 62. No native build, media upload or push.
+
+[D16 operation, validation and limits](../verification/d16-pipeline-acceptance.md).
+
+
 ## Current catalogue and pipeline checkpoint
 
 The owner confirms 21 selectable drills: D01–D12 and D15–D23. D13/D14 stay
@@ -8,9 +21,9 @@ remains pending. See [the accepted register](../verification/accepted-local-pipe
 Dedicated demo review and native integration remain separate. Existing saved
 history, frozen review contracts and Build 62 are preserved.
 
-Current checkpoint validation (28 October): all 525 Python unit tests and
-14 focused Flutter catalogue tests pass from the exact staged-source export.
-The 21 selectable IDs, five accepted pipelines and pending D05 are checked.
+D16 acceptance validation (28 October): all 555 Python unit tests and
+14 focused Flutter catalogue tests pass on the acceptance working tree.
+The 21 selectable IDs, six accepted pipelines and pending D05 are checked.
 The accepted local pipeline documentation records event-level regression
 checks and the fresh D15 selected-CLI run. No device build was produced.
 
@@ -43,7 +56,7 @@ records keep their original identifiers and do not approve these new drafts.
 | D13 | Scan, choose and pass | Read a cue and choose a passing target | Renumbered former reserved D11; still deferred, not selectable |
 | D14 | Goalkeeper set and ground-ball collection | Ready position and controlled ground-ball collection | Renumbered former reserved D12; still deferred, not selectable |
 | D15 | Sole taps | Alternate light sole contacts on top of a stationary ball to develop balance and foot coordination. | Local catalogue draft; local V11 pipeline reviewed and accepted |
-| D16 | Lace stop | Cushion a gently dropping ball with the laces and bring it under control near your feet. | Local catalogue draft; pipeline pending review |
+| D16 | Lace stop | Push the ball forwards with the laces, then roll it back under control. One push-and-roll-back cycle counts as one D16 touch. | Local catalogue draft; local V3 pipeline reviewed and accepted |
 | D17 | V taps | Pull the ball back with the sole and push it diagonally forwards with the inside of the same foot to trace a V. | Local catalogue draft; pipeline pending review |
 | D18 | Croquetas | Transfer the ball across your body with two inside-foot touches while stepping sideways. | Local catalogue draft; pipeline pending review |
 | D19 | Step-over | Circle one foot around the front of the ball to feint, then take the ball away with the outside of the other foot. | Local catalogue draft; pipeline pending review |
@@ -58,7 +71,7 @@ asset-rights approval, a pathway promotion, an app build or publication.
 
 ## Pipeline review register — 28 October 2026
 
-**5 of 21 selectable drill pipelines reviewed and accepted: D01, D02, D03, D04 and D15.** D01–D04 were previously accepted; the owner accepts D15 V11 on 28 October 2026 and explicitly keeps D05 pending. This is pipeline acceptance, not a new accuracy measurement or release approval. The remaining 16 selectable drills are pending pipeline review. D13/D14 remain reserved and deferred, outside the selectable count (23 numbered entries in total).
+**6 of 21 selectable drill pipelines reviewed and accepted: D01, D02, D03, D04, D15 and D16.** D01–D04 were previously accepted; the owner accepts D15 V11 and D16 V3 on 28 October 2026 and explicitly keeps D05 pending. This is pipeline acceptance, not a new accuracy measurement or release approval. The remaining 15 selectable drills are pending pipeline review. D13/D14 remain reserved and deferred, outside the selectable count (23 numbered entries in total).
 
 The JSON catalogue stores a `pipelineStatus` for each drill and a `pipelineReview` summary with the accepted IDs, count, date and basis.
 
@@ -140,7 +153,7 @@ Detailed implementation: private `apps/mobile/DRILL_CATALOG_REVISED.md`.
 
 ## Added ball-mastery drills — D15–D23
 
-Each new drill uses two 20-second rounds with 30 seconds rest as a draft practice default, and a labelled temporary D01 interface sample. Dedicated demonstrations remain pending; D15 V11 is accepted locally and D16–D23 pipelines remain pending. Samba taps uses the sole-tap/inside-touch variation confirmed by the owner. Lace stop is defined here as cushioning a low dropped ball with the laces.
+Each new drill uses two 20-second rounds with 30 seconds rest as a draft practice default, and a labelled temporary D01 interface sample. Dedicated demonstrations remain pending; D15 V11 and D16 V3 are accepted locally and D17–D23 pipelines remain pending. Samba taps uses the sole-tap/inside-touch variation confirmed by the owner. Lace stop uses the owner-confirmed forward lace push and roll-back cycle.
 
 ### D15 — Sole taps
 
@@ -155,14 +168,18 @@ Cue: Light taps. Alternate feet. Stay balanced.
 
 ### D16 — Lace stop
 
-Cushion a gently dropping ball with the laces and bring it under control near your feet.
+Push the ball forwards with the laces, then roll it back under control.
+One forward push and roll-back cycle counts as one D16 touch.
 
-1. Hold the ball low in front of you and balance on one leg.
-2. Release it gently towards the laces of the raised foot; do not kick it upwards.
-3. Lower the receiving foot with the ball to soften the contact and let the ball settle close on the ground.
-4. Stop and reset, then practise with the other foot.
+1. Start with the ball still in front of you and your weight on your supporting leg.
+2. Use the laces of your other foot to gently push the ball forwards.
+3. Place the sole on the ball and roll it back towards you under control.
+4. Repeat at a comfortable pace, resetting your balance when needed. Count each cycle once.
 
-Cue: Soft laces. Cushion down. Keep it close.
+Cue: Laces forward. Roll back. One cycle.
+
+Owner-confirmed definition and accepted local V3 pipeline, 28 October 2026.
+This supersedes the earlier hand-drop wording. Native integration remains separate.
 
 ### D17 — V taps
 

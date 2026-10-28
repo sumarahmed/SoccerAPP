@@ -1,5 +1,8 @@
 # Accepted local drill pipelines — 28 October 2026
 
+D16 V3 is now owner-accepted. [Operation, cycle unit and remaining limits](d16-pipeline-acceptance.md).
+Six of 21 selectable pipelines are accepted; D05 remains pending.
+
 Owner acceptance and Git storage are separate facts. This checkpoint records
 the accepted local Python analyser selections and versions the previously
 uncommitted D01 implementation and D02 handoffs together with accepted D15 V11.
@@ -13,16 +16,17 @@ The owner's latest clarification explicitly keeps **D05 pending**.
 | D04 Cone weave | Accepted | `drill-owned-v11-local-passage` | Existing accepted implementation retained, originally `c979c8a` |
 | D05 Pass through a gate | **Pending** | `drill-owned-v3` | Available implementation is not an acceptance; no newer dedicated variant found |
 | D15 Sole taps | Accepted | `drill-owned-v11-single-foot-release` | Owner accepted 28 October; same V11 counter, normal CLI integration |
+| D16 Lace stop | Accepted | `drill-owned-v3-push-return-cycles` | Owner accepted 28 October; one forward lace push and roll-back cycle per D16 touch |
 
-D06–D12 and D16–D23 remain pending. D13/D14 remain reserved. No acceptance is
+D06–D12 and D17–D23 remain pending. D13/D14 remain reserved. No acceptance is
 inferred from availability of a generic module. D15 is distinct from D02.
 
 The committed local catalogue has 21 selectable entries: D01–D12 and
-D15–D23, with D13/D14 reserved. It records five accepted IDs:
-D01, D02, D03, D04 and D15. The existing catalogue expansion, parsing, plan/history
+D15–D23, with D13/D14 reserved. It records six accepted IDs:
+D01, D02, D03, D04, D15 and D16. The existing catalogue expansion, parsing, plan/history
 identities, filtering and focused tests are included at the owner's request.
 Library work was excluded from this pipeline checkpoint and is recorded separately. The four-ID review snapshot from
-26 October is superseded by the D15 acceptance on 28 October.
+26 October is superseded by the D15 and D16 acceptances on 28 October.
 
 Acceptance selects a local development implementation. It is not a verified
 touch-total guarantee, phone integration or approval for a native build, media
