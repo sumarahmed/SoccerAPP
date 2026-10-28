@@ -21,7 +21,7 @@ The committed local catalogue has 21 selectable entries: D01–D12 and
 D15–D23, with D13/D14 reserved. It records five accepted IDs:
 D01, D02, D03, D04 and D15. The existing catalogue expansion, parsing, plan/history
 identities, filtering and focused tests are included at the owner's request.
-Separate Library UI work remains uncommitted. The four-ID review snapshot from
+Library work was excluded from this pipeline checkpoint and is recorded separately. The four-ID review snapshot from
 26 October is superseded by the D15 acceptance on 28 October.
 
 Acceptance selects a local development implementation. It is not a verified

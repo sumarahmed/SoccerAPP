@@ -1,5 +1,15 @@
 # Soccolo handoff — 24 October 2026
 
+## Library source checkpoint — 28 October 2026
+
+The owner authorizes a separate local commit of the Library implementation:
+exercises, sound bites, pathways, user-created calendar plans and meal guides.
+State and completion are stored per player, separately from Train and analyser
+history. Recordings remain pending; this does not change installed Build 62.
+Validation: 53 selected Flutter tests pass; static analysis reports no issues.
+See [Library implementation and validation](verification/library-implementation.md).
+
+
 ## D15 V11 accepted and earlier selections committed — 28 October 2026
 
 The owner accepts D15 V11 and authorizes local commits in both repositories.

@@ -163,7 +163,7 @@ in the private D15_HANDOFF.md and each frozen private manifest. No model was enl
 Personal videos, frames, masks, raw traces and rendered reports remain local
 and ignored. This checkpoint commits the accepted D01 and D15 source,
 tests and documentation, D02 handoffs, and the existing 21-drill catalogue
-support. Separate Library work remains uncommitted. No new analyser
+support. Library work was excluded from this acceptance checkpoint. No new analyser
 development on another drill, mobile build, native integration, upload,
 push or production-default change is included. Build 62, saved history
 and frozen benchmarks are

@@ -1,5 +1,15 @@
 # SoccerTrainingApp
 
+## Library source checkpoint — 28 October 2026
+
+The owner authorizes a separate local commit of the Library implementation:
+exercises, sound bites, pathways, user-created calendar plans and meal guides.
+State and completion are stored per player, separately from Train and analyser
+history. Recordings remain pending; this does not change installed Build 62.
+Validation: 53 selected Flutter tests pass; static analysis reports no issues.
+See [Library implementation and validation](docs/verification/library-implementation.md).
+
+
 ## Current local checkpoint — 28 October 2026
 
 The catalogue now contains 21 selectable drills: D01–D12 and D15–D23; D13/D14
