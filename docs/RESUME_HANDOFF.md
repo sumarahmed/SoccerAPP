@@ -1,5 +1,11 @@
 # Soccolo handoff — 24 October 2026
 
+## Current drill status — 31 October 2026
+
+The [all-drill acceptance register](verification/accepted-local-pipelines.md) supersedes older pipeline-status summaries below. **10 of 21 selectable drills have an owner-accepted local development pipeline or variant**: D01/D02/D03/D04/D15/D16/D17/D18/D22/D23. D05–D12 and D19–D21 remain pending; D13/D14 are reserved. D17 v8 is an accepted variant, D18 now selects accepted v8 (v5 preserved), D22 retains accepted v4 plus its accepted 1.5× crop experiment, and D23 v6 is accepted. These are development decisions, not complete accuracy or mobile-integration claims.
+
+This documentation checkpoint does not change app catalogue flags, detector code, installed Build 62, or the uncommitted Build 63 preparation. Detailed handoffs retain known misses, extra proposals and failed coverage gates. Earlier dated sections are historical checkpoints. GitHub documentation commits/pushes are authorized for this update; builds, deployment and media uploads are not part of it.
+
 ## D16 V3 accepted — 28 October 2026
 
 The owner accepts D16's local `drill-owned-v3-push-return-cycles` pipeline and

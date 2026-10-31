@@ -1,46 +1,52 @@
-# Accepted local drill pipelines — 28 October 2026
+# All-drill acceptance register — 31 October 2026
 
-D16 V3 is now owner-accepted. [Operation, cycle unit and remaining limits](d16-pipeline-acceptance.md).
-Six of 21 selectable pipelines are accepted; D05 remains pending.
+Audited all 23 catalogue identifiers: **21 selectable, 10 with accepted local development pipelines/variants, 11 pending; D13/D14 reserved**. This supersedes the earlier six-accepted summary. App catalogue flags and installed behavior are separate from these research decisions; this documentation-only update does not migrate runtime flags or ship local analyser source.
 
-Owner acceptance and Git storage are separate facts. This checkpoint records
-the accepted local Python analyser selections and versions the previously
-uncommitted D01 implementation and D02 handoffs together with accepted D15 V11.
-The owner's latest clarification explicitly keeps **D05 pending**.
+| Drill | Current status | Local selection / evidence |
+|---|---|---|
+| D01 Inside touches | Accepted | **v11 image-side**. Current local registry; image-side v1. Known contact losses remain. |
+| D02 Sole rolls | Accepted | **v3**. Current local registry; latest intake 24 proposals, 76.67% coverage; no new tuned acceptance. |
+| D03 Dribble and stop | Accepted | **v5 camera-motion**. Current local registry; tracking/accuracy limitations remain. |
+| D04 Cone weave | Accepted | **v11 local-passage**. Current local registry; requires source-matched reviewed scene map; false proposal/timing review remains. |
+| D05 Pass through a gate | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D06 Receive and return | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D07 Open-body receive | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D08 Pull-back turn | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D09 Feint and escape | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D10 Receive and finish to a target | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D11 Thigh juggling | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D12 Head juggling | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D13 Scan, choose and pass | Reserved / not selectable | No acceptance or scoring pipeline inferred. |
+| D14 Goalkeeper set and ground-ball collection | Reserved / not selectable | No acceptance or scoring pipeline inferred. |
+| D15 Sole taps | Accepted | **v11 single-foot-release**. Current local registry; fourth-source result 25 versus human 25, event accuracy not certified. |
+| D16 Lace stop | Accepted | **v3 push-return-cycles**. Current local registry; one forward lace push plus roll-back = one cycle/touch. Outputs 7/13; raw contacts are a different unit. |
+| D17 V taps | Accepted variant | **v8 foot-ankle-proxy; wide lower-leg**. Accepted development variant, standalone runner. 21 candidates vs 21 markers; 96.64% coverage. Unresolved misses/extras remain; second video unopened. |
+| D18 Croquetas | Accepted | **v8 visible-guiding-contact-episodes**. Accepted and selected in current local registry; v5 preserved. Outputs 10/11/9/8. Fourth source fails coverage at 79.98%; marked misses remain. |
+| D19 Step-over | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D20 Inside outside | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D21 Outside inside | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D22 L drags | Accepted variant | **v4 visible-foot-contacts + accepted 1.5× crop variant**. Standalone. Historical v4 outputs 23/10 vs human 25/13; wider-crop outputs 22/10/10/4. Fourth source fails coverage at 64.98%. |
+| D23 Samba taps | Accepted | **v6 person-mask-consecutive-contacts**. Standalone/frozen evaluator. Accepted outputs 16/21; first human reference 18. No numeric human total supplied for second recording; known misses remain. |
 
-| Drill | Status | Selected local revision | Checkpoint |
-|---|---|---|---|
-| D01 Inside touches | Accepted | `drill-owned-v11-image-side` | Image-side v1, accepted 26 October; previously uncommitted implementation now included |
-| D02 Sole rolls | Accepted | `drill-owned-v3` | Existing committed implementation retained; intake/history docs included |
-| D03 Dribble and stop | Accepted | `drill-owned-v5-camera-motion` | Existing accepted implementation retained, originally `086bf8b` |
-| D04 Cone weave | Accepted | `drill-owned-v11-local-passage` | Existing accepted implementation retained, originally `c979c8a` |
-| D05 Pass through a gate | **Pending** | `drill-owned-v3` | Available implementation is not an acceptance; no newer dedicated variant found |
-| D15 Sole taps | Accepted | `drill-owned-v11-single-foot-release` | Owner accepted 28 October; same V11 counter, normal CLI integration |
-| D16 Lace stop | Accepted | `drill-owned-v3-push-return-cycles` | Owner accepted 28 October; one forward lace push and roll-back cycle per D16 touch |
+## Scoring and exposure
 
-D06–D12 and D17–D23 remain pending. D13/D14 remain reserved. No acceptance is
-inferred from availability of a generic module. D15 is distinct from D02.
+- D17 counts individual foot/ankle contacts: continuous rolling counts once, separate ankle recontact adds one, and another-foot contact adds one. Direction change alone adds nothing. The 21 matching totals do not establish 21 correct events. Its first source is development evidence; no second source was opened in this work.
+- D18 counts active guiding-contact episodes; receiving stops and repeated same-foot members do not automatically add counts. All four sources are development-exposed. The latest v8 acceptance supersedes the older v5 selection without erasing it.
+- D22 counts individual foot contacts, not completed L repetitions. All four sources are development evidence. Wider-crop acceptance preserves, rather than replaces or deletes, the historical verified v4 packet.
+- D23 counts individual contacts; its accepted second result is a detector output, not an invented human annotation. Preserve frozen source/model/configuration and the initial second-video prediction.
+- D16 uses completed push/roll-back cycles, unlike D17/D22/D23. Do not impose one drill's unit or scoring rules on another.
 
-The committed local catalogue has 21 selectable entries: D01–D12 and
-D15–D23, with D13/D14 reserved. It records six accepted IDs:
-D01, D02, D03, D04, D15 and D16. The existing catalogue expansion, parsing, plan/history
-identities, filtering and focused tests are included at the owner's request.
-Library work was excluded from this pipeline checkpoint and is recorded separately. The four-ID review snapshot from
-26 October is superseded by the D15 and D16 acceptances on 28 October.
+## Validation and boundaries
 
-Acceptance selects a local development implementation. It is not a verified
-touch-total guarantee, phone integration or approval for a native build, media
-upload, push or publication. Build 62, saved history, frozen benchmarks and
-historical experiments remain unchanged. Research results retain null accepted
-counts and false phone-readiness flags.
+Latest D17 refinement recorded 739 passing analyser tests, exact D17 original/refined replays, D18 pre-edit behavior equality, and D22/D23 saved-result equality. These are historical verification results, not new inference in this documentation task. Count agreement, owner acceptance, synthetic tests and tracking coverage do not individually prove event accuracy or mobile readiness.
 
-The private analyser handoffs retain architecture, exact commands, experiments,
-source/model hashes and limitations: D01_HANDOFF.md / D01_EXPERIMENTS.md,
-D02_HANDOFF.md / D02_EXPERIMENTS.md, D04_HANDOFF.md and D15_HANDOFF.md /
-D15_ACCEPTANCE.md under Soccolo-app/tools/analyser/tiny_strategy/.
+Preserve historical outputs, accepted source/model/configuration snapshots, annotations and failed experiments. Private evidence remains local; no recordings, model binaries, review-frame images or personal annotation files are published by this checkpoint. Build 62 remains the latest documented installed build; Build 63 is uncommitted source preparation. No build or deployment is performed.
 
-D01's complete saved-evidence event/trace/metric parity remains 80, 62, 85, 72, 25 and 37
-over six sources. D02's latest intake has 24 candidates, 76.67% coverage and no
-complete event labels; that is not a new tuned D02 revision. D04's documented
-false proposal, threshold sensitivity and timing limits remain open. D15's
-matching 25 on its fourth source still needs individual event review.
+## Recent acceptance summaries
+
+- [D17 accepted development summary](d17-pipeline-acceptance.md)
+- [D18 accepted development summary](d18-pipeline-acceptance.md)
+- [D22 accepted development summary](d22-pipeline-acceptance.md)
+- [D23 accepted development summary](d23-pipeline-acceptance.md)
+
+Implementation and private provenance are maintained in the Soccolo-app handoffs. Local source availability and GitHub source publication are separate facts.

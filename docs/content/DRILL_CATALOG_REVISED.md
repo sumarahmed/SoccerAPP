@@ -1,5 +1,11 @@
 # Revised full drill list — 28 October 2026
 
+## Current drill status — 31 October 2026
+
+The [all-drill acceptance register](../verification/accepted-local-pipelines.md) supersedes older pipeline-status summaries below. **10 of 21 selectable drills have an owner-accepted local development pipeline or variant**: D01/D02/D03/D04/D15/D16/D17/D18/D22/D23. D05–D12 and D19–D21 remain pending; D13/D14 are reserved. D17 v8 is an accepted variant, D18 now selects accepted v8 (v5 preserved), D22 retains accepted v4 plus its accepted 1.5× crop experiment, and D23 v6 is accepted. These are development decisions, not complete accuracy or mobile-integration claims.
+
+This documentation checkpoint does not change app catalogue flags, detector code, installed Build 62, or the uncommitted Build 63 preparation. Detailed handoffs retain known misses, extra proposals and failed coverage gates. Earlier dated sections are historical checkpoints. GitHub documentation commits/pushes are authorized for this update; builds, deployment and media uploads are not part of it.
+
 ## D16 V3 accepted — 28 October 2026
 
 The owner accepts D16's local `drill-owned-v3-push-return-cycles` pipeline and
@@ -57,13 +63,13 @@ records keep their original identifiers and do not approve these new drafts.
 | D14 | Goalkeeper set and ground-ball collection | Ready position and controlled ground-ball collection | Renumbered former reserved D12; still deferred, not selectable |
 | D15 | Sole taps | Alternate light sole contacts on top of a stationary ball to develop balance and foot coordination. | Local catalogue draft; local V11 pipeline reviewed and accepted |
 | D16 | Lace stop | Push the ball forwards with the laces, then roll it back under control. One push-and-roll-back cycle counts as one D16 touch. | Local catalogue draft; local V3 pipeline reviewed and accepted |
-| D17 | V taps | Pull the ball back with the sole and push it diagonally forwards with the inside of the same foot to trace a V. | Local catalogue draft; pipeline pending review |
-| D18 | Croquetas | Transfer the ball across your body with two inside-foot touches while stepping sideways. | Local catalogue draft; pipeline pending review |
+| D17 | V taps | Pull the ball back with the sole and push it diagonally forwards with the inside of the same foot to trace a V. | Local development variant accepted; see current acceptance register; not mobile-integrated |
+| D18 | Croquetas | Transfer the ball across your body with two inside-foot touches while stepping sideways. | Local development pipeline accepted; see current acceptance register; not mobile-integrated |
 | D19 | Step-over | Circle one foot around the front of the ball to feint, then take the ball away with the outside of the other foot. | Local catalogue draft; pipeline pending review |
 | D20 | Inside outside | Use the inside and then the outside of the same foot to move the ball from side to side. | Local catalogue draft; pipeline pending review |
 | D21 | Outside inside | Use the outside and then the inside of the same foot to control the ball through a change of direction. | Local catalogue draft; pipeline pending review |
-| D22 | L drags | Pull the ball back with the sole, then guide it sideways behind the supporting leg with the inside of the same foot. | Local catalogue draft; pipeline pending review |
-| D23 | Samba taps | Repeat a sole tap followed by an inside-foot touch, alternating feet in a controlled rhythm. | Local catalogue draft; pipeline pending review |
+| D22 | L drags | Pull the ball back with the sole, then guide it sideways behind the supporting leg with the inside of the same foot. | Local development variant accepted; see current acceptance register; not mobile-integrated |
+| D23 | Samba taps | Repeat a sole tap followed by an inside-foot touch, alternating feet in a controlled rhythm. | Local development pipeline accepted; see current acceptance register; not mobile-integrated |
 
 The local app catalogue contains 21 drills: D01–D12 and D15–D23. D13/D14 are reserved documentation
 entries, not released activities. This renumbering is not coach approval,
