@@ -1,5 +1,9 @@
 # All-drill acceptance register — 31 October 2026
 
+## Latest verified work — 31 October 2026
+
+See the [consolidated work checkpoint](work-checkpoint-2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This section supersedes older current-state summaries below; dated evidence is retained.
+
 Audited all 23 catalogue identifiers: **21 selectable, 10 with accepted local development pipelines/variants, 11 pending; D13/D14 reserved**. This supersedes the earlier six-accepted summary. App catalogue flags and installed behavior are separate from these research decisions; this documentation-only update does not migrate runtime flags or ship local analyser source.
 
 | Drill | Current status | Local selection / evidence |

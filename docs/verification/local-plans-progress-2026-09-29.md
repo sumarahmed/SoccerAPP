@@ -1,5 +1,9 @@
 > Historical dated record. For the current build, scope and acceptance status, see [current product status](../CURRENT_STATUS.md). Later releases may supersede the pending work described here.
 
+## Latest verified work — 31 October 2026
+
+See the [consolidated work checkpoint](work-checkpoint-2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This section supersedes older current-state summaries below; dated evidence is retained.
+
 # Local plans, progress and original deletion
 
 The owner authorized implementation and an iPhone build following prototype

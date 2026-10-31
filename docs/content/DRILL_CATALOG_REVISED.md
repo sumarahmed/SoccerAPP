@@ -1,10 +1,16 @@
-# Revised full drill list — 28 October 2026
+# Revised drill catalogue — 31 October 2026
+
+## Latest verified work — 31 October 2026
+
+See the [consolidated work checkpoint](../verification/work-checkpoint-2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This section supersedes older current-state summaries below; dated evidence is retained.
 
 ## Current drill status — 31 October 2026
 
-The [all-drill acceptance register](../verification/accepted-local-pipelines.md) supersedes older pipeline-status summaries below. **10 of 21 selectable drills have an owner-accepted local development pipeline or variant**: D01/D02/D03/D04/D15/D16/D17/D18/D22/D23. D05–D12 and D19–D21 remain pending; D13/D14 are reserved. D17 v8 is an accepted variant, D18 now selects accepted v8 (v5 preserved), D22 retains accepted v4 plus its accepted 1.5× crop experiment, and D23 v6 is accepted. These are development decisions, not complete accuracy or mobile-integration claims.
+**24 numbered drills: 22 selectable, 11 accepted, 11 pending and 2 reserved.** Ten drills have accepted local pipelines or variants (D01/D02/D03/D04/D15/D16/D17/D18/D22/D23). D24 is separately accepted by the owner as a no-touch exercise; ball touch analysis is disabled and no touch score is produced.
 
-This documentation checkpoint does not change app catalogue flags, detector code, installed Build 62, or the uncommitted Build 63 preparation. Detailed handoffs retain known misses, extra proposals and failed coverage gates. Earlier dated sections are historical checkpoints. GitHub documentation commits/pushes are authorized for this update; builds, deployment and media uploads are not part of it.
+“Available in app catalogue” means present in the current local app source, not verified in the installed phone build. Acceptance does not imply that a development pipeline is mobile-integrated. D17/D22 retain their accepted-variant status. See the [acceptance register](../verification/accepted-local-pipelines.md).
+
+D24 validation: 16 targeted Flutter tests passed, with one existing skipped baseline test; Flutter static analysis reported no issues. This historical check preceded the later successful local Android build.
 
 ## D16 V3 accepted — 28 October 2026
 
@@ -19,13 +25,18 @@ or update installed Build 62. No native build, media upload or push.
 [D16 operation, validation and limits](../verification/d16-pipeline-acceptance.md).
 
 
-## Current catalogue and pipeline checkpoint
+## Current analyser acceptance — 28 October 2026
 
-The owner confirms 21 selectable drills: D01–D12 and D15–D23. D13/D14 stay
-reserved. Five local pipelines are accepted: D01, D02, D03, D04 and D15; D05 explicitly
-remains pending. See [the accepted register](../verification/accepted-local-pipelines.md).
-Dedicated demo review and native integration remain separate. Existing saved
-history, frozen review contracts and Build 62 are preserved.
+Accepted local pipelines are D01 Image-side v1 (`drill-owned-v11-image-side`),
+D02 v3, D03 v5, D04 v11, D15 V11 (`drill-owned-v11-single-foot-release`)
+and D16 V3 (`drill-owned-v3-push-return-cycles`). D05
+remains pending, as explicitly clarified by the owner. This supersedes the
+older four-drill review snapshot. The local draft catalogue's six accepted
+entries are pipeline selections, not verified accuracy or native build approval.
+See [the committed acceptance register](../verification/accepted-local-pipelines.md).
+The 21-drill catalogue and its existing app support are included in this
+checkpoint. Library work is recorded in its separate implementation checkpoint; historical numbering,
+saved results and Build 62 are preserved.
 
 D16 acceptance validation (28 October): all 555 Python unit tests and
 14 focused Flutter catalogue tests pass on the acceptance working tree.
@@ -33,47 +44,61 @@ The 21 selectable IDs, six accepted pipelines and pending D05 are checked.
 The accepted local pipeline documentation records event-level regression
 checks and the fresh D15 selected-CLI run. No device build was produced.
 
+Validation for the 26 October catalogue expansion: all 14 targeted Flutter tests passed (`local_training_test.dart` and `juggling_catalog_test.dart`); Flutter static analysis reported no issues. Checks used cached dependencies and required execution outside the sandbox because of temporary-file and telemetry access restrictions. No device build was produced.
+
 Historical validation for the 22 October change: 169 importable Python tests pass; 24 targeted
 Flutter tests pass (one existing skip); Flutter static analysis reports no issues.
 Companion documentation validation passes. Flutter execution required a retry
 outside the sandbox for its localhost test connection, using cached dependencies.
 No device build or native performance/accuracy validation was performed.
 
-Owner-requested current numbering. D11/D12 are new juggling drafts. The former
-reserved activities are retained under D13/D14, not removed. Historical review
-records keep their original identifiers and do not approve these new drafts.
+This is the current activity-number reference. The owner requested D11 thigh
+juggling and D12 head juggling, then requested that the previously reserved
+activities be retained under new numbers. D13/D14 below preserve those deferred
+activities. Historical approved documents and saved D01–D10 records are not
+rewritten or relabelled.
 
 ## Full revised list
 
-| ID | Activity | Focus | Current status |
+| ID | Drill | Available in app catalogue | Drill accepted |
 | --- | --- | --- | --- |
-| D01 | Inside touches | Alternating inside-foot control | Existing app activity; isolated experimental Tiny strategy; pipeline reviewed and accepted |
-| D02 | Sole rolls | Controlled sole contact, release and recontact | Existing app activity; isolated experimental Tiny strategy; pipeline reviewed and accepted |
-| D03 | Dribble and stop | Travelling control and separate stops | Existing app activity; Tiny/crop local evaluation checkpoint; pipeline reviewed and accepted |
-| D04 | Cone weave | Direction changes around cones | Existing app activity; pipeline reviewed and accepted |
-| D05 | Pass through a gate | Directed ground passing | Existing app activity; pipeline pending review |
-| D06 | Receive and return | Receiving, separate control and return pass | Existing app activity; pipeline pending review |
-| D07 | Open-body receive | First touch and next-pass orientation | Existing app activity; pipeline pending review |
-| D08 | Pull-back turn | Sole control and turn into space | Existing app activity; pipeline pending review |
-| D09 | Feint and escape | Deception followed by controlled exit | Existing app activity; pipeline pending review |
-| D10 | Receive and finish to a target | Reception and directed finish | Existing app activity; pipeline pending review |
-| D11 | Thigh juggling | Controlled thigh contacts | New internal catalogue draft; Tiny/crop strategy; not yet built; pipeline pending review |
-| D12 | Head juggling | Coach-approved head contacts | New restricted internal draft; Tiny/crop strategy; not yet built; pipeline pending review |
-| D13 | Scan, choose and pass | Read a cue and choose a passing target | Renumbered former reserved D11; still deferred, not selectable |
-| D14 | Goalkeeper set and ground-ball collection | Ready position and controlled ground-ball collection | Renumbered former reserved D12; still deferred, not selectable |
-| D15 | Sole taps | Alternate light sole contacts on top of a stationary ball to develop balance and foot coordination. | Local catalogue draft; local V11 pipeline reviewed and accepted |
-| D16 | Lace stop | Push the ball forwards with the laces, then roll it back under control. One push-and-roll-back cycle counts as one D16 touch. | Local catalogue draft; local V3 pipeline reviewed and accepted |
-| D17 | V taps | Pull the ball back with the sole and push it diagonally forwards with the inside of the same foot to trace a V. | Local development variant accepted; see current acceptance register; not mobile-integrated |
-| D18 | Croquetas | Transfer the ball across your body with two inside-foot touches while stepping sideways. | Local development pipeline accepted; see current acceptance register; not mobile-integrated |
-| D19 | Step-over | Circle one foot around the front of the ball to feint, then take the ball away with the outside of the other foot. | Local catalogue draft; pipeline pending review |
-| D20 | Inside outside | Use the inside and then the outside of the same foot to move the ball from side to side. | Local catalogue draft; pipeline pending review |
-| D21 | Outside inside | Use the outside and then the inside of the same foot to control the ball through a change of direction. | Local catalogue draft; pipeline pending review |
-| D22 | L drags | Pull the ball back with the sole, then guide it sideways behind the supporting leg with the inside of the same foot. | Local development variant accepted; see current acceptance register; not mobile-integrated |
-| D23 | Samba taps | Repeat a sole tap followed by an inside-foot touch, alternating feet in a controlled rhythm. | Local development pipeline accepted; see current acceptance register; not mobile-integrated |
+| D01 | Inside touches | Yes | Yes |
+| D02 | Sole rolls | Yes | Yes |
+| D03 | Dribble and stop | Yes | Yes |
+| D04 | Cone weave | Yes | Yes |
+| D05 | Pass through a gate | Yes | No — pending |
+| D06 | Receive and return | Yes | No — pending |
+| D07 | Open-body receive | Yes | No — pending |
+| D08 | Pull-back turn | Yes | No — pending |
+| D09 | Feint and escape | Yes | No — pending |
+| D10 | Receive and finish to a target | Yes | No — pending |
+| D11 | Thigh juggling | Yes | No — pending |
+| D12 | Head juggling | Yes | No — pending |
+| D13 | Scan, choose and pass | No — reserved | No — reserved |
+| D14 | Goalkeeper set and ground-ball collection | No — reserved | No — reserved |
+| D15 | Sole taps | Yes | Yes |
+| D16 | Lace stop | Yes | Yes |
+| D17 | V taps | Yes | Yes — accepted variant |
+| D18 | Croquetas | Yes | Yes |
+| D19 | Step-over | Yes | No — pending |
+| D20 | Inside outside | Yes | No — pending |
+| D21 | Outside inside | Yes | No — pending |
+| D22 | L drags | Yes | Yes — accepted variant |
+| D23 | Samba taps | Yes | Yes |
+| D24 | Ball cross over — no touch | Yes | Yes — no touch analysis required |
 
-The local app catalogue contains 21 drills: D01–D12 and D15–D23. D13/D14 are reserved documentation
-entries, not released activities. This renumbering is not coach approval,
-asset-rights approval, a pathway promotion, an app build or publication.
+The selectable IDs are D01–D12 and D15–D24; D13/D14 remain reserved. Earlier dated review counts below are historical.
+
+## D24 — Ball cross over — no touch
+
+Practise alternating cross-over movements around a stationary ball without touching or moving it.
+
+1. Stand balanced behind the stationary ball.
+2. Lift one foot and sweep it across and around the front of the ball without making contact, then plant it beside the ball.
+3. Reset your balance and repeat with the other foot, alternating sides at a comfortable pace.
+4. Keep the ball still throughout. If you accidentally touch it, stop, reset the ball and continue; there is no ball-touch score.
+
+Accepted by the owner on 31 October 2026. Timing: two 60-second rounds, 30 seconds rest. No touch analysis, touch total or retry-analysis action. A dedicated demonstration remains pending; the D01 sample is unrelated.
 
 ## Pipeline review register — 28 October 2026
 
@@ -81,85 +106,9 @@ asset-rights approval, a pathway promotion, an app build or publication.
 
 The JSON catalogue stores a `pipelineStatus` for each drill and a `pipelineReview` summary with the accepted IDs, count, date and basis.
 
-
-## D01/D02 experimental analysis
-
-Private Tiny and Tiny + bounded person-crop variants have separate versioned
-entry points and review checklists. D01 checks observed inside-foot transfers
-against noncontact steps/hand resets. D02 checks continuous sole episodes against
-release/recontact: a direction change during uninterrupted contact is not a new
-touch. Distinct stop and pass still count twice. Shared rules and thresholds
-remain unchanged; implementation is not a new accuracy claim or native rollout.
-
-## D11 — Thigh juggling details
-
-- Goal/prerequisites: controlled thigh contacts; comfortable balance and ability
-  to follow the coach's guidance.
-- Setup: suitable ball, clear level retrieval area, full body and complete ball
-  flight visible from the front; adult-operated camera for a child.
-- Steps: balanced start, gentle release towards a thigh, controlled upward
-  touch, catch/reset initially. Link contacts only when the coach agrees.
-- Cue: Balance. Gentle thigh touch. Reset with control.
-- Timing: two 20-second windows, 30 seconds rest; resets allowed, no contact
-  quota, stop whenever uncomfortable.
-- Review/variation: a genuine touch counts even if the ball falls afterward.
-  Start with one touch then catch; avoid prioritizing height or chasing misses.
-  Hand releases/catches and floor impacts are excluded.
-- Assets: dedicated reviewed juggling demo missing. D01 is explicitly an
-  unrelated temporary interface sample, not a juggling demonstration.
-
-## D12 — Head juggling details
-
-- Goal/prerequisites: only where a qualified coach confirms suitability and
-  heading is permitted by age/association/club restrictions. Unknown eligibility
-  means choose a non-heading activity; this draft is not child heading approval.
-- Setup: coach-approved ball/service and clear space, no contested balls; front
-  view includes the whole body and complete ball flight.
-- Steps: confirm permission/limits, follow coach-approved technique/service,
-  stop/reset after the approved attempt, manually end the self-paced attempt.
-- Cue: Coach approval first. Controlled attempt. Stop and reset.
-- Timing: one self-paced attempt, no automatic repeat rounds or heading-contact
-  target. The repetition label means an attempt, not a quota of headers.
-- Review/variation: genuine head contact counts even if the ball falls; hands
-  and floor impacts do not. No harder heading variation is prescribed. Stop if
-  uncomfortable or unwell and inform the supervising coach/adult.
-- Assets/restrictions: dedicated reviewed demo absent; unrelated D01 sample is
-  labelled. Restrictions are instructional, not automated medical/age clearance.
-  Existing youth pathways do not automatically include D12.
-
-Youth heading restrictions differ by association; no universal safe load/age is
-asserted. See [UEFA youth heading guidance](https://www.uefa.com/news-media/news/025e-0fb60fba795d-c82533c13f87-1000--uefa-unveils-heading-guidelines-for-youth-players/).
-
-## Retained deferred activities
-
-**D13 Scan, choose and pass:** D06/D07 readiness; partner, ball and two gates with
-shape/number as well as colour cues. Read cue, receive, select target, pass and
-reset. Cue: Check the cue. Receive. Find the gate. Historical draft six decisions
-with resets remains unpromoted. Easier static ball/early cue; review choice and
-execution separately. Camera shows cue/player/targets; no phone reading while
-moving. Content/asset release remains deferred.
-
-**D14 Goalkeeper set and ground-ball collection:** qualified goalkeeper review,
-helper, suitable ball, clear level rolling lane. Ready position, watch controlled
-roll, collect using reviewed technique, return/reset. Cue: Ready. Watch the ball.
-Gather and reset. Historical draft six gentle services remains unpromoted. No
-diving, collisions or overhead service. Camera stays outside service path and
-shows body/hands/ball. Easier stationary setup; any progression needs review.
-Hand collections are not shared playing-contact counts; do not treat the current
-touch analyser as a goalkeeper collection-success metric.
-
-## Evidence and pending work
-
-D01/D02/D11/D12 use independent Tiny strategy profiles but one shared ledger:
-all playing feet/head/thigh contacts count, drill selection is not a filter,
-hands/floor/object impacts are excluded, uncertainty stays Unclassified.
-No exact accuracy, child generalization, phone latency or thermal pass is claimed.
-New catalogue coach/media review and native Tiny integration remain pending.
-Detailed implementation: private `apps/mobile/DRILL_CATALOG_REVISED.md`.
-
 ## Added ball-mastery drills — D15–D23
 
-Each new drill uses two 20-second rounds with 30 seconds rest as a draft practice default, and a labelled temporary D01 interface sample. Dedicated demonstrations remain pending; D15 V11 and D16 V3 are accepted locally and D17–D23 pipelines remain pending. Samba taps uses the sole-tap/inside-touch variation confirmed by the owner. Lace stop uses the owner-confirmed forward lace push and roll-back cycle.
+Each new drill uses two 60-second rounds with 30 seconds rest as a draft practice default, and a labelled temporary D01 interface sample. Dedicated demonstrations remain pending; D15 V11 and D16 V3 are accepted locally and D17–D23 pipelines remain pending. Samba taps uses the sole-tap/inside-touch variation confirmed by the owner. Lace stop uses the owner-confirmed forward lace push and roll-back cycle.
 
 ### D15 — Sole taps
 
@@ -358,5 +307,4 @@ pathways and saved snapshots are unchanged. Analysis strategies D11/D12 are loca
 research only; legacy `research-head`/`research-thigh` identifiers remain for
 reproducibility. D13/D14 have no analyser strategy or app entry yet.
 
-No new build, native Tiny integration, media upload or public deployment is
-authorized. Build 62 and its historical stronger estimates remain preserved.
+No native Tiny integration, media upload or public release is included in the timing update. Build 62 and its historical stronger estimates remain preserved.

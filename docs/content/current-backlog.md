@@ -1,5 +1,9 @@
 # Current backlog — 21 October 2026
 
+## Latest verified work — 31 October 2026
+
+See the [consolidated work checkpoint](../verification/work-checkpoint-2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This section supersedes older current-state summaries below; dated evidence is retained.
+
 ## Current drill status — 31 October 2026
 
 The [all-drill acceptance register](../verification/accepted-local-pipelines.md) supersedes older pipeline-status summaries below. **10 of 21 selectable drills have an owner-accepted local development pipeline or variant**: D01/D02/D03/D04/D15/D16/D17/D18/D22/D23. D05–D12 and D19–D21 remain pending; D13/D14 are reserved. D17 v8 is an accepted variant, D18 now selects accepted v8 (v5 preserved), D22 retains accepted v4 plus its accepted 1.5× crop experiment, and D23 v6 is accepted. These are development decisions, not complete accuracy or mobile-integration claims.
