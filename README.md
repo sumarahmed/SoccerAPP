@@ -1,5 +1,9 @@
 # SoccerTrainingApp
 
+## Current checkpoint — 1 November 2026
+
+See the [current work checkpoint](docs/verification/work-checkpoint-2026-11-01.md) for the 23 selectable drills, accepted D12 V5, pending D11 v6/D25 v11, event-level limitations, validation and product plans. D25 reaches 10/12 and 13/15 feet but remains pending and fails unchanged quality gates. This supersedes older current-state summaries below. Source commits/pushes are authorized; builds, deployments and recording uploads remain outside scope.
+
 ## Latest verified work — 31 October 2026
 
 See the [consolidated work checkpoint](docs/verification/work-checkpoint-2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This section supersedes older current-state summaries below; dated evidence is retained.

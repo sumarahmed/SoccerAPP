@@ -1,10 +1,10 @@
-# All-drill acceptance register — 31 October 2026
+# All-drill acceptance register — 1 November 2026
 
 ## Latest verified work — 31 October 2026
 
-See the [consolidated work checkpoint](work-checkpoint-2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This section supersedes older current-state summaries below; dated evidence is retained.
+See the [consolidated work checkpoint](https://github.com/sumarahmed/Soccolo-app/blob/main/apps/mobile/WORK_CHECKPOINT_2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This 31 October build checkpoint predates D25; current catalogue counts are listed below. Dated evidence is retained.
 
-Audited all 23 catalogue identifiers: **21 selectable, 10 with accepted local development pipelines/variants, 11 pending; D13/D14 reserved**. This supersedes the earlier six-accepted summary. App catalogue flags and installed behavior are separate from these research decisions; this documentation-only update does not migrate runtime flags or ship local analyser source.
+Current catalogue: **25 identifiers, 23 selectable, 12 accepted drills, 11 pending; D13/D14 reserved**. Eleven accepted drills have local development pipelines or variants; D24 is separately owner-accepted without touch analysis. D12 V5 was explicitly accepted on 1 November 2026. The local app catalogue flags reflect this register. Installed app behavior and development-pipeline integration remain separate.
 
 | Drill | Current status | Local selection / evidence |
 |---|---|---|
@@ -18,8 +18,8 @@ Audited all 23 catalogue identifiers: **21 selectable, 10 with accepted local de
 | D08 Pull-back turn | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
 | D09 Feint and escape | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
 | D10 Receive and finish to a target | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
-| D11 Thigh juggling | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
-| D12 Head juggling | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
+| D11 Thigh juggling | Pending | Experimental **v6 surface-evidence**, 1 November. Fresh four-source acquisition plus final decision replay gives thighs 2/11/5/7 versus reviewed 3/12/6/9, all within the owner’s ±2 per-video tolerance. Event comparison at ±0.050 s: 25/30 thigh contacts plus two separate feet, five thigh/one foot misses, zero unmatched predictions. Sides stay uncertain where needed; only D11_1 passes coverage. V3/v4/v5 and original annotations preserved. Count tolerance does not grant acceptance; see [D11 handoff](d11-pipeline-handoff.md). |
+| D12 Head juggling | Accepted | **v5 current-image-head**, explicitly owner-accepted 1 November. Current drill-owned selection. Fresh full-source D12_1/2/4 runs match 4/6/9 reviewed contacts with 0 misses or unmatched predictions; owner-marked hands and near miss remain excluded. Circular overlays match recent drills. D12_3 remains rejected below 30 fps; its separate native-frame diagnostic (0 versus owner total 8) is unselected. Acceptance changes only metadata: four-source decision parity and 19 D12 tests pass. Earlier 61-test checkpoint and v3/v4 preserved. Coverage gates fail and an older D12_4 label remains disputed; coach/eligibility requirements remain. See [D12 handoff](d12-pipeline-acceptance.md). |
 | D13 Scan, choose and pass | Reserved / not selectable | No acceptance or scoring pipeline inferred. |
 | D14 Goalkeeper set and ground-ball collection | Reserved / not selectable | No acceptance or scoring pipeline inferred. |
 | D15 Sole taps | Accepted | **v11 single-foot-release**. Current local registry; fourth-source result 25 versus human 25, event accuracy not certified. |
@@ -31,6 +31,8 @@ Audited all 23 catalogue identifiers: **21 selectable, 10 with accepted local de
 | D21 Outside inside | Pending | No newer owner acceptance found in the current catalogue, registry and handoffs; implementation availability does not imply acceptance. |
 | D22 L drags | Accepted variant | **v4 visible-foot-contacts + accepted 1.5× crop variant**. Standalone. Historical v4 outputs 23/10 vs human 25/13; wider-crop outputs 22/10/10/4. Fourth source fails coverage at 64.98%. |
 | D23 Samba taps | Accepted | **v6 person-mask-consecutive-contacts**. Standalone/frozen evaluator. Accepted outputs 16/21; first human reference 18. No numeric human total supplied for second recording; known misses remain. |
+| D24 Ball cross over — no touch | Accepted — no analysis required | Owner acceptance on 31 October 2026. Alternate cross-over movements around a stationary ball without contact. No ball-touch scoring pipeline; app skips touch analysis. |
+| D25 Feet juggling | Pending | [D25 handoff](d25-pipeline-handoff.md): circular/template foot v11 reaches the requested ±2 band: 10/12 and 13/15 feet. Assistant original-frame review associates all 23 emitted feet; two physical contacts remain missed per source. Strict v2/v3 time-window matches are 8/12 and 13/15 because two D25_1 estimates fall just outside unchanged windows (original v1: 7/12). No confirmed foot FP in reviewed windows; D25_1 has one false thigh candidate and one unresolved non-foot candidate, excluded from feet. Owner annotations are totals only. Both tracking gates still fail; D25_1 also fails pixel coverage. Prior experiments, annotations and circular overlays preserved. No acceptance or mobile integration; instructions and 60–30–60 timing unchanged. |
 
 ## Scoring and exposure
 
@@ -46,11 +48,16 @@ Latest D17 refinement recorded 739 passing analyser tests, exact D17 original/re
 
 Preserve historical outputs, accepted source/model/configuration snapshots, annotations and failed experiments. Private evidence remains local; no recordings, model binaries, review-frame images or personal annotation files are published by this checkpoint. Build 62 remains the latest documented installed build; Build 63 is uncommitted source preparation. No build or deployment is performed.
 
-## Recent acceptance summaries
+## Detailed handoffs
 
-- [D17 accepted development summary](d17-pipeline-acceptance.md)
-- [D18 accepted development summary](d18-pipeline-acceptance.md)
-- [D22 accepted development summary](d22-pipeline-acceptance.md)
-- [D23 accepted development summary](d23-pipeline-acceptance.md)
-
-Implementation and private provenance are maintained in the Soccolo-app handoffs. Local source availability and GitHub source publication are separate facts.
+- [D01 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D01_HANDOFF.md)
+- [D02 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D02_HANDOFF.md)
+- [D04 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D04_HANDOFF.md)
+- [D11 handoff](d11-pipeline-handoff.md)
+- [D12 handoff](d12-pipeline-acceptance.md)
+- [D15 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D15_HANDOFF.md)
+- [D16 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D16_HANDOFF.md)
+- [D17 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D17_HANDOFF.md)
+- [D18 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D18_HANDOFF.md)
+- [D22 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D22_HANDOFF.md)
+- [D23 handoff](https://github.com/sumarahmed/Soccolo-app/blob/main/tools/analyser/tiny_strategy/D23_HANDOFF.md)
