@@ -1,6 +1,35 @@
 # Soccolo handoff — 24 October 2026
 
-## Current checkpoint — 1 November 2026
+## Build 63 build authorization — 5 November 2026
+
+The owner authorized updating both repositories and starting the internal iPhone
+Codemagic build. Implementation candidate: `00d288c6f2cd8cb9264ced90fbfdd927b5ef70df`.
+The next source revision changes handoff documentation only; the validated app
+implementation is unchanged. Use `ios-device-internal` from the verified app
+`main` revision. Build completion, native tests and installation are not yet
+claimed. Build 62 remains the last confirmed installed iPhone build.
+
+Live player calibration remains deferred and disabled until the owner explicitly
+asks to resume that feature. Build authorization does not resume it. Private
+recordings/replay fixtures, model downloads, caches and generated builds remain
+excluded from these commits. Authored synthetic test fixtures are included in
+the implementation repository. No App Store or public website deployment is
+part of this authorization.
+
+
+## Current acceptance checkpoint — 4 November 2026
+
+D25 **v12 circular/template foot** is explicitly owner-accepted as the local
+D25 pipeline. Fresh outputs for D25_1–5 are **10/13/4/7/5 feet**. Event misses,
+suspected false positives, body-attribution issues and unchanged quality-gate
+failures remain documented. Catalogue: **23 selectable, 13 accepted, 10 pending**;
+25 identifiers with D13/D14 reserved. D12 V5 is unchanged. Acceptance does not
+imply mobile integration or change the 60–30–60 drill timing. No build,
+deployment, upload, commit or push accompanies this update.
+
+The dated checkpoints below remain historical.
+
+## Historical checkpoint — 1 November 2026
 
 See the [current work checkpoint](verification/work-checkpoint-2026-11-01.md) for the 23 selectable drills, accepted D12 V5, pending D11 v6/D25 v11, event-level limitations, validation and product plans. D25 reaches 10/12 and 13/15 feet but remains pending and fails unchanged quality gates. This supersedes older current-state summaries below. Source commits/pushes are authorized; builds, deployments and recording uploads remain outside scope.
 

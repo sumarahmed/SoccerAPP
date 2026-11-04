@@ -1,10 +1,13 @@
-# All-drill acceptance register — 1 November 2026
+# All-drill acceptance register — 4 November 2026
+
+Current mobile integration/build status: [Build 63 candidate](build63-integrated-candidate.md).
+Earlier local-pipeline checkpoints below remain historical; known accuracy limits remain.
 
 ## Latest verified work — 31 October 2026
 
 See the [consolidated work checkpoint](https://github.com/sumarahmed/Soccolo-app/blob/main/apps/mobile/WORK_CHECKPOINT_2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This 31 October build checkpoint predates D25; current catalogue counts are listed below. Dated evidence is retained.
 
-Current catalogue: **25 identifiers, 23 selectable, 12 accepted drills, 11 pending; D13/D14 reserved**. Eleven accepted drills have local development pipelines or variants; D24 is separately owner-accepted without touch analysis. D12 V5 was explicitly accepted on 1 November 2026. The local app catalogue flags reflect this register. Installed app behavior and development-pipeline integration remain separate.
+Current catalogue: **25 identifiers, 23 selectable, 13 accepted drills, 10 pending; D13/D14 reserved**. Twelve accepted drills have local development pipelines or variants; D24 is separately owner-accepted without touch analysis. D12 V5 was explicitly accepted on 1 November 2026; D25 v12 on 4 November 2026. The local app catalogue flags reflect this register. Installed app behavior and development-pipeline integration remain separate.
 
 | Drill | Current status | Local selection / evidence |
 |---|---|---|
@@ -32,7 +35,7 @@ Current catalogue: **25 identifiers, 23 selectable, 12 accepted drills, 11 pendi
 | D22 L drags | Accepted variant | **v4 visible-foot-contacts + accepted 1.5× crop variant**. Standalone. Historical v4 outputs 23/10 vs human 25/13; wider-crop outputs 22/10/10/4. Fourth source fails coverage at 64.98%. |
 | D23 Samba taps | Accepted | **v6 person-mask-consecutive-contacts**. Standalone/frozen evaluator. Accepted outputs 16/21; first human reference 18. No numeric human total supplied for second recording; known misses remain. |
 | D24 Ball cross over — no touch | Accepted — no analysis required | Owner acceptance on 31 October 2026. Alternate cross-over movements around a stationary ball without contact. No ball-touch scoring pipeline; app skips touch analysis. |
-| D25 Feet juggling | Pending | [D25 handoff](d25-pipeline-handoff.md): circular/template foot v11 reaches the requested ±2 band: 10/12 and 13/15 feet. Assistant original-frame review associates all 23 emitted feet; two physical contacts remain missed per source. Strict v2/v3 time-window matches are 8/12 and 13/15 because two D25_1 estimates fall just outside unchanged windows (original v1: 7/12). No confirmed foot FP in reviewed windows; D25_1 has one false thigh candidate and one unresolved non-foot candidate, excluded from feet. Owner annotations are totals only. Both tracking gates still fail; D25_1 also fails pixel coverage. Prior experiments, annotations and circular overlays preserved. No acceptance or mobile integration; instructions and 60–30–60 timing unchanged. |
+| D25 Feet juggling | Accepted | **v12 circular/template foot**, explicitly owner-accepted 4 November 2026. Selected standalone entry: `run_d25_accepted_v12.py`; generic registry/mobile integration unchanged. Fresh five-source outputs: 10/13/4/7/5 feet; separate thigh/head/unknown counts and owner/assistant references remain in [D25 handoff](d25-pipeline-handoff.md). D25_4 misses F121/F215 against nine owner marks; text notes say 6–7. D25_5 opening F5 is a suspected floor false positive; D25_3 has attribution issues. Only D25_3 passes existing quality gates; D25_1 also fails pixel coverage. Acceptance does not waive gates or certify event accuracy. Original evidence, instructions and 60–30–60 timing preserved. |
 
 ## Scoring and exposure
 

@@ -4,9 +4,9 @@
 
 See the [consolidated work checkpoint](https://github.com/sumarahmed/Soccolo-app/blob/main/apps/mobile/WORK_CHECKPOINT_2026-10-31.md) for Drill Timing (60–30–60), both themes, saved settings, the 22-drill catalogue including no-touch D24, card previews, Build 63 preparation and accepted local analyser variants. The local Android debug build succeeded; installed iPhone Build 62 is unchanged. Codemagic has not been started. Touch-target pathways remain a proposal. This 31 October build checkpoint predates D25; current catalogue counts are listed below. Dated evidence is retained.
 
-## Current drill status — 1 November 2026
+## Current drill status — 4 November 2026
 
-**25 numbered drills: 23 selectable, 12 accepted, 11 pending and 2 reserved.** Eleven drills have accepted local pipelines or variants (D01/D02/D03/D04/D12/D15/D16/D17/D18/D22/D23). D12 V5 was explicitly accepted on 1 November 2026. D24 is separately accepted by the owner as a no-touch exercise; ball touch analysis is disabled and no touch score is produced.
+**25 numbered drills: 23 selectable, 13 accepted, 10 pending and 2 reserved.** Twelve drills have accepted local pipelines or variants (D01/D02/D03/D04/D12/D15/D16/D17/D18/D22/D23/D25). D12 V5 was explicitly accepted on 1 November 2026. D24 is separately accepted by the owner as a no-touch exercise; ball touch analysis is disabled and no touch score is produced.
 
 “Available in app catalogue” means present in the current local app source, not verified in the installed phone build. Acceptance does not imply that a development pipeline is mobile-integrated. D17/D22 retain their accepted-variant status. See the [acceptance register](../verification/accepted-local-pipelines.md).
 
@@ -86,7 +86,7 @@ rewritten or relabelled.
 | D22 | L drags | Yes | Yes — accepted variant |
 | D23 | Samba taps | Yes | Yes |
 | D24 | Ball cross over — no touch | Yes | Yes — no touch analysis required |
-| D25 | Feet juggling | Yes | No — pending |
+| D25 | Feet juggling | Yes | Yes — v12 accepted 4 November 2026 |
 
 The selectable IDs are D01–D12 and D15–D25; D13/D14 remain reserved. Earlier dated review counts below are historical.
 
@@ -99,7 +99,7 @@ Keep the ball in the air with controlled foot touches, building balance and coor
 3. Begin with one touch then catch and reset. As control improves, link touches and alternate feet at a comfortable pace.
 4. Reset when the ball drops or moves out of reach. Genuine foot contacts count even if the ball falls afterward; hand releases, catches and floor bounces do not.
 
-2 × 60 seconds · 30 seconds rest between rounds. Take resets as needed; the interval is not a target number of contacts. Dedicated demonstration and pipeline acceptance are pending. Added to the local catalogue and Juggling filters on 1 November 2026; not included in the earlier Android build.
+2 × 60 seconds · 30 seconds rest between rounds. Take resets as needed; the interval is not a target number of contacts. Pipeline v12 was owner-accepted on 4 November 2026; dedicated demonstration and mobile integration remain pending. Added to the local catalogue and Juggling filters on 1 November 2026; not included in the earlier Android build.
 
 ## D24 — Ball cross over — no touch
 

@@ -1,5 +1,273 @@
 # D25 Feet juggling — development checkpoint, 1 November 2026
 
+Current mobile integration/build status: [Build 63 candidate](build63-integrated-candidate.md).
+Earlier local-pipeline checkpoints below remain historical; known accuracy limits remain.
+
+## Owner acceptance — 4 November 2026
+
+**D25 v12 (`d25-circular-template-foot-v12`) is now owner-accepted as the D25
+local development pipeline.** The owner explicitly requested: “Accept the
+current variant as the D25 pipeline and update the documentation.” This
+supersedes the pending status in the dated development checkpoints below.
+
+Accepted entry point: `tools/analyser/run_d25_accepted_v12.py --input <original.MOV>
+--output <new ignored directory>`. It runs the same preserved fresh v10 image
+stages followed by the v12 counter. `replay_d25_v12.py` remains available for
+source-bound measured-evidence replay. This standalone selection is deliberate:
+the generic registry does not perform D25's multistage image acquisition, and
+has not been wired to an incomplete raw-frame route. D12 V5 and other accepted
+pipelines are unchanged.
+
+The accepted variant is the all-five fresh rerun: **10/13/4/7/5 feet** for
+D25_1–5; separate bodies are 2 thigh / none / 3 thigh / 1 unknown / none.
+The prior report and its original pending labels remain immutable historical
+evidence under `.build-artifacts/d25-20261104-all-fresh-v12/`. Acceptance is
+recorded separately under `.build-artifacts/d25-20261104-acceptance/`.
+
+Acceptance changes status only, not event decisions, thresholds, original
+annotations or quality results. D25_4 still misses F121/F215 against nine owner
+frame labels; its text-note 6–7 reference remains in conflict. D25_5 F5 remains
+a suspected floor-bounce false positive, with F61 an apparent genuine touch.
+D25_3's foot/thigh attribution and ambiguous intervals remain documented.
+Only D25_3 passes existing quality gates; all other coverage failures remain,
+including D25_1's pixel failure. These limitations are not erased by acceptance.
+
+The catalogue now records **13 accepted / 10 pending among 23 selectable
+drills** (25 identifiers, D13/D14 reserved); twelve accepted local pipelines or
+variants plus D24's accepted no-touch exercise. D25 instructions and two
+60-second rounds with 30 seconds rest remain unchanged. Dedicated demonstration
+and mobile integration remain outstanding. `phoneIntegrationReady` stays false,
+and gated evaluation's `acceptedCount` remains null. No build, deployment,
+recording upload, commit or push is performed by this acceptance update.
+
+**Acceptance validation:** 254 relevant tests passed. A source-bound replay
+of all five frozen measurement sets verified equality of the entire counter
+output, including every event and decision trace, except `acceptanceStatus`.
+Coverage, pixel counts, quality failures and readiness fields are identical.
+The catalogue comparison verifies that only D25 acceptance flags and aggregate
+review metadata changed; all other drill entries and D25 instructions/timing
+are identical. D12 source and the generic registry are hash-identical. The new
+accepted runner uses the same acquisition/counter composition as the fresh
+rerun; its CLI was checked. No additional fresh model inference was needed for
+this metadata-only acceptance. Verification and test log are stored in the
+separate acceptance directory above.
+
+Earlier entries below describe their original dates and are retained as history.
+
+## All-five fresh rerun and complete report — 4 November 2026
+
+Reran **all five originals from fresh Tiny/pose inference**, through preserved
+template/circle/limb stages and then the isolated v12 counter. This supersedes
+the preceding counter-only replay as the latest reproducibility check. All
+1,684 original frames were retained, with eight complete stage manifests per
+recording; source hashes, final inputs/outputs and circular overlay frame counts
+were verified. Exact event frame/body/side/time parity with the prior v12 run:
+**True**. No detector code, threshold,
+catalogue instructions, drill timing or accepted pipeline changed in this rerun.
+
+| Recording | Feet | Other proposed bodies | Owner reference | Tracking | Quality gate failures |
+| --- | --- | --- | --- | --- | --- |
+| D25_1 | 10 | {'thigh': 2} | 12 | 32.31% | tracking-coverage, independent-pixel-evidence |
+| D25_2 | 13 | {} | 15 | 73.32% | tracking-coverage |
+| D25_3 | 4 | {'thigh': 3} | 4 or 5 | 86.70% | pass |
+| D25_4 | 7 | {'unknown': 1} | 9 frame marks; text says 6 or 7 | 71.65% | tracking-coverage |
+| D25_5 | 5 | {} | 4 feet + 1 hand handling | 84.55% | tracking-coverage |
+
+**Owner-reference clarification:** the current `HumanJudgment.txt` now contains
+all five recordings, including D25_3 “4 or 5”, D25_4 “6 or 7” with uncertainty
+about the opening touch, and D25_5 “4 with 1 touch of hand ball handling”. Its
+byte copy is preserved with the report. The D25_4 owner JSON explicitly marks
+nine contacts, including opening/control touches. Both references are retained;
+the nine explicit frame labels remain the event-comparison reference. Their
+conflict is disclosed rather than silently reconciled or optimized away.
+
+The complete report includes every detected event, every available reviewed
+contact, strict and ±50 ms diagnostic comparisons, excluded/unresolved review
+intervals, all five circular overlays and original-frame annotation links.
+D25_1/2 frame references are partial assistant reviews, not owner event labels;
+D25_4 has complete owner frame labels. D25_3/5 have owner count notes plus
+separately recorded assistant observations. No held-out accuracy is claimed.
+
+**New assistant-only review findings (original frame strips, not owner labels):**
+- D25_5 shows apparent foot contacts at F49/F61/F75/F88. The opening F5
+  proposal lies in a floor-bounce sequence without a clear separate foot
+  impact and is a suspected false positive. Thus the earlier matching total
+  of four may have hidden one extra proposal plus the missed F61. This is
+  more specific than the preceding checkpoint's unresolved count discrepancy;
+  owner frame judgments are still needed, especially for the opening sequence.
+- D25_3 has apparent foot contacts F7/F25/F117, a ground-control touch near
+  F77, and a foot contact around F145–146 misattributed as thigh at F148.
+  F37 is a suspected false thigh proposal during descent. F38–43 remains an
+  unresolved possible foot/floor interaction; F42's thigh attribution is not
+  supported by the reviewed images. No full-source negative labels were inferred.
+
+All **253 relevant tests passed again**. D25 remains pending owner acceptance;
+quality-gate passes do not imply correct event attribution or acceptance.
+Report: `.build-artifacts/d25-20261104-all-fresh-v12/REPORT.html`, with complete
+JSON comparisons, raw results, source/model/code manifests, separate assistant
+observations, reference snapshots, `tests.log`, `integrity.json` and
+`report-qa.json`. All report media links were verified; all overlays retain
+original frame counts/timing. Previous recordings, annotations and experiments
+remain intact. No build, deployment, upload, commit or push was performed.
+
+**Next:** resolve D25_4's text-versus-frame reference conflict and D25_5's
+opening F5/F61 event judgments; address D25_4 F121/F215 misses, D25_3 foot/thigh
+attribution and false floor/non-foot proposals, then improve coverage without
+relaxing existing gates. The offline annotation pages remain the local workflow.
+
+
+## Owner-guided missed-contact fixes: isolated v12 — 4 November 2026
+
+**Current checkpoint: pending owner acceptance.** D25_4 improves from 2 to
+**7 feet against 9 owner-marked contacts**. The immutable owner export is the
+development reference, not held-out validation. No catalogue instructions or
+timing, accepted pipeline (including D12 V5), runtime selection or quality gate
+was changed. No build, deployment, upload, commit or push was performed.
+
+The new, opt-in `replay_d25_v12.py` counter reuses the complete original-frame
+v11 evidence and validates source hashes and timebase. It does not rerun or
+claim to improve ball acquisition: circular measurements already captured
+most of these impacts. `d25_context_v12.py` uses observed ankle–toe geometry
+when the heel is hidden, without lowering the 0.6 pose threshold or inventing
+landmarks. Own-foot motion requires two observed endpoints; opposite-foot
+motion alone cannot establish a contact. Pose separation is kept independent
+of merged colour regions. A missing hand can be excluded using a conservative
+observed shoulder/elbow reach bound; this image-space estimate still has a
+foreshortening limitation and needs broader validation. Hand proximity, held
+ball, pixel response, circular support, separation and duplicate safeguards
+remain active. v11 and earlier experiments remain available unchanged.
+
+Event comparison uses the already disclosed **±50 ms diagnostic**, with strict
+point-time comparison saved separately; annotation windows were not widened.
+Owner frames F7/F19/F146/F157/F170/F186/F202 associate one-to-one with detected
+F6/F18/F145/F156/F169/F186/F202. **Two missed owner contacts remain: F121**, a
+gentle foot control touch without a resolved impulse, **and F215**, a visible
+juggle rejected because pose underestimates foot motion. There are **zero
+extra foot predictions** at this diagnostic tolerance. Unknown F210 is still
+excluded from feet; assistant inspection of F207–213 suggests a false unknown
+proposal during descent, not another physical contact. Foot-side ambiguity
+is reported separately from foot-count matches; the owner's nine labels are
+all right-foot. Source-frame strips around all nine marks were inspected.
+
+All five recordings were replayed, retaining all original frames and source
+hashes. Original resolution, existing analysis resolution and cadence checks
+were unchanged; this was a counter replay, not a fresh model benchmark:
+
+| Recording | Feet v11 → v12 | Other v12 candidates | Reference / interpretation |
+| --- | --- | --- | --- |
+| D25_1 | 10 → 10 | 2 thigh | Owner total 12; individual prior events unchanged; assistant frame references |
+| D25_2 | 13 → 13 | none | Owner total 15; individual prior events unchanged; assistant frame references |
+| D25_3 | 3 → 4 | 3 thigh | New F77 appears to be a ground-control foot touch; owner unresolved |
+| D25_4 | 2 → 7 | 1 unknown | Nine owner frame labels; seven diagnostic matches, two misses |
+| D25_5 | 4 → 5 | none | New F61 appears to be a right-foot contact, replacing nearby unknown F57; conflicts with owner-confirmed total 4 and needs owner event judgment |
+
+The D25_5 count discrepancy is **not a passed regression** and the owner total
+has not been changed. Both new regression proposals were inspected in source
+frame strips and recorded as separate assistant observations. D25_1 retains
+its previously identified false thigh proposal and unresolved thigh interval.
+Tracking/pixel quality results are unchanged: D25_4 is 71.65% tracked against
+the required 85%; D25_5 is 84.55%; D25_1/2 also retain their earlier failures.
+D25_3 passes the existing quality gates. None is an accepted pipeline result.
+
+**Validation:** 253 tests passed across D25, D12, D01, D17, D22 and D23,
+including seven new v12 tests for partial foot observations, same-foot motion,
+reach exclusions, separation, original cadences, failed juggles, duplicate
+suppression, body conflicts, hand/floor/near-miss exclusions and missing pixels.
+The final source-bound replay manifests and all trial outputs are preserved.
+
+Local evidence is under `.build-artifacts/d25-20261104-owner-fix-v12/`:
+`REPORT.html`, `overlay/circular-overlay.mp4`, `individual-events.json`, strict
+and diagnostic comparisons, `regression-events.json`, assistant-only
+observations, test log, source frame strips and `final/D25_1` through `D25_5`.
+The report links the existing offline original-frame annotation pages. Import
+the preserved owner JSON into D25_4's page and export a new version for further
+judgment; keep the original export unchanged. D25_5's F61 review link is also
+provided. No recordings need to leave the machine.
+
+**Next:** recover current-image foot motion around F215 and distinguish gentle
+ground-control contact episodes such as F121 from continuous support without
+weakening floor/near-miss guards; resolve the D25_5 F61 owner discrepancy and
+the false unknown F210. Improve tracking coverage before integration. The
+earlier ±2 count target is met for D25_4, but these limitations and pending
+owner acceptance remain explicit.
+
+## Owner D25_4 annotations imported — 4 November 2026
+
+Validated and preserved the source-bound owner export
+`D25_4-review-2026-11-04T10-24-35-296Z.json` byte-for-byte under
+`.build-artifacts/d25-20261104-new-v11/owner-reconciliation-v1/`.
+The owner declares complete review and marks **9 confirmed right-foot contacts**:
+F7, F19, F121, F146, F157, F170, F186, F202 and F215. F121 is explicitly a foot
+contact used to handle/control the ball and remains included. This supersedes
+the earlier provisional “at least 6” statement; D25_5's count-level 4 remains.
+
+The unchanged pipeline emitted 2 feet. Exact point-timestamp matching finds 0;
+the separately saved **±50 ms diagnostic**, not a calibrated scoring rule,
+associates predictions F145/F169 with owner F146/F170. Seven owner foot labels
+remain unmatched: F7/F19/F121/F157/F186/F202/F215. Unknown F210 is also unmatched,
+excluded from feet, and needs visual interpretation. No annotation windows,
+quality gates or pipeline code were changed; no inference was rerun.
+
+The reconciliation report preserves strict and diagnostic results, individual
+rejection reasons and original-frame links. Next: diagnose the seven missed
+contacts and the unmatched unknown event using these owner judgments. The
+references are development-exposed, and D25 remains pending owner acceptance.
+
+
+## Owner reconciliation started — 4 November 2026
+
+After seeing the machine report, the owner confirms **D25_5's foot total of 4**.
+This is count-level feedback, not individual-event adjudication or acceptance.
+The owner states **D25_4 has at least 6 clear foot contacts plus additional
+touches to review**; its exact total remains unset. The earlier machine result
+of 2 is preserved. D25_3 remains unreconciled.
+
+Feedback is saved separately in
+`.build-artifacts/d25-20261104-new-v11/owner-feedback-20261104-v1.json`.
+The existing D25_4 offline reviewer contains all 254 original frames and no
+prefilled predictions. Next: import the owner's exported JSON and compare
+events one-to-one. Preserve source recordings, original report and annotations.
+D25 remains pending acceptance. The pre-reconciliation evaluation follows.
+
+## New recordings evaluated — 4 November 2026
+
+The owner supplied D25_3.MOV, D25_4.MOV and D25_5.MOV and requested analysis
+before reconciliation. **No human totals or event judgments are supplied for
+these three clips.** `HumanJudgment.txt` still covers D25_1/D25_2 only. Do not
+interpret absent totals as zero or carry the earlier ±2 result onto new footage.
+
+The unchanged v11 wrapper completed end-to-end from fresh Tiny/pose inference
+through all image stages for all three sources. No tuning, manual event override
+or acceptance change was made. Original 4K sources are 30 fps; every original
+frame is processed at the existing 720 × 1280 analysis dimensions. Quality gates
+are unchanged. The following are **machine proposals awaiting owner review**:
+
+| Source | Frames | Feet | Thigh | Head | Unknown | Tracking coverage | Failed gates |
+|---|---:|---:|---:|---:|---:|---:|---|
+| D25_3 | 188 | 3 | 3 | 0 | 0 | 86.70% | None |
+| D25_4 | 254 | 2 | 0 | 0 | 1 | 71.65% | tracking-coverage |
+| D25_5 | 123 | 4 | 0 | 0 | 1 | 84.55% | tracking-coverage |
+
+Passing quality gates does not establish event accuracy. Thigh/head/unknown
+candidates are excluded from feet. Misses and false positives are not scored
+until contacts are reconciled; no assistant contact annotations were added.
+
+Local report: `.build-artifacts/d25-20261104-new-v11/REPORT.html`.
+`summary.json` and `events.json` list the counts, timestamps and original frame
+indices. Each `<source>/final/result.json` contains every decision and rejection
+trace. Circular overlays and self-contained original-frame annotation pages
+are linked from the report. All 565 source frames are retained, with source
+hashes, complete stage manifests and playback timestamp checks. The three
+review pages pass stepping, timestamp, provenance and JSON import/export checks.
+
+Next: owner reconciliation of the proposed events and overlooked intervals,
+then compare one-to-one against saved owner judgments. Originals, existing
+annotations/experiments and accepted pipelines remain preserved. D25 is pending;
+instructions and timing are unchanged. No application build, deployment or
+recording upload was performed. Earlier dated checkpoints below are historical.
+
+---
+
 **Requested ±2 count range reached; still pending owner acceptance and failing
 quality gates. The pipeline still misses genuine contacts.** No app build, deployment, recording upload, commit
 or push was performed. No accepted pipeline was selected, replaced or edited.
