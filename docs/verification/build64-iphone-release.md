@@ -5,3 +5,5 @@ Codemagic completed internal run 88 from app commit `986a4d9d3146a85f0b6958157ba
 The owner will test on iPhone and report feedback. The open performance question is how long the two previously saved Sole Rolls rounds take on the device. Record the new elapsed times alongside their estimates and frame rates. Fresh capture targets 60 fps with a 30 fps fallback. The prior 219.2 fps readout came from an existing recording.
 
 The release includes automatic setup, the 12 accepted drill analysers, the revised Train and Coaches screens and the simplified round results. Live player calibration is deferred until the owner explicitly asks to resume it.
+
+The first device report shows Inside Touches round 1 retaining an older 22-touch estimate after unsuccessful reanalysis. Build 64 hides timing for this case. A tested source correction displays “Not recorded” for the old estimate and the duration of a newly timed failed attempt separately. Device verification of the correction requires a subsequent build. The cause of the failed count and the Sole Rolls timings remain open. [App fix](https://github.com/sumarahmed/Soccolo-app/commit/fcb0b65)
