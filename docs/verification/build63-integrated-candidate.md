@@ -1,4 +1,4 @@
-# Build 63 integrated candidate — 5 November 2026
+# Build 63 integrated candidate â€” 5 November 2026
 
 The owner authorized synchronizing both repositories and starting the internal
 Codemagic iPhone build. The validated implementation is app commit
@@ -28,8 +28,20 @@ freshness and repository checks passed. Final publication cleanup changed only
 whitespace/source hashes: 62 Dart parity tests and nine D25 Python tests passed,
 with complete fixture observations and expected decisions unchanged.
 
-Native iPhone compilation and 183 RunnerTests (116 accepted-profile tests) await
-the authorized `ios-device-internal` run. On-device accuracy, memory, thermal
+Native iPhone compilation now passes. The fourth cloud attempt ran all 183
+RunnerTests: eight cases produced 135 assertions/errors, with one test skipped.
+The fixes cover decoder preroll, idempotent spool cleanup, model asset lookup,
+watchdog callback expectations and scoped cross-backend numerical checks.
+Production analyser thresholds and fixture expectations are unchanged.
+Two new OpenCV backend proof checks and two model-packaging checks pass locally.
+
+The current retry is app revision
+[`c205534`](https://github.com/sumarahmed/Soccolo-app/commit/c205534edf0879311e7764fa19cc8b8fce1dcdf5),
+[Codemagic run 6aebcb71e2b8a3c07cf65f88](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aebcb71e2b8a3c07cf65f88).
+Status at publication: preparing, exact source SHA confirmed. No IPA yet.
+[Failure details and validation](https://github.com/sumarahmed/Soccolo-app/blob/main/apps/mobile/BUILD63_CLOUD_VALIDATION.md).
+
+On-device accuracy, memory, thermal
 behavior and performance remain unverified. Build 62 is the last confirmed
 installed iPhone version. Do not describe Build 63 as successful or installed
 until the corresponding evidence exists.
