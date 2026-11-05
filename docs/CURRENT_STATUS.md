@@ -1,23 +1,10 @@
-# Soccolo current status — 24 October 2026
+# Soccolo current status
 
-## Build 63 build authorization — 5 November 2026
+## Build 64 · 5 November 2026
 
-The owner authorized updating both repositories and starting the internal iPhone
-Codemagic build. Implementation candidate: `00d288c6f2cd8cb9264ced90fbfdd927b5ef70df`.
-The next source revision changes handoff documentation only; the validated app
-implementation is unchanged. Use `ios-device-internal` from the verified app
-`main` revision. Build completion, native tests and installation are not yet
-claimed. Build 62 remains the last confirmed installed iPhone build.
+The signed internal iPhone build is available for registered devices. Codemagic run 88 passed and the IPA measures 96.75 MiB. Owner device testing is pending. Live player calibration is deferred until explicitly requested. [Release details and testing handoff](verification/build64-iphone-release.md)
 
-Live player calibration remains deferred and disabled until the owner explicitly
-asks to resume that feature. Build authorization does not resume it. Private
-recordings/replay fixtures, model downloads, caches and generated builds remain
-excluded from these commits. Authored synthetic test fixtures are included in
-the implementation repository. No App Store or public website deployment is
-part of this authorization.
-
-
-## Current acceptance checkpoint — 4 November 2026
+## Historical acceptance checkpoint — 4 November 2026
 
 D25 **v12 circular/template foot** is explicitly owner-accepted as the local
 D25 pipeline. Fresh outputs for D25_1–5 are **10/13/4/7/5 feet**. Event misses,
