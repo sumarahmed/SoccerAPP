@@ -46,16 +46,21 @@ control. The test-only correction settles scrolling, centers the target and
 asserts hit-test visibility on Android/iOS/macOS. The complete local Flutter
 suite now passes: 1,834 passed, 14 skipped. Live calibration is still deferred.
 
-The current retry is app revision
+**Build 63 succeeded in run 87**, app revision
 [`e9fd4be`](https://github.com/sumarahmed/Soccolo-app/commit/e9fd4bea53d3ab2a91555803b54e25892ccedfeb),
 [Codemagic run 6aebdb15bec4042bf4037d36](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aebdb15bec4042bf4037d36).
-Status at publication: requested, pending cloud validation. No IPA yet.
+Final API status: `finished`. All stages passed: 183 native tests (one skipped,
+zero failures), Flutter analysis, 1,834 Flutter tests (14 skips), 49 enabled
+practice tests, 25 shared-counter tests and 29 accepted-runtime tests.
+Signed `soccolo_mobile.ipa`: 106,406,425 bytes; app metadata confirms version
+`0.2.0`, build `63`, bundle `com.soccolo.soccoloMobile`, minimum iOS `15.0`.
+SHA-256: `cc0fb2a391adaedf0110ce6cb8915cdbca4c10d233058c24555c48ae8107c78c`.
 [Failure details and validation](https://github.com/sumarahmed/Soccolo-app/blob/main/apps/mobile/BUILD63_CLOUD_VALIDATION.md).
 
 On-device accuracy, memory, thermal
 behavior and performance remain unverified. Build 62 is the last confirmed
-installed iPhone version. Do not describe Build 63 as successful or installed
-until the corresponding evidence exists.
+installed iPhone version. Build 63 is successfully built; physical installation
+and device validation have not yet been confirmed.
 
 Private media/replay fixtures and generated outputs stay local. This companion
 repository contains documentation only; the app repository contains source and
