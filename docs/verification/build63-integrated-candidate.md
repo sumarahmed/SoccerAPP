@@ -35,10 +35,15 @@ watchdog callback expectations and scoped cross-backend numerical checks.
 Production analyser thresholds and fixture expectations are unchanged.
 Two new OpenCV backend proof checks and two model-packaging checks pass locally.
 
+Run 85 reduced failures to three: two reverse-image tests found a duplicated
+seek-boundary PTS, and one stale test expected the deliberately excluded
+experimental model. The reader now seeks 100 ms before the requested identity;
+the model test validates the shipped tiny model and rejects the wrong tensor.
+
 The current retry is app revision
-[`c205534`](https://github.com/sumarahmed/Soccolo-app/commit/c205534edf0879311e7764fa19cc8b8fce1dcdf5),
-[Codemagic run 6aebcb71e2b8a3c07cf65f88](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aebcb71e2b8a3c07cf65f88).
-Status at publication: preparing, exact source SHA confirmed. No IPA yet.
+[`228501b`](https://github.com/sumarahmed/Soccolo-app/commit/228501be2d85cfb0ebbe53945acd0173cc353ce9),
+[Codemagic run 6aebd1adfa55893130c79ff1](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aebd1adfa55893130c79ff1).
+Status at publication: queued, exact source SHA confirmed. No IPA yet.
 [Failure details and validation](https://github.com/sumarahmed/Soccolo-app/blob/main/apps/mobile/BUILD63_CLOUD_VALIDATION.md).
 
 On-device accuracy, memory, thermal
