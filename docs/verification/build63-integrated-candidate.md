@@ -40,10 +40,16 @@ seek-boundary PTS, and one stale test expected the deliberately excluded
 experimental model. The reader now seeks 100 ms before the requested identity;
 the model test validates the shipped tiny model and rejects the wrong tensor.
 
+Run 86 passed native compilation and all 183 native tests (one skipped, zero
+failures), plus Flutter analysis. One Flutter demo test tapped an offscreen
+control. The test-only correction settles scrolling, centers the target and
+asserts hit-test visibility on Android/iOS/macOS. The complete local Flutter
+suite now passes: 1,834 passed, 14 skipped. Live calibration is still deferred.
+
 The current retry is app revision
-[`228501b`](https://github.com/sumarahmed/Soccolo-app/commit/228501be2d85cfb0ebbe53945acd0173cc353ce9),
-[Codemagic run 6aebd1adfa55893130c79ff1](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aebd1adfa55893130c79ff1).
-Status at publication: queued, exact source SHA confirmed. No IPA yet.
+[`e9fd4be`](https://github.com/sumarahmed/Soccolo-app/commit/e9fd4bea53d3ab2a91555803b54e25892ccedfeb),
+[Codemagic run 6aebdb15bec4042bf4037d36](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aebdb15bec4042bf4037d36).
+Status at publication: requested, pending cloud validation. No IPA yet.
 [Failure details and validation](https://github.com/sumarahmed/Soccolo-app/blob/main/apps/mobile/BUILD63_CLOUD_VALIDATION.md).
 
 On-device accuracy, memory, thermal
