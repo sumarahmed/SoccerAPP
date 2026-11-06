@@ -2,6 +2,10 @@
 
 Soccolo **0.2.0 (68)** uses the signed internal workflow for registered iPhones.
 
+Repair verification passed Flutter analysis and the full default Flutter suite locally (1,839 passed, 14 skipped).
+
+The [first Build 68 run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aed840d4df4604c6e315e47) stopped during Flutter tests. The light-theme Library calendar test checked for “My leg session” before it found the saved card. Native export tests and Flutter analysis had passed. IPA packaging was skipped. The same scenario passed locally in both themes on the original source. The test now waits for the saved card after both create and edit, with a bounded timeout, and still verifies the stored exercise order.
+
 Live practice uses a compact smoked-glass timer and controls, a matching header and a glass frame for the exercise demo or unavailable-video placeholder. The tint uses 72% opacity with a clipped blur behind the controls. Setup and exercise previews share the finish. Check readability, recording smoothness and floor visibility on iPhone.
 
 After automatic or manual framing confirmation, the first exercise opens in the same Up next preview used between drills. Its preview timer uses the configured rest duration (five seconds if rest is zero). Start countdown lets a ready player continue early. Recording begins after the drill countdown.
