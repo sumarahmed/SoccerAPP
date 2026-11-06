@@ -1,5 +1,7 @@
 # Build 66 · Internal iPhone release
 
+Codemagic finished the signed internal workflow from app commit `4eca0bc`. [Build 66 run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aed21571e634e3e95184a53)
+
 Version **0.2.0 (66)** adds 500 Touches, 1,000 Touches and 1,500 Touches at the top of Train → Pathways. Their default durations including between-drill rest are 15:00, 30:30 and 46:00. Each exercise has a timed block and a touch goal. Rest defaults to 30 seconds, with 10 and 20 seconds available. The optional no-touch warm-up adds 30 seconds of activity and one rest.
 
 Local verification passed Flutter analysis, eight Home, planner, pathway and rest regression tests, and the project documentation validator.

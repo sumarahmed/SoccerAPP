@@ -1,5 +1,9 @@
 # Soccolo handoff
 
+## Build 67 · Camera setup
+
+Version 0.2.0 (67) adds a full-screen camera preview and an automatic countdown when Player, Feet and Ball are ready. [Release notes and iPhone checks](verification/build67-iphone-release.md)
+
 ## Build 66 · 6 November 2026
 
 The internal iPhone candidate adds touch pathways, weekly scheduling and direct access to today's practice from Home. See the [release record and device checks](verification/build66-iphone-release.md).
