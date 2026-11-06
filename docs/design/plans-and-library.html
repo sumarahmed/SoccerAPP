@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Soccolo · Plans and Library review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eff3ee;color:#152119;font:16px system-ui,sans-serif}
+main{max-width:1280px;margin:auto;padding:24px}header,nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}header{justify-content:space-between}
+h1{font-size:clamp(24px,4vw,36px);margin:0}nav{margin:24px 0}button,select{font:inherit;padding:8px 14px;border:1px solid #88978b;border-radius:12px;background:white;color:#152119;cursor:pointer}button[aria-pressed=true]{color:white;background:#193d2a}
+section{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:22px;align-items:start}figure{margin:0;max-width:390px}figcaption{font-weight:650;margin-bottom:8px}img,video{width:100%;border-radius:12px;border:1px solid #9ea99f;display:block}
+</style>
+<main><header><h1>Plans and Library</h1><label>Appearance <select><option>Dark</option><option>Light</option></select></label></header>
+<p>Flutter design review. The scheduled Ball control practice and saved Library plans are examples.</p>
+<nav aria-label="Review sections"></nav><section aria-live="polite"></section></main>
+<script>
+const groups={
+  'Drill card comparison':[['original-drills','Original Flutter · Drills'],['builder','Proposed · Plan your practice'],['physical-0','Proposed · Library exercises']],
+  'Pathway card comparison':[['original-pathways','Original Flutter · Pathways'],['week','Proposed · Weekly planner'],['mindset-1','Proposed · Mindset pathways']],
+  'Plans':[['week','Weekly planner'],['builder','Plan your practice'],['plan','Open the scheduled plan']],
+  'Plan setup':[['plan','Plan drills'],['@setup-none','No camera'],['@setup-session','Full Session']],
+  'Plan session':[['@recording','Work round'],['@rest','Rest between rounds'],['@upcoming','Up next during rest between drills'],['@countdown','Next drill countdown']],
+  'Plan results':[['@analysis','Results by drill'],['@compare','Compare round'],['@compare-menu','Choose a named round']],
+  'Library':[['library','Library'],['mindset-0','Mindset'],['physical-0','Physical drills'],['meals','Meal guide']],
+  'Mindset':[['mindset-0','Sound bites'],['mindset-1','Pathways'],['mindset-2','Plans']],
+  'Physical drills':[['physical-0','Exercises'],['physical-1','Pathways'],['physical-2','Plans']],
+  'Meal guide':[['meals','Recipe cards and diet filters']]
+};
+const nav=document.querySelector('nav'),gallery=document.querySelector('section'),appearance=document.querySelector('select');
+let selected='Drill card comparison';
+function render(){
+  gallery.replaceChildren();
+  for(const button of nav.children)button.setAttribute('aria-pressed',button.textContent===selected);
+  for(const [key,title] of groups[selected]){
+    const figure=document.createElement('figure'),caption=document.createElement('figcaption');
+    const base=(key.startsWith('@')?'pathway-review/':'plans-library/')+appearance.value.toLowerCase()+'-'+key.replace('@','');
+    const video=key==='@upcoming',media=document.createElement(video?'video':'img');
+    caption.textContent=title;
+    if(video){media.controls=true;media.playsInline=true;media.muted=true;media.poster=base+'.png';media.src=base+'.mp4';}
+    else{media.src=base+'.png';media.alt=title;}
+    figure.append(caption,media);gallery.append(figure);
+  }
+}
+for(const name of Object.keys(groups)){
+  const button=document.createElement('button');button.textContent=name;
+  button.onclick=()=>{selected=name;render()};nav.append(button);
+}
+appearance.onchange=render;render();
+</script></html>

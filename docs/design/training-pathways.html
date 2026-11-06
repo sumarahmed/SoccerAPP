@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Training pathways · Flutter design review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2ed;color:#131b17;font:16px system-ui,sans-serif}main{max-width:1340px;margin:auto;padding:24px}header,nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}header{justify-content:space-between}h1{margin:0;font-size:clamp(24px,4vw,36px)}p{max-width:75ch;line-height:1.45}button,select{font:inherit;padding:8px 14px;background:#fff;border:1px solid #87958b;border-radius:12px;color:#131b17;cursor:pointer}button[aria-pressed=true]{background:#193d2a;color:white}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;margin-top:24px}figure{margin:0;max-width:390px}figcaption{min-height:5em}figcaption p{margin:4px 0 12px;font-size:14px;color:#405347}img{width:100%;display:block;border:1px solid #a4b1a6;border-radius:12px}
+</style>
+<main>
+<header><h1>Training pathways</h1><label>App appearance <select id="theme"><option>Dark</option><option>Light</option></select></label></header>
+<p>Flutter design review · Ball control pathway. Camera and comparison images use the bundled drill demonstration. The round result uses sample values.</p>
+<nav aria-label="Review chapters"></nav><section aria-live="polite"></section>
+</main>
+<script>
+const chapters = {
+  'Train and setup': [
+    ['train','Train','The Pathways tab uses the existing collection cards.'],
+    ['path','View pathway','Each exercise uses the same DrillCard as the Drills tab.'],
+    ['path-end','End of the pathway','Scroll to the existing readiness reminder and setup button.'],
+    ['setup-session','Set up practice','Full Session and No camera use the existing recording-choice controls.']
+  ],
+  'Session flow': [
+    ['recording','Work round','The single-drill camera fills the stage behind the timer and controls.'],
+    ['rest','30-second rest','Camera off. The foreground display should stay awake for the full rest.'],
+    ['upcoming','Upcoming exercise','After Sole rolls round 2, the Dribble and stop demo loops throughout the configured rest. This example uses 30 seconds.'],
+    ['countdown','Get ready','At zero, the next drill enters the usual countdown automatically. This example shows Sole rolls.']
+  ],
+  'Review rounds': [
+    ['analysis','Session complete','Choose a round beneath its drill name to see its result.'],
+    ['compare','Compare','The selected round includes its drill name above the two playback panes.'],
+    ['compare-menu','Choose a round','The list shows each drill name and round number.']
+  ],
+  'No camera': [
+    ['setup-none','No camera selected','Use the same guided sequence, previews and timers without recording.']
+  ]
+};
+const nav=document.querySelector('nav'), gallery=document.querySelector('section'), theme=document.querySelector('select');
+let selected=Object.keys(chapters)[0];
+function render(){
+  gallery.replaceChildren();
+  for(const button of nav.children)button.setAttribute('aria-pressed',button.textContent===selected);
+  for(const [file,title,detail] of chapters[selected]){
+    const figure=document.createElement('figure'), caption=document.createElement('figcaption');
+    const heading=document.createElement('strong'), description=document.createElement('p'), image=document.createElement('img');
+    heading.textContent=title;description.textContent=detail;image.alt=title+' — '+detail;
+    image.src='pathway-review/'+theme.value.toLowerCase()+'-'+file+'.png';
+    let media=image;
+    if(file==='upcoming'){
+      media=document.createElement('video');
+      media.controls=true;media.muted=true;media.playsInline=true;media.autoplay=true;
+      media.poster=image.src;media.style.cssText='width:100%;display:block;border-radius:12px';
+      media.src='pathway-review/'+theme.value.toLowerCase()+'-upcoming.mp4';
+      media.setAttribute('aria-label','Upcoming Dribble and stop demonstration with a 30-second rest countdown');
+    }
+    caption.append(heading,description);figure.append(caption,media);gallery.append(figure);
+  }
+}
+for(const name of Object.keys(chapters)){
+  const button=document.createElement('button');button.textContent=name;
+  button.onclick=()=>{selected=name;render()};nav.append(button);
+}
+theme.onchange=render;render();
+</script>
+</html>

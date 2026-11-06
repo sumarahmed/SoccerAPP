@@ -1,5 +1,9 @@
 # Soccolo current status
 
+## Build 66 · 6 November 2026
+
+The internal iPhone candidate adds touch pathways, weekly scheduling and direct access to today's practice from Home. See the [release record and device checks](verification/build66-iphone-release.md).
+
 ## Build 64 · 5 November 2026
 
 The signed internal iPhone build is available for registered devices. Codemagic run 88 passed and the IPA measures 96.75 MiB. Owner device testing is pending. Live player calibration is deferred until explicitly requested. [Release details and testing handoff](verification/build64-iphone-release.md)
