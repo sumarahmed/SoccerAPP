@@ -1,5 +1,7 @@
 # Build 67 · Internal iPhone release
 
+Codemagic finished the signed internal workflow from `d6767a6`. [Build 67 run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aed67054c7238f7cf03452d)
+
 Soccolo **0.2.0 (67)** fills the camera setup screen with the live preview. The translucent overlay shows large Player, Feet and Ball checks. A steady second of fresh detections for all three starts the five-second drill countdown. Losing a marker resets the hold. Next manually becomes available immediately when automatic checks are disabled or unavailable, or after eight seconds of unresolved framing.
 
 All 23 targeted local camera, countdown, layout and recovery tests passed. The release uses the existing registered-iPhone signing workflow.

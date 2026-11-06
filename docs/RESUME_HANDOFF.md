@@ -1,5 +1,9 @@
 # Soccolo handoff
 
+## Build 68 · Practice camera and planner
+
+Version 0.2.0 (68) brings compact glass camera controls, the opening exercise preview, corrected pathway rounds and the selected-day planner agenda. [Release record and iPhone checks](verification/build68-iphone-release.md)
+
 ## Build 67 · Camera setup
 
 Version 0.2.0 (67) adds a full-screen camera preview and an automatic countdown when Player, Feet and Ball are ready. [Release notes and iPhone checks](verification/build67-iphone-release.md)
