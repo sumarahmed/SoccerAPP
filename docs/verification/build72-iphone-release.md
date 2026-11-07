@@ -2,6 +2,8 @@
 
 Version 0.2.0 (72). The owner approved the combined Codemagic build on 8 November 2026 after reviewing the Build 71 device failures.
 
+[Approved Codemagic build](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aef89444d92a0e61de8a736) was requested and its source confirmed as `5a1941631e55e6aa195fef90f2b6bb6e8fac1d8f`. Initial status: waiting. No successful IPA or native test result is claimed yet. The release preparation reran all 66 Python and 79 focused Flutter tests successfully.
+
 ## Changes
 
 - Normalize only tiny finite person-mask endpoint overshoots within eight Float epsilons. Preserve every valid value and reject nonfinite or materially invalid masks. Record aggregate anomalous ranges, counts and mask origin for diagnosis. Build 71 confirms the shared validation failure in D01/D17, but did not record the offending values; numerical round-off remains an unverified hypothesis.
