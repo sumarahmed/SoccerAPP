@@ -19,3 +19,11 @@ Local Flutter analysis passed. The full default suite passed 1,844 tests with 14
 Private recordings, fixtures and generated results stay outside Git.
 
 The package is available for owner testing with the same older D17 recording. Device recovery remains unconfirmed until that test. Documentation-only commits record this outcome after the built app revision.
+
+## Device result and diagnostic follow-up
+
+The owner confirmed the recovery failed for the older D17 video and that D01 also fails. D17 returned `accepted-evidence-unavailable` at the accepted-analysis step after 552 ms. The native checkpoint recorded failure at 535 ms, frame 0, with 2966.89 MiB available and thermal state 1. The exact native exception remains unknown.
+
+A local repair addresses error suppression in the transport. Failed jobs retain their cause until the consumer reads it, and copied reports include an allowlisted native reason, error domain/code, startup checkpoint and source-video metadata. Startup checkpoints distinguish model load, source opening and initial full-pose inference. Arbitrary SDK descriptions and recording paths are excluded. Counting behavior is untouched by this diagnostic work.
+
+Flutter analysis and 12 focused tests passed at this stage. Added native tests require Apple-toolchain execution. This does not establish the root cause or successful recovery. The owner subsequently authorised expanded troubleshooting in Build 71; see [the new release record](build71-iphone-release.md) for the final scope and verification.

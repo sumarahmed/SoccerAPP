@@ -1,5 +1,9 @@
 # SoccerTrainingApp
 
+## Build 71 · Analysis troubleshooting
+
+Version 0.2.0 (71) retains native errors, adds bounded processing checkpoints and D25 pass progress, and combines diagnostics into Copy analysis report even while running. The device failure remains under investigation. [Release record and tester steps](docs/verification/build71-iphone-release.md)
+
 ## Build 70 · Analysis recovery
 
 Version 0.2.0 (70) restores Build 68's native analyser and foreground lifecycle while retaining copyable analysis reports and camera Zoom. [Release record and tester steps](docs/verification/build70-iphone-release.md)
