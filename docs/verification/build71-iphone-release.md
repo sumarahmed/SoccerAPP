@@ -1,6 +1,6 @@
 # Build 71 · Analysis troubleshooting
 
-Version 0.2.0 (71). The owner authorised a comprehensive diagnostic iPhone build on 7 November 2026 to reduce repeated diagnostic releases. Codemagic status is pending.
+Version 0.2.0 (71). The owner authorised a comprehensive diagnostic iPhone build on 7 November 2026 to reduce repeated diagnostic releases. [Codemagic run 96](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aeeca8c6c7d0444d2620ea1) from `2589af40db4d4956cf68fa18778e08f555f93a9d` failed the native regression stage; no IPA was produced.
 
 ## Evidence and investigation
 
@@ -30,4 +30,8 @@ Local Flutter analysis passed. The full default suite passed 1,845 tests with 14
 3. Tap **Copy analysis report** after failure, or while running if it appears stuck, and paste the full report. It now includes native diagnostics automatically.
 4. Retry D25 separately and copy its report if progress stops. Moving to another screen inside Soccolo is supported; leaving the app pauses/cancels this foreground-only build.
 
-Cloud result and exact source revision will be recorded after the authorised build.
+## Cloud result and correction
+
+Native compilation succeeded. The suite executed 185 tests with one skipped; the only failing test was the portrait-round test's two assertions that diagnostics remain below the old 16 KiB limit. The expanded reports were 32,650 and 33,296 bytes. Startup-error retention, private-location redaction and D25 multipass/progress tests passed. No analyser count/inference assertion failed. Later Flutter cloud stages and signing were skipped because this gate failed.
+
+The follow-up correction enforces a 64 KiB native diagnostic-file limit, trims oldest previous attempts/checkpoints first, retains the current error and facts whenever possible, and marks truncation. An oversized-payload regression test verifies the cap and preservation of the current failure. The portrait test now checks that enforced limit. This Swift correction requires a new Apple-toolchain run; it has not yet been validated by Codemagic. The failed run does not establish that device analysis is repaired. A retry awaits the owner's explicit approval under the standing build rule.
