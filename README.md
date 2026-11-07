@@ -1,5 +1,9 @@
 # SoccerTrainingApp
 
+## Build 69 · Analysis timing
+
+Version 0.2.0 (69) adds a copyable video analysis report, processing-stage timings, background-analysis requests and camera Zoom controls. [Release record and tester steps](docs/verification/build69-iphone-release.md)
+
 ## Build 68 · Practice camera and planner
 
 Version 0.2.0 (68) brings compact glass camera controls, the opening exercise preview, corrected pathway rounds and the selected-day planner agenda. [Release record and iPhone checks](docs/verification/build68-iphone-release.md)
