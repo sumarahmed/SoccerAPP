@@ -1,6 +1,8 @@
 # Build 71 · Analysis troubleshooting
 
-Version 0.2.0 (71). The owner authorised a comprehensive diagnostic iPhone build on 7 November 2026 to reduce repeated diagnostic releases. [Codemagic run 96](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aeeca8c6c7d0444d2620ea1) from `2589af40db4d4956cf68fa18778e08f555f93a9d` failed the native regression stage; no IPA was produced.
+Version 0.2.0 (71). The owner authorised a comprehensive diagnostic iPhone build and its corrected retry on 7 November 2026. [Codemagic run 97 and installation artifacts](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aeed1afba0993363c9c765e) succeeded from `7609848528dc39c30a6a77ff86dad92ba29b5a49`. All verification, signing and publishing stages passed. Artifact metadata confirms `soccolo_mobile.ipa`, version `0.2.0`, build `71`, 101,501,187 bytes.
+
+The first attempt, [run 96](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aeeca8c6c7d0444d2620ea1) from `2589af40db4d4956cf68fa18778e08f555f93a9d`, failed the previous diagnostic-size assertion and produced no IPA. The correction and successful retry are recorded below.
 
 ## Evidence and investigation
 
@@ -21,7 +23,7 @@ Capture remains targeted at 60 fps with 30 fps fallback; full pose and all 12 ac
 
 ## Verification
 
-Local Flutter analysis passed. The full default suite passed 1,845 tests with 14 skips; after the final report/redaction additions, all 14 focused runtime/report/UI/round tests passed. Native regression tests cover startup error retention, redaction and D25 progress across real acquisition passes. Windows cannot execute the Apple tests; Codemagic must compile and run them before signing. Device success remains pending.
+Local Flutter analysis passed. The full default suite passed 1,845 tests with 14 skips; after the final report/redaction additions, all 14 focused runtime/report/UI/round tests passed. Codemagic's corrected native run executed 186 tests with one skipped and zero failures, including startup-error retention, redaction, D25 multipass progress and bounded diagnostic history. Flutter analysis, the full Flutter suite and all enabled-feature/accepted-runtime verification stages also passed. Actual analysis recovery on the owner's iPhone remains pending.
 
 ## iPhone test
 
@@ -34,4 +36,4 @@ Local Flutter analysis passed. The full default suite passed 1,845 tests with 14
 
 Native compilation succeeded. The suite executed 185 tests with one skipped; the only failing test was the portrait-round test's two assertions that diagnostics remain below the old 16 KiB limit. The expanded reports were 32,650 and 33,296 bytes. Startup-error retention, private-location redaction and D25 multipass/progress tests passed. No analyser count/inference assertion failed. Later Flutter cloud stages and signing were skipped because this gate failed.
 
-The follow-up correction enforces a 64 KiB native diagnostic-file limit, trims oldest previous attempts/checkpoints first, retains the current error and facts whenever possible, and marks truncation. An oversized-payload regression test verifies the cap and preservation of the current failure. The portrait test now checks that enforced limit. This Swift correction requires a new Apple-toolchain run; it has not yet been validated by Codemagic. The failed run does not establish that device analysis is repaired. A retry awaits the owner's explicit approval under the standing build rule.
+The follow-up correction enforces a 64 KiB native diagnostic-file limit, trims oldest previous attempts/checkpoints first, retains the current error and facts whenever possible, and marks truncation. An oversized-payload regression test verifies the cap and preservation of the current failure. The portrait test now checks that enforced limit. Both tests passed in the authorised retry, which completed on 7 November 2026 at 07:44 UTC. The successful package is ready for owner testing; it does not yet establish that the original device analysis failure is repaired. Documentation-only commits record the cloud outcome separately from the built source revision.
