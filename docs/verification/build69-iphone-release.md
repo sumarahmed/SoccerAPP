@@ -1,6 +1,8 @@
 # Build 69 · iPhone analysis timing
 
-Version 0.2.0 (69) is prepared for registered iPhones. The user approved the build on 7 November 2026 to collect analysis timing reports.
+Version 0.2.0 (69) is available for registered iPhones. The user approved the build on 7 November 2026 to collect analysis timing reports.
+
+Codemagic run 94 succeeded from app commit `356367938df7702ef98a94515f328efef11763d4`. Native simulator tests, Flutter analysis, all Flutter verification suites, accepted-analysis checks and signed packaging passed. The published `soccolo_mobile.ipa` identifies version `0.2.0`, build `69`, with size 101,497,560 bytes (96.80 MiB). [Build and installation artifacts](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6aee98d817c8b705587f055b)
 
 ## Tester steps
 
@@ -20,4 +22,4 @@ This release includes the pending camera Zoom controls, saved-analysis backgroun
 
 Local tests exercise copied timing values, privacy filtering, old results and the actual copy button. The internal Codemagic workflow performs Swift compilation, native tests, Flutter checks and signed IPA packaging. Native background scheduling and real iPhone performance require device testing.
 
-Private recordings and generated results remain outside Git. The cloud run and artifact outcome will be recorded below after launch.
+Private recordings and generated results remain outside Git. Real iPhone timings and background continuation await owner testing. Documentation-only commits after the build record this outcome separately from the built app revision.
