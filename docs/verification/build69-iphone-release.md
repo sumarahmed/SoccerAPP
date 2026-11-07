@@ -16,6 +16,18 @@ New reports separate queue wait, video acquisition/transfer and counting. Exclus
 
 ## Scope and verification
 
+### Device failure follow-up
+
+The owner reported D17 round 1, 60 seconds, failing after 446 ms on Build 69 source `3563679`, without stage timings. Cause remains unconfirmed. The copied report omitted the failure reason, and the native bridge discarded partial timings and specific error categories.
+
+The supplied Settings checkpoint shows loading-model at frame 0 and 0 ms, 212.31 MiB footprint, 3163.69 MiB available and thermal state 2. It contains no terminal error. The owner confirmed the regression began with Build 69. The accepted source only stops for critical thermal state, so the snapshot does not establish heat as the cause.
+
+The local recovery restores Build 68's native acquisition, transport, tracking, model runtime and app lifecycle source exactly from `4417628`, together with the prior Dart foreground analysis lifecycle. Background execution, native stage profiling and the backward-tracking shortcut are deferred as a group. The individual failing change remains unconfirmed. The earlier native diagnostic experiment is excluded from this recovery.
+
+The recovery retains camera Zoom, copyable reports and Dart totals for queue wait, acquisition/transfer and counting. Reports include failure reasons and steps. Local Flutter analysis, 12 focused runtime/report/UI tests and the foreground lifecycle test passed. The full local suite passed 1,844 tests with 14 skips. Device validation and a separately approved recovery build remain pending.
+
+The affected clip is an older saved recording. Source review confirmed current-directory discovery in the library and identical saved-video entry points and round-window logic between Builds 68 and 69. No changed storage-path logic was found to explain the regression. Existing recordings remain available for device testing.
+
 Local Flutter analysis passed, and the full default suite passed 1,846 tests with 14 skips. Enabled tests verified the copy button and background retry. Counting parity checks continue comparing all decision fields while validating timing metadata separately.
 
 This release includes the pending camera Zoom controls, saved-analysis background execution requests, timing instrumentation and the redundant reverse-tracking shortcut. Local Python replay preserved D01/D18 counts, timestamps, foot attribution and frame evidence. The speed difference was small, so device reports will guide further optimization. Capture retains the 60 fps target with 30 fps fallback and production full pose.

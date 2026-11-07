@@ -1,5 +1,9 @@
 # SoccerTrainingApp
 
+## Build 70 · Analysis recovery
+
+Version 0.2.0 (70) restores Build 68's native analyser and foreground lifecycle while retaining copyable analysis reports and camera Zoom. [Release record and tester steps](docs/verification/build70-iphone-release.md)
+
 ## Build 69 · Analysis timing
 
 Version 0.2.0 (69) adds a copyable video analysis report, processing-stage timings, background-analysis requests and camera Zoom controls. [Release record and tester steps](docs/verification/build69-iphone-release.md)
