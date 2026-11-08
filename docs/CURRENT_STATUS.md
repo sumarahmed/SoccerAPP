@@ -1,3 +1,9 @@
+## Current scope — 8 November 2026
+
+The owner approved provisional drill-specific **Estimated touches** based on active practice duration, replacing on-device analysis in the local app candidate. Temporary performance/analysis troubleshooting is retired. Service analysis remains research, not deployed. The next paid build needs fresh approval; this checkpoint is not installed-device acceptance or publication. See [decision, evidence and acceptance checklist](verification/duration-estimates-20261108.md). Older build/analysis statements below remain historical evidence.
+
+Next: review provisional rates, verify the replacement experience on a separately approved device build, and continue offline service accuracy/performance evaluation.
+
 # Soccolo current status
 
 ## Build 68 · Practice camera and planner
