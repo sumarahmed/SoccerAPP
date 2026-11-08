@@ -35,3 +35,8 @@ The owner subsequently approved pushing both repositories to GitHub and building
 Build 74 local validation passed: 1,892 Flutter tests (14 existing skips), 38 release-configuration tests, Flutter static analysis and four model-packaging checks. The results card is tested at 320-pixel width and 3× text in both themes.
 
 The authorized Build 74 cloud run failed at native compilation after both repositories were pushed. A leftover call to the retired memory-probe object caused the compiler error; no installable IPA was produced. The source correction removes that reference and adds a local native-reference check. A second paid run has not been started and requires owner approval. Local Flutter success is not native build success.
+
+
+## Authorized correction — 9 November 2026
+
+The owner authorized one corrected build. The upcoming-drill placeholder now prominently names the drill above its description, with scrollable content to avoid overlap with rest controls. The existing pause/resume regression also verifies this heading. Five packaging checks and the focused Flutter test pass; native compilation will be verified in the authorized cloud retry.

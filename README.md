@@ -1,12 +1,12 @@
 ## Build 74 preparation — 8 November 2026
 
-**Build outcome:** the authorized run failed at native compilation on a leftover retired-probe reference. The correction is committed/pushed separately; no IPA exists and another paid run requires approval.
+**Build outcome:** the first Build 74 run failed on a retired native probe reference, now corrected. On 9 November the owner authorized one corrected retry after adding the drill name above the between-drill description. Local checks precede submission; no successful IPA is claimed yet.
 
 The owner has now approved GitHub pushes for both repositories and one internal Codemagic app build, including the requested estimated-touch results UI improvement. Results emphasize count and active duration with accessible wrapping. Local validation precedes cloud submission; build success and device acceptance are not yet claimed. [Current release checkpoint](docs/verification/duration-estimates-20261108.md).
 
 ## Current scope — 8 November 2026
 
-The owner approved provisional drill-specific **Estimated touches** based on active practice duration, replacing on-device analysis in the local app candidate. Temporary performance/analysis troubleshooting is retired. Service analysis remains research, not deployed. The next paid build needs fresh approval; this checkpoint is not installed-device acceptance or publication. See [decision, evidence and acceptance checklist](docs/verification/duration-estimates-20261108.md). Older build/analysis statements below remain historical evidence.
+The owner approved provisional drill-specific **Estimated touches** based on active practice duration, replacing on-device analysis in the local app candidate. Temporary performance/analysis troubleshooting is retired. Service analysis remains research, not deployed. One corrected paid retry is now authorized; this checkpoint is not installed-device acceptance or publication. See [decision, evidence and acceptance checklist](docs/verification/duration-estimates-20261108.md). Older build/analysis statements below remain historical evidence.
 
 Next: review provisional rates, verify the replacement experience on a separately approved device build, and continue offline service accuracy/performance evaluation.
 
