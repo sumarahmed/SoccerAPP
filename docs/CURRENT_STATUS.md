@@ -1,5 +1,7 @@
 ## Build 74 preparation — 8 November 2026
 
+**Build outcome:** the authorized run failed at native compilation on a leftover retired-probe reference. The correction is committed/pushed separately; no IPA exists and another paid run requires approval.
+
 The owner has now approved GitHub pushes for both repositories and one internal Codemagic app build, including the requested estimated-touch results UI improvement. Results emphasize count and active duration with accessible wrapping. Local validation precedes cloud submission; build success and device acceptance are not yet claimed. [Current release checkpoint](verification/duration-estimates-20261108.md).
 
 ## Current scope — 8 November 2026
