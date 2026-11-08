@@ -40,3 +40,5 @@ The authorized Build 74 cloud run failed at native compilation after both reposi
 ## Authorized correction — 9 November 2026
 
 The owner authorized one corrected build. The upcoming-drill placeholder now prominently names the drill above its description, with scrollable content to avoid overlap with rest controls. The existing pause/resume regression also verifies this heading. Five packaging checks and the focused Flutter test pass; native compilation will be verified in the authorized cloud retry.
+
+The single authorized [corrected Codemagic run](https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6af0e4922d5c0983eda15abc) was submitted from `c15c3bfea361b80ca76fa1adf9519977f9578656`; Codemagic confirms that source SHA. Flutter analysis, the rest/pause/resume test with the new heading, five packaging checks, and documentation validation passed locally. Cloud verification is in progress; no IPA or device acceptance is claimed.
