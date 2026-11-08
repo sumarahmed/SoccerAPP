@@ -1,3 +1,7 @@
+## Build 74 preparation — 8 November 2026
+
+The owner has now approved GitHub pushes for both repositories and one internal Codemagic app build, including the requested estimated-touch results UI improvement. Results emphasize count and active duration with accessible wrapping. Local validation precedes cloud submission; build success and device acceptance are not yet claimed. [Current release checkpoint](docs/verification/duration-estimates-20261108.md).
+
 ## Current scope — 8 November 2026
 
 The owner approved provisional drill-specific **Estimated touches** based on active practice duration, replacing on-device analysis in the local app candidate. Temporary performance/analysis troubleshooting is retired. Service analysis remains research, not deployed. The next paid build needs fresh approval; this checkpoint is not installed-device acceptance or publication. See [decision, evidence and acceptance checklist](docs/verification/duration-estimates-20261108.md). Older build/analysis statements below remain historical evidence.

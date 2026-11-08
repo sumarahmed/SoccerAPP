@@ -27,3 +27,9 @@ The private implementation handoff records local Flutter checks, research unit t
 - Preserve historical build records as dated evidence; they do not authorize more builds, pushes or deployment.
 
 Implementation commit: `d6025bc` in the private Soccolo-app repository. Local checks passed: Flutter analysis, 34 targeted Flutter tests, a separate five-test legacy-flag blocking run, 11 research unit tests and documentation validation. Native Swift changes are source-reviewed only on Windows; no new iOS build or device acceptance is claimed.
+
+## Subsequent Build 74 authorization
+
+The owner subsequently approved pushing both repositories to GitHub and building the internal app, then requested an estimated-touch results UI fix. The candidate now emphasizes the count, active time and rate, with responsive light/dark layouts and explicit no-touch/unavailable states. Version 0.2.0+74 is being validated locally before submitting one Codemagic build. The earlier no-build restriction is superseded for this specific build only. Cloud completion and device acceptance remain unconfirmed.
+
+Build 74 local validation passed: 1,892 Flutter tests (14 existing skips), 38 release-configuration tests, Flutter static analysis and four model-packaging checks. The results card is tested at 320-pixel width and 3× text in both themes.
