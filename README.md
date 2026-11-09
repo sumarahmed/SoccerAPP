@@ -1,3 +1,7 @@
+## D15 demonstration — 9 November 2026
+
+The private app candidate includes the owner-supplied Sole taps video, setup still and card preview. [Content update and maintenance workflow](docs/verification/drill-content-20261109.md). Twelve focused local tests passed. No Codemagic build is authorized or started; installed Build 74 is unchanged.
+
 ## Current rate revision — 9 November 2026
 
 The owner revised 15 drill rates; eight remain unchanged. Duration scaling, rounding and preservation of saved historical rates pass 13 targeted tests. [Complete rates, 30/60/90-second examples and delivery boundary](docs/verification/touch-rates-20261109.md). Both repositories are being synchronized; **no Codemagic build or deployment is authorized or started**. Installed Build 74 remains unchanged.
