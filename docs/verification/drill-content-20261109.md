@@ -1,5 +1,9 @@
 # Drill content update — 9 November 2026
 
+## Approved medium controls and full-screen demo follow-up
+
+The owner approved the actual Flutter-rendered medium control card. The private app source now uses a 36 px counter, 80 px timer ring, 15 px button labels and minimum 52 px action targets. Between-drill videos fill the screen with proportional center-cropping for portrait and landscape clips. Screen taps pause and resume the rest preview and recording surfaces, alongside the existing buttons. Thirteen focused tests and two release-config recording tests passed; static analysis is clean. No additional Codemagic build started; device verification remains pending.
+
 ## Build 75 playback correction
 
 Validation: 15 focused Flutter tests, 9 packaging tests and Dart analysis passed. Local Flutter bundle generation and exact-path/hash checks passed. Widget playback tests simulate the native player; iPhone playback remains pending.
