@@ -1,4 +1,8 @@
 # Drill content update — 9 November 2026
+## Summary back navigation follow-up
+
+The summary back arrow and system back now use the same return-home behavior as Back to home, bypassing the previous drill page. Active practice navigation remains unchanged. Three local regression tests passed using a Home > Drill > Summary navigation stack. This correction was made after Build 76 submission and needs a later build; no additional build was started.
+
 ## Build 76: practice total and individual rounds
 
 The owner approved a new app build with a redesigned touch summary. The private app now shows a persistent total of the round estimates, followed by one drill selector and an iOS-style round switcher for the individual count. Saved active practice time determines estimates; rest and pauses are excluded. Missing active time is identified as an incomplete subtotal. Large text and many rounds use a dropdown instead of cramped segments.
