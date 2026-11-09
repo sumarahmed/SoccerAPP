@@ -1,3 +1,7 @@
+## Build 75 authorized — 9 November 2026
+
+The owner approved one Codemagic app build of version 0.2.0+75 with D15/D25 demonstrations, revised estimated-touch rates and analysis-engine package exclusion. Seven packaging tests and 13 focused demo tests passed locally. Submission and build outcome are pending; earlier no-build notes describe the preparation phase.
+
 ## D15 and D25 demonstrations — 9 November 2026
 
 The private app candidate includes the owner-supplied Sole taps and Feet juggling videos, setup stills and card previews. [Content update and maintenance workflow](docs/verification/drill-content-20261109.md). Thirteen focused local tests passed. Prepared for the next approved Codemagic build; no build started and installed Build 74 is unchanged.
