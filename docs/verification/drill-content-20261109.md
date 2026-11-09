@@ -1,4 +1,8 @@
 # Drill content update — 9 November 2026
+## Saved-video estimate follow-up
+
+The saved-round and individual-clip playback screens missed the earlier saved-active-time wiring applied to the summary. Both now use validated recorded active time for duration estimates and pass it to comparison. Eight focused tests passed, including round switching, paused rounds and absent metadata. Existing recordings require the saved active-time field to recover their estimate; no duration is invented. This correction follows Build 76 and no additional build was started.
+
 ## Summary back navigation follow-up
 
 The summary back arrow and system back now use the same return-home behavior as Back to home, bypassing the previous drill page. Active practice navigation remains unchanged. Three local regression tests passed using a Home > Drill > Summary navigation stack. This correction was made after Build 76 submission and needs a later build; no additional build was started.
