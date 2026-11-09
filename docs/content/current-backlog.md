@@ -1,3 +1,11 @@
+## Current rate revision — 9 November 2026
+
+The owner revised 15 drill rates; eight remain unchanged. Duration scaling, rounding and preservation of saved historical rates pass 13 targeted tests. [Complete rates, 30/60/90-second examples and delivery boundary](../verification/touch-rates-20261109.md). Both repositories are being synchronized; **no Codemagic build or deployment is authorized or started**. Installed Build 74 remains unchanged.
+
+## Local package separation — 9 November 2026
+
+Build 74 installation is owner-confirmed. The local candidate excludes the analysis engine from the app package and preserves it in private research; automatic setup framing and media features remain. Measured removable components: 66.42 MiB unpacked / 36.69 MiB compressed, with further static-library savings unmeasured. **No new build is authorized or started.** [Evidence and remaining acceptance](../verification/engine-package-separation-20261109.md). Earlier statuses below are historical.
+
 ## Build 74 preparation — 8 November 2026
 
 **Build outcome:** the first Build 74 run failed on a retired native probe reference, now corrected. On 9 November the owner authorized one corrected retry after adding the drill name above the between-drill description. Local checks precede submission; no successful IPA is claimed yet.
