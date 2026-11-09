@@ -1,5 +1,11 @@
 # Drill content update — 9 November 2026
 
+## Paused estimates and camera rotation follow-up
+
+Owner screenshots revealed that paused D15 rounds hid their duration estimate because the review still checked a retired analyser-eligibility flag. The private source now uses saved measured active time independently of that flag. A local paused-round fixture verifies 100 estimated touches for 60 active seconds, excluding additional capture time. Unknown duration remains unavailable.
+
+The two recording screens now share orientation-aware preview sizing and display rotation rather than always swapping dimensions for portrait. The change preserves the capture orientation and original video. Simulated iPhone orientation-transition geometry tests and static analysis pass; live iPhone orientation and saved playback require device verification. No additional Codemagic build started.
+
 ## Approved medium controls and full-screen demo follow-up
 
 The owner approved the actual Flutter-rendered medium control card. The private app source now uses a 36 px counter, 80 px timer ring, 15 px button labels and minimum 52 px action targets. Between-drill videos fill the screen with proportional center-cropping for portrait and landscape clips. Screen taps pause and resume the rest preview and recording surfaces, alongside the existing buttons. Thirteen focused tests and two release-config recording tests passed; static analysis is clean. No additional Codemagic build started; device verification remains pending.
