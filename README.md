@@ -1,3 +1,7 @@
+## Build 75 D15 playback correction
+
+Build 75 completed and was installed. The missing Sole taps video was traced to a space-encoded filename mismatch in the signed IPA. The source filename is corrected, with exact packaged-asset checks and a visible playback fallback. [Evidence](docs/verification/drill-content-20261109.md). No additional paid build started.
+
 ## Build 75 authorized — 9 November 2026
 
 The owner approved one Codemagic app build of version 0.2.0+75 with D15/D25 demonstrations, revised estimated-touch rates and analysis-engine package exclusion. Seven packaging tests and 13 focused demo tests passed locally. Submission and build outcome are pending; earlier no-build notes describe the preparation phase.
