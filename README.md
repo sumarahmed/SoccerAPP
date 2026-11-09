@@ -1,6 +1,6 @@
-## D15 demonstration — 9 November 2026
+## D15 and D25 demonstrations — 9 November 2026
 
-The private app candidate includes the owner-supplied Sole taps video, setup still and card preview. [Content update and maintenance workflow](docs/verification/drill-content-20261109.md). Twelve focused local tests passed. No Codemagic build is authorized or started; installed Build 74 is unchanged.
+The private app candidate includes the owner-supplied Sole taps and Feet juggling videos, setup stills and card previews. [Content update and maintenance workflow](docs/verification/drill-content-20261109.md). Thirteen focused local tests passed. Prepared for the next approved Codemagic build; no build started and installed Build 74 is unchanged.
 
 ## Current rate revision — 9 November 2026
 
