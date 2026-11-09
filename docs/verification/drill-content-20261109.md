@@ -1,4 +1,11 @@
 # Drill content update — 9 November 2026
+## Build 76: practice total and individual rounds
+
+The owner approved a new app build with a redesigned touch summary. The private app now shows a persistent total of the round estimates, followed by one drill selector and an iOS-style round switcher for the individual count. Saved active practice time determines estimates; rest and pauses are excluded. Missing active time is identified as an incomplete subtotal. Large text and many rounds use a dropdown instead of cramped segments.
+
+Candidate 0.2.0+76 includes the previous D15 playback filename correction, medium controls, full-screen demos, tap-to-pause/resume, paused-round estimate correction and camera preview orientation changes. Historical no-build statements below refer to earlier preparation. iPhone playback and rotation still require device acceptance.
+
+Four focused summary/paused-estimate tests, actual Flutter rendering, static analysis and nine package checks passed. The full local Flutter suite passed: 1,905 tests, 14 skipped. Documentation validation passed. No private media or implementation is published here.
 
 ## Paused estimates and camera rotation follow-up
 
