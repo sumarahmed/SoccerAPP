@@ -1,4 +1,16 @@
 # Drill content update — 9 November 2026
+## Touch-plan targets and comparison fit — 10 November 2026
+
+Build 76 feedback showed the 1,000-touch plan finishing with 1,588 estimated touches over 26:30 active time and 18 rounds. Reproduced exactly from the old fixed durations and current per-round estimation rates: D01 226, D15 250, D02 140, D16 180, D17 240, D18 180, D23 200, D11 60, D25 112. The targets and hard-coded durations had drifted apart; the summary was correctly summing the prescribed work estimates.
+
+All three touch pathways now derive durations from the same rates and per-round rounding used by the summary. Full prescribed completion yields 500, 1,000 or 1,500 estimated touches respectively. Work rounds never exceed 60 seconds, with 30-second rests and additional rounds as required. Planned estimate chips now also sum rounded per-round counts. Standard timed drills already default to 60 seconds work / 30 seconds rest; explicit user timing customizations remain available. Rest and pauses remain excluded; stopped or incomplete sessions report only valid saved active time.
+
+New starts, repeats and scheduled touch-plan snapshots use the corrected prescriptions, including older two-round assignments. Active/restored runs and completed recordings retain their original snapshots and measured time. Missing active-time metadata is never inferred. Existing 1,588-touch history is not rewritten.
+
+Both comparison previews now fill their panels proportionally with centered cropping, matching the interpreted request to remove empty bands. This affects only display, preserving source recordings. Portrait/landscape geometry is tested through Flutter widgets; physical iPhone rendering remains an acceptance check. No Codemagic build was started; these corrections are after Build 76.
+
+Validation: 30 focused Flutter tests passed covering every pathway target, default round limits, legacy assignments, scheduled starts, proportional comparison fill, saved active-time playback and guided navigation. Flutter analysis is clean; Git whitespace checks passed. Tests use simulated video platforms and do not establish native device behavior.
+
 ## Saved-video estimate follow-up
 
 The saved-round and individual-clip playback screens missed the earlier saved-active-time wiring applied to the summary. Both now use validated recorded active time for duration estimates and pass it to comparison. Eight focused tests passed, including round switching, paused rounds and absent metadata. Existing recordings require the saved active-time field to recover their estimate; no duration is invented. This correction follows Build 76 and no additional build was started.
