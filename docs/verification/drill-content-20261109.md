@@ -7,6 +7,8 @@ Recordings and saved session history are preserved. Rest/pauses do not contribut
 
 Release validation: the full local Flutter suite passed (1,917 tests; 14 skipped), all nine offline packaging tests passed, and the latest Flutter analysis is clean. Codemagic will also run native iOS tests, release-flag checks and signed-IPA verification.
 
+Build 77 submitted: Codemagic job 6af2e1ba4f94d182cad0f755, ios-device-internal, source 951f017ed17fb8ed8d293ba376dbdac8bc49f0a5, version 0.2.0+77. The initial queued-job response confirms the exact source SHA. Build link: https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6af2e1ba4f94d182cad0f755 . Build and device acceptance are pending.
+
 ## Countdown alongside plan progress — 10 November 2026
 
 Owner follow-up requested a visible countdown as well as whole-plan position. The plan progress card now includes a compact lime Starts in m:ss badge beside Drill X of Y. It reads the existing remaining rest time, freezes with pause and shows Paused until resumed. Large text and narrow screens stack the badge below the progress heading. The existing rest duration and automatic transition are unchanged.
