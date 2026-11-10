@@ -1,4 +1,12 @@
 # Drill content update — 9 November 2026
+## Plan progress during Up next — 10 November 2026
+
+Multi-drill plan previews now replace the timer dock with a compact translucent progress card: a prominent Drill 2 of 7-style label, segmented position strip, drill title, Pause/Resume and Stop. Earlier positions are muted green, the upcoming drill is lime, and later positions are subdued. Plans longer than twelve drills use a continuous strip to avoid tiny segments. Large text and narrow screens reflow the title and controls. Single-drill previews retain their timer dock.
+
+The production UpcomingPractice screen supplies the actual position and total for both the opening preview and between-drill transitions. The rest clock, automatic advance, screen-tap pause/resume, lifecycle interruption handling and recordings are unchanged. No instructional description appears over a playing demo.
+
+Validation: seven focused Flutter tests passed, including first/middle/last positions, long plans, 320px/3x text layout, controls, portrait/landscape video fill, load failures and paused rest recovery. Flutter analysis and Git whitespace checks passed. An actual Flutter-rendered 390x844 preview was visually checked using the bundled demo still in place of the native video texture; it is not physical-device verification. No Codemagic build started.
+
 ## Touch-plan targets and comparison fit — 10 November 2026
 
 Build 76 feedback showed the 1,000-touch plan finishing with 1,588 estimated touches over 26:30 active time and 18 rounds. Reproduced exactly from the old fixed durations and current per-round estimation rates: D01 226, D15 250, D02 140, D16 180, D17 240, D18 180, D23 200, D11 60, D25 112. The targets and hard-coded durations had drifted apart; the summary was correctly summing the prescribed work estimates.
