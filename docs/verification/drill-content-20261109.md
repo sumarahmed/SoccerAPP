@@ -7,7 +7,11 @@ Recordings and saved session history are preserved. Rest/pauses do not contribut
 
 Release validation: the full local Flutter suite passed (1,917 tests; 14 skipped), all nine offline packaging tests passed, and the latest Flutter analysis is clean. Codemagic will also run native iOS tests, release-flag checks and signed-IPA verification.
 
-Build 77 submitted: Codemagic job 6af2e1ba4f94d182cad0f755, ios-device-internal, source 951f017ed17fb8ed8d293ba376dbdac8bc49f0a5, version 0.2.0+77. The initial queued-job response confirms the exact source SHA. Build link: https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6af2e1ba4f94d182cad0f755 . Build and device acceptance are pending.
+Build 77 submitted: Codemagic job 6af2e1ba4f94d182cad0f755, ios-device-internal, source 951f017ed17fb8ed8d293ba376dbdac8bc49f0a5, version 0.2.0+77. The initial queued-job response confirms the exact source SHA. Build link: https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6af2e1ba4f94d182cad0f755 . The job failed during Flutter tests; no IPA was produced.
+
+Build outcome: the approved job failed at Run Flutter tests (1,916 passed, 14 skipped, one failure: recording recovery: preparation). Native iOS regression tests, packaging checks and analysis passed. Release-flag checks and signed IPA creation were skipped; no installable artifact was produced. No second build has been submitted.
+
+The failed assertion expected one camera start after a fixed settling delay but observed zero with the readiness countdown at zero. Capture start awaits orientation locking and a flushed on-disk marker. The regression test now waits, with a ten-second bound, for the camera start and all capture/work clocks to be running; exact start-count assertions remain. The preparation scenario explicitly gates orientation locking to cover a slow asynchronous start. This is a test synchronization correction; production code is unchanged. Remote confirmation requires an owner-approved retry. Local retry validation passed: all seven recording-recovery scenarios, the preparation scenario with release flags, the full 1,917-test suite (14 skipped), and Flutter analysis. No production behavior was changed.
 
 ## Countdown alongside plan progress — 10 November 2026
 
