@@ -1,4 +1,12 @@
 # Drill content update — 9 November 2026
+## Build 77 release preparation — 10 November 2026
+
+The owner explicitly approved one new Codemagic iPhone build with all fixes since installed Build 76. Candidate version is 0.2.0+77. It includes summary back navigation to home; saved active-time estimates in recording playback and comparison; rate-aligned 500/1,000/1,500-touch plans with work rounds at most 60 seconds; proportional full-panel comparison previews; and the Up next plan-stage card with its live countdown.
+
+Recordings and saved session history are preserved. Rest/pauses do not contribute to touches, absent active time is not invented, and production video analysis remains excluded. Physical iPhone playback, rotation and the new layouts require owner acceptance after installation. Earlier no-build notes below are historical; this release has explicit approval.
+
+Release validation: the full local Flutter suite passed (1,917 tests; 14 skipped), all nine offline packaging tests passed, and the latest Flutter analysis is clean. Codemagic will also run native iOS tests, release-flag checks and signed-IPA verification.
+
 ## Countdown alongside plan progress — 10 November 2026
 
 Owner follow-up requested a visible countdown as well as whole-plan position. The plan progress card now includes a compact lime Starts in m:ss badge beside Drill X of Y. It reads the existing remaining rest time, freezes with pause and shows Paused until resumed. Large text and narrow screens stack the badge below the progress heading. The existing rest duration and automatic transition are unchanged.
