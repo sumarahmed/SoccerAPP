@@ -1,4 +1,8 @@
 # Drill content update — 9 November 2026
+## Build 77 approved retry — 10 November 2026
+
+The owner explicitly approved one retry after the recording-recovery test correction. Codemagic job 6af2ea839aaf7c0400edca4a uses ios-device-internal and verified source b88ddd8e7203b5f065e61487c1d417a59bf86e12. Version remains 0.2.0+77 because the first attempt produced no IPA. The queued job confirms the exact source SHA. Build: https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6af2ea839aaf7c0400edca4a . Build outcome and physical-device acceptance are pending.
+
 ## Build 77 release preparation — 10 November 2026
 
 The owner explicitly approved one new Codemagic iPhone build with all fixes since installed Build 76. Candidate version is 0.2.0+77. It includes summary back navigation to home; saved active-time estimates in recording playback and comparison; rate-aligned 500/1,000/1,500-touch plans with work rounds at most 60 seconds; proportional full-panel comparison previews; and the Up next plan-stage card with its live countdown.
