@@ -1,4 +1,10 @@
 # Drill content update — 9 November 2026
+## Countdown alongside plan progress — 10 November 2026
+
+Owner follow-up requested a visible countdown as well as whole-plan position. The plan progress card now includes a compact lime Starts in m:ss badge beside Drill X of Y. It reads the existing remaining rest time, freezes with pause and shows Paused until resumed. Large text and narrow screens stack the badge below the progress heading. The existing rest duration and automatic transition are unchanged.
+
+Seven focused Flutter tests passed, including countdown presence, paused-time preservation, automatic advance, plan positions, large-text layout and video behavior. Flutter analysis is clean. The actual Flutter-rendered screen was visually checked with a bundled demo still replacing the native texture; physical iPhone behavior is not claimed. Both repositories are updated; no Codemagic build started.
+
 ## Plan progress during Up next — 10 November 2026
 
 Multi-drill plan previews now replace the timer dock with a compact translucent progress card: a prominent Drill 2 of 7-style label, segmented position strip, drill title, Pause/Resume and Stop. Earlier positions are muted green, the upcoming drill is lime, and later positions are subdued. Plans longer than twelve drills use a continuous strip to avoid tiny segments. Large text and narrow screens reflow the title and controls. Single-drill previews retain their timer dock.
