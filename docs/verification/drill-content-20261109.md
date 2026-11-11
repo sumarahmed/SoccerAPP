@@ -5,6 +5,8 @@ The owner approved one new Codemagic signed iPhone build containing the multi-ro
 
 The unchanged implementation has passed the full local Flutter suite (1,920 tests; 14 skipped), 12 focused recording/whole-plan checks with production feature flags, and clean Flutter analysis. Physical-device acceptance is pending. Earlier no-build notes below are historical; this release has explicit approval.
 
+Build 78 submitted: Codemagic job 6af3c125742d42725dd60905, ios-device-internal, version 0.2.0+78, verified source d33c9ea2e8b2e355aab302720787029831c21529. Codemagic confirms the exact source SHA and initial waiting status. All nine local packaging checks passed before submission. Build: https://codemagic.io/app/6aac92fbbcb7de30c265f1dd/build/6af3c125742d42725dd60905 . Build completion and physical-device acceptance are pending.
+
 ## Build 77 multi-round plan interruption — 10 November 2026
 
 Owner device screenshots show the 500-touch plan twice ending at Sole rolls: Inside touches and Sole taps completed, Sole rolls stopped early, later drills not completed. Build 77 introduced rate-derived prescriptions that can require more than two rounds, but the camera recorder still transitioned to rest only after round one and hard-coded the next round as round two. A new recorder/plan-ledger regression reproduced the premature result at D02 round 2 of 4, and also D01 round 2 of 5 in the 1,500-touch plan. The earlier plan arithmetic tests did not exercise this recording state machine.
