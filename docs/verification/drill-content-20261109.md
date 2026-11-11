@@ -1,4 +1,10 @@
 # Drill content update — 9 November 2026
+## Build 78 approved release — 11 November 2026
+
+The owner approved one new Codemagic signed iPhone build containing the multi-round correction. Candidate version is 0.2.0+78. Source includes 22d9bef: complete every prescribed recording round, retain newly saved clips during concurrent inventory scans, and cap measured active-work estimates consistently with session facts. All earlier Build 77 fixes remain included. Existing recordings and history are preserved.
+
+The unchanged implementation has passed the full local Flutter suite (1,920 tests; 14 skipped), 12 focused recording/whole-plan checks with production feature flags, and clean Flutter analysis. Physical-device acceptance is pending. Earlier no-build notes below are historical; this release has explicit approval.
+
 ## Build 77 multi-round plan interruption — 10 November 2026
 
 Owner device screenshots show the 500-touch plan twice ending at Sole rolls: Inside touches and Sole taps completed, Sole rolls stopped early, later drills not completed. Build 77 introduced rate-derived prescriptions that can require more than two rounds, but the camera recorder still transitioned to rest only after round one and hard-coded the next round as round two. A new recorder/plan-ledger regression reproduced the premature result at D02 round 2 of 4, and also D01 round 2 of 5 in the 1,500-touch plan. The earlier plan arithmetic tests did not exercise this recording state machine.
