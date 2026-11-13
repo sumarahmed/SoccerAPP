@@ -1,4 +1,14 @@
 # Drill content update — 9 November 2026
+## Setup screenshot interruption — 14 November 2026
+
+Owner reports taking an iPhone screenshot on ball/player detection sends the plan back instead of continuing. The installed build number was not supplied with this report; diagnosis was checked against the current source, whose setup implementation is unchanged from Build 78. Setup treated every non-resumed lifecycle event, including transient inactive focus, as camera suspension. This disposed the camera and invalidated the opening-preview generation, returning a successful preview to detection. A separate asynchronous handoff race converted a lifecycle interruption into a false/cancel result, which the recorder interprets as leaving the plan setup.
+
+Setup now uses the existing practice background policy: transient inactive focus does not dispose the camera or reset detection. Real hidden/paused/detached states still suspend the camera and recover when foregrounded. The final handoff rechecks lifecycle and camera generation after stopping the image stream; an interruption retains setup rather than reporting user cancellation. Explicit Back/Stop retains its cancellation behavior. The upcoming countdown still pauses on loss of focus and requires Resume.
+
+Three new widget regressions cover detection focus loss, opening-preview focus loss, and actual backgrounding during a delayed image-stream stop. All three fail against the pre-fix source and pass with the fix. The existing camera-recovery test now explicitly exercises actual background states. These use simulated lifecycle and camera behavior, not physical iPhone screenshot verification. Recordings, touch estimates and plan prescriptions are unchanged. No new Codemagic build has been started for this fix.
+
+Validation: 29 focused tests passed (one existing skip) with production feature flags, covering setup, upcoming demos, recording recovery, and complete 500/1,000/1,500-touch plans. Flutter analysis is clean.
+
 ## Build 78 approved release — 11 November 2026
 
 The owner approved one new Codemagic signed iPhone build containing the multi-round correction. Candidate version is 0.2.0+78. Source includes 22d9bef: complete every prescribed recording round, retain newly saved clips during concurrent inventory scans, and cap measured active-work estimates consistently with session facts. All earlier Build 77 fixes remain included. Existing recordings and history are preserved.
